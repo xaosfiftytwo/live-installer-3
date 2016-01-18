@@ -1,0 +1,45 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-18 08:57+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 1.12.0\n"
+
+#: en/60_safe.html+h1:1
+msgid "Safe updates"
+msgstr ""
+
+#: en/60_safe.html+div.div.ul.li:6
+msgid ""
+"Some operating systems make updating your system harder than it really needs "
+"to be. SolydXK thinks upgrades should be quick and easy, and then get out of "
+"the way."
+msgstr ""
+
+#: en/60_safe.html+div.div.ul.li:7
+msgid ""
+"The Update Manager sits discreetly in your system tray and lets you know "
+"when updates are available. You don't have to apply updates when you don't "
+"want to. The Update Manager won't pop up or annoy you in any way."
+msgstr ""
+
+#: en/60_safe.html+div.div.ul.li:8
+msgid ""
+"All updated files are maintained and closely checked by trusted developers "
+"and maintainers."
+msgstr ""
+
+#: en/60_safe.html+div.div.ul.li:9
+msgid "All files are stored in special secure repositories for your use."
+msgstr ""
+
+#: en/60_safe.html+div.div.ul.li:10
+msgid "The security repository is synchronized daily."
+msgstr ""

@@ -1,0 +1,410 @@
+# Czech translation for live-installer-3.slideshow
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the live-installer-3.slideshow package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: live-installer-3.slideshow\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2015-10-09 12:56+0200\n"
+"PO-Revision-Date: 2013-12-11 11:29+0000\n"
+"Last-Translator: Charles Vlk <Unknown>\n"
+"Language-Team: Czech <cs@li.org>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2014-05-03 20:44+0000\n"
+"X-Generator: Launchpad (build 16985)\n"
+
+#. type: Content of: <h1>
+#: en/10_welcome.html:1
+msgid "Welcome to SolydXK"
+msgstr ""
+
+#. type: Content of: <div><div><p>
+#: en/10_welcome.html:5
+#, fuzzy
+#| msgid "Thank you for choosing SolydXK."
+msgid "Thank you for choosing SolydXK."
+msgstr "Děkujeme, že jste si vybrali SolydXK."
+
+#. type: Content of: <div><div><p>
+#: en/10_welcome.html:6
+msgid "You've chosen a Linux distribution that is:"
+msgstr ""
+
+#. type: Content of: <div><div><ul><li>
+#: en/10_welcome.html:8
+msgid "Secure and stable"
+msgstr ""
+
+#. type: Content of: <div><div><ul><li>
+#: en/10_welcome.html:9
+msgid "Fast and responsive"
+msgstr ""
+
+#. type: Content of: <div><div><ul><li>
+#: en/10_welcome.html:10
+msgid "Desktop-ready"
+msgstr ""
+
+#. type: Content of: <div><div><p>
+#: en/10_welcome.html:12
+#, fuzzy
+#| msgid "Thank you for choosing SolydXK."
+msgid "Enjoy this new release and thank you for choosing SolydXK."
+msgstr "Děkujeme, že jste si vybrali SolydXK."
+
+#. type: Content of: <div><div><p>
+#: en/10_welcome.html:13
+msgid "The installation takes 15-30 minutes, depending on your settings."
+msgstr ""
+
+#. type: Content of: <h1>
+#: en/20_giants.html:1
+msgid "Standing on the shoulders of Giants"
+msgstr "Postaveno na pevných základech"
+
+#. type: Content of: <div><div><ul><li>
+#: en/20_giants.html:6
+msgid ""
+"SolydXK is a Debian-based GNU/Linux distribution derived from and compatible "
+"with Debian."
+msgstr ""
+
+#. type: Content of: <div><div><ul><li>
+#: en/20_giants.html:7
+msgid ""
+"SolydXK uses either the lightweight Xfce desktop for SoldyX or the highly "
+"configurable and stunningly appealing KDE desktop for SolydK."
+msgstr ""
+
+#. type: Content of: <div><div><ul><li>
+#: en/20_giants.html:8
+#, fuzzy
+#| msgid ""
+#| "Our innovations and the huge Debian package selection make SolydXK one of "
+#| "the most attractive desktop operating systems available to home users."
+msgid ""
+"Our innovations, the rapid development of Debian and the huge Debian package "
+"selection make SolydXK one of the most attractive desktop operating systems "
+"available to home users."
+msgstr ""
+"Naše inovace a velký výběr balíčků Debianu dělají SolydXK jedním z "
+"nejatraktivnějších desktopových operačních systémů, určených pro domácí "
+"uživatele."
+
+#. type: Content of: <h1>
+#: en/30_desktop-ready.html:1
+msgid "Out of the box"
+msgstr "Co v systému najdete"
+
+#. type: Content of: <div><div><ul><li>
+#: en/30_desktop-ready.html:6
+#, fuzzy
+#| msgid ""
+#| "Firefox, Thunderbird, OpenOffice.org and Xchat come pre-installed in "
+#| "SolydXK, so you can get started immediately with your daily routine on "
+#| "your desktop and the Internet."
+msgid ""
+"Firefox, Thunderbird, and LibreOffice come pre-installed in SolydXK, so you "
+"can get started immediately with the desktop and the Internet."
+msgstr ""
+"Firefox, Thunderbird, OpenOffice a Xchat jsou v SolydXK předinstalovány, "
+"takže můžete okamžitě začít pracovat s plochou a internetem."
+
+#. type: Content of: <div><div><ul><li>
+#: en/30_desktop-ready.html:7
+msgid ""
+"Unlike other Linux distributions SolydXK is also ready to play your music, "
+"internet videos and more."
+msgstr ""
+
+#. type: Content of: <div><div><ul><li>
+#: en/30_desktop-ready.html:8
+msgid "A wide variety of software can be installed with a click of the mouse."
+msgstr ""
+
+#. type: Content of: <div><div><ul><li>
+#: en/30_desktop-ready.html:9
+#, fuzzy
+#| msgid ""
+#| "SolydXK is compatible with most popular file formats: zip, doc, xls, pdf, "
+#| "rar, mp3, wmv, mpg, mp4, mov ..."
+msgid ""
+"SolydXK is compatible with most popular file formats such as: docx, xlsx, "
+"doc, xls, pdf, zip, rar, mp3, mpg, and many more."
+msgstr ""
+"SolydXK je kompatibilní s nejpoužívanějšími souborovými formáty: zip, doc, "
+"xls, pdf, rar, mp3, wmv, mpg, mp4, mov ..."
+
+#. type: Content of: <h1>
+#: en/40_office.html:1
+msgid "Office tools are ready to use as soon as you install SolydXK"
+msgstr ""
+
+#. type: Content of: <div><div><ul><li>
+#: en/40_office.html:6
+msgid ""
+"<em>LibreOffice</em>, a powerful office software suite, comes built into "
+"SolydXK."
+msgstr ""
+
+#. type: Content of: <div><div><ul><li>
+#: en/40_office.html:7
+msgid "<em>LibreOffice</em> is very easy to learn and use."
+msgstr ""
+
+#. type: Content of: <div><div><ul><li>
+#: en/40_office.html:8
+msgid ""
+"You can use it to create letters, presentations and spreadsheets, as well as "
+"diagrams and databases."
+msgstr ""
+
+#. type: Content of: <div><div><ul><li>
+#: en/40_office.html:9
+msgid ""
+"<em>LibreOffice</em> uses the standard OpenDocument format and it works with "
+"documents from other popular office applications including WordPerfect and "
+"Microsoft Office."
+msgstr ""
+
+#. type: Content of: <h1>
+#: en/50_windows.html:1
+msgid "An alternative to mainstream operating systems"
+msgstr "Alternativa k tradičním operačním systémům"
+
+#. type: Content of: <div><div><ul><li>
+#: en/50_windows.html:6
+#, fuzzy
+#| msgid "SolydXK is easy to use, powerful and configurable."
+msgid "SolydXK is easy to use, powerful and configurable."
+msgstr "SolydXK je uživatelsky přívětivý, výkonný a jednoduše nastavitelný."
+
+#. type: Content of: <div><div><ul><li>
+#: en/50_windows.html:7
+msgid ""
+"SolydXK is safe and stable. Unlike other operating systems, it is not prone "
+"to computer viruses or spyware, it does not suffer from disk fragmentation, "
+"and it has no registry that requires periodic cleaning."
+msgstr ""
+
+#. type: Content of: <div><div><ul><li>
+#: en/50_windows.html:8
+#, fuzzy
+#| msgid ""
+#| "SolydXK can detect other operating systems and install itself beside "
+#| "them. You can choose which operating system to launch when you start the "
+#| "computer."
+msgid ""
+"SolydXK can detect other operating systems and install itself beside them. "
+"You can choose which operating system to launch when you start the computer."
+msgstr ""
+"SolydXK rozpozná ostatní operační systémy a nainstaluje se vedle nich. Při "
+"zapnutí počítače si pak můžete příslušný systém vybrat."
+
+#. type: Content of: <h1>
+#: en/60_safe.html:1
+msgid "Safe updates"
+msgstr "Bezpečné aktualizace"
+
+#. type: Content of: <div><div><ul><li>
+#: en/60_safe.html:6
+msgid ""
+"Some operating systems make updating your system harder than it really needs "
+"to be. SolydXK thinks upgrades should be quick and easy, and then get out of "
+"the way."
+msgstr ""
+
+#. type: Content of: <div><div><ul><li>
+#: en/60_safe.html:7
+#, fuzzy
+#| msgid ""
+#| "The SolydXK Update Manager sits discreetly in your system tray and lets "
+#| "you know when updates are available. You don't have to apply updates when "
+#| "you don't want to. The Update Manager won't pop up or annoy you in any "
+#| "way."
+msgid ""
+"The Update Manager sits discreetly in your system tray and lets you know "
+"when updates are available. You don't have to apply updates when you don't "
+"want to. The Update Manager won't pop up or annoy you in any way."
+msgstr ""
+"Správce aktualizací SolydXK je umístěn ve vaší liště, a informuje vás o "
+"dostupných aktualizacích. Pokud je však nebudete chtít instalovat, nemusíte. "
+"Správce vás nebude obtěžovat vyskakovacími okny ani jiným způsobem."
+
+#. type: Content of: <div><div><ul><li>
+#: en/60_safe.html:8
+msgid ""
+"All updated files are maintained and closely checked by trusted developers "
+"and maintainers."
+msgstr ""
+
+#. type: Content of: <div><div><ul><li>
+#: en/60_safe.html:9
+msgid "All files are stored in special secure repositories for your use."
+msgstr ""
+
+#. type: Content of: <div><div><ul><li>
+#: en/60_safe.html:10
+msgid "The security repository is synchronized daily."
+msgstr ""
+
+#. type: Content of: <h1>
+#: en/70_community.html:1
+msgid "A great community"
+msgstr "Skvělá komunita"
+
+#. type: Content of: <div><div><ul><li>
+#: en/70_community.html:6
+#, fuzzy
+#| msgid ""
+#| "The SolydXK community is one of the best on the Internet. Our users not "
+#| "only provide most of our funding, but also ideas, artwork, and sometimes "
+#| "even source code."
+msgid ""
+"The SolydXK community is one of the best on the Internet. Our users provide "
+"most of our funding, as well as ideas, artwork and sometimes even source "
+"code."
+msgstr ""
+"Komunita SolydXK je jedna z nejlepších na Internetu. Naši uživatelé nás "
+"podporují finančně, ale také nápady, výtvarnou tvorbou a někdy vytvářejí i "
+"zdrojový kód."
+
+#. type: Content of: <div><div><ul><li>
+#: en/70_community.html:7
+#, fuzzy
+#| msgid ""
+#| "SolydXK users are happy to share their passion, enthusiasm, and eagerness "
+#| "to help. Don't hesitate to ask questions in the forums or get involved "
+#| "with the community."
+msgid ""
+"SolydXK users are happy to share their passion and enthusiasm and are eager "
+"to help. Don't hesitate to ask questions on the forums or to get involved in "
+"the community."
+msgstr ""
+"Uživatelé SolydXK rádi sdílejí své nadšení a entuziasmus, a jsou připraveni "
+"pomoci. Neváhejte hledat odpovědi na fórech nebo se rovnou zapojte do "
+"komunity."
+
+#. type: Content of: <div><div><ul><li>
+#: en/70_community.html:8
+#, fuzzy
+#| msgid ""
+#| "Send us your feedback and tell us about your experience. We'll listen to "
+#| "your ideas and use them to further improve SolydXK."
+msgid ""
+"Send us your feedback and tell us about your experience. We'll listen to "
+"your ideas and use them to further improve SolydXK."
+msgstr ""
+"Pošlete nám názor a sdělte nám své zkušenosti. Vaše nápady a připomínky "
+"využijeme k dalšímu zlepšování SolydXK."
+
+#~ msgid "Welcome to SolydXK Debian"
+#~ msgstr "Vítejte!"
+
+#~ msgid ""
+#~ "We believe in sharing and being open-minded. Our vision of Freedom "
+#~ "includes being able to do what you want with your computer, and the "
+#~ "operating system should never stand in the way."
+#~ msgstr ""
+#~ "Věříme ve sdílení a otevřenost. Naše vize svobody je taková, že byste "
+#~ "měli mít možnost na svém počítači dělat co potřebujete, a váš operační "
+#~ "systém by vám k tomu měl pomáhat."
+
+#~ msgid ""
+#~ "We focus on ease of use, comfort, and elegance to make your experience "
+#~ "with SolydXK as enjoyable as possible."
+#~ msgstr ""
+#~ "Zaměřujeme se na snadnost užívání, komfort a eleganci, aby vaše "
+#~ "zkušenosti s prací v SolydXK byly tak příjemné, jak je to jen možné."
+
+#~ msgid ""
+#~ "We hope you will have a wonderful time spent with SolydXK, and that you "
+#~ "will enjoy using it as much as we do developing it!"
+#~ msgstr ""
+#~ "Doufáme, že s SolydXK zažijete příjemné chvíle a že ho budete stejně rádi "
+#~ "používat, jak jsme jej vyvíjeli."
+
+#, fuzzy
+#~| msgid "SolydXK is a Debian-based GNU/Linux distribution."
+#~ msgid "SolydXK is a Debian-based GNU/Linux distribution."
+#~ msgstr "SolydXK je distribuce na bázi GNU/Linuxu Debian"
+
+#, fuzzy
+#~| msgid ""
+#~| "At home, SolydXK is the 4th most widely used desktop operating system, "
+#~| "behind Microsoft Windows, Apple OS X and Ubuntu."
+#~ msgid ""
+#~ "At home, GNU/Linux distributions like SolydXK or Ubuntu are among the "
+#~ "most widely used desktop operating systems, right next to Microsoft "
+#~ "Windows and Apple OS X."
+#~ msgstr ""
+#~ "SolydXK je čtvrtým nejpoužívanějším operačním systémem v domácnostech, "
+#~ "vedle Microsoft Windows, Apple OS X a Ubuntu."
+
+#, fuzzy
+#~| msgid ""
+#~| "Other popular applications such as Skype, Google Earth, Opera can be "
+#~| "installed with a click of the mouse."
+#~ msgid ""
+#~ "Other popular applications such as Skype, Google Earth, Opera, and over "
+#~ "30,000+ more can be installed with a click of the mouse."
+#~ msgstr ""
+#~ "Další oblíbené aplikace, jako jsou Skype, Google Earth nebo Opera, můžete "
+#~ "nainstalovat pouhým kliknutím myši."
+
+#~ msgid "Be productive"
+#~ msgstr "Buďte produktivní"
+
+#~ msgid ""
+#~ "Use LibreOffice to create professional documents, spreadsheets and "
+#~ "presentations that are fully compatible with Microsoft Office. Share "
+#~ "printers or access them remotely."
+#~ msgstr ""
+#~ "K vytvoření profesionálních dokumentů, tabulek a prezentací můžete použít "
+#~ "LibreOffice, který je kompatibilní s Microsoft Office. Sdílejte tiskárny, "
+#~ "nebo k nim přistupujte vzdáleně."
+
+#, fuzzy
+#~| msgid ""
+#~| "Install Wine and run Windows software in SolydXK. Or install Virtualbox, "
+#~| "and run Windows itself within SolydXK."
+#~ msgid ""
+#~ "Install Wine and run Windows software in SolydXK. Or install VirtualBox, "
+#~ "and run Windows itself within SolydXK."
+#~ msgstr ""
+#~ "Nainstalujte si Wine a spouštějte software pro Windows v SolydXK. Pokud "
+#~ "si nainstalujete Virtualbox, můžete v SolydXK spustit přímo samotné "
+#~ "Windows."
+
+#~ msgid ""
+#~ "SolydXK is safe and stable, you don't need an antivirus, an anti-spyware, "
+#~ "a defragmentation tool or a registry cleaner."
+#~ msgstr ""
+#~ "SolydXK je bezpečný a stabilní, nepotřebujete antivirus, anti-spyware, "
+#~ "defragmentační nástroj či čistič registrů."
+
+#~ msgid ""
+#~ "Receive fixes and security updates all in one place, for the entire "
+#~ "system, including the software you install."
+#~ msgstr ""
+#~ "Opravy a bezpečnostní aktualizace stahujte najednou pro celý systém, "
+#~ "včetně aktualizací nainstalovaného software."
+
+#~ msgid "Stay connected"
+#~ msgstr "Buďte v kontaktu"
+
+#~ msgid ""
+#~ "Keep in touch with your friends and contacts, by email, messenger or on "
+#~ "your favorite social networks. SolydXK provides all you need to interact "
+#~ "with Twitter, Facebook, Google Hangouts, ICQ, IRC, AIM, Yahoo and many "
+#~ "other networks."
+#~ msgstr ""
+#~ "Buďte v kontaktu s ostatními pomocí e-mailu, messengeru nebo některé z "
+#~ "vašich oblíbených komunitních sítí. SolydXK poskytuje vše potřebné pro "
+#~ "využívání Twitteru, Facebooku, Google Hangouts, ICQ, IRCu, AIM, Yahoo a "
+#~ "mnoha dalších sítí."

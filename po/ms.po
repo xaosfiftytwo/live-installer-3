@@ -1,0 +1,1071 @@
+# Malay translation for linuxmint
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-18 08:57+0100\n"
+"PO-Revision-Date: 2014-06-07 08:42+0000\n"
+"Last-Translator: Fazwan Fazil <takaizu91@gmail.com>\n"
+"Language-Team: Malay <ms@li.org>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2014-09-11 21:48+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
+
+#: ../usr/lib/live-installer-3/localize.py:48
+msgid "Install additional localized packages"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/localize.py:61
+#, fuzzy
+msgid "Localizing KDE"
+msgstr "Penyetempatan"
+
+#: ../usr/lib/live-installer-3/localize.py:78
+#, fuzzy
+msgid "Localizing LibreOffice"
+msgstr "Menyetempatkan pakej"
+
+#: ../usr/lib/live-installer-3/localize.py:97
+#, fuzzy
+msgid "Localizing AbiWord"
+msgstr "Penyetempatan"
+
+#: ../usr/lib/live-installer-3/localize.py:111
+#, fuzzy
+msgid "Localizing Firefox"
+msgstr "Menyetempatkan pakej"
+
+#: ../usr/lib/live-installer-3/localize.py:129
+msgid "Localizing Thunderbird"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/partitioning.py:170
+#: ../usr/lib/live-installer-3/partitioning.py:517
+msgid "Unknown"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/partitioning.py:297
+#, fuzzy
+msgid "Removable:"
+msgstr "Peranti tanggal:"
+
+#: ../usr/lib/live-installer-3/partitioning.py:324
+#: ../usr/lib/live-installer-3/gtk_interface.py:702
+#: ../usr/lib/live-installer-3/gtk_interface.py:706
+#: ../usr/lib/live-installer-3/gtk_interface.py:725
+#: ../usr/lib/live-installer-3/gtk_interface.py:730
+#: ../usr/lib/live-installer-3/gtk_interface.py:734
+#: ../usr/lib/live-installer-3/gtk_interface.py:738
+msgid "Installation Tool"
+msgstr "Alat Pemasangan"
+
+#: ../usr/lib/live-installer-3/partitioning.py:325
+#, fuzzy, python-brace-format
+msgid ""
+"No partition table was found on the hard drive: {disk_description}. Do you "
+"want the installer to create a set of partitions for you? Note: This will "
+"ERASE ALL DATA present on this disk."
+msgstr ""
+"Tiada jadual sekatan ditemui dalam pemacu keras. Anda hendak pemasang "
+"mencipta set sekatan untuk anda? Perhatian: Ini akan memadam sebarang data "
+"yang ada didalam cakera."
+
+#: ../usr/lib/live-installer-3/partitioning.py:512
+#, fuzzy
+msgid "Logical partition"
+msgstr "Sunting sekatan"
+
+#: ../usr/lib/live-installer-3/partitioning.py:513
+#, fuzzy
+msgid "Extended partition"
+msgstr "Sunting sekatan"
+
+#: ../usr/lib/live-installer-3/partitioning.py:514
+#: ../usr/lib/live-installer-3/gtk_interface.py:535
+msgid "Free space"
+msgstr "Membebaskan ruang"
+
+#: ../usr/lib/live-installer-3/partitioning.py:534
+#, fuzzy
+msgid "Encryption password"
+msgstr "Keterangan"
+
+#: ../usr/lib/live-installer-3/partitioning.py:535
+#, fuzzy
+msgid "Password for the encrypted partition:"
+msgstr "Sila sediakan kata laluan untuk akaun pengguna anda"
+
+#: ../usr/lib/live-installer-3/partitioning.py:646
+msgid "Edit partition"
+msgstr "Sunting sekatan"
+
+#: ../usr/lib/live-installer-3/partitioning.py:653
+#: ../usr/lib/live-installer-3/gtk_interface.py:527
+msgid "Device"
+msgstr "Peranti"
+
+#: ../usr/lib/live-installer-3/partitioning.py:654
+#: ../usr/lib/live-installer-3/gtk_interface.py:532
+#, fuzzy
+msgid "Format as"
+msgstr "Format sebagai:"
+
+#: ../usr/lib/live-installer-3/partitioning.py:655
+#: ../usr/lib/live-installer-3/gtk_interface.py:531
+msgid "Mount point"
+msgstr "Titik lekap"
+
+#: ../usr/lib/live-installer-3/partitioning.py:656
+msgid "Label (optional)"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/partitioning.py:657
+#, fuzzy
+msgid "Encryption/password"
+msgstr "Keterangan"
+
+#: ../usr/lib/live-installer-3/partitioning.py:744
+#: ../usr/lib/live-installer-3/partitioning.py:751
+#: ../usr/lib/live-installer-3/partitioning.py:780
+#: ../usr/lib/live-installer-3/partitioning.py:784
+#: ../usr/lib/live-installer-3/partitioning.py:790
+#, fuzzy
+msgid "Encryption"
+msgstr "Keterangan"
+
+#: ../usr/lib/live-installer-3/partitioning.py:745
+msgid ""
+"You chose to encrypt the root partition.\n"
+"\n"
+"You will need to mount /boot on a separate non-encrypted partition (500 "
+"MB).\n"
+"Without a non-encrypted /boot partition your system will be unbootable.\n"
+"\n"
+"Encryption will erase all data from {}\n"
+"\n"
+"Are you sure you want to continue?"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/partitioning.py:752
+msgid ""
+"Encryption will erase all data from {}\n"
+"\n"
+"Are you sure you want to continue?"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/partitioning.py:781
+#, fuzzy
+msgid "Provide an encryption password for partition:"
+msgstr "Sila sediakan kata laluan untuk akaun pengguna anda"
+
+#: ../usr/lib/live-installer-3/partitioning.py:785
+msgid ""
+"You need to choose a format type\n"
+"for your encrypted partition (default: ext4):"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/partitioning.py:791
+msgid "You need to choose a mount point for partition:"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:128
+#: ../usr/lib/live-installer-3/installer.py:153
+msgid "Installation error"
+msgstr "Ralat pemasangan"
+
+#: ../usr/lib/live-installer-3/installer.py:138
+#, fuzzy
+msgid ""
+"Installation is now paused. Please read the instructions on the page "
+"carefully before clicking Forward to finish the installation."
+msgstr ""
+"Pemasangan kini dijeda. Sila baca arahan pada halaman dengan hati-hati dan "
+"klik Maju untuk selesaikan pemasangan."
+
+#: ../usr/lib/live-installer-3/installer.py:139
+msgid "Verify that fstab is correct (use blkid to check the UUIDs)."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:140
+msgid ""
+"A chrooted terminal and fstab will be opened after you close this message."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:142
+#, fuzzy
+msgid "Installation paused"
+msgstr "Pemasangan Dijeda"
+
+#: ../usr/lib/live-installer-3/installer.py:188
+#, fuzzy, python-format
+msgid "Encrypting %(partition)s ..."
+msgstr "Memformat %(partition)s sebagai %(format)s..."
+
+#: ../usr/lib/live-installer-3/installer.py:194
+#, fuzzy, python-format
+msgid "Formatting %(partition)s as %(format)s ..."
+msgstr "Memformat %(partition)s sebagai %(format)s..."
+
+#: ../usr/lib/live-installer-3/installer.py:237
+#: ../usr/lib/live-installer-3/installer.py:252
+#, python-format
+msgid "Mounting %(partition)s on %(mountpoint)s"
+msgstr "Melekap %(partition)s pada %(mountpoint)s"
+
+#: ../usr/lib/live-installer-3/installer.py:269
+msgid "Not mounted"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:270
+#, fuzzy
+msgid ""
+"You must first manually mount your target filesystem(s) at /target to do a "
+"custom install!"
+msgstr ""
+"RALAT: Anda mesti lekap sistem fail sasaran anda secara manual pada /target "
+"untuk membuat pemasangan suai!"
+
+#: ../usr/lib/live-installer-3/installer.py:279
+msgid "Base filesystem does not exist"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:280
+msgid ""
+"Something is wrong with the installation medium! This is usually caused by "
+"burning tools which are not compatible with {}. Please burn the ISO image to "
+"DVD/USB using a different tool."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:333
+#, fuzzy
+msgid "Copying"
+msgstr "Menyalin %s"
+
+#: ../usr/lib/live-installer-3/installer.py:352
+#, fuzzy
+msgid "Entering the system ..."
+msgstr "Memasuki sistem baru.."
+
+#: ../usr/lib/live-installer-3/installer.py:377
+#, fuzzy
+msgid "Installing EFI packages..."
+msgstr "Memasang Linux Mint..."
+
+#: ../usr/lib/live-installer-3/installer.py:421
+#, fuzzy
+msgid "Installing drivers"
+msgstr "Memasang pemuat but"
+
+#: ../usr/lib/live-installer-3/installer.py:433
+msgid "Removing live configuration (packages)"
+msgstr "Membuang konfigurasi langsung (pakej)"
+
+#: ../usr/lib/live-installer-3/installer.py:441
+#, fuzzy
+msgid "Adding new user to the system"
+msgstr "Menambah pengguna ke sistem"
+
+#: ../usr/lib/live-installer-3/installer.py:487
+#, fuzzy
+msgid "Writing filesystem mount information to /etc/fstab"
+msgstr "Munulis maklumat lekap sistem fail"
+
+#: ../usr/lib/live-installer-3/installer.py:608
+msgid "Setting hostname"
+msgstr "Tetapan nama hos"
+
+#: ../usr/lib/live-installer-3/installer.py:627
+msgid "Setting locale"
+msgstr "Menetapkan penempatan"
+
+#: ../usr/lib/live-installer-3/installer.py:645
+msgid "Update apt cache"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:649
+msgid "Update the new system"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:658
+msgid "Localizing packages"
+msgstr "Menyetempatkan pakej"
+
+#: ../usr/lib/live-installer-3/installer.py:680
+#, fuzzy
+msgid "Configuring sensors"
+msgstr "Menkonfigur pemuat but"
+
+#: ../usr/lib/live-installer-3/installer.py:688
+msgid "Removing VirtualBox"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:696
+msgid "Removing os-prober"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:702
+msgid "Setting keyboard options"
+msgstr "Menetapkan pilihan papan kekunci"
+
+#: ../usr/lib/live-installer-3/installer.py:739
+msgid "Installing bootloader"
+msgstr "Memasang pemuat but"
+
+#: ../usr/lib/live-installer-3/installer.py:755
+msgid "Grub not configured"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:756
+#, fuzzy
+msgid ""
+"The grub bootloader was not configured properly! You need to configure it "
+"manually."
+msgstr ""
+"AMARAN: Pemuat but Grub tidak dikonfigur dengan betul! Anda perlu konfigur "
+"ia secara manual."
+
+#: ../usr/lib/live-installer-3/installer.py:777
+#, fuzzy
+msgid "Configuring Plymouth"
+msgstr "Menkonfigur pemuat but"
+
+#: ../usr/lib/live-installer-3/installer.py:790
+#, fuzzy
+msgid "Configuring initramfs"
+msgstr "Menkonfigur pemuat but"
+
+#: ../usr/lib/live-installer-3/installer.py:798
+msgid "Cleaning APT"
+msgstr "Membersih APT"
+
+#: ../usr/lib/live-installer-3/installer.py:830
+#, fuzzy
+msgid "Unmounting partitions"
+msgstr "Memformat %(partition)s sebagai %(format)s..."
+
+#: ../usr/lib/live-installer-3/installer.py:852
+#: ../usr/lib/live-installer-3/gtk_interface.py:848
+msgid "Installation finished"
+msgstr "Pemasangan selesai"
+
+#: ../usr/lib/live-installer-3/installer.py:856
+msgid "Configuring bootloader"
+msgstr "Menkonfigur pemuat but"
+
+#: ../usr/lib/live-installer-3/installer.py:863
+msgid "Checking bootloader"
+msgstr "Memeriksa pemuat but"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:276
+msgid "Quit?"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:276
+msgid "Are you sure you want to quit the installer?"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:329
+msgid ""
+"Cannot download and install additional locale packages: no internet "
+"connection\n"
+"Configuration will still be set to your selected language."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:331
+msgid "No internet connection"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:482
+#: ../usr/lib/live-installer-3/gtk_interface.py:484
+#, fuzzy
+msgid "{} Installer"
+msgstr "Pemasang %s"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:498
+#: ../usr/lib/live-installer-3/gtk_interface.py:514
+msgid "Language"
+msgstr "Bahasa"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:499
+msgid "Timezone"
+msgstr "Zon waktu"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:500
+msgid "Keyboard layout"
+msgstr "Bentangan papan kekunci"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:501
+msgid "User info"
+msgstr "Maklumat pengguna"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:502
+msgid "Partitioning"
+msgstr "Menyekatkan"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:503
+#, fuzzy
+msgid "Please make sure you wish to manage partitions manually"
+msgstr "Sila pastikan anda ingin mengurus sekatan secara manual"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:504
+msgid "Summary"
+msgstr "Ringkasan"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:505
+#, fuzzy
+msgid "Installing {}..."
+msgstr "Memasang Linux Mint..."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:506
+#, fuzzy
+msgid "Installation is paused: please finish the custom installation"
+msgstr "Pemasangan Dijeda: Sila selesaikan pemasangan suai"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:509
+#: ../usr/lib/live-installer-3/gtk_interface.py:539
+msgid "Quit"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:510
+#: ../usr/lib/live-installer-3/gtk_interface.py:540
+msgid "Back"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:511
+#: ../usr/lib/live-installer-3/gtk_interface.py:541
+#: ../usr/lib/live-installer-3/gtk_interface.py:619
+msgid "Forward"
+msgstr "Maju"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:515
+msgid "Country"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:518
+msgid "Selected timezone:"
+msgstr "Zon waktu terpilih:"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:519
+#, fuzzy
+msgid "Select timezone"
+msgstr "Zon waktu terpilih:"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:522
+msgid "Refresh"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:523
+msgid "_Expert mode"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:524
+#, fuzzy
+msgid "_Edit partitions"
+msgstr "Sunting sekatan"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:528
+msgid "Grub"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:529
+msgid "Type"
+msgstr "Jenis"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:530
+msgid "Label"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:533
+#, fuzzy
+msgid "Encrypt"
+msgstr "Keterangan"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:534
+msgid "Size"
+msgstr "Saiz"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:544
+msgid "Layout"
+msgstr "Bentangan"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:545
+msgid "Variant"
+msgstr "Varian"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:546
+#, fuzzy
+msgid "Use this box to test your keyboard layout."
+msgstr "Guna kotak ini untuk menguji bentangan papan kekunci anda"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:547
+msgid "Model"
+msgstr "Model"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:550
+msgid "Click to change your picture"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:551
+#, fuzzy
+msgid "Take a photo..."
+msgstr "Ambil foto"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:552
+msgid "Browse for more pictures..."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:553
+msgid "Your full name"
+msgstr "Nama penuh anda"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:554
+#, fuzzy
+msgid "This will be shown in the About Me application."
+msgstr "Ini akan dipaparkan dalam aplikasi Perihal Saya"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:555
+msgid "Your username"
+msgstr "Nama pengguna anda"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:556
+#, fuzzy
+msgid "This is the name you will use to log in to your computer."
+msgstr "Adakah ini nama yang anda akan guna untuk log masuk ke komputer anda"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:557
+msgid "Your password"
+msgstr "Kata laluan anda"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:558
+#, fuzzy
+msgid "Please enter your password twice to ensure it is correct."
+msgstr "Sila masukkan kata laluan anda dua kali untuk memastikan ianya betul"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:559
+msgid "Hostname"
+msgstr "Nama hos"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:560
+#, fuzzy
+msgid "This hostname will be the computer's name on the network."
+msgstr "Nama hos ini akan menjadi nama komputer pada rangkaian"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:561
+msgid "Automatic login"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:562
+msgid ""
+"If enabled, the login screen is skipped when the system starts, and you are "
+"signed into your desktop session automatically."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:564
+msgid "Log in automatically on system boot"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:565
+msgid "Your picture"
+msgstr "Gambar anda"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:566
+msgid ""
+"This picture represents your user account. It is used in the login screen "
+"and a few other places."
+msgstr ""
+"Gambar ini mewakili akaun pengguna anda. Ia digunakan dalam skrin daftar "
+"masuk dan lain-lain tempat."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:570
+msgid ""
+"You have selected to manage your partitions manually, this feature is for "
+"ADVANCED USERS ONLY."
+msgstr ""
+"Anda telah memilih untuk mengurus sekatan anda secara manual, fitur ini "
+"untuk PENGGUNA MAHIR SAHAJA."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:572
+msgid "Before continuing, please mount your target filesystem(s) at /target."
+msgstr "Sebelum diteruskan, sila lekap sistem fail sasaran anda di /target."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:574
+msgid ""
+"Do NOT mount virtual devices such as /dev, /proc, /sys, etc on /target/."
+msgstr ""
+"JANGAN lekap peranti maya seperti /dev, /proc, /sys, etc pada /target/."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:576
+#, fuzzy
+msgid ""
+"During the install, you will be given time to chroot into /target and "
+"install any packages that will be needed to boot your new system."
+msgstr ""
+"Ketika pemasangan, anda diberi masa untuk chroot ke dalam /target dan pasang "
+"apa jua pakej yang akan diperlukan untuk membut sistem baharu anda."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:578
+msgid "During the install, you will be required to write your own /etc/fstab."
+msgstr ""
+"Ketika pemasangan, anda diperlukan untuk menulis /etc/fstab anda sendiri."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:580
+#, fuzzy
+msgid ""
+"If you aren't sure what any of this means, please go back and deselect "
+"manual partition management."
+msgstr ""
+"Jika anda tidak pasti apakah maksud ini, sila kembali dan jangan pilih "
+"pengurusan sekatan secara manual."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:584
+#, fuzzy
+msgid "Please do the following and then click Forward to finish installation:"
+msgstr "Sila buat yang berikut dan klik Maju untuk selesaikan Pemasangan:"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:586
+msgid ""
+"Create /target/etc/fstab for the filesystems as they will be mounted in your "
+"new system, matching those currently mounted at /target (without using the /"
+"target prefix in the mount paths themselves)."
+msgstr ""
+"Cipta /target/etc/fstab untuk sistemfail kerana ia akan dipautkan ke sistem "
+"baru anda, yang sepadan dengan pautan kini di /target (tanpa menggunakan "
+"awalan /target dalam laluan pautan mereka)."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:588
+msgid ""
+"Install any packages that may be needed for first boot (mdadm, cryptsetup, "
+"dmraid, etc) by calling \"sudo chroot /target\" followed by the relevant apt-"
+"get/aptitude installations."
+msgstr ""
+"Pasang mana-mana pakej yang mungkin diperlukan untuk but pertama kali "
+"(mdadm, cryptsetup, dmraid, etc) dengan memanggil \"sudo chroot /target\" "
+"diikuti dengan installasi apt-get/aptitude berkaitan."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:590
+msgid ""
+"Note that in order for update-initramfs to work properly in some cases (such "
+"as dm-crypt), you may need to have drives currently mounted using the same "
+"block device name as they appear in /target/etc/fstab."
+msgstr ""
+"Perhatikan bahawa untuk update-initramfs untuk berfungsi dengan baik dalam "
+"sesetengah keadaan (seperti dm-crypt), anda mungkin perlu pautkan storan "
+"menggunakan nama peranti blok yang sama ketika ia muncul di /target/etc/"
+"fstab."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:592
+msgid ""
+"Double-check that your /target/etc/fstab is correct, matches what your new "
+"system will have at first boot, and matches what is currently mounted at /"
+"target."
+msgstr ""
+"Semak semula /target/etc/fstab anda betul, sepadan dengan sistem baru anda "
+"yang akan but pertama kali, dan sepadan dengan apa yang dipautkan di /target"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:596
+msgid "Overview"
+msgstr "Selayang Pandang"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:599
+#, fuzzy
+msgid "Calculating file indexes ..."
+msgstr "Mengira indeks fail..."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:664
+#, fuzzy
+msgid "Please provide your full name."
+msgstr "Sila berikan nama penuh anda"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:667
+#, fuzzy
+msgid "Please provide a username."
+msgstr "Sila sediakan nama pengguna"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:670
+#, fuzzy
+msgid "Please provide a password for your user account."
+msgstr "Sila sediakan kata laluan untuk akaun pengguna anda"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:673
+#, fuzzy
+msgid "Your passwords do not match."
+msgstr "Kata laluan anda tidak sepadan"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:676
+#, fuzzy
+msgid "Please provide a hostname."
+msgstr "Sila berikan nama hos anda"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:680
+#, fuzzy
+msgid "Your username cannot start with a digit."
+msgstr "Nama pengguna anda tidak boleh mengandungi ruang kosong"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:683
+msgid ""
+"The hostname is incorrect:\n"
+"not more than 63 characters between periods\n"
+"and not more than 255 characters total."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:688
+msgid "Error"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:703
+#, fuzzy
+msgid ""
+"Please indicate a filesystem to format the root (/) partition with before "
+"proceeding."
+msgstr ""
+"Sila nyatakan sistem fail untuk memformat sekatan root (/) sebelum diteruskan"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:707
+#, fuzzy
+msgid "<b>Please select a root (/) partition.</b>"
+msgstr "<b>Sila pilih sekatan root</b>"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:708
+#, fuzzy
+msgid ""
+"A root partition is needed to install the system.\n"
+"\n"
+" - Mount point: /\n"
+" - Recommended size: 30GB\n"
+" - Recommended filesystem format: ext4\n"
+msgstr ""
+"Partisyen root diperlukan untuk pasang Linux Mint\n"
+"\n"
+" - Tempat dipautkan: /\n"
+" - Saiz disarankan: Lebih daripada 10GB\n"
+" - Format disarankan: ext4\n"
+" "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:725
+msgid "The EFI partition is too small. It must be at least 100MB."
+msgstr "Sekatan EFI terlalu kecil. Ia mesti sekurang-kurangnya 100MB."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:730
+#: ../usr/lib/live-installer-3/gtk_interface.py:734
+msgid "The EFI partition must be formatted as vfat."
+msgstr "Sekatan EFI mesti diformat sebagai vfat."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:739
+#, fuzzy
+msgid "<b>Please select an EFI partition.</b>"
+msgstr "<b>Sila pilih satu sekatan EFI</b>"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:740
+msgid ""
+"An EFI system partition is needed with the following requirements:\n"
+"\n"
+" - Mount point: /boot/efi\n"
+" - Partition flags: Bootable\n"
+" - Size: Larger than 100MB\n"
+" - Format: vfat or fat32\n"
+"\n"
+"To ensure compatibility with Windows we recommend you use the first "
+"partition of the disk as the EFI system partition.\n"
+" "
+msgstr ""
+"Satu sistem partisyen EFI diperlukan dengan keperluan berkaitan:\n"
+"\n"
+" - Tempat pautan: /boot/efi\n"
+" - Tanda partisyen: Bootable\n"
+" - Saiz: Lebih daripada 100MB\n"
+" - Format: vfat atau fat32\n"
+"\n"
+"Untuk memastikan keserasian dengan Windows, kami sarankan anda menggunakan "
+"partisyen disk pertama sebagai sistem partisyen EFI\n"
+" "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:775
+#: ../usr/lib/live-installer-3/gtk_interface.py:782
+msgid "Apply"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:849
+msgid ""
+"Installation is now complete. Do you want to restart your computer to use "
+"the new system?"
+msgstr ""
+"Pemasangan kini selesai. Anda mahu mulakan semula komputer anda untuk guna "
+"sistem baharu ini?"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:897
+msgid "Localization"
+msgstr "Penyetempatan"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:898
+msgid "Language: "
+msgstr "Bahasa: "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:899
+msgid "Timezone: "
+msgstr "Zon masa: "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:900
+msgid "Keyboard layout: "
+msgstr "Bentangan papan kekunci: "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:903
+msgid "User settings"
+msgstr "Tetapan pengguna"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:904
+msgid "Real name: "
+msgstr "Nama sebenar: "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:905
+msgid "Username: "
+msgstr "Nama pengguna: "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:906
+msgid "Automatic login: "
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:906
+msgid "enabled"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:906
+msgid "disabled"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:907
+msgid "System settings"
+msgstr "Tetapan sistem"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:908
+msgid "Hostname: "
+msgstr "Nama hos: "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:909
+msgid "Filesystem operations"
+msgstr "Operasi sistem fail"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:910
+#, fuzzy
+msgid "Install Grub on {}"
+msgstr "Pasang pemuat but dalam %s"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:910
+#, fuzzy
+msgid "Do not install Grub"
+msgstr "Jangan pasang pemuat but"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:913
+msgid "Use already-mounted /target."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:922
+msgid "set boot flag"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:923
+#, fuzzy
+msgid "Mount {}{} as {}"
+msgstr "Format sebagai:"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:926
+msgid "Encrypt {} and format as {}"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:928
+#, fuzzy
+msgid "Format {} as {}"
+msgstr "Format sebagai:"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1115
+msgid "Assign to /"
+msgstr "Umpuk ke /"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1118
+msgid "Assign to /home"
+msgstr "Umpuk ke /rumah"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1124
+msgid "Assign to /boot/efi"
+msgstr "Umpuk ke /boot/efi"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1129
+msgid "Advanced..."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1143
+#: ../usr/lib/live-installer-3/gtk_interface.py:1169
+#, fuzzy
+msgid "Grub install"
+msgstr "Pemasang %s"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1144
+msgid ""
+"You chose to NOT install Grub on your system.\n"
+"Without a bootloader like Grub your system might not boot.\n"
+"\n"
+"Are you sure you want to continue?"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1170
+msgid ""
+"You chose to install Grub on a partition.\n"
+"It is recommended to install Grub on a disk instead of a partition.\n"
+"\n"
+"Only continue if you are certain that you have another bootloader already "
+"installed.\n"
+"\n"
+"Are you sure you want to continue?"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1223
+#, fuzzy
+msgid "Select image"
+msgstr "Zon waktu terpilih:"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1276
+#, fuzzy
+msgid "Take a photo"
+msgstr "Ambil foto"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1277
+#, fuzzy
+msgid "Unable to take a photo."
+msgstr "Ambil foto"
+
+#: ../usr/share/applications/live-installer-3.desktop.in.h:1
+#, fuzzy
+msgid "Install"
+msgstr "Pemasang %s"
+
+#: ../usr/share/applications/live-installer-3.desktop.in.h:2
+#, fuzzy
+msgid "Live Installer"
+msgstr "Pemasang %s"
+
+#: ../usr/share/applications/live-installer-3.desktop.in.h:3
+#, fuzzy
+msgid "Install the operating system"
+msgstr "Sistem operasi"
+
+#~ msgid "Images"
+#~ msgstr "Imej"
+
+#~ msgid "The EFI partition is not bootable. Please edit the partition flags."
+#~ msgstr "Sekatan EFI tidak boleh dibut. Sila sunting bendera sekatan."
+
+#~ msgid "Device:"
+#~ msgstr "Peranti:"
+
+#~ msgid "Format as:"
+#~ msgstr "Format sebagai:"
+
+#~ msgid "Mount point:"
+#~ msgstr "Titik lekap:"
+
+#, fuzzy
+#~ msgid "Your username must be lower case."
+#~ msgstr "Nama pengguna anda mestilah huruf kecil"
+
+#, fuzzy
+#~ msgid "The hostname must be lower case."
+#~ msgstr "Nama hos anda mestilah dalam huruf kecil"
+
+#, fuzzy
+#~ msgid "The hostname may not contain whitespace characters."
+#~ msgstr "Nama hos anda tidak boleh mengandungi ruang putih"
+
+#~ msgid "Operating system"
+#~ msgstr "Sistem operasi"
+
+#, fuzzy
+#~ msgid "Click this button to take a new picture of yourself with the webcam."
+#~ msgstr ""
+#~ "Klik butang ini untuk mengambil gambar anda sendiri menggunakan kamera "
+#~ "sesawang"
+
+#, fuzzy
+#~ msgid "The installer did not detect any webcams."
+#~ msgstr "Pemasang tidak dapat mengesan kamera sesawang"
+
+#~ msgid "Select a picture"
+#~ msgstr "Pilih gambar"
+
+#, fuzzy
+#~ msgid "Click this button to choose a picture from the hard disk."
+#~ msgstr "Klik butang ini untuk memilih gambar akaun anda"
+
+#~ msgid "Do not install bootloader"
+#~ msgstr "Jangan pasang pemuat but"
+
+#~ msgid "Advanced options"
+#~ msgstr "Pilihan lanjutan"
+
+#~ msgid "Bootloader"
+#~ msgstr "Pemuat But"
+
+#~ msgid "Install GRUB"
+#~ msgstr "Pasang GRUB"
+
+#, fuzzy
+#~ msgid "GRUB is a bootloader used to load the Linux kernel."
+#~ msgstr ""
+#~ "GRUB merupakan pemuat but yang digunakan untuk memuatkan kernel Linux"
+
+#~ msgid "Edit"
+#~ msgstr "Sunting"
+
+#, fuzzy
+#~ msgid "Install Plymouth"
+#~ msgstr "Pasang"
+
+#, fuzzy
+#~ msgid "Install SolydXK"
+#~ msgstr "Pasang"
+
+#, fuzzy
+#~ msgid "Passwords do not match."
+#~ msgstr "Kata laluan tidak sepadan"
+
+#, fuzzy
+#~ msgid "Passwords match."
+#~ msgstr "Kata laluan sepadan"
+
+#~ msgid "Indexing files to be copied.."
+#~ msgstr "Mengindeks fail untuk disalin.."
+
+#~ msgid "Restoring meta-information on %s"
+#~ msgstr "Memulihkan maklumat-meta pada %s"
+
+#~ msgid "unallocated"
+#~ msgstr "tidak diperuntukkan"
+
+#~ msgid "Hard drive"
+#~ msgstr "Pemacu keras"
+
+#~ msgid "Format?"
+#~ msgstr "Format?"
+
+#~ msgid "Install Linux Mint on the selected drive:"
+#~ msgstr "Pasang Linux Mint pada pemacu terpilih:"
+
+#~ msgid "Manually mount partitions (ADVANCED USERS ONLY)."
+#~ msgstr "Lekap sekatan secara manual (UNTUK PENGGUNA MAHIR SAHAJA)."
+
+#~ msgid "Extended"
+#~ msgstr "Dilanjutkan"
+
+#~ msgid "Format %(partition)s as %(format)s"
+#~ msgstr "Format %(partition)s sebagai %(format)s"
+
+#~ msgid "Mount %(partition)s as %(mountpoint)s"
+#~ msgstr "Lekap %(partition)s sebagai %(mountpoint)s"
+
+#~ msgid "Could not build supported filesystems list!"
+#~ msgstr "Tidak boleh membina senarai sistem fail yang disokong!"

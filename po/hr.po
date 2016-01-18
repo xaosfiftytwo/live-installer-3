@@ -1,0 +1,1078 @@
+# Croatian translation for linuxmint
+# Copyright (c) 2011 Rosetta Contributors and Canonical Ltd 2011
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-18 08:57+0100\n"
+"PO-Revision-Date: 2014-06-04 10:24+0000\n"
+"Last-Translator: gogo <trebelnik2@gmail.com>\n"
+"Language-Team: Croatian <hr@li.org>\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2014-09-11 21:49+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
+
+#: ../usr/lib/live-installer-3/localize.py:48
+msgid "Install additional localized packages"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/localize.py:61
+#, fuzzy
+msgid "Localizing KDE"
+msgstr "Lokalizacija"
+
+#: ../usr/lib/live-installer-3/localize.py:78
+#, fuzzy
+msgid "Localizing LibreOffice"
+msgstr "Lokalizacija paketa"
+
+#: ../usr/lib/live-installer-3/localize.py:97
+#, fuzzy
+msgid "Localizing AbiWord"
+msgstr "Lokalizacija"
+
+#: ../usr/lib/live-installer-3/localize.py:111
+#, fuzzy
+msgid "Localizing Firefox"
+msgstr "Lokalizacija paketa"
+
+#: ../usr/lib/live-installer-3/localize.py:129
+msgid "Localizing Thunderbird"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/partitioning.py:170
+#: ../usr/lib/live-installer-3/partitioning.py:517
+msgid "Unknown"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/partitioning.py:297
+#, fuzzy
+msgid "Removable:"
+msgstr "Prijenosni uređaj:"
+
+#: ../usr/lib/live-installer-3/partitioning.py:324
+#: ../usr/lib/live-installer-3/gtk_interface.py:702
+#: ../usr/lib/live-installer-3/gtk_interface.py:706
+#: ../usr/lib/live-installer-3/gtk_interface.py:725
+#: ../usr/lib/live-installer-3/gtk_interface.py:730
+#: ../usr/lib/live-installer-3/gtk_interface.py:734
+#: ../usr/lib/live-installer-3/gtk_interface.py:738
+msgid "Installation Tool"
+msgstr "Alat za instaliranje"
+
+#: ../usr/lib/live-installer-3/partitioning.py:325
+#, fuzzy, python-brace-format
+msgid ""
+"No partition table was found on the hard drive: {disk_description}. Do you "
+"want the installer to create a set of partitions for you? Note: This will "
+"ERASE ALL DATA present on this disk."
+msgstr ""
+"Nijedna particijska tablica nije pronađena na tvrdom disku. Želite li da "
+"instalacijski program napravi particije umjesto vas? Napomena: ovo će "
+"izbrisati sve podatke sa diska!!!"
+
+#: ../usr/lib/live-installer-3/partitioning.py:512
+#, fuzzy
+msgid "Logical partition"
+msgstr "Uredi particiju"
+
+#: ../usr/lib/live-installer-3/partitioning.py:513
+#, fuzzy
+msgid "Extended partition"
+msgstr "Uredi particiju"
+
+#: ../usr/lib/live-installer-3/partitioning.py:514
+#: ../usr/lib/live-installer-3/gtk_interface.py:535
+msgid "Free space"
+msgstr "Slobodan prostor"
+
+#: ../usr/lib/live-installer-3/partitioning.py:534
+#, fuzzy
+msgid "Encryption password"
+msgstr "Opis"
+
+#: ../usr/lib/live-installer-3/partitioning.py:535
+#, fuzzy
+msgid "Password for the encrypted partition:"
+msgstr "Upišite lozinku za vaš korisnički račun"
+
+#: ../usr/lib/live-installer-3/partitioning.py:646
+msgid "Edit partition"
+msgstr "Uredi particiju"
+
+#: ../usr/lib/live-installer-3/partitioning.py:653
+#: ../usr/lib/live-installer-3/gtk_interface.py:527
+msgid "Device"
+msgstr "Uređaj"
+
+#: ../usr/lib/live-installer-3/partitioning.py:654
+#: ../usr/lib/live-installer-3/gtk_interface.py:532
+#, fuzzy
+msgid "Format as"
+msgstr "Formatiraj kao:"
+
+#: ../usr/lib/live-installer-3/partitioning.py:655
+#: ../usr/lib/live-installer-3/gtk_interface.py:531
+msgid "Mount point"
+msgstr "Točka montiranja"
+
+#: ../usr/lib/live-installer-3/partitioning.py:656
+msgid "Label (optional)"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/partitioning.py:657
+#, fuzzy
+msgid "Encryption/password"
+msgstr "Opis"
+
+#: ../usr/lib/live-installer-3/partitioning.py:744
+#: ../usr/lib/live-installer-3/partitioning.py:751
+#: ../usr/lib/live-installer-3/partitioning.py:780
+#: ../usr/lib/live-installer-3/partitioning.py:784
+#: ../usr/lib/live-installer-3/partitioning.py:790
+#, fuzzy
+msgid "Encryption"
+msgstr "Opis"
+
+#: ../usr/lib/live-installer-3/partitioning.py:745
+msgid ""
+"You chose to encrypt the root partition.\n"
+"\n"
+"You will need to mount /boot on a separate non-encrypted partition (500 "
+"MB).\n"
+"Without a non-encrypted /boot partition your system will be unbootable.\n"
+"\n"
+"Encryption will erase all data from {}\n"
+"\n"
+"Are you sure you want to continue?"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/partitioning.py:752
+msgid ""
+"Encryption will erase all data from {}\n"
+"\n"
+"Are you sure you want to continue?"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/partitioning.py:781
+#, fuzzy
+msgid "Provide an encryption password for partition:"
+msgstr "Upišite lozinku za vaš korisnički račun"
+
+#: ../usr/lib/live-installer-3/partitioning.py:785
+msgid ""
+"You need to choose a format type\n"
+"for your encrypted partition (default: ext4):"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/partitioning.py:791
+msgid "You need to choose a mount point for partition:"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:128
+#: ../usr/lib/live-installer-3/installer.py:153
+msgid "Installation error"
+msgstr "Greška instalacije"
+
+#: ../usr/lib/live-installer-3/installer.py:138
+#, fuzzy
+msgid ""
+"Installation is now paused. Please read the instructions on the page "
+"carefully before clicking Forward to finish the installation."
+msgstr ""
+"Instalacija je sada pauzirana. Pažljivo pročitajte upute na stranici i "
+"kliknite 'Naprijed' za završetak instalacije"
+
+#: ../usr/lib/live-installer-3/installer.py:139
+msgid "Verify that fstab is correct (use blkid to check the UUIDs)."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:140
+msgid ""
+"A chrooted terminal and fstab will be opened after you close this message."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:142
+#, fuzzy
+msgid "Installation paused"
+msgstr "Instalacija pauzirana"
+
+#: ../usr/lib/live-installer-3/installer.py:188
+#, fuzzy, python-format
+msgid "Encrypting %(partition)s ..."
+msgstr "Formatiranje %(partition)s kao %(format)s"
+
+#: ../usr/lib/live-installer-3/installer.py:194
+#, fuzzy, python-format
+msgid "Formatting %(partition)s as %(format)s ..."
+msgstr "Formatiranje %(partition)s kao %(format)s"
+
+#: ../usr/lib/live-installer-3/installer.py:237
+#: ../usr/lib/live-installer-3/installer.py:252
+#, python-format
+msgid "Mounting %(partition)s on %(mountpoint)s"
+msgstr "Montiranje %(partition)s na %(mountpoint)s"
+
+#: ../usr/lib/live-installer-3/installer.py:269
+msgid "Not mounted"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:270
+#, fuzzy
+msgid ""
+"You must first manually mount your target filesystem(s) at /target to do a "
+"custom install!"
+msgstr ""
+"GREŠKA: najprije morate ručno montirati vaše odredišne datotečne sustave na /"
+"odredište za prilagođenu instalaciju!"
+
+#: ../usr/lib/live-installer-3/installer.py:279
+msgid "Base filesystem does not exist"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:280
+msgid ""
+"Something is wrong with the installation medium! This is usually caused by "
+"burning tools which are not compatible with {}. Please burn the ISO image to "
+"DVD/USB using a different tool."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:333
+#, fuzzy
+msgid "Copying"
+msgstr "Kopiranje %s"
+
+#: ../usr/lib/live-installer-3/installer.py:352
+#, fuzzy
+msgid "Entering the system ..."
+msgstr "Pristupanje novom sustavu..."
+
+#: ../usr/lib/live-installer-3/installer.py:377
+#, fuzzy
+msgid "Installing EFI packages..."
+msgstr "Instalacija Linux Minta..."
+
+#: ../usr/lib/live-installer-3/installer.py:421
+#, fuzzy
+msgid "Installing drivers"
+msgstr "Instalacija učitača podizanja sustava"
+
+#: ../usr/lib/live-installer-3/installer.py:433
+msgid "Removing live configuration (packages)"
+msgstr "Uklanjanje live podešavanja (paketi)"
+
+#: ../usr/lib/live-installer-3/installer.py:441
+#, fuzzy
+msgid "Adding new user to the system"
+msgstr "Dodavanje korisnika sustavu"
+
+#: ../usr/lib/live-installer-3/installer.py:487
+#, fuzzy
+msgid "Writing filesystem mount information to /etc/fstab"
+msgstr "Zapisivanje informacije montiranja datotečnog sustava"
+
+#: ../usr/lib/live-installer-3/installer.py:608
+msgid "Setting hostname"
+msgstr "Postavljanje naziva računala"
+
+#: ../usr/lib/live-installer-3/installer.py:627
+msgid "Setting locale"
+msgstr "Postavljanje lokalnih postavki"
+
+#: ../usr/lib/live-installer-3/installer.py:645
+msgid "Update apt cache"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:649
+msgid "Update the new system"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:658
+msgid "Localizing packages"
+msgstr "Lokalizacija paketa"
+
+#: ../usr/lib/live-installer-3/installer.py:680
+#, fuzzy
+msgid "Configuring sensors"
+msgstr "Podešavam učitač podizanja sustava"
+
+#: ../usr/lib/live-installer-3/installer.py:688
+msgid "Removing VirtualBox"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:696
+msgid "Removing os-prober"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:702
+msgid "Setting keyboard options"
+msgstr "Postavljanje mogućnosti tipkovnice"
+
+#: ../usr/lib/live-installer-3/installer.py:739
+msgid "Installing bootloader"
+msgstr "Instalacija učitača podizanja sustava"
+
+#: ../usr/lib/live-installer-3/installer.py:755
+msgid "Grub not configured"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:756
+#, fuzzy
+msgid ""
+"The grub bootloader was not configured properly! You need to configure it "
+"manually."
+msgstr ""
+"UPOZORENJE: Grub učitač podizanja sustava nije ispravno prilagođen! "
+"Prilagodite ga ručno."
+
+#: ../usr/lib/live-installer-3/installer.py:777
+#, fuzzy
+msgid "Configuring Plymouth"
+msgstr "Podešavam učitač podizanja sustava"
+
+#: ../usr/lib/live-installer-3/installer.py:790
+#, fuzzy
+msgid "Configuring initramfs"
+msgstr "Podešavam učitač podizanja sustava"
+
+#: ../usr/lib/live-installer-3/installer.py:798
+msgid "Cleaning APT"
+msgstr "Čisćenje APT-a"
+
+#: ../usr/lib/live-installer-3/installer.py:830
+#, fuzzy
+msgid "Unmounting partitions"
+msgstr "Formatiranje %(partition)s kao %(format)s"
+
+#: ../usr/lib/live-installer-3/installer.py:852
+#: ../usr/lib/live-installer-3/gtk_interface.py:848
+msgid "Installation finished"
+msgstr "Instalacija završena"
+
+#: ../usr/lib/live-installer-3/installer.py:856
+msgid "Configuring bootloader"
+msgstr "Podešavam učitač podizanja sustava"
+
+#: ../usr/lib/live-installer-3/installer.py:863
+msgid "Checking bootloader"
+msgstr "Provjeravam učitač podizanja sustava"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:276
+msgid "Quit?"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:276
+msgid "Are you sure you want to quit the installer?"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:329
+msgid ""
+"Cannot download and install additional locale packages: no internet "
+"connection\n"
+"Configuration will still be set to your selected language."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:331
+msgid "No internet connection"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:482
+#: ../usr/lib/live-installer-3/gtk_interface.py:484
+#, fuzzy
+msgid "{} Installer"
+msgstr "%s instalacijski program"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:498
+#: ../usr/lib/live-installer-3/gtk_interface.py:514
+msgid "Language"
+msgstr "Jezik"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:499
+msgid "Timezone"
+msgstr "Vremenska zona"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:500
+msgid "Keyboard layout"
+msgstr "Raspored tipkovnice"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:501
+msgid "User info"
+msgstr "Informacije o korisniku"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:502
+msgid "Partitioning"
+msgstr "Particioniranje"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:503
+#, fuzzy
+msgid "Please make sure you wish to manage partitions manually"
+msgstr "Pobrinite se da ručno prilagodite particije"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:504
+msgid "Summary"
+msgstr "Sažetak"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:505
+#, fuzzy
+msgid "Installing {}..."
+msgstr "Instalacija Linux Minta..."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:506
+#, fuzzy
+msgid "Installation is paused: please finish the custom installation"
+msgstr "Instalacija je pauzirana: završite prilagođenu instalaciju"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:509
+#: ../usr/lib/live-installer-3/gtk_interface.py:539
+msgid "Quit"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:510
+#: ../usr/lib/live-installer-3/gtk_interface.py:540
+msgid "Back"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:511
+#: ../usr/lib/live-installer-3/gtk_interface.py:541
+#: ../usr/lib/live-installer-3/gtk_interface.py:619
+msgid "Forward"
+msgstr "Naprijed"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:515
+msgid "Country"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:518
+msgid "Selected timezone:"
+msgstr "Odabrana vremenska zona:"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:519
+#, fuzzy
+msgid "Select timezone"
+msgstr "Odabrana vremenska zona:"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:522
+msgid "Refresh"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:523
+msgid "_Expert mode"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:524
+#, fuzzy
+msgid "_Edit partitions"
+msgstr "Uredi particije"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:528
+msgid "Grub"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:529
+msgid "Type"
+msgstr "Vrsta"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:530
+msgid "Label"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:533
+#, fuzzy
+msgid "Encrypt"
+msgstr "Opis"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:534
+msgid "Size"
+msgstr "Veličina"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:544
+msgid "Layout"
+msgstr "Raspored"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:545
+msgid "Variant"
+msgstr "Inačica"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:546
+#, fuzzy
+msgid "Use this box to test your keyboard layout."
+msgstr "Ovdje možete testirati raspored tipkovnice"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:547
+msgid "Model"
+msgstr "Način"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:550
+msgid "Click to change your picture"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:551
+#, fuzzy
+msgid "Take a photo..."
+msgstr "Snimi fotografiju"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:552
+msgid "Browse for more pictures..."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:553
+msgid "Your full name"
+msgstr "Vaše puno ime"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:554
+#, fuzzy
+msgid "This will be shown in the About Me application."
+msgstr "Ovo će biti prikazano u aplikaciji 'O meni'"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:555
+msgid "Your username"
+msgstr "Vaše korisničko ime"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:556
+#, fuzzy
+msgid "This is the name you will use to log in to your computer."
+msgstr "Ovo je ime koje ćete koristiti za prijavu na vaše računalo"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:557
+msgid "Your password"
+msgstr "Vaša lozinka"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:558
+#, fuzzy
+msgid "Please enter your password twice to ensure it is correct."
+msgstr "Upišite vašu lozinku dva puta kako bi bili sigurni da je točna"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:559
+msgid "Hostname"
+msgstr "Naziv računala"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:560
+#, fuzzy
+msgid "This hostname will be the computer's name on the network."
+msgstr "Ovaj naziv računala biti će naziv računala na mreži"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:561
+msgid "Automatic login"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:562
+msgid ""
+"If enabled, the login screen is skipped when the system starts, and you are "
+"signed into your desktop session automatically."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:564
+msgid "Log in automatically on system boot"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:565
+msgid "Your picture"
+msgstr "Vaša slika"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:566
+msgid ""
+"This picture represents your user account. It is used in the login screen "
+"and a few other places."
+msgstr ""
+"Ova slika predstavlja vaš korisnički račun. Koristi se na zaslonu prijave i "
+"na par drugih mjesta."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:570
+msgid ""
+"You have selected to manage your partitions manually, this feature is for "
+"ADVANCED USERS ONLY."
+msgstr ""
+"Odabrali ste ručno upravljanje particijama, ova značajka je samo za NAPREDNE "
+"KORISNIKE."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:572
+msgid "Before continuing, please mount your target filesystem(s) at /target."
+msgstr ""
+"Prije nastavka instalacije montirajte svoj odredišni datotečni sustav na /"
+"odredište."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:574
+msgid ""
+"Do NOT mount virtual devices such as /dev, /proc, /sys, etc on /target/."
+msgstr ""
+"Nemojte montirati virtualne uređaje poput  /dev, /proc, /sys, etc na /"
+"odredište."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:576
+#, fuzzy
+msgid ""
+"During the install, you will be given time to chroot into /target and "
+"install any packages that will be needed to boot your new system."
+msgstr ""
+"Tijekom instalacije, imat ćete određeno vrijeme za chroot u /odredište i "
+"instalaciju bilo kojeg paketa koji će vam biti potreban za podizanje vašeg "
+"novog sustava."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:578
+msgid "During the install, you will be required to write your own /etc/fstab."
+msgstr ""
+"Tijekom instalacije, biti će zahtijevano od vas da prilagodite vlastitu /etc/"
+"fstab datoteku."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:580
+#, fuzzy
+msgid ""
+"If you aren't sure what any of this means, please go back and deselect "
+"manual partition management."
+msgstr ""
+"Ako niste sigurni što sve ovo znači, vratite se natrag i odznačite ručno "
+"particioniranje."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:584
+#, fuzzy
+msgid "Please do the following and then click Forward to finish installation:"
+msgstr "Učinite slijedeće i zatim kliknite 'Naprijed' za instalaciju:"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:586
+msgid ""
+"Create /target/etc/fstab for the filesystems as they will be mounted in your "
+"new system, matching those currently mounted at /target (without using the /"
+"target prefix in the mount paths themselves)."
+msgstr ""
+"Napravite /odredište/etc/fstab za datotečene sustave kako bi bili montirani "
+"u vašem novom sustavu, tako da odgovara trenutno montiranim uređajima na /"
+"odredište (nemojte koristiti /odredište prefiks u putanjama montiranja)."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:588
+msgid ""
+"Install any packages that may be needed for first boot (mdadm, cryptsetup, "
+"dmraid, etc) by calling \"sudo chroot /target\" followed by the relevant apt-"
+"get/aptitude installations."
+msgstr ""
+"Instalirajte bilo koji paket koji vam je potreban za prvo pokretanje sustava "
+"(mdadm, cryptsetup, dmraid, itd.) naredbom \"sudo chroot /odredište\" "
+"slijeđenu odgovarajućom apt-get/aptitude instalacijom."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:590
+msgid ""
+"Note that in order for update-initramfs to work properly in some cases (such "
+"as dm-crypt), you may need to have drives currently mounted using the same "
+"block device name as they appear in /target/etc/fstab."
+msgstr ""
+"Imajte na umu da bi 'update-initramfs' radio ispravno u nekim slučajevima "
+"(poput dm-crypt), možda biste trebali imati uređaj trenutno montiran "
+"koristeći isti naziv bloka uređaja kao i u datoteci /target/etc/fstab."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:592
+msgid ""
+"Double-check that your /target/etc/fstab is correct, matches what your new "
+"system will have at first boot, and matches what is currently mounted at /"
+"target."
+msgstr ""
+"Dobro provjerite da je /odredište/etc/fstab ispravan, da odgovara onome što "
+"je potrebno vašem sustavu za prvo pokretanje i da odgovara onome što je "
+"trenutno montirano na /odredište."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:596
+msgid "Overview"
+msgstr "Pregled"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:599
+#, fuzzy
+msgid "Calculating file indexes ..."
+msgstr "Izračunavanje indeksa datoteka..."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:664
+#, fuzzy
+msgid "Please provide your full name."
+msgstr "Upišite vaše puno ime"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:667
+#, fuzzy
+msgid "Please provide a username."
+msgstr "Upišite korisničko ime"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:670
+#, fuzzy
+msgid "Please provide a password for your user account."
+msgstr "Upišite lozinku za vaš korisnički račun"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:673
+#, fuzzy
+msgid "Your passwords do not match."
+msgstr "Vaše lozinke se ne podudaraju"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:676
+#, fuzzy
+msgid "Please provide a hostname."
+msgstr "Upišite naziv računala"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:680
+#, fuzzy
+msgid "Your username cannot start with a digit."
+msgstr "Vaše korisničko ime ne smije sadržavati razmake"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:683
+msgid ""
+"The hostname is incorrect:\n"
+"not more than 63 characters between periods\n"
+"and not more than 255 characters total."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:688
+msgid "Error"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:703
+#, fuzzy
+msgid ""
+"Please indicate a filesystem to format the root (/) partition with before "
+"proceeding."
+msgstr ""
+"Odaberite datotečni sustav za formatiranje root (/) particije prije nastavka"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:707
+#, fuzzy
+msgid "<b>Please select a root (/) partition.</b>"
+msgstr "<b>Odaberite 'root' particiju</b>"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:708
+#, fuzzy
+msgid ""
+"A root partition is needed to install the system.\n"
+"\n"
+" - Mount point: /\n"
+" - Recommended size: 30GB\n"
+" - Recommended filesystem format: ext4\n"
+msgstr ""
+"'root' particija je potrebna za instalaciju Linux Minta.\n"
+"\n"
+" - Točka montiranja: /\n"
+" - Preporučena veličina: veća od 10 GB\n"
+" - Preporučen datotečni format: ext4\n"
+" "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:725
+msgid "The EFI partition is too small. It must be at least 100MB."
+msgstr "EFI particija je premala. Mora imati najmanje 100 MB."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:730
+#: ../usr/lib/live-installer-3/gtk_interface.py:734
+msgid "The EFI partition must be formatted as vfat."
+msgstr "EFI particija mora biti formatirana u vfat datotečnom sustavu."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:739
+#, fuzzy
+msgid "<b>Please select an EFI partition.</b>"
+msgstr "<b>Odaberite EFI particiju</b>"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:740
+msgid ""
+"An EFI system partition is needed with the following requirements:\n"
+"\n"
+" - Mount point: /boot/efi\n"
+" - Partition flags: Bootable\n"
+" - Size: Larger than 100MB\n"
+" - Format: vfat or fat32\n"
+"\n"
+"To ensure compatibility with Windows we recommend you use the first "
+"partition of the disk as the EFI system partition.\n"
+" "
+msgstr ""
+"EFI particija sustava zahtijeva:\n"
+"\n"
+" - Točka montiranja: /boot/efi\n"
+" - Zastavica particije: Bootabilna\n"
+" - Veličina: veća od 100 MB\n"
+" - Datotečni format: vfat ili fat32\n"
+"\n"
+"Da bi osigurali kompatibilnost s Windowsima preporučljivo je koristiti prvu "
+"particiju diska kao EFI particiju sustava.\n"
+" "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:775
+#: ../usr/lib/live-installer-3/gtk_interface.py:782
+msgid "Apply"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:849
+msgid ""
+"Installation is now complete. Do you want to restart your computer to use "
+"the new system?"
+msgstr ""
+"Instalacija je sada završena. Želite li ponovno pokrenuti vaše računalo kako "
+"bi koristili novi sustav?"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:897
+msgid "Localization"
+msgstr "Lokalizacija"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:898
+msgid "Language: "
+msgstr "Jezik: "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:899
+msgid "Timezone: "
+msgstr "Vremenska zona: "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:900
+msgid "Keyboard layout: "
+msgstr "Raspodred tipkovnice: "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:903
+msgid "User settings"
+msgstr "Korisničke postavke"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:904
+msgid "Real name: "
+msgstr "Vaše ime: "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:905
+msgid "Username: "
+msgstr "Korisničko ime: "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:906
+msgid "Automatic login: "
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:906
+msgid "enabled"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:906
+msgid "disabled"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:907
+msgid "System settings"
+msgstr "Postavke sustava"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:908
+msgid "Hostname: "
+msgstr "Naziv računala: "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:909
+msgid "Filesystem operations"
+msgstr "Radnje datotečnog sustava"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:910
+#, fuzzy
+msgid "Install Grub on {}"
+msgstr "Instaliraj učitač podizanja sustava u %s"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:910
+#, fuzzy
+msgid "Do not install Grub"
+msgstr "Nemoj instalalirati  učitač podizanja sustava"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:913
+msgid "Use already-mounted /target."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:922
+msgid "set boot flag"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:923
+#, fuzzy
+msgid "Mount {}{} as {}"
+msgstr "Formatiraj kao:"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:926
+msgid "Encrypt {} and format as {}"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:928
+#, fuzzy
+msgid "Format {} as {}"
+msgstr "Formatiraj kao:"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1115
+msgid "Assign to /"
+msgstr "Dodijeli /"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1118
+msgid "Assign to /home"
+msgstr "Dodijeli /home"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1124
+msgid "Assign to /boot/efi"
+msgstr "Dodijeli /boot/efi"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1129
+msgid "Advanced..."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1143
+#: ../usr/lib/live-installer-3/gtk_interface.py:1169
+#, fuzzy
+msgid "Grub install"
+msgstr "%s instalacijski program"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1144
+msgid ""
+"You chose to NOT install Grub on your system.\n"
+"Without a bootloader like Grub your system might not boot.\n"
+"\n"
+"Are you sure you want to continue?"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1170
+msgid ""
+"You chose to install Grub on a partition.\n"
+"It is recommended to install Grub on a disk instead of a partition.\n"
+"\n"
+"Only continue if you are certain that you have another bootloader already "
+"installed.\n"
+"\n"
+"Are you sure you want to continue?"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1223
+#, fuzzy
+msgid "Select image"
+msgstr "Odabrana vremenska zona:"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1276
+#, fuzzy
+msgid "Take a photo"
+msgstr "Snimi fotografiju"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1277
+#, fuzzy
+msgid "Unable to take a photo."
+msgstr "Snimi fotografiju"
+
+#: ../usr/share/applications/live-installer-3.desktop.in.h:1
+#, fuzzy
+msgid "Install"
+msgstr "%s instalacijski program"
+
+#: ../usr/share/applications/live-installer-3.desktop.in.h:2
+#, fuzzy
+msgid "Live Installer"
+msgstr "%s instalacijski program"
+
+#: ../usr/share/applications/live-installer-3.desktop.in.h:3
+#, fuzzy
+msgid "Install the operating system"
+msgstr "Operativni sustav"
+
+#~ msgid "Images"
+#~ msgstr "Slike"
+
+#~ msgid "The EFI partition is not bootable. Please edit the partition flags."
+#~ msgstr ""
+#~ "EFI particija ne može pokrenuti sustav. Uredite zastavice particije."
+
+#~ msgid "Device:"
+#~ msgstr "Uređaj:"
+
+#~ msgid "Format as:"
+#~ msgstr "Formatiraj kao:"
+
+#~ msgid "Mount point:"
+#~ msgstr "Točka montiranja:"
+
+#, fuzzy
+#~ msgid "Your username must be lower case."
+#~ msgstr "Vaše korisničko ime mora biti napisano malim slovima"
+
+#, fuzzy
+#~ msgid "The hostname must be lower case."
+#~ msgstr "Naziv računala mora biti napisan malim slovima"
+
+#, fuzzy
+#~ msgid "The hostname may not contain whitespace characters."
+#~ msgstr "Naziv računala ne smije sadržavati razmake"
+
+#~ msgid "Operating system"
+#~ msgstr "Operativni sustav"
+
+#, fuzzy
+#~ msgid "Click this button to take a new picture of yourself with the webcam."
+#~ msgstr ""
+#~ "Kliknite na ovu tipku ako želite napraviti svoju fotografiju pomoću web "
+#~ "kamere"
+
+#, fuzzy
+#~ msgid "The installer did not detect any webcams."
+#~ msgstr "Instalacijski program nije otkrio web kameru"
+
+#~ msgid "Select a picture"
+#~ msgstr "Odaberi sliku"
+
+#, fuzzy
+#~ msgid "Click this button to choose a picture from the hard disk."
+#~ msgstr "Kliknite na ovu tipku za odabir slike vašeg računa"
+
+#~ msgid "Do not install bootloader"
+#~ msgstr "Nemoj instalalirati  učitač podizanja sustava"
+
+#~ msgid "Advanced options"
+#~ msgstr "Napredne mogućnosti"
+
+#~ msgid "Bootloader"
+#~ msgstr "Učitač podizanja sustava"
+
+#~ msgid "Install GRUB"
+#~ msgstr "Instaliraj GRUB"
+
+#, fuzzy
+#~ msgid "GRUB is a bootloader used to load the Linux kernel."
+#~ msgstr ""
+#~ "GRUB je učitač podizanja sustava koji se koristi za učitavanje Linux "
+#~ "kernela"
+
+#~ msgid "Edit"
+#~ msgstr "Uredi"
+
+#, fuzzy
+#~ msgid "Install Plymouth"
+#~ msgstr "Instaliraj"
+
+#, fuzzy
+#~ msgid "Install SolydXK"
+#~ msgstr "Instaliraj"
+
+#, fuzzy
+#~ msgid "Passwords do not match."
+#~ msgstr "Lozinke se ne podudaraju"
+
+#, fuzzy
+#~ msgid "Passwords match."
+#~ msgstr "Lozinke se podudaraju"
+
+#~ msgid "Indexing files to be copied.."
+#~ msgstr "Indeksiranje datoteka za kopiranje..."
+
+#~ msgid "Restoring meta-information on %s"
+#~ msgstr "Obnavljanje informacija odredišta na %s"
+
+#~ msgid "unallocated"
+#~ msgstr "nedodjeljeno"
+
+#~ msgid "Hard drive"
+#~ msgstr "Tvrdi disk"
+
+#~ msgid "Format?"
+#~ msgstr "Formatirati?"
+
+#~ msgid "Install Linux Mint on the selected drive:"
+#~ msgstr "Instaliraj Linux Mint na odabrani uređaj:"
+
+#~ msgid "Manually mount partitions (ADVANCED USERS ONLY)."
+#~ msgstr "Ručno montiranje particija (SAMO ZA NAPREDNE KORISNIKE)."
+
+#~ msgid "Extended"
+#~ msgstr "Prošireno"
+
+#~ msgid "Format %(partition)s as %(format)s"
+#~ msgstr "Formatiraj %(partition)s kao %(format)s"
+
+#~ msgid "Mount %(partition)s as %(mountpoint)s"
+#~ msgstr "Montiraj %(partition)s na %(mountpoint)s"
+
+#~ msgid "Could not build supported filesystems list!"
+#~ msgstr "Nemoguće stvaranje popisa podržanih datotečnih sustava!"

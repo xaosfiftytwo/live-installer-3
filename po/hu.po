@@ -1,0 +1,1077 @@
+# Hungarian translation of live-installer.
+# Copyright (C) 2013 Free Software Foundation, Inc.
+# This file is distributed under the same license as the live-installer package.
+# KAMI <kami911@gmail.com>, 2013-2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: live-installer\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-18 08:57+0100\n"
+"PO-Revision-Date: 2014-06-29 17:22+0000\n"
+"Last-Translator: jackson <Unknown>\n"
+"Language-Team: Hungarian\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2014-09-11 21:49+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
+
+#: ../usr/lib/live-installer-3/localize.py:48
+msgid "Install additional localized packages"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/localize.py:61
+#, fuzzy
+msgid "Localizing KDE"
+msgstr "Honosítás"
+
+#: ../usr/lib/live-installer-3/localize.py:78
+#, fuzzy
+msgid "Localizing LibreOffice"
+msgstr "Nyelvi csomagok"
+
+#: ../usr/lib/live-installer-3/localize.py:97
+#, fuzzy
+msgid "Localizing AbiWord"
+msgstr "Honosítás"
+
+#: ../usr/lib/live-installer-3/localize.py:111
+#, fuzzy
+msgid "Localizing Firefox"
+msgstr "Nyelvi csomagok"
+
+#: ../usr/lib/live-installer-3/localize.py:129
+msgid "Localizing Thunderbird"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/partitioning.py:170
+#: ../usr/lib/live-installer-3/partitioning.py:517
+msgid "Unknown"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/partitioning.py:297
+#, fuzzy
+msgid "Removable:"
+msgstr "Hordozható eszköz:"
+
+#: ../usr/lib/live-installer-3/partitioning.py:324
+#: ../usr/lib/live-installer-3/gtk_interface.py:702
+#: ../usr/lib/live-installer-3/gtk_interface.py:706
+#: ../usr/lib/live-installer-3/gtk_interface.py:725
+#: ../usr/lib/live-installer-3/gtk_interface.py:730
+#: ../usr/lib/live-installer-3/gtk_interface.py:734
+#: ../usr/lib/live-installer-3/gtk_interface.py:738
+msgid "Installation Tool"
+msgstr "Telepítőeszköz"
+
+#: ../usr/lib/live-installer-3/partitioning.py:325
+#, fuzzy, python-brace-format
+msgid ""
+"No partition table was found on the hard drive: {disk_description}. Do you "
+"want the installer to create a set of partitions for you? Note: This will "
+"ERASE ALL DATA present on this disk."
+msgstr ""
+"Nem található partíciós tábla a merevlemezen. Szeretné hogy a telepítő hozza "
+"létre a partíciókat?\r\n"
+"FIGYELMEZTETÉS: Minden adat törlődni fog a merevlemezről."
+
+#: ../usr/lib/live-installer-3/partitioning.py:512
+#, fuzzy
+msgid "Logical partition"
+msgstr "Partíció szerkesztése"
+
+#: ../usr/lib/live-installer-3/partitioning.py:513
+#, fuzzy
+msgid "Extended partition"
+msgstr "Partíció szerkesztése"
+
+#: ../usr/lib/live-installer-3/partitioning.py:514
+#: ../usr/lib/live-installer-3/gtk_interface.py:535
+msgid "Free space"
+msgstr "Szabad hely"
+
+#: ../usr/lib/live-installer-3/partitioning.py:534
+#, fuzzy
+msgid "Encryption password"
+msgstr "Leírás"
+
+#: ../usr/lib/live-installer-3/partitioning.py:535
+#, fuzzy
+msgid "Password for the encrypted partition:"
+msgstr "Adjon meg egy jelszót a felhasználói fiókjához"
+
+#: ../usr/lib/live-installer-3/partitioning.py:646
+msgid "Edit partition"
+msgstr "Partíció szerkesztése"
+
+#: ../usr/lib/live-installer-3/partitioning.py:653
+#: ../usr/lib/live-installer-3/gtk_interface.py:527
+msgid "Device"
+msgstr "Eszköz"
+
+#: ../usr/lib/live-installer-3/partitioning.py:654
+#: ../usr/lib/live-installer-3/gtk_interface.py:532
+#, fuzzy
+msgid "Format as"
+msgstr "Formázás mint:"
+
+#: ../usr/lib/live-installer-3/partitioning.py:655
+#: ../usr/lib/live-installer-3/gtk_interface.py:531
+msgid "Mount point"
+msgstr "Csatolási pont"
+
+#: ../usr/lib/live-installer-3/partitioning.py:656
+msgid "Label (optional)"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/partitioning.py:657
+#, fuzzy
+msgid "Encryption/password"
+msgstr "Leírás"
+
+#: ../usr/lib/live-installer-3/partitioning.py:744
+#: ../usr/lib/live-installer-3/partitioning.py:751
+#: ../usr/lib/live-installer-3/partitioning.py:780
+#: ../usr/lib/live-installer-3/partitioning.py:784
+#: ../usr/lib/live-installer-3/partitioning.py:790
+#, fuzzy
+msgid "Encryption"
+msgstr "Leírás"
+
+#: ../usr/lib/live-installer-3/partitioning.py:745
+msgid ""
+"You chose to encrypt the root partition.\n"
+"\n"
+"You will need to mount /boot on a separate non-encrypted partition (500 "
+"MB).\n"
+"Without a non-encrypted /boot partition your system will be unbootable.\n"
+"\n"
+"Encryption will erase all data from {}\n"
+"\n"
+"Are you sure you want to continue?"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/partitioning.py:752
+msgid ""
+"Encryption will erase all data from {}\n"
+"\n"
+"Are you sure you want to continue?"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/partitioning.py:781
+#, fuzzy
+msgid "Provide an encryption password for partition:"
+msgstr "Adjon meg egy jelszót a felhasználói fiókjához"
+
+#: ../usr/lib/live-installer-3/partitioning.py:785
+msgid ""
+"You need to choose a format type\n"
+"for your encrypted partition (default: ext4):"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/partitioning.py:791
+msgid "You need to choose a mount point for partition:"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:128
+#: ../usr/lib/live-installer-3/installer.py:153
+msgid "Installation error"
+msgstr "Telepítési hiba"
+
+#: ../usr/lib/live-installer-3/installer.py:138
+#, fuzzy
+msgid ""
+"Installation is now paused. Please read the instructions on the page "
+"carefully before clicking Forward to finish the installation."
+msgstr ""
+"Telepítés fel lett függesztve. Olvassa el figyelmesen a használati utasítást "
+"az oldalon és kattintson a Tovább gombra a befejezéshez."
+
+#: ../usr/lib/live-installer-3/installer.py:139
+msgid "Verify that fstab is correct (use blkid to check the UUIDs)."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:140
+msgid ""
+"A chrooted terminal and fstab will be opened after you close this message."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:142
+#, fuzzy
+msgid "Installation paused"
+msgstr "Telepítés felfüggesztve"
+
+#: ../usr/lib/live-installer-3/installer.py:188
+#, fuzzy, python-format
+msgid "Encrypting %(partition)s ..."
+msgstr "%(partition)s partíció formázása %(format)s fájlrendszerre…"
+
+#: ../usr/lib/live-installer-3/installer.py:194
+#, fuzzy, python-format
+msgid "Formatting %(partition)s as %(format)s ..."
+msgstr "%(partition)s partíció formázása %(format)s fájlrendszerre…"
+
+#: ../usr/lib/live-installer-3/installer.py:237
+#: ../usr/lib/live-installer-3/installer.py:252
+#, python-format
+msgid "Mounting %(partition)s on %(mountpoint)s"
+msgstr "%(partition)s partíció csatolása ide: %(mountpoint)s"
+
+#: ../usr/lib/live-installer-3/installer.py:269
+msgid "Not mounted"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:270
+#, fuzzy
+msgid ""
+"You must first manually mount your target filesystem(s) at /target to do a "
+"custom install!"
+msgstr ""
+"HIBA: Egyéni telepítéshez kézzel kell csatlakoztatni a cél fájlrendszert /"
+"target csatolási pont alá."
+
+#: ../usr/lib/live-installer-3/installer.py:279
+msgid "Base filesystem does not exist"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:280
+msgid ""
+"Something is wrong with the installation medium! This is usually caused by "
+"burning tools which are not compatible with {}. Please burn the ISO image to "
+"DVD/USB using a different tool."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:333
+#, fuzzy
+msgid "Copying"
+msgstr "%s másolása"
+
+#: ../usr/lib/live-installer-3/installer.py:352
+#, fuzzy
+msgid "Entering the system ..."
+msgstr "Belépés az új rendszerbe…"
+
+#: ../usr/lib/live-installer-3/installer.py:377
+#, fuzzy
+msgid "Installing EFI packages..."
+msgstr "Linux Mint telepítése…"
+
+#: ../usr/lib/live-installer-3/installer.py:421
+#, fuzzy
+msgid "Installing drivers"
+msgstr "Rendszerbetöltő telepítése"
+
+#: ../usr/lib/live-installer-3/installer.py:433
+msgid "Removing live configuration (packages)"
+msgstr "A Live beállítások eltávolítása (csomagok)"
+
+#: ../usr/lib/live-installer-3/installer.py:441
+#, fuzzy
+msgid "Adding new user to the system"
+msgstr "Felhasználó hozzáadása a rendszerhez"
+
+#: ../usr/lib/live-installer-3/installer.py:487
+#, fuzzy
+msgid "Writing filesystem mount information to /etc/fstab"
+msgstr "Fájlrendszer csatolási információjának mentése"
+
+#: ../usr/lib/live-installer-3/installer.py:608
+msgid "Setting hostname"
+msgstr "Gépnév beállítása"
+
+#: ../usr/lib/live-installer-3/installer.py:627
+msgid "Setting locale"
+msgstr "Nyelv beállítása"
+
+#: ../usr/lib/live-installer-3/installer.py:645
+msgid "Update apt cache"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:649
+msgid "Update the new system"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:658
+msgid "Localizing packages"
+msgstr "Nyelvi csomagok"
+
+#: ../usr/lib/live-installer-3/installer.py:680
+#, fuzzy
+msgid "Configuring sensors"
+msgstr "Rendszerbetöltő beállítása"
+
+#: ../usr/lib/live-installer-3/installer.py:688
+msgid "Removing VirtualBox"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:696
+msgid "Removing os-prober"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:702
+msgid "Setting keyboard options"
+msgstr "Billentyűzet beállítása"
+
+#: ../usr/lib/live-installer-3/installer.py:739
+msgid "Installing bootloader"
+msgstr "Rendszerbetöltő telepítése"
+
+#: ../usr/lib/live-installer-3/installer.py:755
+msgid "Grub not configured"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:756
+#, fuzzy
+msgid ""
+"The grub bootloader was not configured properly! You need to configure it "
+"manually."
+msgstr ""
+"FIGYELEM! A GRUB rendszerbetöltő beállítása nem megfelelő! Kézzel kell "
+"beállítania."
+
+#: ../usr/lib/live-installer-3/installer.py:777
+#, fuzzy
+msgid "Configuring Plymouth"
+msgstr "Rendszerbetöltő beállítása"
+
+#: ../usr/lib/live-installer-3/installer.py:790
+#, fuzzy
+msgid "Configuring initramfs"
+msgstr "Rendszerbetöltő beállítása"
+
+#: ../usr/lib/live-installer-3/installer.py:798
+msgid "Cleaning APT"
+msgstr "APT tisztítása"
+
+#: ../usr/lib/live-installer-3/installer.py:830
+#, fuzzy
+msgid "Unmounting partitions"
+msgstr "%(partition)s partíció formázása %(format)s fájlrendszerre…"
+
+#: ../usr/lib/live-installer-3/installer.py:852
+#: ../usr/lib/live-installer-3/gtk_interface.py:848
+msgid "Installation finished"
+msgstr "A telepítés sikeresen befejeződött"
+
+#: ../usr/lib/live-installer-3/installer.py:856
+msgid "Configuring bootloader"
+msgstr "Rendszerbetöltő beállítása"
+
+#: ../usr/lib/live-installer-3/installer.py:863
+msgid "Checking bootloader"
+msgstr "Rendszerbetöltő ellenőrzése"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:276
+msgid "Quit?"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:276
+msgid "Are you sure you want to quit the installer?"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:329
+msgid ""
+"Cannot download and install additional locale packages: no internet "
+"connection\n"
+"Configuration will still be set to your selected language."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:331
+msgid "No internet connection"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:482
+#: ../usr/lib/live-installer-3/gtk_interface.py:484
+#, fuzzy
+msgid "{} Installer"
+msgstr "%s Telepítő"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:498
+#: ../usr/lib/live-installer-3/gtk_interface.py:514
+msgid "Language"
+msgstr "Nyelv"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:499
+msgid "Timezone"
+msgstr "Időzóna"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:500
+msgid "Keyboard layout"
+msgstr "Billentyűzetkiosztás"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:501
+msgid "User info"
+msgstr "Felhasználói információ"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:502
+msgid "Partitioning"
+msgstr "Particionálás"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:503
+#, fuzzy
+msgid "Please make sure you wish to manage partitions manually"
+msgstr "Bizonyosodjon meg róla, hogy kézzel szeretné kezelni a partíciókat"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:504
+msgid "Summary"
+msgstr "Összefoglaló"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:505
+#, fuzzy
+msgid "Installing {}..."
+msgstr "Linux Mint telepítése…"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:506
+#, fuzzy
+msgid "Installation is paused: please finish the custom installation"
+msgstr "A telepítés felfüggesztve: Kérem fejezze be az egyéni telepítést"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:509
+#: ../usr/lib/live-installer-3/gtk_interface.py:539
+msgid "Quit"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:510
+#: ../usr/lib/live-installer-3/gtk_interface.py:540
+msgid "Back"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:511
+#: ../usr/lib/live-installer-3/gtk_interface.py:541
+#: ../usr/lib/live-installer-3/gtk_interface.py:619
+msgid "Forward"
+msgstr "Tovább"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:515
+msgid "Country"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:518
+msgid "Selected timezone:"
+msgstr "Választott időzóna:"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:519
+#, fuzzy
+msgid "Select timezone"
+msgstr "Választott időzóna:"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:522
+msgid "Refresh"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:523
+msgid "_Expert mode"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:524
+#, fuzzy
+msgid "_Edit partitions"
+msgstr "Partíciók szerkesztése"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:528
+msgid "Grub"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:529
+msgid "Type"
+msgstr "Típus"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:530
+msgid "Label"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:533
+#, fuzzy
+msgid "Encrypt"
+msgstr "Leírás"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:534
+msgid "Size"
+msgstr "Méret"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:544
+msgid "Layout"
+msgstr "Kiosztás"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:545
+msgid "Variant"
+msgstr "Változat"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:546
+#, fuzzy
+msgid "Use this box to test your keyboard layout."
+msgstr "A billentyűzetkiosztás kipróbálásához gépeljen a mezőbe"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:547
+msgid "Model"
+msgstr "Modell"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:550
+msgid "Click to change your picture"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:551
+#, fuzzy
+msgid "Take a photo..."
+msgstr "Fénykép készítése"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:552
+msgid "Browse for more pictures..."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:553
+msgid "Your full name"
+msgstr "Az Ön teljes neve"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:554
+#, fuzzy
+msgid "This will be shown in the About Me application."
+msgstr "Ez a Névjegyem alkalmazásban lesz látható"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:555
+msgid "Your username"
+msgstr "Az Ön felhasználói neve"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:556
+#, fuzzy
+msgid "This is the name you will use to log in to your computer."
+msgstr "Ezt a nevet fogja használni, hogy bejelentkezzen a számítógépre"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:557
+msgid "Your password"
+msgstr "Az Ön jelszava"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:558
+#, fuzzy
+msgid "Please enter your password twice to ensure it is correct."
+msgstr "Ellenőrzésképpen ismételje meg a jelszavát"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:559
+msgid "Hostname"
+msgstr "Gépnév"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:560
+#, fuzzy
+msgid "This hostname will be the computer's name on the network."
+msgstr "Ez lesz a számítógép hálózaton megjelenő neve"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:561
+msgid "Automatic login"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:562
+msgid ""
+"If enabled, the login screen is skipped when the system starts, and you are "
+"signed into your desktop session automatically."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:564
+msgid "Log in automatically on system boot"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:565
+msgid "Your picture"
+msgstr "Az Ön fotója"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:566
+msgid ""
+"This picture represents your user account. It is used in the login screen "
+"and a few other places."
+msgstr ""
+"A kép az Ön felhasználói fiókját képviseli. A bejelentkezési képernyőnél és "
+"néhány egyéb helyen lesz a kép megjelenítve."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:570
+msgid ""
+"You have selected to manage your partitions manually, this feature is for "
+"ADVANCED USERS ONLY."
+msgstr ""
+"A kézi partíciókezelést választotta, ez azonban csak HALADÓ FELHASZNÁLÓKNAK "
+"ajánlott."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:572
+msgid "Before continuing, please mount your target filesystem(s) at /target."
+msgstr ""
+"Folytatáshoz csatolja a cél fájlrendszert a /target csatolási pont alá."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:574
+msgid ""
+"Do NOT mount virtual devices such as /dev, /proc, /sys, etc on /target/."
+msgstr ""
+"Ne csatoljon fájlrendszert a virtuális eszközökre, például a /dev, /proc, /"
+"sys, stb. a /target csatolási pont alá."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:576
+#, fuzzy
+msgid ""
+"During the install, you will be given time to chroot into /target and "
+"install any packages that will be needed to boot your new system."
+msgstr ""
+"Telepítés során – a megfelelő időben – használhatja a chroot parancsot a /"
+"target helyre és telepíthet csomagokat, amelyek az új rendszer elindulásához "
+"szükségesek."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:578
+msgid "During the install, you will be required to write your own /etc/fstab."
+msgstr "A telepítés során saját /etc/fstab fájlt kell majd készítenie."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:580
+#, fuzzy
+msgid ""
+"If you aren't sure what any of this means, please go back and deselect "
+"manual partition management."
+msgstr ""
+"Ha nem tudja, hogy az alábbiak mit jelentenek, akkor lépjen vissza és ne "
+"válassza ki a kézi partíciókezelést."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:584
+#, fuzzy
+msgid "Please do the following and then click Forward to finish installation:"
+msgstr ""
+"Tegye a következőket, majd kattintson a Tovább gombra a telepítés "
+"befejezéséhez:"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:586
+msgid ""
+"Create /target/etc/fstab for the filesystems as they will be mounted in your "
+"new system, matching those currently mounted at /target (without using the /"
+"target prefix in the mount paths themselves)."
+msgstr ""
+"A /target/etc/fstab létrehozása a felcsatolandó fájlrendszerek számára, "
+"ahogy azok az új rendszerben csatolva lesznek. Ezek megegyeznek a jelenleg /"
+"target csatolási pont alá csatoltakkal (a /target előtag használata nélkül "
+"az elérési útban)."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:588
+msgid ""
+"Install any packages that may be needed for first boot (mdadm, cryptsetup, "
+"dmraid, etc) by calling \"sudo chroot /target\" followed by the relevant apt-"
+"get/aptitude installations."
+msgstr ""
+"Telepítheti az új rendszer elindításához szükséges csomagokat (mdadm, "
+"cryptsetup, dmraid, stb.) a „sudo chroot /target” parancs kiadásával majd a "
+"apt-get vagy aptitude parancsokkal történő csomagtelepítés elvégzésével."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:590
+msgid ""
+"Note that in order for update-initramfs to work properly in some cases (such "
+"as dm-crypt), you may need to have drives currently mounted using the same "
+"block device name as they appear in /target/etc/fstab."
+msgstr ""
+"Figyeljen arra, hogy az „update-initramfs” helyes működéséhez bizonyos "
+"esetekben (például: dm-crypt) már most ugyanolyan néven kell csatolni a "
+"blokkeszközt, mint ahogy a /target/etc/fstab fájlban található."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:592
+msgid ""
+"Double-check that your /target/etc/fstab is correct, matches what your new "
+"system will have at first boot, and matches what is currently mounted at /"
+"target."
+msgstr ""
+"Alaposan ellenőrizze a /target/etc/fstab fájl helyességét egyeztesse az új "
+"rendszer elindulásához szükséges meghajtók csatolva vannak-e a /target "
+"csatolási pont alá."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:596
+msgid "Overview"
+msgstr "Áttekintés"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:599
+#, fuzzy
+msgid "Calculating file indexes ..."
+msgstr "Fájl indexek kiszámítása…"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:664
+#, fuzzy
+msgid "Please provide your full name."
+msgstr "Adja meg a teljes nevét"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:667
+#, fuzzy
+msgid "Please provide a username."
+msgstr "Adja meg a felhasználónevét"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:670
+#, fuzzy
+msgid "Please provide a password for your user account."
+msgstr "Adjon meg egy jelszót a felhasználói fiókjához"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:673
+#, fuzzy
+msgid "Your passwords do not match."
+msgstr "A megadott jelszavak nem egyeznek"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:676
+#, fuzzy
+msgid "Please provide a hostname."
+msgstr "Adja meg a gép nevét"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:680
+#, fuzzy
+msgid "Your username cannot start with a digit."
+msgstr "A felhasználónév nem tartalmazhat szóközt"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:683
+msgid ""
+"The hostname is incorrect:\n"
+"not more than 63 characters between periods\n"
+"and not more than 255 characters total."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:688
+msgid "Error"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:703
+#, fuzzy
+msgid ""
+"Please indicate a filesystem to format the root (/) partition with before "
+"proceeding."
+msgstr ""
+"Kérem adja meg, hogy milyen fájlrendszerre formázza a root partíciót (/) "
+"mielőtt továbblépne"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:707
+#, fuzzy
+msgid "<b>Please select a root (/) partition.</b>"
+msgstr "<b>Válassza ki a root partíciót</b>"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:708
+#, fuzzy
+msgid ""
+"A root partition is needed to install the system.\n"
+"\n"
+" - Mount point: /\n"
+" - Recommended size: 30GB\n"
+" - Recommended filesystem format: ext4\n"
+msgstr ""
+"A root partíció szükséges Linux Mint telepítéséhez.\n"
+"\n"
+" - Csatolási pont: /\n"
+" - Ajánlott méret: legalább 10GB\n"
+" - Ajánlott fájlrendszer: EXT4\n"
+" "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:725
+msgid "The EFI partition is too small. It must be at least 100MB."
+msgstr ""
+"Az EFI partíció túl kicsi. A partíciónak legalább 100 MB-nak kell lennie."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:730
+#: ../usr/lib/live-installer-3/gtk_interface.py:734
+msgid "The EFI partition must be formatted as vfat."
+msgstr "Az EFI partíciót VFAT vagy FAT32 fájlrendszerre kell formázni."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:739
+#, fuzzy
+msgid "<b>Please select an EFI partition.</b>"
+msgstr "<b>Válasszon egy EFI partíciót</b>"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:740
+msgid ""
+"An EFI system partition is needed with the following requirements:\n"
+"\n"
+" - Mount point: /boot/efi\n"
+" - Partition flags: Bootable\n"
+" - Size: Larger than 100MB\n"
+" - Format: vfat or fat32\n"
+"\n"
+"To ensure compatibility with Windows we recommend you use the first "
+"partition of the disk as the EFI system partition.\n"
+" "
+msgstr ""
+"Az EFI rendszerpartícióhoz az alábbiak szükségesek:\n"
+"\n"
+" - Csatolási pont: /boot/efi\n"
+" - Partíció jelölés: Bootable\n"
+" - Méret: legalább 100MB\n"
+" - Fájlrendszer: VFAT vagy FAT32\n"
+"\n"
+"A Windows kompatibilitás fenntartása érdekében javasoljuk, hogy az EFI "
+"rendszerpartíció legyen az első a lemezen.\n"
+" "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:775
+#: ../usr/lib/live-installer-3/gtk_interface.py:782
+msgid "Apply"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:849
+msgid ""
+"Installation is now complete. Do you want to restart your computer to use "
+"the new system?"
+msgstr ""
+"A telepítés befejeződött. Az új rendszer használatához újraindításra van "
+"szükség. Újraindítja most?"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:897
+msgid "Localization"
+msgstr "Honosítás"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:898
+msgid "Language: "
+msgstr "Nyelv: "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:899
+msgid "Timezone: "
+msgstr "Időzóna: "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:900
+msgid "Keyboard layout: "
+msgstr "Billentyűzetkiosztás: "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:903
+msgid "User settings"
+msgstr "Felhasználói beállítások"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:904
+msgid "Real name: "
+msgstr "Teljes név: "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:905
+msgid "Username: "
+msgstr "Felhasználónév: "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:906
+msgid "Automatic login: "
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:906
+msgid "enabled"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:906
+msgid "disabled"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:907
+msgid "System settings"
+msgstr "Rendszerbeállítások"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:908
+msgid "Hostname: "
+msgstr "Gépnév: "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:909
+msgid "Filesystem operations"
+msgstr "Fájlrendszer műveletek"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:910
+#, fuzzy
+msgid "Install Grub on {}"
+msgstr "Rendszerbetöltő telepítése ide: %s"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:910
+#, fuzzy
+msgid "Do not install Grub"
+msgstr "Ne telepítsen rendszerbetöltőt"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:913
+msgid "Use already-mounted /target."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:922
+msgid "set boot flag"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:923
+#, fuzzy
+msgid "Mount {}{} as {}"
+msgstr "Formázás mint:"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:926
+msgid "Encrypt {} and format as {}"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:928
+#, fuzzy
+msgid "Format {} as {}"
+msgstr "Formázás mint:"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1115
+msgid "Assign to /"
+msgstr "Csatolás ide: /"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1118
+msgid "Assign to /home"
+msgstr "Csatolás ide: /home"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1124
+msgid "Assign to /boot/efi"
+msgstr "Csatolás ide: /boot/efi"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1129
+msgid "Advanced..."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1143
+#: ../usr/lib/live-installer-3/gtk_interface.py:1169
+#, fuzzy
+msgid "Grub install"
+msgstr "%s Telepítő"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1144
+msgid ""
+"You chose to NOT install Grub on your system.\n"
+"Without a bootloader like Grub your system might not boot.\n"
+"\n"
+"Are you sure you want to continue?"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1170
+msgid ""
+"You chose to install Grub on a partition.\n"
+"It is recommended to install Grub on a disk instead of a partition.\n"
+"\n"
+"Only continue if you are certain that you have another bootloader already "
+"installed.\n"
+"\n"
+"Are you sure you want to continue?"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1223
+#, fuzzy
+msgid "Select image"
+msgstr "Választott időzóna:"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1276
+#, fuzzy
+msgid "Take a photo"
+msgstr "Fénykép készítése"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1277
+#, fuzzy
+msgid "Unable to take a photo."
+msgstr "Fénykép készítése"
+
+#: ../usr/share/applications/live-installer-3.desktop.in.h:1
+#, fuzzy
+msgid "Install"
+msgstr "%s Telepítő"
+
+#: ../usr/share/applications/live-installer-3.desktop.in.h:2
+#, fuzzy
+msgid "Live Installer"
+msgstr "%s Telepítő"
+
+#: ../usr/share/applications/live-installer-3.desktop.in.h:3
+#, fuzzy
+msgid "Install the operating system"
+msgstr "Operációs rendszer"
+
+#~ msgid "Images"
+#~ msgstr "Képek"
+
+#~ msgid "The EFI partition is not bootable. Please edit the partition flags."
+#~ msgstr ""
+#~ "Az EFI partíció nincs indíthatónak jelölve. Kérjük állítsa be a partíció "
+#~ "jelöléseket."
+
+#~ msgid "Device:"
+#~ msgstr "Eszköz:"
+
+#~ msgid "Format as:"
+#~ msgstr "Formázás mint:"
+
+#~ msgid "Mount point:"
+#~ msgstr "Csatolási pont:"
+
+#, fuzzy
+#~ msgid "Your username must be lower case."
+#~ msgstr "A felhasználónév csak kisbetűs lehet"
+
+#, fuzzy
+#~ msgid "The hostname must be lower case."
+#~ msgstr "A gépnév csak kisbetűs lehet"
+
+#, fuzzy
+#~ msgid "The hostname may not contain whitespace characters."
+#~ msgstr "A gépnév nem tartalmazhat szóközt"
+
+#~ msgid "Operating system"
+#~ msgstr "Operációs rendszer"
+
+#, fuzzy
+#~ msgid "Click this button to take a new picture of yourself with the webcam."
+#~ msgstr "Kattintson ide új kép készítéséhez a webkamerával"
+
+#, fuzzy
+#~ msgid "The installer did not detect any webcams."
+#~ msgstr "A telepítő nem talált webkamerát"
+
+#~ msgid "Select a picture"
+#~ msgstr "Válasszon ki egy képet"
+
+#, fuzzy
+#~ msgid "Click this button to choose a picture from the hard disk."
+#~ msgstr "A felhasználói fiók profilképének kiválasztásához kattintson ide"
+
+#~ msgid "Do not install bootloader"
+#~ msgstr "Ne telepítsen rendszerbetöltőt"
+
+#~ msgid "Advanced options"
+#~ msgstr "Haladó beállítások"
+
+#~ msgid "Bootloader"
+#~ msgstr "Rendszerbetöltő"
+
+#~ msgid "Install GRUB"
+#~ msgstr "GRUB telepítése"
+
+#, fuzzy
+#~ msgid "GRUB is a bootloader used to load the Linux kernel."
+#~ msgstr "A GRUB rendszerbetöltő tölti be a Linux kernelt"
+
+#~ msgid "Edit"
+#~ msgstr "Szerkesztés"
+
+#, fuzzy
+#~ msgid "Install Plymouth"
+#~ msgstr "Telepítés"
+
+#, fuzzy
+#~ msgid "Install SolydXK"
+#~ msgstr "Telepítés"
+
+#, fuzzy
+#~ msgid "Passwords do not match."
+#~ msgstr "A jelszavak nem egyeznek"
+
+#, fuzzy
+#~ msgid "Passwords match."
+#~ msgstr "A jelszavak egyeznek"
+
+#~ msgid "Indexing files to be copied.."
+#~ msgstr "Másolandó fájlok indexelése…"
+
+#~ msgid "Restoring meta-information on %s"
+#~ msgstr "Metaadatok visszaállítása ezen: %s"
+
+#~ msgid "unallocated"
+#~ msgstr "lefoglalatlan"
+
+#~ msgid "Hard drive"
+#~ msgstr "Merevlemez"
+
+#~ msgid "Format?"
+#~ msgstr "Formázás"
+
+#~ msgid "Install Linux Mint on the selected drive:"
+#~ msgstr "Linux Mint telepítése az következő meghajtóra:"
+
+#~ msgid "Manually mount partitions (ADVANCED USERS ONLY)."
+#~ msgstr "Kézzel csatolt partíciók (CSAK HALADÓKNAK)."
+
+#~ msgid "Extended"
+#~ msgstr "Kiterjesztett"
+
+#~ msgid "Format %(partition)s as %(format)s"
+#~ msgstr "%(partition)s partíció formázása %(format)s fájlrendszerre"
+
+#~ msgid "Mount %(partition)s as %(mountpoint)s"
+#~ msgstr "%(partition)s partíció csatolása ide: %(mountpoint)s"
+
+#~ msgid "Could not build supported filesystems list!"
+#~ msgstr "Nem lehet felépíteni a támogatott fájlrendszerek listáját!"

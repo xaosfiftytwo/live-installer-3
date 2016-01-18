@@ -1,0 +1,5 @@
+?package(live-installer-3:needs="X11"\
+   section="Applications/System/Administration"\
+   title="Install"\
+   icon="/usr/share/live-installer-3/logo.png"\
+   command="live-installer-3"

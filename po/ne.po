@@ -1,0 +1,975 @@
+# Nepali translation for linuxmint
+# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-18 08:57+0100\n"
+"PO-Revision-Date: 2014-03-10 08:30+0000\n"
+"Last-Translator: Niroj Bista <nirooj56@outlook.com>\n"
+"Language-Team: Nepali <ne@li.org>\n"
+"Language: ne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2014-09-11 21:49+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
+
+#: ../usr/lib/live-installer-3/localize.py:48
+msgid "Install additional localized packages"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/localize.py:61
+#, fuzzy
+msgid "Localizing KDE"
+msgstr "स्थानीयकरण"
+
+#: ../usr/lib/live-installer-3/localize.py:78
+msgid "Localizing LibreOffice"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/localize.py:97
+#, fuzzy
+msgid "Localizing AbiWord"
+msgstr "स्थानीयकरण"
+
+#: ../usr/lib/live-installer-3/localize.py:111
+#, fuzzy
+msgid "Localizing Firefox"
+msgstr "स्थानीयकरण"
+
+#: ../usr/lib/live-installer-3/localize.py:129
+msgid "Localizing Thunderbird"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/partitioning.py:170
+#: ../usr/lib/live-installer-3/partitioning.py:517
+msgid "Unknown"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/partitioning.py:297
+msgid "Removable:"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/partitioning.py:324
+#: ../usr/lib/live-installer-3/gtk_interface.py:702
+#: ../usr/lib/live-installer-3/gtk_interface.py:706
+#: ../usr/lib/live-installer-3/gtk_interface.py:725
+#: ../usr/lib/live-installer-3/gtk_interface.py:730
+#: ../usr/lib/live-installer-3/gtk_interface.py:734
+#: ../usr/lib/live-installer-3/gtk_interface.py:738
+msgid "Installation Tool"
+msgstr "स्थापना औजार"
+
+#: ../usr/lib/live-installer-3/partitioning.py:325
+#, fuzzy, python-brace-format
+msgid ""
+"No partition table was found on the hard drive: {disk_description}. Do you "
+"want the installer to create a set of partitions for you? Note: This will "
+"ERASE ALL DATA present on this disk."
+msgstr ""
+"एस हार्डडिस्कमा डिस्क विभाजन गरिएको भेतियेन | के तपाई स्थापना औजारले यो बिभाजन गर्न "
+"चाहनु हुन्छ | नोट: एसले डिस्क मा भएको सबै दाता नष्ट पर्नेछ |"
+
+#: ../usr/lib/live-installer-3/partitioning.py:512
+#, fuzzy
+msgid "Logical partition"
+msgstr "विभाजन सम्पादन गर्नुहोस्"
+
+#: ../usr/lib/live-installer-3/partitioning.py:513
+#, fuzzy
+msgid "Extended partition"
+msgstr "विभाजन सम्पादन गर्नुहोस्"
+
+#: ../usr/lib/live-installer-3/partitioning.py:514
+#: ../usr/lib/live-installer-3/gtk_interface.py:535
+msgid "Free space"
+msgstr "खाली ठाउँ"
+
+#: ../usr/lib/live-installer-3/partitioning.py:534
+#, fuzzy
+msgid "Encryption password"
+msgstr "बिवरण"
+
+#: ../usr/lib/live-installer-3/partitioning.py:535
+#, fuzzy
+msgid "Password for the encrypted partition:"
+msgstr "तपाइको प्रयोगकर्ता नामकोलाई पास्वोर्ड दिनुहोस |"
+
+#: ../usr/lib/live-installer-3/partitioning.py:646
+msgid "Edit partition"
+msgstr "विभाजन सम्पादन गर्नुहोस्"
+
+#: ../usr/lib/live-installer-3/partitioning.py:653
+#: ../usr/lib/live-installer-3/gtk_interface.py:527
+msgid "Device"
+msgstr "उपकरण"
+
+#: ../usr/lib/live-installer-3/partitioning.py:654
+#: ../usr/lib/live-installer-3/gtk_interface.py:532
+#, fuzzy
+msgid "Format as"
+msgstr "येस्मा फर्मात गर्नुहोस्:"
+
+#: ../usr/lib/live-installer-3/partitioning.py:655
+#: ../usr/lib/live-installer-3/gtk_interface.py:531
+msgid "Mount point"
+msgstr "माउन्ट बिन्दु"
+
+#: ../usr/lib/live-installer-3/partitioning.py:656
+msgid "Label (optional)"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/partitioning.py:657
+#, fuzzy
+msgid "Encryption/password"
+msgstr "बिवरण"
+
+#: ../usr/lib/live-installer-3/partitioning.py:744
+#: ../usr/lib/live-installer-3/partitioning.py:751
+#: ../usr/lib/live-installer-3/partitioning.py:780
+#: ../usr/lib/live-installer-3/partitioning.py:784
+#: ../usr/lib/live-installer-3/partitioning.py:790
+#, fuzzy
+msgid "Encryption"
+msgstr "बिवरण"
+
+#: ../usr/lib/live-installer-3/partitioning.py:745
+msgid ""
+"You chose to encrypt the root partition.\n"
+"\n"
+"You will need to mount /boot on a separate non-encrypted partition (500 "
+"MB).\n"
+"Without a non-encrypted /boot partition your system will be unbootable.\n"
+"\n"
+"Encryption will erase all data from {}\n"
+"\n"
+"Are you sure you want to continue?"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/partitioning.py:752
+msgid ""
+"Encryption will erase all data from {}\n"
+"\n"
+"Are you sure you want to continue?"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/partitioning.py:781
+#, fuzzy
+msgid "Provide an encryption password for partition:"
+msgstr "तपाइको प्रयोगकर्ता नामकोलाई पास्वोर्ड दिनुहोस |"
+
+#: ../usr/lib/live-installer-3/partitioning.py:785
+msgid ""
+"You need to choose a format type\n"
+"for your encrypted partition (default: ext4):"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/partitioning.py:791
+msgid "You need to choose a mount point for partition:"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:128
+#: ../usr/lib/live-installer-3/installer.py:153
+msgid "Installation error"
+msgstr "स्थापना त्रुटि देखियो"
+
+#: ../usr/lib/live-installer-3/installer.py:138
+msgid ""
+"Installation is now paused. Please read the instructions on the page "
+"carefully before clicking Forward to finish the installation."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:139
+msgid "Verify that fstab is correct (use blkid to check the UUIDs)."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:140
+msgid ""
+"A chrooted terminal and fstab will be opened after you close this message."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:142
+#, fuzzy
+msgid "Installation paused"
+msgstr "स्थापना सकियो"
+
+#: ../usr/lib/live-installer-3/installer.py:188
+#, fuzzy, python-format
+msgid "Encrypting %(partition)s ..."
+msgstr "%(partition)sलाई %(format)sमा फरम्याट गरिदै छ ।"
+
+#: ../usr/lib/live-installer-3/installer.py:194
+#, fuzzy, python-format
+msgid "Formatting %(partition)s as %(format)s ..."
+msgstr "%(partition)sलाई %(format)sमा फरम्याट गरिदै छ ।"
+
+#: ../usr/lib/live-installer-3/installer.py:237
+#: ../usr/lib/live-installer-3/installer.py:252
+#, python-format
+msgid "Mounting %(partition)s on %(mountpoint)s"
+msgstr "%(partition)sलाई %(mountpoint)s मा माउन्ट गरिदै ।"
+
+#: ../usr/lib/live-installer-3/installer.py:269
+msgid "Not mounted"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:270
+msgid ""
+"You must first manually mount your target filesystem(s) at /target to do a "
+"custom install!"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:279
+msgid "Base filesystem does not exist"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:280
+msgid ""
+"Something is wrong with the installation medium! This is usually caused by "
+"burning tools which are not compatible with {}. Please burn the ISO image to "
+"DVD/USB using a different tool."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:333
+#, fuzzy
+msgid "Copying"
+msgstr "%s को प्रतिलिपि बनाइदैछ ।"
+
+#: ../usr/lib/live-installer-3/installer.py:352
+#, fuzzy
+msgid "Entering the system ..."
+msgstr "नया सिस्टम मा प्रवेश गरिदै..."
+
+#: ../usr/lib/live-installer-3/installer.py:377
+#, fuzzy
+msgid "Installing EFI packages..."
+msgstr "स्थापना सकियो"
+
+#: ../usr/lib/live-installer-3/installer.py:421
+#, fuzzy
+msgid "Installing drivers"
+msgstr "bootloader स्थापना गरिदै"
+
+#: ../usr/lib/live-installer-3/installer.py:433
+msgid "Removing live configuration (packages)"
+msgstr "लाईभका कनफिगरासनहरु निकलिदै छ (पाकेजहरु)।"
+
+#: ../usr/lib/live-installer-3/installer.py:441
+#, fuzzy
+msgid "Adding new user to the system"
+msgstr "सिस्टममा नया प्रयोगकर्ता थपिदै छ ।"
+
+#: ../usr/lib/live-installer-3/installer.py:487
+#, fuzzy
+msgid "Writing filesystem mount information to /etc/fstab"
+msgstr "फाइलसिस्टममा माउन्त गरिने जानकारी थपिदै छ ।"
+
+#: ../usr/lib/live-installer-3/installer.py:608
+msgid "Setting hostname"
+msgstr "hostname स्थापना गरिदै"
+
+#: ../usr/lib/live-installer-3/installer.py:627
+msgid "Setting locale"
+msgstr "स्थान स्थापना गरिदै"
+
+#: ../usr/lib/live-installer-3/installer.py:645
+msgid "Update apt cache"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:649
+msgid "Update the new system"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:658
+msgid "Localizing packages"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:680
+#, fuzzy
+msgid "Configuring sensors"
+msgstr "bootloader कन्फ़िगर गरिदै"
+
+#: ../usr/lib/live-installer-3/installer.py:688
+msgid "Removing VirtualBox"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:696
+msgid "Removing os-prober"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:702
+msgid "Setting keyboard options"
+msgstr "किबोर्द अप्संस मिलायिदै"
+
+#: ../usr/lib/live-installer-3/installer.py:739
+msgid "Installing bootloader"
+msgstr "bootloader स्थापना गरिदै"
+
+#: ../usr/lib/live-installer-3/installer.py:755
+msgid "Grub not configured"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:756
+#, fuzzy
+msgid ""
+"The grub bootloader was not configured properly! You need to configure it "
+"manually."
+msgstr ""
+"चेतावनी: grub bootloader ठीक संग कन्फ़िगर गरिएको छैन, कृपया आफै कॉन्फ़िगर मिलाउनु होला"
+
+#: ../usr/lib/live-installer-3/installer.py:777
+#, fuzzy
+msgid "Configuring Plymouth"
+msgstr "bootloader कन्फ़िगर गरिदै"
+
+#: ../usr/lib/live-installer-3/installer.py:790
+#, fuzzy
+msgid "Configuring initramfs"
+msgstr "bootloader कन्फ़िगर गरिदै"
+
+#: ../usr/lib/live-installer-3/installer.py:798
+msgid "Cleaning APT"
+msgstr "APT सफा गरिदै"
+
+#: ../usr/lib/live-installer-3/installer.py:830
+#, fuzzy
+msgid "Unmounting partitions"
+msgstr "%(partition)sलाई %(format)sमा फरम्याट गरिदै छ ।"
+
+#: ../usr/lib/live-installer-3/installer.py:852
+#: ../usr/lib/live-installer-3/gtk_interface.py:848
+msgid "Installation finished"
+msgstr "स्थापना सकियो"
+
+#: ../usr/lib/live-installer-3/installer.py:856
+msgid "Configuring bootloader"
+msgstr "bootloader कन्फ़िगर गरिदै"
+
+#: ../usr/lib/live-installer-3/installer.py:863
+msgid "Checking bootloader"
+msgstr "bootloader जाँचिदै"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:276
+msgid "Quit?"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:276
+msgid "Are you sure you want to quit the installer?"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:329
+msgid ""
+"Cannot download and install additional locale packages: no internet "
+"connection\n"
+"Configuration will still be set to your selected language."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:331
+msgid "No internet connection"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:482
+#: ../usr/lib/live-installer-3/gtk_interface.py:484
+#, fuzzy
+msgid "{} Installer"
+msgstr "%s स्थापक"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:498
+#: ../usr/lib/live-installer-3/gtk_interface.py:514
+msgid "Language"
+msgstr "भाषा"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:499
+msgid "Timezone"
+msgstr "समय क्षेत्र"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:500
+msgid "Keyboard layout"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:501
+msgid "User info"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:502
+msgid "Partitioning"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:503
+msgid "Please make sure you wish to manage partitions manually"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:504
+msgid "Summary"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:505
+#, fuzzy
+msgid "Installing {}..."
+msgstr "स्थापना सकियो"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:506
+msgid "Installation is paused: please finish the custom installation"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:509
+#: ../usr/lib/live-installer-3/gtk_interface.py:539
+msgid "Quit"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:510
+#: ../usr/lib/live-installer-3/gtk_interface.py:540
+msgid "Back"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:511
+#: ../usr/lib/live-installer-3/gtk_interface.py:541
+#: ../usr/lib/live-installer-3/gtk_interface.py:619
+msgid "Forward"
+msgstr "फरवार्ड गर्नुहोस्"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:515
+msgid "Country"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:518
+msgid "Selected timezone:"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:519
+#, fuzzy
+msgid "Select timezone"
+msgstr "समय क्षेत्र"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:522
+msgid "Refresh"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:523
+msgid "_Expert mode"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:524
+#, fuzzy
+msgid "_Edit partitions"
+msgstr "डिस्क विभाजन मिलाउनुहोस"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:528
+msgid "Grub"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:529
+msgid "Type"
+msgstr "टाइप"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:530
+msgid "Label"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:533
+#, fuzzy
+msgid "Encrypt"
+msgstr "बिवरण"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:534
+msgid "Size"
+msgstr "साइज"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:544
+msgid "Layout"
+msgstr "ढाँचा"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:545
+msgid "Variant"
+msgstr "प्रकार"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:546
+#, fuzzy
+msgid "Use this box to test your keyboard layout."
+msgstr "यो बक्स किबोर्ड लेआउट थाहा पाउन प्रयोग गर्नुहोस्"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:547
+msgid "Model"
+msgstr "प्रकार"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:550
+msgid "Click to change your picture"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:551
+msgid "Take a photo..."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:552
+msgid "Browse for more pictures..."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:553
+msgid "Your full name"
+msgstr "तपाइको पुरा नाम"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:554
+#, fuzzy
+msgid "This will be shown in the About Me application."
+msgstr "एस्लाई \"तपाइको बारे\"  आप्प्लिसनमा देखायिनेछ"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:555
+msgid "Your username"
+msgstr "तपाइको प्रयोगकर्ता नाम"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:556
+msgid "This is the name you will use to log in to your computer."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:557
+msgid "Your password"
+msgstr "तपाइको पासवर्ड"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:558
+#, fuzzy
+msgid "Please enter your password twice to ensure it is correct."
+msgstr "कृपया आफ्नो पासवर्ड दुइ चोटी लेखेर पुष्टि गर्नुहोस |"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:559
+msgid "Hostname"
+msgstr "होस्टनाम"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:560
+#, fuzzy
+msgid "This hostname will be the computer's name on the network."
+msgstr "यो होस्टनाम एस कम्प्युटरको  नेटवर्कमा नाम हुनेछ |"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:561
+msgid "Automatic login"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:562
+msgid ""
+"If enabled, the login screen is skipped when the system starts, and you are "
+"signed into your desktop session automatically."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:564
+msgid "Log in automatically on system boot"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:565
+msgid "Your picture"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:566
+msgid ""
+"This picture represents your user account. It is used in the login screen "
+"and a few other places."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:570
+msgid ""
+"You have selected to manage your partitions manually, this feature is for "
+"ADVANCED USERS ONLY."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:572
+msgid "Before continuing, please mount your target filesystem(s) at /target."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:574
+msgid ""
+"Do NOT mount virtual devices such as /dev, /proc, /sys, etc on /target/."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:576
+msgid ""
+"During the install, you will be given time to chroot into /target and "
+"install any packages that will be needed to boot your new system."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:578
+msgid "During the install, you will be required to write your own /etc/fstab."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:580
+msgid ""
+"If you aren't sure what any of this means, please go back and deselect "
+"manual partition management."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:584
+msgid "Please do the following and then click Forward to finish installation:"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:586
+msgid ""
+"Create /target/etc/fstab for the filesystems as they will be mounted in your "
+"new system, matching those currently mounted at /target (without using the /"
+"target prefix in the mount paths themselves)."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:588
+msgid ""
+"Install any packages that may be needed for first boot (mdadm, cryptsetup, "
+"dmraid, etc) by calling \"sudo chroot /target\" followed by the relevant apt-"
+"get/aptitude installations."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:590
+msgid ""
+"Note that in order for update-initramfs to work properly in some cases (such "
+"as dm-crypt), you may need to have drives currently mounted using the same "
+"block device name as they appear in /target/etc/fstab."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:592
+msgid ""
+"Double-check that your /target/etc/fstab is correct, matches what your new "
+"system will have at first boot, and matches what is currently mounted at /"
+"target."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:596
+msgid "Overview"
+msgstr "समिक्षा"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:599
+#, fuzzy
+msgid "Calculating file indexes ..."
+msgstr "फाइल इन्डेक्स गणना गरिदै..."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:664
+#, fuzzy
+msgid "Please provide your full name."
+msgstr "तपाइको पूरा नाम दिनुहोस"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:667
+#, fuzzy
+msgid "Please provide a username."
+msgstr "तपाइको प्रयोगकर्ता नाम दिनुहोस |"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:670
+#, fuzzy
+msgid "Please provide a password for your user account."
+msgstr "तपाइको प्रयोगकर्ता नामकोलाई पास्वोर्ड दिनुहोस |"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:673
+#, fuzzy
+msgid "Your passwords do not match."
+msgstr "तपाईका पासवर्डहरू सही छैनन्"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:676
+#, fuzzy
+msgid "Please provide a hostname."
+msgstr "कृपया होस्टनेम दिनुहोस्"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:680
+#, fuzzy
+msgid "Your username cannot start with a digit."
+msgstr "तपाइको प्रयोगकर्ता नामको बीच खाली ठाउँ हुनु हुदैन |"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:683
+msgid ""
+"The hostname is incorrect:\n"
+"not more than 63 characters between periods\n"
+"and not more than 255 characters total."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:688
+msgid "Error"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:703
+#, fuzzy
+msgid ""
+"Please indicate a filesystem to format the root (/) partition with before "
+"proceeding."
+msgstr "अगाडी बढ्नु अघि पहिला रूट विभाजन (/) को फाइलसिस्टम चुन्नु होस् |"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:707
+msgid "<b>Please select a root (/) partition.</b>"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:708
+msgid ""
+"A root partition is needed to install the system.\n"
+"\n"
+" - Mount point: /\n"
+" - Recommended size: 30GB\n"
+" - Recommended filesystem format: ext4\n"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:725
+msgid "The EFI partition is too small. It must be at least 100MB."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:730
+#: ../usr/lib/live-installer-3/gtk_interface.py:734
+msgid "The EFI partition must be formatted as vfat."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:739
+msgid "<b>Please select an EFI partition.</b>"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:740
+msgid ""
+"An EFI system partition is needed with the following requirements:\n"
+"\n"
+" - Mount point: /boot/efi\n"
+" - Partition flags: Bootable\n"
+" - Size: Larger than 100MB\n"
+" - Format: vfat or fat32\n"
+"\n"
+"To ensure compatibility with Windows we recommend you use the first "
+"partition of the disk as the EFI system partition.\n"
+" "
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:775
+#: ../usr/lib/live-installer-3/gtk_interface.py:782
+msgid "Apply"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:849
+msgid ""
+"Installation is now complete. Do you want to restart your computer to use "
+"the new system?"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:897
+msgid "Localization"
+msgstr "स्थानीयकरण"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:898
+msgid "Language: "
+msgstr "भाषा: "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:899
+msgid "Timezone: "
+msgstr "समयक्षेत्र "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:900
+msgid "Keyboard layout: "
+msgstr "किबोर्द लेआउट: "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:903
+msgid "User settings"
+msgstr "तपाइको सेटिंगहरु"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:904
+msgid "Real name: "
+msgstr "असली नाम "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:905
+msgid "Username: "
+msgstr "प्रयोगकर्ता नाम: "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:906
+msgid "Automatic login: "
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:906
+msgid "enabled"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:906
+msgid "disabled"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:907
+msgid "System settings"
+msgstr "सिस्टम सेत्तिन्ग्स"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:908
+msgid "Hostname: "
+msgstr "होस्टनाम "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:909
+msgid "Filesystem operations"
+msgstr "फाइल सिस्टम कृयाहरू"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:910
+#, fuzzy
+msgid "Install Grub on {}"
+msgstr "बुटलोडर %s मा इन्स्टल हुदैँ"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:910
+#, fuzzy
+msgid "Do not install Grub"
+msgstr "bootloader स्थापन नगर्नु |"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:913
+msgid "Use already-mounted /target."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:922
+msgid "set boot flag"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:923
+#, fuzzy
+msgid "Mount {}{} as {}"
+msgstr "येस्मा फर्मात गर्नुहोस्:"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:926
+msgid "Encrypt {} and format as {}"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:928
+#, fuzzy
+msgid "Format {} as {}"
+msgstr "येस्मा फर्मात गर्नुहोस्:"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1115
+msgid "Assign to /"
+msgstr "/ प्रदान गर्नुहोस"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1118
+msgid "Assign to /home"
+msgstr "/home प्रदान गर्नुहोस"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1124
+msgid "Assign to /boot/efi"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1129
+msgid "Advanced..."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1143
+#: ../usr/lib/live-installer-3/gtk_interface.py:1169
+#, fuzzy
+msgid "Grub install"
+msgstr "%s स्थापक"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1144
+msgid ""
+"You chose to NOT install Grub on your system.\n"
+"Without a bootloader like Grub your system might not boot.\n"
+"\n"
+"Are you sure you want to continue?"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1170
+msgid ""
+"You chose to install Grub on a partition.\n"
+"It is recommended to install Grub on a disk instead of a partition.\n"
+"\n"
+"Only continue if you are certain that you have another bootloader already "
+"installed.\n"
+"\n"
+"Are you sure you want to continue?"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1223
+#, fuzzy
+msgid "Select image"
+msgstr "समय क्षेत्र"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1276
+msgid "Take a photo"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1277
+msgid "Unable to take a photo."
+msgstr ""
+
+#: ../usr/share/applications/live-installer-3.desktop.in.h:1
+#, fuzzy
+msgid "Install"
+msgstr "%s स्थापक"
+
+#: ../usr/share/applications/live-installer-3.desktop.in.h:2
+#, fuzzy
+msgid "Live Installer"
+msgstr "%s स्थापक"
+
+#: ../usr/share/applications/live-installer-3.desktop.in.h:3
+#, fuzzy
+msgid "Install the operating system"
+msgstr "अपरेटिंग सिस्टम"
+
+#~ msgid "Device:"
+#~ msgstr "उपकरण:"
+
+#~ msgid "Format as:"
+#~ msgstr "येस्मा फर्मात गर्नुहोस्:"
+
+#~ msgid "Mount point:"
+#~ msgstr "माउन्ट बिन्दु:"
+
+#, fuzzy
+#~ msgid "Your username must be lower case."
+#~ msgstr "तपाइको पासवर्ड बीच मेल भेटिएन |"
+
+#, fuzzy
+#~ msgid "The hostname must be lower case."
+#~ msgstr "तपाइको होस्टनाम सानो अक्षरमा हुनुपर्छ |"
+
+#, fuzzy
+#~ msgid "The hostname may not contain whitespace characters."
+#~ msgstr "तपाइको होस्टनाम खाली ठाउँ हुनु हुदैन |"
+
+#~ msgid "Operating system"
+#~ msgstr "अपरेटिंग सिस्टम"
+
+#~ msgid "Do not install bootloader"
+#~ msgstr "bootloader स्थापन नगर्नु |"
+
+#~ msgid "Bootloader"
+#~ msgstr "Bootloader"
+
+#~ msgid "Install GRUB"
+#~ msgstr "GRUB स्थापना गर्नुहोस"
+
+#, fuzzy
+#~ msgid "GRUB is a bootloader used to load the Linux kernel."
+#~ msgstr "GRUB एक प्रकारको bootloader जसले लिनक्स कर्नेल कन्फ़िगर गर्छ"
+
+#~ msgid "Edit"
+#~ msgstr "सम्पादन गर्नुस"
+
+#, fuzzy
+#~ msgid "Install Plymouth"
+#~ msgstr "स्थापना गर्नुहोस्"
+
+#, fuzzy
+#~ msgid "Install SolydXK"
+#~ msgstr "स्थापना गर्नुहोस्"
+
+#, fuzzy
+#~ msgid "Passwords do not match."
+#~ msgstr "पासवर्ड बीच मेल भेटिएन"
+
+#, fuzzy
+#~ msgid "Passwords match."
+#~ msgstr "पासवर्ड बीच मेल भेटियो"
+
+#~ msgid "Indexing files to be copied.."
+#~ msgstr "कपि गरिनु पर्ने फाइलहरुको इन्देक्स बनाइदै छ ।"
+
+#~ msgid "Restoring meta-information on %s"
+#~ msgstr "%sको मेटा-जानकारी फर्काइदै छ ।"
+
+#~ msgid "unallocated"
+#~ msgstr "बाँडफाँड नगरिएको"
+
+#~ msgid "Hard drive"
+#~ msgstr "हार्ड ड्राइभ"
+
+#~ msgid "Format?"
+#~ msgstr "ढाँचावद्द गर्ने"
+
+#~ msgid "Extended"
+#~ msgstr "बिस्तारित"
+
+#~ msgid "Format %(partition)s as %(format)s"
+#~ msgstr "%(partition)s %(format)s जसरी फर्म्याट गर्नुहोस्"
+
+#~ msgid "Mount %(partition)s as %(mountpoint)s"
+#~ msgstr "%(partition)s %(mountpoint)s जसरी माउन्ट गर्नुहोस्"
+
+#~ msgid "Could not build supported filesystems list!"
+#~ msgstr "सपोर्ट गरिएका फाइल सिस्टमहरूको तालिका बनाउन सकिएन!"

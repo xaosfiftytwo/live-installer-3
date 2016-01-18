@@ -1,0 +1,1077 @@
+# Albanian translation for linuxmint
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-18 08:57+0100\n"
+"PO-Revision-Date: 2014-08-07 20:57+0000\n"
+"Last-Translator: mzs.112000 <mzs.112000@gmail.com>\n"
+"Language-Team: Albanian <sq@li.org>\n"
+"Language: sq\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2014-09-11 21:48+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
+
+#: ../usr/lib/live-installer-3/localize.py:48
+msgid "Install additional localized packages"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/localize.py:61
+#, fuzzy
+msgid "Localizing KDE"
+msgstr "Lokalizimi"
+
+#: ../usr/lib/live-installer-3/localize.py:78
+#, fuzzy
+msgid "Localizing LibreOffice"
+msgstr "paketa lokalizimin"
+
+#: ../usr/lib/live-installer-3/localize.py:97
+#, fuzzy
+msgid "Localizing AbiWord"
+msgstr "Lokalizimi"
+
+#: ../usr/lib/live-installer-3/localize.py:111
+#, fuzzy
+msgid "Localizing Firefox"
+msgstr "paketa lokalizimin"
+
+#: ../usr/lib/live-installer-3/localize.py:129
+msgid "Localizing Thunderbird"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/partitioning.py:170
+#: ../usr/lib/live-installer-3/partitioning.py:517
+msgid "Unknown"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/partitioning.py:297
+#, fuzzy
+msgid "Removable:"
+msgstr "Pajisje Removable:"
+
+#: ../usr/lib/live-installer-3/partitioning.py:324
+#: ../usr/lib/live-installer-3/gtk_interface.py:702
+#: ../usr/lib/live-installer-3/gtk_interface.py:706
+#: ../usr/lib/live-installer-3/gtk_interface.py:725
+#: ../usr/lib/live-installer-3/gtk_interface.py:730
+#: ../usr/lib/live-installer-3/gtk_interface.py:734
+#: ../usr/lib/live-installer-3/gtk_interface.py:738
+msgid "Installation Tool"
+msgstr "Mjeti i Instalimit"
+
+#: ../usr/lib/live-installer-3/partitioning.py:325
+#, fuzzy, python-brace-format
+msgid ""
+"No partition table was found on the hard drive: {disk_description}. Do you "
+"want the installer to create a set of partitions for you? Note: This will "
+"ERASE ALL DATA present on this disk."
+msgstr ""
+"Nuk u gjet asnjë tabelë particionimi në hard disk. Dëshironi që instaluesi "
+"të krijojë një grup particionesh për ju? Shënim: Kjo do të fshijë çdo të "
+"dhënë që ndodhet në disk."
+
+#: ../usr/lib/live-installer-3/partitioning.py:512
+#, fuzzy
+msgid "Logical partition"
+msgstr "Modifiko particionin"
+
+#: ../usr/lib/live-installer-3/partitioning.py:513
+#, fuzzy
+msgid "Extended partition"
+msgstr "Modifiko particionin"
+
+#: ../usr/lib/live-installer-3/partitioning.py:514
+#: ../usr/lib/live-installer-3/gtk_interface.py:535
+msgid "Free space"
+msgstr "Hapësira e lirë"
+
+#: ../usr/lib/live-installer-3/partitioning.py:534
+#, fuzzy
+msgid "Encryption password"
+msgstr "Përshkrimi"
+
+#: ../usr/lib/live-installer-3/partitioning.py:535
+#, fuzzy
+msgid "Password for the encrypted partition:"
+msgstr "Ju lutemi të jepni një fjalëkalim për llogarinë tuaj të përdoruesit"
+
+#: ../usr/lib/live-installer-3/partitioning.py:646
+msgid "Edit partition"
+msgstr "Modifiko particionin"
+
+#: ../usr/lib/live-installer-3/partitioning.py:653
+#: ../usr/lib/live-installer-3/gtk_interface.py:527
+msgid "Device"
+msgstr "Pajisja"
+
+#: ../usr/lib/live-installer-3/partitioning.py:654
+#: ../usr/lib/live-installer-3/gtk_interface.py:532
+#, fuzzy
+msgid "Format as"
+msgstr "Formatoje si:"
+
+#: ../usr/lib/live-installer-3/partitioning.py:655
+#: ../usr/lib/live-installer-3/gtk_interface.py:531
+msgid "Mount point"
+msgstr "Pika e montimit"
+
+#: ../usr/lib/live-installer-3/partitioning.py:656
+msgid "Label (optional)"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/partitioning.py:657
+#, fuzzy
+msgid "Encryption/password"
+msgstr "Përshkrimi"
+
+#: ../usr/lib/live-installer-3/partitioning.py:744
+#: ../usr/lib/live-installer-3/partitioning.py:751
+#: ../usr/lib/live-installer-3/partitioning.py:780
+#: ../usr/lib/live-installer-3/partitioning.py:784
+#: ../usr/lib/live-installer-3/partitioning.py:790
+#, fuzzy
+msgid "Encryption"
+msgstr "Përshkrimi"
+
+#: ../usr/lib/live-installer-3/partitioning.py:745
+msgid ""
+"You chose to encrypt the root partition.\n"
+"\n"
+"You will need to mount /boot on a separate non-encrypted partition (500 "
+"MB).\n"
+"Without a non-encrypted /boot partition your system will be unbootable.\n"
+"\n"
+"Encryption will erase all data from {}\n"
+"\n"
+"Are you sure you want to continue?"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/partitioning.py:752
+msgid ""
+"Encryption will erase all data from {}\n"
+"\n"
+"Are you sure you want to continue?"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/partitioning.py:781
+#, fuzzy
+msgid "Provide an encryption password for partition:"
+msgstr "Ju lutemi të jepni një fjalëkalim për llogarinë tuaj të përdoruesit"
+
+#: ../usr/lib/live-installer-3/partitioning.py:785
+msgid ""
+"You need to choose a format type\n"
+"for your encrypted partition (default: ext4):"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/partitioning.py:791
+msgid "You need to choose a mount point for partition:"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:128
+#: ../usr/lib/live-installer-3/installer.py:153
+msgid "Installation error"
+msgstr "Gabim instalimi"
+
+#: ../usr/lib/live-installer-3/installer.py:138
+#, fuzzy
+msgid ""
+"Installation is now paused. Please read the instructions on the page "
+"carefully before clicking Forward to finish the installation."
+msgstr ""
+"Instalimi është e ndaluar tani. Ju lutemi lexoni udhëzimet e shfaqura në "
+"faqe me kujdes dhe klikoni Forward për të përfunduar instalimin."
+
+#: ../usr/lib/live-installer-3/installer.py:139
+msgid "Verify that fstab is correct (use blkid to check the UUIDs)."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:140
+msgid ""
+"A chrooted terminal and fstab will be opened after you close this message."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:142
+#, fuzzy
+msgid "Installation paused"
+msgstr "Instalimi ndaluar"
+
+#: ../usr/lib/live-installer-3/installer.py:188
+#, fuzzy, python-format
+msgid "Encrypting %(partition)s ..."
+msgstr "Duke formatuar %(partition)s si %(format)s..."
+
+#: ../usr/lib/live-installer-3/installer.py:194
+#, fuzzy, python-format
+msgid "Formatting %(partition)s as %(format)s ..."
+msgstr "Duke formatuar %(partition)s si %(format)s..."
+
+#: ../usr/lib/live-installer-3/installer.py:237
+#: ../usr/lib/live-installer-3/installer.py:252
+#, python-format
+msgid "Mounting %(partition)s on %(mountpoint)s"
+msgstr "Duke montuar %(partition)s në %(mountpoint)s"
+
+#: ../usr/lib/live-installer-3/installer.py:269
+msgid "Not mounted"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:270
+#, fuzzy
+msgid ""
+"You must first manually mount your target filesystem(s) at /target to do a "
+"custom install!"
+msgstr ""
+"GABIM: Ju duhet së pari me dorë malin filesystem tuaj të synuar (s) në /"
+"objektivin për të bërë një porosi të instaluar!"
+
+#: ../usr/lib/live-installer-3/installer.py:279
+msgid "Base filesystem does not exist"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:280
+msgid ""
+"Something is wrong with the installation medium! This is usually caused by "
+"burning tools which are not compatible with {}. Please burn the ISO image to "
+"DVD/USB using a different tool."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:333
+#, fuzzy
+msgid "Copying"
+msgstr "Duke kopjuar %s"
+
+#: ../usr/lib/live-installer-3/installer.py:352
+#, fuzzy
+msgid "Entering the system ..."
+msgstr "Duke hyrë në sistemin e ri..."
+
+#: ../usr/lib/live-installer-3/installer.py:377
+#, fuzzy
+msgid "Installing EFI packages..."
+msgstr "Instalimi i Linux Mint ..."
+
+#: ../usr/lib/live-installer-3/installer.py:421
+#, fuzzy
+msgid "Installing drivers"
+msgstr "Duke instaluar ngarkuesin e boot"
+
+#: ../usr/lib/live-installer-3/installer.py:433
+msgid "Removing live configuration (packages)"
+msgstr "Duke hequr konfigurimin live (paketat)"
+
+#: ../usr/lib/live-installer-3/installer.py:441
+#, fuzzy
+msgid "Adding new user to the system"
+msgstr "Duke i shtuar përdoruesin sistemit"
+
+#: ../usr/lib/live-installer-3/installer.py:487
+#, fuzzy
+msgid "Writing filesystem mount information to /etc/fstab"
+msgstr "Duke shkruajtur informacionin për montimin e sistemit të skedarëve"
+
+#: ../usr/lib/live-installer-3/installer.py:608
+msgid "Setting hostname"
+msgstr "Duke vendosur emrin e mbartësit"
+
+#: ../usr/lib/live-installer-3/installer.py:627
+msgid "Setting locale"
+msgstr "Duke vendosur lokalet"
+
+#: ../usr/lib/live-installer-3/installer.py:645
+msgid "Update apt cache"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:649
+msgid "Update the new system"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:658
+msgid "Localizing packages"
+msgstr "paketa lokalizimin"
+
+#: ../usr/lib/live-installer-3/installer.py:680
+#, fuzzy
+msgid "Configuring sensors"
+msgstr "Duke konfiguruar ngarkuesin e sistemit"
+
+#: ../usr/lib/live-installer-3/installer.py:688
+msgid "Removing VirtualBox"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:696
+msgid "Removing os-prober"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:702
+msgid "Setting keyboard options"
+msgstr "Duke vendosur opsionet e tastierës"
+
+#: ../usr/lib/live-installer-3/installer.py:739
+msgid "Installing bootloader"
+msgstr "Duke instaluar ngarkuesin e boot"
+
+#: ../usr/lib/live-installer-3/installer.py:755
+msgid "Grub not configured"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:756
+#, fuzzy
+msgid ""
+"The grub bootloader was not configured properly! You need to configure it "
+"manually."
+msgstr ""
+"KUJDES: Ngarkuesi i sistemit grub nuk u konfigurua siç duhet!. Ju duhet ta "
+"konfiguroni atë në mënyrë manuale."
+
+#: ../usr/lib/live-installer-3/installer.py:777
+#, fuzzy
+msgid "Configuring Plymouth"
+msgstr "Duke konfiguruar ngarkuesin e sistemit"
+
+#: ../usr/lib/live-installer-3/installer.py:790
+#, fuzzy
+msgid "Configuring initramfs"
+msgstr "Duke konfiguruar ngarkuesin e sistemit"
+
+#: ../usr/lib/live-installer-3/installer.py:798
+msgid "Cleaning APT"
+msgstr "Duke pastruar APT"
+
+#: ../usr/lib/live-installer-3/installer.py:830
+#, fuzzy
+msgid "Unmounting partitions"
+msgstr "Duke formatuar %(partition)s si %(format)s..."
+
+#: ../usr/lib/live-installer-3/installer.py:852
+#: ../usr/lib/live-installer-3/gtk_interface.py:848
+msgid "Installation finished"
+msgstr "Instalimi përfundoi"
+
+#: ../usr/lib/live-installer-3/installer.py:856
+msgid "Configuring bootloader"
+msgstr "Duke konfiguruar ngarkuesin e sistemit"
+
+#: ../usr/lib/live-installer-3/installer.py:863
+msgid "Checking bootloader"
+msgstr "Duke kontrolluar ngarkuesin e sistemit"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:276
+msgid "Quit?"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:276
+msgid "Are you sure you want to quit the installer?"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:329
+msgid ""
+"Cannot download and install additional locale packages: no internet "
+"connection\n"
+"Configuration will still be set to your selected language."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:331
+msgid "No internet connection"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:482
+#: ../usr/lib/live-installer-3/gtk_interface.py:484
+#, fuzzy
+msgid "{} Installer"
+msgstr "%s Instaluesi"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:498
+#: ../usr/lib/live-installer-3/gtk_interface.py:514
+msgid "Language"
+msgstr "Gjuha"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:499
+msgid "Timezone"
+msgstr "Zona orare"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:500
+msgid "Keyboard layout"
+msgstr "Skema e tastierës"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:501
+msgid "User info"
+msgstr "Informacion i Përdoruesit"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:502
+msgid "Partitioning"
+msgstr "Particionimi"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:503
+#, fuzzy
+msgid "Please make sure you wish to manage partitions manually"
+msgstr "Ju lutem sigurohuni që ju dëshironi për të menaxhuar me dorë ndarëse"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:504
+msgid "Summary"
+msgstr "Përmbledhje"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:505
+#, fuzzy
+msgid "Installing {}..."
+msgstr "Instalimi i Linux Mint ..."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:506
+#, fuzzy
+msgid "Installation is paused: please finish the custom installation"
+msgstr "Instalimi është ndaluar: Ju lutem përfundoni instalimin porosi"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:509
+#: ../usr/lib/live-installer-3/gtk_interface.py:539
+msgid "Quit"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:510
+#: ../usr/lib/live-installer-3/gtk_interface.py:540
+msgid "Back"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:511
+#: ../usr/lib/live-installer-3/gtk_interface.py:541
+#: ../usr/lib/live-installer-3/gtk_interface.py:619
+msgid "Forward"
+msgstr "Përpara"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:515
+msgid "Country"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:518
+msgid "Selected timezone:"
+msgstr "Timezone e zgjedhur:"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:519
+#, fuzzy
+msgid "Select timezone"
+msgstr "Timezone e zgjedhur:"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:522
+msgid "Refresh"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:523
+msgid "_Expert mode"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:524
+#, fuzzy
+msgid "_Edit partitions"
+msgstr "Modifikoni particionet"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:528
+msgid "Grub"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:529
+msgid "Type"
+msgstr "Lloji"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:530
+msgid "Label"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:533
+#, fuzzy
+msgid "Encrypt"
+msgstr "Përshkrimi"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:534
+msgid "Size"
+msgstr "Përmasa"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:544
+msgid "Layout"
+msgstr "Dalja"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:545
+msgid "Variant"
+msgstr "Varianti"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:546
+#, fuzzy
+msgid "Use this box to test your keyboard layout."
+msgstr "Përdorni këtë kuti për të testuar daljen e tastierës suaj"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:547
+msgid "Model"
+msgstr "Modeli"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:550
+msgid "Click to change your picture"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:551
+#, fuzzy
+msgid "Take a photo..."
+msgstr "Nxirr një foto"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:552
+msgid "Browse for more pictures..."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:553
+msgid "Your full name"
+msgstr "Emri juaj i plotë"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:554
+#, fuzzy
+msgid "This will be shown in the About Me application."
+msgstr "Ky do të shfaqet në programin Rreth Meje"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:555
+msgid "Your username"
+msgstr "Emri juaj i përdoruesit"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:556
+#, fuzzy
+msgid "This is the name you will use to log in to your computer."
+msgstr "Ky është emri që ju do të përdorni për të hyni në kompjuterin tuaj"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:557
+msgid "Your password"
+msgstr "Fjalëkalimi juaj"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:558
+#, fuzzy
+msgid "Please enter your password twice to ensure it is correct."
+msgstr ""
+"Ju lutemi ta vendosni fjalëkalimin tuaj dy herë për të qenë të sigurtë që "
+"është i saktë"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:559
+msgid "Hostname"
+msgstr "Emri i mbartësit"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:560
+#, fuzzy
+msgid "This hostname will be the computer's name on the network."
+msgstr "Emri i mbartësit do të jetë emri i kompjuterit tuaj në rrjet"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:561
+msgid "Automatic login"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:562
+msgid ""
+"If enabled, the login screen is skipped when the system starts, and you are "
+"signed into your desktop session automatically."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:564
+msgid "Log in automatically on system boot"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:565
+msgid "Your picture"
+msgstr "Fotografia juaj"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:566
+msgid ""
+"This picture represents your user account. It is used in the login screen "
+"and a few other places."
+msgstr ""
+"This picture represents your user account. It is used in the login screen "
+"and a few other places."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:570
+msgid ""
+"You have selected to manage your partitions manually, this feature is for "
+"ADVANCED USERS ONLY."
+msgstr ""
+"Ju keni zgjedhur për të menaxhuar ndarëse tuaj me dorë, ky tipar është për "
+"Advanced përdoruesit vetëm."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:572
+msgid "Before continuing, please mount your target filesystem(s) at /target."
+msgstr ""
+"Para se të vazhdoni, ju lutem malin filesystem tuaj të synuar (s) në / "
+"target."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:574
+msgid ""
+"Do NOT mount virtual devices such as /dev, /proc, /sys, etc on /target/."
+msgstr ""
+"A NUK mali pajisje virtuale të tilla si /dev, /proc, /sys, etj në /target/."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:576
+#, fuzzy
+msgid ""
+"During the install, you will be given time to chroot into /target and "
+"install any packages that will be needed to boot your new system."
+msgstr ""
+"Gjatë instaluar, ju do të jepet kohë për të chroot në /objektiv dhe të "
+"instaluar ndonjë pacakges që do të jenë të nevojshme për të boot sistemin "
+"tuaj të re."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:578
+msgid "During the install, you will be required to write your own /etc/fstab."
+msgstr "Gjatë instaluar, ju do të kërkohet për të shkruar tuaj /etc/fstab."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:580
+#, fuzzy
+msgid ""
+"If you aren't sure what any of this means, please go back and deselect "
+"manual partition management."
+msgstr ""
+"Nëse ju nuk jeni të sigurt se çfarë ndonjë nga kjo do të thotë, ju lutem "
+"shkoni mbrapa dhe deselect menaxhimit manual ndarje."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:584
+#, fuzzy
+msgid "Please do the following and then click Forward to finish installation:"
+msgstr ""
+"Ju lutemi të bëjë të mëposhtme dhe pastaj klikoni Forward për të përfunduar "
+"Instalimi:"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:586
+msgid ""
+"Create /target/etc/fstab for the filesystems as they will be mounted in your "
+"new system, matching those currently mounted at /target (without using the /"
+"target prefix in the mount paths themselves)."
+msgstr ""
+"Krijo /target/etc/fstab për sistemet e file si ata do të jetë ngritur në "
+"sistemin tuaj të ri, të ngjashëm me ato që aktualisht montuar në / objektiv "
+"(pa përdorur / prefiksin synuar në vetë shtigje mali"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:588
+msgid ""
+"Install any packages that may be needed for first boot (mdadm, cryptsetup, "
+"dmraid, etc) by calling \"sudo chroot /target\" followed by the relevant apt-"
+"get/aptitude installations."
+msgstr ""
+"Install ndonjë paketa që mund të jenë të nevojshme për të boot parë (mdadm, "
+"cryptsetup, dmraid, etj) duke e quajtur \"sudo chroot /objektivin\" e "
+"ndjekur nga instalimet përkatëse apt-get / dhunti."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:590
+msgid ""
+"Note that in order for update-initramfs to work properly in some cases (such "
+"as dm-crypt), you may need to have drives currently mounted using the same "
+"block device name as they appear in /target/etc/fstab."
+msgstr ""
+"Vini re se në mënyrë për te update initramfs për të punuar si duhet në disa "
+"raste (si DM-dhomë e nëndheshme), ju mund të duhet të ketë disqet duke "
+"montuar duke përdorur të njëjtin emër bllok pajisje si ato të shfaqen në /"
+"target/etc/fstab."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:592
+msgid ""
+"Double-check that your /target/etc/fstab is correct, matches what your new "
+"system will have at first boot, and matches what is currently mounted at /"
+"target."
+msgstr ""
+"Double-kontrolloni se /objektivi juaj/etc/fstab është e saktë, përputhet me "
+"atë që sistemi juaj i ri do të ketë në bagazhin e parë, dhe të përputhet me "
+"atë që është i montuar aktualisht në /objektiv."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:596
+msgid "Overview"
+msgstr "Parapamje"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:599
+#, fuzzy
+msgid "Calculating file indexes ..."
+msgstr "Duke llogaritur indeksuesit e skedarëve..."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:664
+#, fuzzy
+msgid "Please provide your full name."
+msgstr "Ju lutemi të jepni emrin tuaj të plotë"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:667
+#, fuzzy
+msgid "Please provide a username."
+msgstr "Ju lutemi të jepni një emër përdoruesi"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:670
+#, fuzzy
+msgid "Please provide a password for your user account."
+msgstr "Ju lutemi të jepni një fjalëkalim për llogarinë tuaj të përdoruesit"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:673
+#, fuzzy
+msgid "Your passwords do not match."
+msgstr "Fjalëkalimet tuaja nuk përputhen"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:676
+#, fuzzy
+msgid "Please provide a hostname."
+msgstr "Ju lutemi të jepni një emër mbartësi"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:680
+#, fuzzy
+msgid "Your username cannot start with a digit."
+msgstr "Emri juaj i përdoruesit nuk mund të mbajë hapësirë të lirë"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:683
+msgid ""
+"The hostname is incorrect:\n"
+"not more than 63 characters between periods\n"
+"and not more than 255 characters total."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:688
+msgid "Error"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:703
+#, fuzzy
+msgid ""
+"Please indicate a filesystem to format the root (/) partition with before "
+"proceeding."
+msgstr ""
+"Ju lutemi të tregoni sistemin e skedarëve me të cilin do të formatohet "
+"particioni rrënjë (/) para se të vazhdojmë"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:707
+#, fuzzy
+msgid "<b>Please select a root (/) partition.</b>"
+msgstr "<b>Ju lutem, përzgjidhni një ndarje root</b>"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:708
+#, fuzzy
+msgid ""
+"A root partition is needed to install the system.\n"
+"\n"
+" - Mount point: /\n"
+" - Recommended size: 30GB\n"
+" - Recommended filesystem format: ext4\n"
+msgstr ""
+"Një ndarje root është e nevojshme për të instaluar Linux Mint.\n"
+"\n"
+" - Mount pika: /\n"
+" - Recommended Madhësia: Më të mëdha se 10GB\n"
+" - Format Recommended: ext4\n"
+" "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:725
+msgid "The EFI partition is too small. It must be at least 100MB."
+msgstr "Ndarje EFI është shumë e vogël. Ajo duhet të jetë të paktën 100MB."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:730
+#: ../usr/lib/live-installer-3/gtk_interface.py:734
+msgid "The EFI partition must be formatted as vfat."
+msgstr "Ndarje EFI duhet të jetë i formatuar si VFAT."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:739
+#, fuzzy
+msgid "<b>Please select an EFI partition.</b>"
+msgstr "<b>Ju lutem, përzgjidhni një ndarje EFI</b>"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:740
+msgid ""
+"An EFI system partition is needed with the following requirements:\n"
+"\n"
+" - Mount point: /boot/efi\n"
+" - Partition flags: Bootable\n"
+" - Size: Larger than 100MB\n"
+" - Format: vfat or fat32\n"
+"\n"
+"To ensure compatibility with Windows we recommend you use the first "
+"partition of the disk as the EFI system partition.\n"
+" "
+msgstr ""
+"Një ndarje sistem EFI është e nevojshme me kërkesat e mëposhtme:\n"
+"\n"
+" - Mount pika: / boot / efi\n"
+" - Flamujve Ndarja: Bootable\n"
+" - Size: Më të mëdha se 100MB\n"
+" - Format: vfat apo FAT32\n"
+"\n"
+"Për të siguruar pajtueshmërinë me Windows-it ne ju rekomandojmë të përdorë "
+"ndarjen e parë e diskut si ndarjen e sistemit EFI.\n"
+" "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:775
+#: ../usr/lib/live-installer-3/gtk_interface.py:782
+msgid "Apply"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:849
+msgid ""
+"Installation is now complete. Do you want to restart your computer to use "
+"the new system?"
+msgstr ""
+"Instalimi tani është kompletuar. A doni të rinisni kompjuterin tuaj për të "
+"përdorur sistemin e ri?"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:897
+msgid "Localization"
+msgstr "Lokalizimi"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:898
+msgid "Language: "
+msgstr "Gjuha: "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:899
+msgid "Timezone: "
+msgstr "Zona Kohore: "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:900
+msgid "Keyboard layout: "
+msgstr "Dalja e tastierës: "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:903
+msgid "User settings"
+msgstr "Parametrat e përdoruesve"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:904
+msgid "Real name: "
+msgstr "Emri i vërtetë: "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:905
+msgid "Username: "
+msgstr "Emri i përdruesit: "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:906
+msgid "Automatic login: "
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:906
+msgid "enabled"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:906
+msgid "disabled"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:907
+msgid "System settings"
+msgstr "Parametrat e sistemit"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:908
+msgid "Hostname: "
+msgstr "Emri i mbartësit: "
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:909
+msgid "Filesystem operations"
+msgstr "Veprimet e sistemit të skedarëve"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:910
+#, fuzzy
+msgid "Install Grub on {}"
+msgstr "Instalo ngarkuesin e nisjes në %s"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:910
+#, fuzzy
+msgid "Do not install Grub"
+msgstr "Mos e instalo ngarkuesin e nisjes"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:913
+msgid "Use already-mounted /target."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:922
+msgid "set boot flag"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:923
+#, fuzzy
+msgid "Mount {}{} as {}"
+msgstr "Formatoje si:"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:926
+msgid "Encrypt {} and format as {}"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:928
+#, fuzzy
+msgid "Format {} as {}"
+msgstr "Formatoje si:"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1115
+msgid "Assign to /"
+msgstr "Caktoja /"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1118
+msgid "Assign to /home"
+msgstr "Caktoja /home"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1124
+msgid "Assign to /boot/efi"
+msgstr "Cakto për /boot/efi"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1129
+msgid "Advanced..."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1143
+#: ../usr/lib/live-installer-3/gtk_interface.py:1169
+#, fuzzy
+msgid "Grub install"
+msgstr "%s Instaluesi"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1144
+msgid ""
+"You chose to NOT install Grub on your system.\n"
+"Without a bootloader like Grub your system might not boot.\n"
+"\n"
+"Are you sure you want to continue?"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1170
+msgid ""
+"You chose to install Grub on a partition.\n"
+"It is recommended to install Grub on a disk instead of a partition.\n"
+"\n"
+"Only continue if you are certain that you have another bootloader already "
+"installed.\n"
+"\n"
+"Are you sure you want to continue?"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1223
+#, fuzzy
+msgid "Select image"
+msgstr "Timezone e zgjedhur:"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1276
+#, fuzzy
+msgid "Take a photo"
+msgstr "Nxirr një foto"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1277
+#, fuzzy
+msgid "Unable to take a photo."
+msgstr "Nxirr një foto"
+
+#: ../usr/share/applications/live-installer-3.desktop.in.h:1
+#, fuzzy
+msgid "Install"
+msgstr "%s Instaluesi"
+
+#: ../usr/share/applications/live-installer-3.desktop.in.h:2
+#, fuzzy
+msgid "Live Installer"
+msgstr "%s Instaluesi"
+
+#: ../usr/share/applications/live-installer-3.desktop.in.h:3
+#, fuzzy
+msgid "Install the operating system"
+msgstr "Sistemi operativ"
+
+#~ msgid "Images"
+#~ msgstr "Imazhet"
+
+#~ msgid "The EFI partition is not bootable. Please edit the partition flags."
+#~ msgstr "Ndarje EFI nuk është bootable. Ju lutemi editoni flamujt ndarje."
+
+#~ msgid "Device:"
+#~ msgstr "Pajisja:"
+
+#~ msgid "Format as:"
+#~ msgstr "Formatoje si:"
+
+#~ msgid "Mount point:"
+#~ msgstr "Pika e montimit:"
+
+#, fuzzy
+#~ msgid "Your username must be lower case."
+#~ msgstr "Emri juaj i përdoruesit duhet të jetë me gërma të vogla"
+
+#, fuzzy
+#~ msgid "The hostname must be lower case."
+#~ msgstr "Emri i mbartësit duhet të jetë me gërma të vogla"
+
+#, fuzzy
+#~ msgid "The hostname may not contain whitespace characters."
+#~ msgstr "Emri i mbartësit nuk duhet të përmbajë hapësirë"
+
+#~ msgid "Operating system"
+#~ msgstr "Sistemi operativ"
+
+#, fuzzy
+#~ msgid "Click this button to take a new picture of yourself with the webcam."
+#~ msgstr "Klikoni këtë buton për të marrë një pamje të re për veten me webcam"
+
+#, fuzzy
+#~ msgid "The installer did not detect any webcams."
+#~ msgstr "Installer nuk ka zbuluar ndonjë Webcam"
+
+#~ msgid "Select a picture"
+#~ msgstr "Përzgjidh një foto"
+
+#, fuzzy
+#~ msgid "Click this button to choose a picture from the hard disk."
+#~ msgstr "Klikoni këtë buton për të zgjedhur një fotografi për llogarinë tuaj"
+
+#~ msgid "Do not install bootloader"
+#~ msgstr "Mos e instalo ngarkuesin e nisjes"
+
+#~ msgid "Advanced options"
+#~ msgstr "Opsione të avancuara"
+
+#~ msgid "Bootloader"
+#~ msgstr "Mbartësi i nisjes"
+
+#~ msgid "Install GRUB"
+#~ msgstr "Instalo GRUB"
+
+#, fuzzy
+#~ msgid "GRUB is a bootloader used to load the Linux kernel."
+#~ msgstr "GRUB është një nisës që përdoret për të ngarkuar kernelin e Linux"
+
+#~ msgid "Edit"
+#~ msgstr "Ndrysho"
+
+#, fuzzy
+#~ msgid "Install Plymouth"
+#~ msgstr "Instalo"
+
+#, fuzzy
+#~ msgid "Install SolydXK"
+#~ msgstr "Instalo"
+
+#, fuzzy
+#~ msgid "Passwords do not match."
+#~ msgstr "Fjalëkalimet nuk përputhen"
+
+#, fuzzy
+#~ msgid "Passwords match."
+#~ msgstr "Fjalëkalimet përputhen"
+
+#~ msgid "Indexing files to be copied.."
+#~ msgstr "Duke indeksuar skedarët që do të kopjohen..."
+
+#~ msgid "Restoring meta-information on %s"
+#~ msgstr "Duke rikthyer meta-informacionin në %s"
+
+#~ msgid "unallocated"
+#~ msgstr "e pa përdorur"
+
+#~ msgid "Hard drive"
+#~ msgstr "Hard draivi"
+
+#~ msgid "Format?"
+#~ msgstr "Ta formatoj?"
+
+#~ msgid "Install Linux Mint on the selected drive:"
+#~ msgstr "instaluar Linux Mint në makinë e zgjedhur:"
+
+#~ msgid "Manually mount partitions (ADVANCED USERS ONLY)."
+#~ msgstr "Dorë mali ndarëse (përdoruesit e përparuar vetëm)."
+
+#~ msgid "Extended"
+#~ msgstr "I Zgjeruar"
+
+#~ msgid "Format %(partition)s as %(format)s"
+#~ msgstr "Formato %(partition)s si %(format)s"
+
+#~ msgid "Mount %(partition)s as %(mountpoint)s"
+#~ msgstr "Monto %(partition)s si %(mountpoint)s"
+
+#~ msgid "Could not build supported filesystems list!"
+#~ msgstr ""
+#~ "Nuk mund të ndërtoj një listë të sistemeve të skedarëve të suportuar!"

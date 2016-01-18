@@ -1,0 +1,37 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-18 08:57+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 1.12.0\n"
+
+#: en/70_community.html+h1:1
+msgid "A great community"
+msgstr ""
+
+#: en/70_community.html+div.div.ul.li:6
+msgid ""
+"The SolydXK community is one of the best on the Internet. Our users provide "
+"most of our funding, as well as ideas, artwork and sometimes even source "
+"code."
+msgstr ""
+
+#: en/70_community.html+div.div.ul.li:7
+msgid ""
+"SolydXK users are happy to share their passion and enthusiasm and are eager "
+"to help. Don't hesitate to ask questions on the forums or to get involved in "
+"the community."
+msgstr ""
+
+#: en/70_community.html+div.div.ul.li:8
+msgid ""
+"Send us your feedback and tell us about your experience. We'll listen to "
+"your ideas and use them to further improve SolydXK."
+msgstr ""

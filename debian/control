@@ -1,0 +1,54 @@
+Source: live-installer-3
+Section: admin
+Priority: optional
+Maintainer: Arjen Balfoort <arjenbalfoort@solydxk.com>
+Build-Depends: debhelper (>= 9)
+  , python3 (>= 3.2)
+  , po4a
+  , intltool
+X-Python3-Version: >= 3.2
+Standards-Version: 3.9.6
+Vcs-Git: git://github.com/linuxmint/live-installer-3
+Vcs-Browser: https://github.com/SolydXK/live-installer-3
+
+Package: live-installer-3
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}
+  , python3
+  , python3-gi
+  , gir1.2-webkit-3.0
+  , gir1.2-gtk-3.0
+  , python3-parted
+  , parted
+  , gparted
+  , python3-geoip
+  , geoip-database-contrib
+  , python3-pyqt4
+  , python3-pil
+  , streamer
+  , imagemagick
+  , desktop-file-utils
+  , shared-mime-info
+  , sysv-rc
+  , menu
+  , gdisk
+  , isoquery
+  , iso-codes
+  , locales
+  , adduser
+  , rsync
+  , whois
+  , passwd
+  , cryptsetup
+Conflicts: live-installer
+Replaces: live-installer
+Description: Live Installer
+ A live installer
+
+Package: live-installer-3-slideshow
+Architecture: all
+Depends: live-installer-3
+Conflicts: live-installer-3.slideshow
+Replaces: live-installer-3.slideshow
+Description: Live Installer Slideshow
+ A slideshow for the live installer

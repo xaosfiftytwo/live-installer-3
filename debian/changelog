@@ -1,0 +1,8 @@
+live-installer-3 (2016.01.18) debian; urgency=low
+
+  * Python2.7 to Python3 of live-installer 2016.01.01
+  * Update new system if possible
+  * Improved handling of manually mounted partitions during custom install
+  * Resolved bug: hanging on re-encrypting previously encrypted partition
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Mon, 18 Jan 2016 09:00:00 +0100
