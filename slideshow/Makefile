@@ -10,8 +10,8 @@ build:
 	# html
 	@ rm pot/*.pot
 	@ html2po -P en pot && echo "HTML pot files created"
-	@ msgcat pot/*.pot >> live-installer-3.slideshow.pot
-	@ head -n50 live-installer-3.slideshow.pot > .tmp && tail -n+51 live-installer-3.slideshow.pot | sed '/fuzzy/,/X-/d' >> .tmp && mv -f .tmp live-installer-3.slideshow.pot && echo "Pot files merged"
+	@ msgcat pot/*.pot > live-installer-3-slideshow.pot
+	@ head -n50 live-installer-3-slideshow.pot > .tmp && tail -n+51 live-installer-3-slideshow.pot | sed '/fuzzy/,/X-/d' >> .tmp && mv -f .tmp live-installer-3-slideshow.pot && echo "Pot files merged"
 	@ po4a po4a/po4a.cfg && echo "Po files and translations updated"
 	# don't ship incomplete translations
 	@ n_required=`ls en | wc -l`; \
