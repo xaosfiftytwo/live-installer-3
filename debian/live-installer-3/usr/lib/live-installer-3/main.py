@@ -44,10 +44,14 @@ sys.excepthook = uncaught_excepthook
 
 # main entry
 if __name__ == "__main__":
-    # Calling GObject.threads_init() is not needed for PyGObject 3.10.2+
-    # Check with print (sys.version)
-    # Debian Jessie: 3.4.2
-    GObject.threads_init()
+    # Create an instance of our GTK application
+    try:
+        # Calling GObject.threads_init() is not needed for PyGObject 3.10.2+
+        # Check with print (sys.version)
+        # Debian Jessie: 3.4.2
+        GObject.threads_init()
 
-    InstallerWindow(fullscreen=("install" in getoutput("cat /proc/cmdline")))
-    Gtk.main()
+        InstallerWindow(fullscreen=("install" in getoutput("cat /proc/cmdline")))
+        Gtk.main()
+    except KeyboardInterrupt:
+        pass

@@ -1,3 +1,11 @@
+live-installer-3 (2016.01.19) debian; urgency=low
+
+  * Updated translations
+  * Solved bug: incorrect grub update when using custom boot parameters
+  * Create symbolic link /usr/bin/live-installer to live-installer-3
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Tue, 19 Jan 2016 09:00:00 +0100
+
 live-installer-3 (2016.01.18) debian; urgency=low
 
   * Python2.7 to Python3 of live-installer 2016.01.01

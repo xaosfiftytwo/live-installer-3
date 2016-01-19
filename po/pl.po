@@ -3,17 +3,17 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Arjen Balfoort <schoelje@solydxk.com>, 2015
+# Arjen Balfoort <schoelje@solydxk.com>, 2015-2016
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2010
-# Wojciech Kolasinski <kolasinski@retsat1.com.pl>, 2015
+# Wojciech Kolasinski <kolasinski@retsat1.com.pl>, 2015-2016
 msgid ""
 msgstr ""
-"Project-Id-Version: live-installer\n"
+"Project-Id-Version: live-installer-3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-18 08:57+0100\n"
-"PO-Revision-Date: 2016-01-02 09:09+0000\n"
-"Last-Translator: Arjen Balfoort <schoelje@solydxk.com>\n"
-"Language-Team: Polish (http://www.transifex.com/solydxk/live-installer/"
+"POT-Creation-Date: 2016-01-19 15:39+0100\n"
+"PO-Revision-Date: 2016-01-19 11:18+0000\n"
+"Last-Translator: Wojciech Kolasinski <kolasinski@retsat1.com.pl>\n"
+"Language-Team: Polish (http://www.transifex.com/solydxk/live-installer-3/"
 "language/pl/)\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -189,12 +189,13 @@ msgstr ""
 
 #: ../usr/lib/live-installer-3/installer.py:139
 msgid "Verify that fstab is correct (use blkid to check the UUIDs)."
-msgstr ""
+msgstr "Sprawdź poprawność fstab (użyj blkid aby zweryfikować UUID)."
 
 #: ../usr/lib/live-installer-3/installer.py:140
 msgid ""
 "A chrooted terminal and fstab will be opened after you close this message."
 msgstr ""
+"Chrootowany terminal i fstab zostaną otwarte po zamknięciu tej wiadomoći."
 
 #: ../usr/lib/live-installer-3/installer.py:142
 msgid "Installation paused"
@@ -218,31 +219,27 @@ msgstr "Montowanie %(partition)s na %(mountpoint)s"
 
 #: ../usr/lib/live-installer-3/installer.py:269
 msgid "Not mounted"
-msgstr ""
+msgstr "Niezamontowany"
 
 #: ../usr/lib/live-installer-3/installer.py:270
-#, fuzzy
 msgid ""
 "You must first manually mount your target filesystem(s) at /target to do a "
 "custom install!"
-msgstr ""
-"BŁĄD: Musisz wpierw ręcznie zamontować swój docelowy system plików w /"
-"target, aby przeprowadzić własną instalację!"
+msgstr "System bazowy nie istnieje"
 
 #: ../usr/lib/live-installer-3/installer.py:279
 msgid "Base filesystem does not exist"
-msgstr ""
+msgstr "Nie istnieje bazowy system plików"
 
 #: ../usr/lib/live-installer-3/installer.py:280
-#, fuzzy
 msgid ""
 "Something is wrong with the installation medium! This is usually caused by "
 "burning tools which are not compatible with {}. Please burn the ISO image to "
 "DVD/USB using a different tool."
 msgstr ""
-"BŁĄD: Niewłaściwe medium instalacyjne! Zazwyczaj jest to spowodowane "
-"niezgodnością narzędzia do nagrywania obrazu z {}. Proszę użyć innego "
-"oprogramowania do nagrywania obrazu ISO na płytę DVD/dysk USB."
+"Niewłaściwe medium instalacyjne! Zazwyczaj jest to spowodowane niezgodnością "
+"narzędzia do nagrywania obrazu z {}. Proszę użyć innego oprogramowania do "
+"nagrywania obrazu ISO na płytę DVD/dysk USB."
 
 #: ../usr/lib/live-installer-3/installer.py:333
 msgid "Copying"
@@ -253,9 +250,8 @@ msgid "Entering the system ..."
 msgstr "Wejście do systemu..."
 
 #: ../usr/lib/live-installer-3/installer.py:377
-#, fuzzy
 msgid "Installing EFI packages..."
-msgstr "Instalacj {}..."
+msgstr "Instalacja pakietów EFI"
 
 #: ../usr/lib/live-installer-3/installer.py:421
 msgid "Installing drivers"
@@ -287,7 +283,7 @@ msgstr "Uaktualnij pamięć apt"
 
 #: ../usr/lib/live-installer-3/installer.py:649
 msgid "Update the new system"
-msgstr ""
+msgstr "Zaktualizuj nowy system"
 
 #: ../usr/lib/live-installer-3/installer.py:658
 msgid "Localizing packages"
@@ -303,7 +299,7 @@ msgstr "Usuwanie VirtualBox"
 
 #: ../usr/lib/live-installer-3/installer.py:696
 msgid "Removing os-prober"
-msgstr ""
+msgstr "Usuwanie pakietu os-prober"
 
 #: ../usr/lib/live-installer-3/installer.py:702
 msgid "Setting keyboard options"
@@ -315,16 +311,15 @@ msgstr "Instalowanie programu rozruchowego"
 
 #: ../usr/lib/live-installer-3/installer.py:755
 msgid "Grub not configured"
-msgstr ""
+msgstr "Grub jest nieskonfigurowany"
 
 #: ../usr/lib/live-installer-3/installer.py:756
-#, fuzzy
 msgid ""
 "The grub bootloader was not configured properly! You need to configure it "
 "manually."
 msgstr ""
-"OSTRZEŻENIE: Program rozruchowy grub nie został poprawnie skonfigurowany! "
-"Zachodzi potrzeba jego ręcznego skonfigurowania."
+"Program rozruchowy grub nie jest właściwie skonfigurowany. Konieczna "
+"konfiguracja manualna."
 
 #: ../usr/lib/live-installer-3/installer.py:777
 msgid "Configuring Plymouth"
@@ -339,9 +334,8 @@ msgid "Cleaning APT"
 msgstr "Czyszczenie APT"
 
 #: ../usr/lib/live-installer-3/installer.py:830
-#, fuzzy
 msgid "Unmounting partitions"
-msgstr "Szyfrowanie %(partition)s ..."
+msgstr "Odmontowanie partycji"
 
 #: ../usr/lib/live-installer-3/installer.py:852
 #: ../usr/lib/live-installer-3/gtk_interface.py:848
@@ -723,6 +717,10 @@ msgid ""
 " - Recommended size: 30GB\n"
 " - Recommended filesystem format: ext4\n"
 msgstr ""
+"Partycja główna (root) jest niezbędna do instalacji systemu.\n"
+"- Punkt montowania: /\n"
+"- Zalecany rozmiar: 30GB\n"
+"- Zalecany system plików: ext4\n"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:725
 msgid "The EFI partition is too small. It must be at least 100MB."
@@ -902,19 +900,16 @@ msgstr ""
 "Czy na pewno chcesz kontynuować? "
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1223
-#, fuzzy
 msgid "Select image"
-msgstr "Wybierz strefę czasową"
+msgstr "Wybierz obrazek"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1276
-#, fuzzy
 msgid "Take a photo"
 msgstr "Zrób zdjęcie"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1277
-#, fuzzy
 msgid "Unable to take a photo."
-msgstr "Zrób zdjęcie"
+msgstr "Nie można zrobić zdjęcia."
 
 #: ../usr/share/applications/live-installer-3.desktop.in.h:1
 msgid "Install"
@@ -927,19 +922,3 @@ msgstr "Instalator live"
 #: ../usr/share/applications/live-installer-3.desktop.in.h:3
 msgid "Install the operating system"
 msgstr "Instaluj system operacyjny"
-
-#~ msgid "No slideshow template found."
-#~ msgstr "Nie znaleziono szablonu pokazu slajdów."
-
-#~ msgid "Images"
-#~ msgstr "Obrazy"
-
-#~ msgid "Unexpected error"
-#~ msgstr "Niespodziewany błąd"
-
-#~ msgid ""
-#~ "The installer has failed with the following unexpected error. Please "
-#~ "submit a bug report!"
-#~ msgstr ""
-#~ "Instalator zakończył działanie z powodu nieoczekiwanego błędu. Wyślij "
-#~ "proszę raport o błędzie."

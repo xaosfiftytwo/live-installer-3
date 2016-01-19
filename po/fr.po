@@ -3,18 +3,18 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Arjen Balfoort <schoelje@solydxk.com>, 2015
+# Arjen Balfoort <schoelje@solydxk.com>, 2015-2016
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2010
 # ich bin <ichbin1199@gmail.com>, 2015
 # Jocelyn <anechampenois@solydxk.com>, 2015
 msgid ""
 msgstr ""
-"Project-Id-Version: live-installer\n"
+"Project-Id-Version: live-installer-3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-18 08:57+0100\n"
-"PO-Revision-Date: 2016-01-02 09:09+0000\n"
+"POT-Creation-Date: 2016-01-19 15:39+0100\n"
+"PO-Revision-Date: 2016-01-19 14:35+0000\n"
 "Last-Translator: Arjen Balfoort <schoelje@solydxk.com>\n"
-"Language-Team: French (http://www.transifex.com/solydxk/live-installer/"
+"Language-Team: French (http://www.transifex.com/solydxk/live-installer-3/"
 "language/fr/)\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -228,28 +228,24 @@ msgid "Not mounted"
 msgstr ""
 
 #: ../usr/lib/live-installer-3/installer.py:270
-#, fuzzy
 msgid ""
 "You must first manually mount your target filesystem(s) at /target to do a "
 "custom install!"
 msgstr ""
-"ERREUR : Vous devez d'abord monter manuellement le(s) système(s) de fichiers "
-"cible(s) à l'emplacement /target pour faire une installation personnalisée !"
 
 #: ../usr/lib/live-installer-3/installer.py:279
 msgid "Base filesystem does not exist"
 msgstr ""
 
 #: ../usr/lib/live-installer-3/installer.py:280
-#, fuzzy
 msgid ""
 "Something is wrong with the installation medium! This is usually caused by "
 "burning tools which are not compatible with {}. Please burn the ISO image to "
 "DVD/USB using a different tool."
 msgstr ""
-"ERREUR: Le support d'installation semble corrompu! Cela provient "
-"généralement d'un logiciel de gravure non compatible avec {}. Merci de "
-"graver l'image ISO sur USB/DVD à l'aide d'un autre programme."
+"Le support d'installation semble corrompu! Cela provient généralement d'un "
+"logiciel de gravure non compatible avec {}. Merci de graver l'image ISO sur "
+"USB/DVD à l'aide d'un autre programme."
 
 #: ../usr/lib/live-installer-3/installer.py:333
 msgid "Copying"
@@ -260,9 +256,8 @@ msgid "Entering the system ..."
 msgstr "Accès au système..."
 
 #: ../usr/lib/live-installer-3/installer.py:377
-#, fuzzy
 msgid "Installing EFI packages..."
-msgstr "Installation {}..."
+msgstr ""
 
 #: ../usr/lib/live-installer-3/installer.py:421
 msgid "Installing drivers"
@@ -326,13 +321,12 @@ msgid "Grub not configured"
 msgstr ""
 
 #: ../usr/lib/live-installer-3/installer.py:756
-#, fuzzy
 msgid ""
 "The grub bootloader was not configured properly! You need to configure it "
 "manually."
 msgstr ""
-"ATTENTION : le chargeur d'amorçage GRUB n'a pas été configuré correctement ! "
-"Vous devez le configurer manuellement."
+"Le chargeur d'amorçage GRUB n'a pas été configuré correctement ! Vous devez "
+"le configurer manuellement."
 
 #: ../usr/lib/live-installer-3/installer.py:777
 msgid "Configuring Plymouth"
@@ -347,9 +341,8 @@ msgid "Cleaning APT"
 msgstr "Nettoyage de APT"
 
 #: ../usr/lib/live-installer-3/installer.py:830
-#, fuzzy
 msgid "Unmounting partitions"
-msgstr "Cryptage en cours de %(partition)s ..."
+msgstr ""
 
 #: ../usr/lib/live-installer-3/installer.py:852
 #: ../usr/lib/live-installer-3/gtk_interface.py:848
@@ -931,19 +924,16 @@ msgstr ""
 "Etes-vous sûr de vouloir continuer?"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1223
-#, fuzzy
 msgid "Select image"
-msgstr "Sélectionnez un fuseau horaire"
+msgstr ""
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1276
-#, fuzzy
 msgid "Take a photo"
-msgstr "Prenez une photo..."
+msgstr ""
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1277
-#, fuzzy
 msgid "Unable to take a photo."
-msgstr "Prenez une photo..."
+msgstr ""
 
 #: ../usr/share/applications/live-installer-3.desktop.in.h:1
 msgid "Install"
@@ -956,19 +946,3 @@ msgstr "Programme d'installation"
 #: ../usr/share/applications/live-installer-3.desktop.in.h:3
 msgid "Install the operating system"
 msgstr "Installation du système d'exploitation"
-
-#~ msgid "No slideshow template found."
-#~ msgstr "Aucun modèle de diaporama trouvé."
-
-#~ msgid "Images"
-#~ msgstr "Images"
-
-#~ msgid "Unexpected error"
-#~ msgstr "Erreur inattendue"
-
-#~ msgid ""
-#~ "The installer has failed with the following unexpected error. Please "
-#~ "submit a bug report!"
-#~ msgstr ""
-#~ "L'installeur a rencontré une erreur inattendue. Merci de faire un rapport "
-#~ "de bug!"

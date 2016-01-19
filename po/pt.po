@@ -3,18 +3,18 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Arjen Balfoort <schoelje@solydxk.com>, 2015
+# Arjen Balfoort <schoelje@solydxk.com>, 2015-2016
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2010
-# Luis Filipe Teixeira <lufilte@gmail.com>, 2015
+# Luis Filipe Teixeira <lufilte@gmail.com>, 2015-2016
 # Nuno Duarte <inactive+nuno.passiano@transifex.com>, 2015
 msgid ""
 msgstr ""
-"Project-Id-Version: live-installer\n"
+"Project-Id-Version: live-installer-3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-18 08:57+0100\n"
-"PO-Revision-Date: 2016-01-02 09:09+0000\n"
+"POT-Creation-Date: 2016-01-19 15:39+0100\n"
+"PO-Revision-Date: 2016-01-19 14:33+0000\n"
 "Last-Translator: Arjen Balfoort <schoelje@solydxk.com>\n"
-"Language-Team: Portuguese (http://www.transifex.com/solydxk/live-installer/"
+"Language-Team: Portuguese (http://www.transifex.com/solydxk/live-installer-3/"
 "language/pt/)\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
@@ -195,12 +195,13 @@ msgstr ""
 
 #: ../usr/lib/live-installer-3/installer.py:139
 msgid "Verify that fstab is correct (use blkid to check the UUIDs)."
-msgstr ""
+msgstr "Verifique que fstab está correto (use blkid para verificar os UUIDs)."
 
 #: ../usr/lib/live-installer-3/installer.py:140
 msgid ""
 "A chrooted terminal and fstab will be opened after you close this message."
 msgstr ""
+"Um terminal de chroot e fstab será aberto depois de fechar esta mensagem."
 
 #: ../usr/lib/live-installer-3/installer.py:142
 msgid "Installation paused"
@@ -224,31 +225,29 @@ msgstr "Montar %(partition)s em %(mountpoint)s"
 
 #: ../usr/lib/live-installer-3/installer.py:269
 msgid "Not mounted"
-msgstr ""
+msgstr "Não está montado"
 
 #: ../usr/lib/live-installer-3/installer.py:270
-#, fuzzy
 msgid ""
 "You must first manually mount your target filesystem(s) at /target to do a "
 "custom install!"
 msgstr ""
-"ERRO: Tem de primeiro montar o seu alvo de sistema de ficheiro(s) em /target "
-"para fazer uma instalação personalizada!"
+"Tem de primeiro montar o seu alvo de sistema de ficheiro(s) em /target para "
+"fazer uma instalação personalizada!"
 
 #: ../usr/lib/live-installer-3/installer.py:279
 msgid "Base filesystem does not exist"
-msgstr ""
+msgstr "A base de sistema de ficheiros não existe"
 
 #: ../usr/lib/live-installer-3/installer.py:280
-#, fuzzy
 msgid ""
 "Something is wrong with the installation medium! This is usually caused by "
 "burning tools which are not compatible with {}. Please burn the ISO image to "
 "DVD/USB using a different tool."
 msgstr ""
-"ERRO: Algo está errado com o meio de instalação! Isto é geralmente causado "
-"pela gravação de ferramentas que não são compatíveis com {}. Por favor, "
-"grave a imagem ISO de DVD / USB usando uma ferramenta diferente."
+"Algo está errado com o meio de instalação! Isto é geralmente causado pela "
+"gravação de ferramentas que não são compatíveis com {}. Por favor, grave a "
+"imagem ISO de DVD / USB usando uma ferramenta diferente."
 
 #: ../usr/lib/live-installer-3/installer.py:333
 msgid "Copying"
@@ -259,9 +258,8 @@ msgid "Entering the system ..."
 msgstr "A entrar no sistema ..."
 
 #: ../usr/lib/live-installer-3/installer.py:377
-#, fuzzy
 msgid "Installing EFI packages..."
-msgstr "Instalando {}..."
+msgstr "A instalar pacotes EFI..."
 
 #: ../usr/lib/live-installer-3/installer.py:421
 msgid "Installing drivers"
@@ -293,7 +291,7 @@ msgstr "Atualização da cache de apt"
 
 #: ../usr/lib/live-installer-3/installer.py:649
 msgid "Update the new system"
-msgstr ""
+msgstr "Actualizar o novo sistema"
 
 #: ../usr/lib/live-installer-3/installer.py:658
 msgid "Localizing packages"
@@ -309,7 +307,7 @@ msgstr "A remover a VirtualBox"
 
 #: ../usr/lib/live-installer-3/installer.py:696
 msgid "Removing os-prober"
-msgstr ""
+msgstr "A remover os-prober"
 
 #: ../usr/lib/live-installer-3/installer.py:702
 msgid "Setting keyboard options"
@@ -321,16 +319,15 @@ msgstr "A instalar o gestor de arranque"
 
 #: ../usr/lib/live-installer-3/installer.py:755
 msgid "Grub not configured"
-msgstr ""
+msgstr "Grub sem configuração"
 
 #: ../usr/lib/live-installer-3/installer.py:756
-#, fuzzy
 msgid ""
 "The grub bootloader was not configured properly! You need to configure it "
 "manually."
 msgstr ""
-"AVISO: O arranque automático GRUB não foi configurado corretamente! Você "
-"precisa configurá-lo manualmente."
+"O arranque automático GRUB não foi configurado corretamente! Você precisa "
+"configurá-lo manualmente."
 
 #: ../usr/lib/live-installer-3/installer.py:777
 msgid "Configuring Plymouth"
@@ -345,9 +342,8 @@ msgid "Cleaning APT"
 msgstr "A limpar APT"
 
 #: ../usr/lib/live-installer-3/installer.py:830
-#, fuzzy
 msgid "Unmounting partitions"
-msgstr "Encriptando %(partition)s ..."
+msgstr "Desmontar as partições"
 
 #: ../usr/lib/live-installer-3/installer.py:852
 #: ../usr/lib/live-installer-3/gtk_interface.py:848
@@ -916,19 +912,16 @@ msgstr ""
 "Você tem certeza que quer continuar?"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1223
-#, fuzzy
 msgid "Select image"
-msgstr "Escolha um fuso horário"
+msgstr "Selecionar uma imagem"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1276
-#, fuzzy
 msgid "Take a photo"
-msgstr "Tire uma foto..."
+msgstr "Tirar uma fotografia"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1277
-#, fuzzy
 msgid "Unable to take a photo."
-msgstr "Tire uma foto..."
+msgstr "Não é possível tirar uma foto."
 
 #: ../usr/share/applications/live-installer-3.desktop.in.h:1
 msgid "Install"
@@ -941,19 +934,3 @@ msgstr "Instalador em Live"
 #: ../usr/share/applications/live-installer-3.desktop.in.h:3
 msgid "Install the operating system"
 msgstr "Instalar o sistema operativo"
-
-#~ msgid "No slideshow template found."
-#~ msgstr "Nenhum modelo encontrado de apresentação de diapositivos."
-
-#~ msgid "Images"
-#~ msgstr "Imagens"
-
-#~ msgid "Unexpected error"
-#~ msgstr "Erro inesperado"
-
-#~ msgid ""
-#~ "The installer has failed with the following unexpected error. Please "
-#~ "submit a bug report!"
-#~ msgstr ""
-#~ "O instalador falhou com o seguinte erro inesperado. Por favor envie um "
-#~ "relatório de erro!"

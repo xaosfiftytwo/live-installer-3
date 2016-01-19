@@ -189,7 +189,7 @@ def is_amd64():
 
 def get_boot_parameters():
     parms = []
-    not_allowed = ['live', 'ram', 'single', 'ignore', 'config', 'components', 'memtest']
+    not_allowed = 'live,ram,single,ignore,config,components,memtest,iso,noprompt,noeject,noswap'.split(',')
     cmd = "cat /proc/cmdline"
     ret = getoutput(cmd).split(" ")
     for line in ret:
