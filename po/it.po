@@ -12,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: live-installer-3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-19 15:39+0100\n"
-"PO-Revision-Date: 2016-01-19 14:29+0000\n"
-"Last-Translator: Arjen Balfoort <schoelje@solydxk.com>\n"
+"POT-Creation-Date: 2016-01-20 14:47+0100\n"
+"PO-Revision-Date: 2016-01-19 17:33+0000\n"
+"Last-Translator: Franco Frolloni <frolloni@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/solydxk/live-installer-3/"
 "language/it/)\n"
 "Language: it\n"
@@ -197,12 +197,12 @@ msgstr ""
 
 #: ../usr/lib/live-installer-3/installer.py:139
 msgid "Verify that fstab is correct (use blkid to check the UUIDs)."
-msgstr ""
+msgstr "Verifica che fstab è corretto (usa blkid per controllare gli UUID)"
 
 #: ../usr/lib/live-installer-3/installer.py:140
 msgid ""
 "A chrooted terminal and fstab will be opened after you close this message."
-msgstr ""
+msgstr "Seleziona l'immagine"
 
 #: ../usr/lib/live-installer-3/installer.py:142
 msgid "Installation paused"
@@ -226,13 +226,15 @@ msgstr "Mount di %(partition)s in %(mountpoint)s"
 
 #: ../usr/lib/live-installer-3/installer.py:269
 msgid "Not mounted"
-msgstr ""
+msgstr "Non montato"
 
 #: ../usr/lib/live-installer-3/installer.py:270
 msgid ""
 "You must first manually mount your target filesystem(s) at /target to do a "
 "custom install!"
 msgstr ""
+"Devi prima montare il/i filesystem di destinazione in /target per "
+"un'installazione personalizzata!"
 
 #: ../usr/lib/live-installer-3/installer.py:279
 msgid "Base filesystem does not exist"
@@ -258,7 +260,7 @@ msgstr "Accesso al sistema..."
 
 #: ../usr/lib/live-installer-3/installer.py:377
 msgid "Installing EFI packages..."
-msgstr ""
+msgstr "Installazione dei pacchetti EFI"
 
 #: ../usr/lib/live-installer-3/installer.py:421
 msgid "Installing drivers"
@@ -290,7 +292,7 @@ msgstr "Aggiorna la cache di apt"
 
 #: ../usr/lib/live-installer-3/installer.py:649
 msgid "Update the new system"
-msgstr ""
+msgstr "Aggiorna il nuovo sistema"
 
 #: ../usr/lib/live-installer-3/installer.py:658
 msgid "Localizing packages"
@@ -318,7 +320,7 @@ msgstr "Installazione del bootloader"
 
 #: ../usr/lib/live-installer-3/installer.py:755
 msgid "Grub not configured"
-msgstr ""
+msgstr "Grub non configurato"
 
 #: ../usr/lib/live-installer-3/installer.py:756
 msgid ""
@@ -342,7 +344,7 @@ msgstr "Pulizia di APT"
 
 #: ../usr/lib/live-installer-3/installer.py:830
 msgid "Unmounting partitions"
-msgstr ""
+msgstr "Smontaggio partizioni"
 
 #: ../usr/lib/live-installer-3/installer.py:852
 #: ../usr/lib/live-installer-3/gtk_interface.py:848
@@ -911,15 +913,15 @@ msgstr ""
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1223
 msgid "Select image"
-msgstr ""
+msgstr "Seleziona un'immagine"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1276
 msgid "Take a photo"
-msgstr ""
+msgstr "Scatta una foto"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1277
 msgid "Unable to take a photo."
-msgstr ""
+msgstr "Impossibile scattare una foto."
 
 #: ../usr/share/applications/live-installer-3.desktop.in.h:1
 msgid "Install"

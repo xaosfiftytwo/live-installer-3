@@ -28,9 +28,10 @@ a
 	left:0;
 	
 	border: 1px solid black; 
-	background-image:url('background.png');
-	background-repeat:no-repeat;
-	background-position:top left;
+	background-image:url('background.svg');
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	background-size: Auto 75%;
 
 }
 

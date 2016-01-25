@@ -4,15 +4,15 @@
 #
 # Translators:
 # Arjen Balfoort <schoelje@solydxk.com>, 2015-2016
-# Eduard Selma <selma@tinet.cat>, 2015
+# Eduard Selma <selma@tinet.cat>, 2015-2016
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2010
 msgid ""
 msgstr ""
 "Project-Id-Version: live-installer-3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-19 15:39+0100\n"
-"PO-Revision-Date: 2016-01-19 14:34+0000\n"
-"Last-Translator: Arjen Balfoort <schoelje@solydxk.com>\n"
+"POT-Creation-Date: 2016-01-22 09:09+0100\n"
+"PO-Revision-Date: 2016-01-21 09:22+0000\n"
+"Last-Translator: Eduard Selma <selma@tinet.cat>\n"
 "Language-Team: Catalan (http://www.transifex.com/solydxk/live-installer-3/"
 "language/ca/)\n"
 "Language: ca\n"
@@ -194,11 +194,13 @@ msgstr ""
 #: ../usr/lib/live-installer-3/installer.py:139
 msgid "Verify that fstab is correct (use blkid to check the UUIDs)."
 msgstr ""
+"Comproveu que el fstab és correcte (useu blkid per verificar els UUIDs)"
 
 #: ../usr/lib/live-installer-3/installer.py:140
 msgid ""
 "A chrooted terminal and fstab will be opened after you close this message."
 msgstr ""
+"S'obrirà un terminal amb chroot i fstab després de tancar aquest missatge."
 
 #: ../usr/lib/live-installer-3/installer.py:142
 msgid "Installation paused"
@@ -222,17 +224,19 @@ msgstr "S'està muntant %(partition)s a %(mountpoint)s"
 
 #: ../usr/lib/live-installer-3/installer.py:269
 msgid "Not mounted"
-msgstr ""
+msgstr "No muntat "
 
 #: ../usr/lib/live-installer-3/installer.py:270
 msgid ""
 "You must first manually mount your target filesystem(s) at /target to do a "
 "custom install!"
 msgstr ""
+"Cal que primer munteu manualment el sistema de fitxers objectiu a /target "
+"per fer una instal·lació a mida!"
 
 #: ../usr/lib/live-installer-3/installer.py:279
 msgid "Base filesystem does not exist"
-msgstr ""
+msgstr "El sistema de fitxers base no existeix "
 
 #: ../usr/lib/live-installer-3/installer.py:280
 msgid ""
@@ -254,7 +258,7 @@ msgstr "Entrant al sistema..."
 
 #: ../usr/lib/live-installer-3/installer.py:377
 msgid "Installing EFI packages..."
-msgstr ""
+msgstr "Instal·lant els paquets EFI..."
 
 #: ../usr/lib/live-installer-3/installer.py:421
 msgid "Installing drivers"
@@ -288,7 +292,7 @@ msgstr "Actualitzant la memòria cau de l'APT  "
 
 #: ../usr/lib/live-installer-3/installer.py:649
 msgid "Update the new system"
-msgstr ""
+msgstr "Actualitza el nou sistema "
 
 #: ../usr/lib/live-installer-3/installer.py:658
 msgid "Localizing packages"
@@ -304,7 +308,7 @@ msgstr "Eliminant VirtualBox "
 
 #: ../usr/lib/live-installer-3/installer.py:696
 msgid "Removing os-prober"
-msgstr ""
+msgstr "Eliminant OS-prober "
 
 #: ../usr/lib/live-installer-3/installer.py:702
 msgid "Setting keyboard options"
@@ -316,7 +320,7 @@ msgstr "Instal·lant el carregador d'arrencada "
 
 #: ../usr/lib/live-installer-3/installer.py:755
 msgid "Grub not configured"
-msgstr ""
+msgstr "El GRUB no està configurat "
 
 #: ../usr/lib/live-installer-3/installer.py:756
 msgid ""
@@ -340,7 +344,7 @@ msgstr "Netejant l'APT "
 
 #: ../usr/lib/live-installer-3/installer.py:830
 msgid "Unmounting partitions"
-msgstr ""
+msgstr "Desmuntant les particions "
 
 #: ../usr/lib/live-installer-3/installer.py:852
 #: ../usr/lib/live-installer-3/gtk_interface.py:848
@@ -911,15 +915,15 @@ msgstr ""
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1223
 msgid "Select image"
-msgstr ""
+msgstr "Trieu la imatge "
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1276
 msgid "Take a photo"
-msgstr ""
+msgstr "Feu una foto "
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1277
 msgid "Unable to take a photo."
-msgstr ""
+msgstr "No es pot fer la foto."
 
 #: ../usr/share/applications/live-installer-3.desktop.in.h:1
 msgid "Install"

@@ -237,7 +237,7 @@ class InstallerWindow():
             self.window.fullscreen()
 
         # Configure slideshow webview
-        html = '<html><body style="background-color:#E6E6E6;">Placeholder</body></html>'
+        html = '<html><body style="background-color:#E6E6E6;"></body></html>'
         self.slideshow_browser = SimpleBrowser(html)
         self.go("box_slideshow").pack_start(self.slideshow_browser, True, True, 0)
 
