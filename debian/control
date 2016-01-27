@@ -50,7 +50,7 @@ Description: Live Installer
 Package: live-installer-3-slideshow
 Architecture: all
 Depends: live-installer-3
-Conflicts: live-installer-3.slideshow
-Replaces: live-installer-3.slideshow
+Conflicts: live-installer-slideshow
+Replaces: live-installer-slideshow
 Description: Live Installer Slideshow
  A slideshow for the live installer

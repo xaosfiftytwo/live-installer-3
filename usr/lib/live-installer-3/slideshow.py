@@ -26,7 +26,7 @@ class Slideshow(Thread):
                 template = f.read()
         except IOError:
             print('WARNING: Slideshow template not found.')
-            self.browser.showHtml('No slideshow template found.')
+            #self.browser.showHtml('No slideshow template found.')
             return
         # Preload all pages in an array
         lang_dir = self.get_language_dir(language)

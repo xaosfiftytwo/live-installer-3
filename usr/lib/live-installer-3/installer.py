@@ -11,7 +11,6 @@
 from utils import shell_exec, shell_exec_popen, getoutput, chroot_exec, \
                   get_config_dict, has_internet, in_virtualbox, \
                   get_boot_parameters, get_files_from_dir
-from plymouth import PlymouthSave
 from localize import Localize
 from encryption import clear_partition, encrypt_partition
 from partitioning import get_partition_label
@@ -773,9 +772,8 @@ class InstallerEngine(threading.Thread):
 
             # Configure Plymouth
             if os.path.exists('/target/bin/plymouth') and 'splash' in self.boot_parms:
-                print(" --> Configuring Plymouth")
-                self.update_progress(pulse=True, total=self.our_total, current=self.our_current, message=_("Configuring Plymouth"))
-                PlymouthSave().save()
+                cmd = 'sed -i -e \'/GRUB_GFXMODE=/ c GRUB_GFXMODE=1024x768\' /target/etc/default/grub'
+                shell_exec(cmd)
 
             # /etc/default/grub could have been changed: update Grub
             chroot_exec('update-grub')

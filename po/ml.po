@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-18 08:57+0100\n"
+"POT-Creation-Date: 2016-01-27 14:53+0100\n"
 "PO-Revision-Date: 2012-09-28 02:58+0000\n"
 "Last-Translator: praveenp <Unknown>\n"
 "Language-Team: Malayalam <ml@li.org>\n"
@@ -172,148 +172,148 @@ msgstr ""
 msgid "You need to choose a mount point for partition:"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:128
-#: ../usr/lib/live-installer-3/installer.py:153
+#: ../usr/lib/live-installer-3/installer.py:127
+#: ../usr/lib/live-installer-3/installer.py:152
 msgid "Installation error"
 msgstr "ഇൻസ്റ്റലേഷൻ പിഴവ്"
 
-#: ../usr/lib/live-installer-3/installer.py:138
+#: ../usr/lib/live-installer-3/installer.py:137
 msgid ""
 "Installation is now paused. Please read the instructions on the page "
 "carefully before clicking Forward to finish the installation."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:139
+#: ../usr/lib/live-installer-3/installer.py:138
 msgid "Verify that fstab is correct (use blkid to check the UUIDs)."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:140
+#: ../usr/lib/live-installer-3/installer.py:139
 msgid ""
 "A chrooted terminal and fstab will be opened after you close this message."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:142
+#: ../usr/lib/live-installer-3/installer.py:141
 #, fuzzy
 msgid "Installation paused"
 msgstr "ഇൻസ്റ്റലേഷൻ പുർണ്ണമായി"
 
-#: ../usr/lib/live-installer-3/installer.py:188
+#: ../usr/lib/live-installer-3/installer.py:187
 #, fuzzy, python-format
 msgid "Encrypting %(partition)s ..."
 msgstr "%(partition)s  %(format)s ആയി ഫോർമാറ്റ് ചെയ്യുന്നു..."
 
-#: ../usr/lib/live-installer-3/installer.py:194
+#: ../usr/lib/live-installer-3/installer.py:193
 #, fuzzy, python-format
 msgid "Formatting %(partition)s as %(format)s ..."
 msgstr "%(partition)s  %(format)s ആയി ഫോർമാറ്റ് ചെയ്യുന്നു..."
 
-#: ../usr/lib/live-installer-3/installer.py:237
-#: ../usr/lib/live-installer-3/installer.py:252
+#: ../usr/lib/live-installer-3/installer.py:236
+#: ../usr/lib/live-installer-3/installer.py:251
 #, python-format
 msgid "Mounting %(partition)s on %(mountpoint)s"
 msgstr "%(partition)s  %(mountpoint)s-ൽ മൗണ്ട് ചെയ്യുന്നു"
 
-#: ../usr/lib/live-installer-3/installer.py:269
+#: ../usr/lib/live-installer-3/installer.py:268
 msgid "Not mounted"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:270
+#: ../usr/lib/live-installer-3/installer.py:269
 msgid ""
 "You must first manually mount your target filesystem(s) at /target to do a "
 "custom install!"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:279
+#: ../usr/lib/live-installer-3/installer.py:278
 msgid "Base filesystem does not exist"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:280
+#: ../usr/lib/live-installer-3/installer.py:279
 msgid ""
 "Something is wrong with the installation medium! This is usually caused by "
 "burning tools which are not compatible with {}. Please burn the ISO image to "
 "DVD/USB using a different tool."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:333
+#: ../usr/lib/live-installer-3/installer.py:332
 #, fuzzy
 msgid "Copying"
 msgstr "\"%s\" പകർത്തുന്നു"
 
-#: ../usr/lib/live-installer-3/installer.py:352
+#: ../usr/lib/live-installer-3/installer.py:351
 #, fuzzy
 msgid "Entering the system ..."
 msgstr "പുതിയ വ്യൂഹത്തിലേയ്ക്ക് പ്രവേശിക്കുന്നു"
 
-#: ../usr/lib/live-installer-3/installer.py:377
+#: ../usr/lib/live-installer-3/installer.py:376
 #, fuzzy
 msgid "Installing EFI packages..."
 msgstr "ഇൻസ്റ്റലേഷൻ പുർണ്ണമായി"
 
-#: ../usr/lib/live-installer-3/installer.py:421
+#: ../usr/lib/live-installer-3/installer.py:420
 #, fuzzy
 msgid "Installing drivers"
 msgstr "ബൂട്ട്ലോഡര്‍ ഇന്‍സ്റ്റോള്‍ ചെയ്യുന്നു"
 
-#: ../usr/lib/live-installer-3/installer.py:433
+#: ../usr/lib/live-installer-3/installer.py:432
 msgid "Removing live configuration (packages)"
 msgstr "തത്സമയ ക്രമീകരണങ്ങൾ ഒഴിവാക്കുന്നു (പാക്കേജുകൾ)"
 
-#: ../usr/lib/live-installer-3/installer.py:441
+#: ../usr/lib/live-installer-3/installer.py:440
 #, fuzzy
 msgid "Adding new user to the system"
 msgstr "ഉപയോക്താവിനെ സിസ്റ്റത്തിലേയ്ക്ക് ചേർക്കുന്നു"
 
-#: ../usr/lib/live-installer-3/installer.py:487
+#: ../usr/lib/live-installer-3/installer.py:486
 #, fuzzy
 msgid "Writing filesystem mount information to /etc/fstab"
 msgstr "ഫയൽസിസ്റ്റം മൗണ്ട് വിവരങ്ങൾ എഴുതിവെയ്ക്കുന്നു"
 
-#: ../usr/lib/live-installer-3/installer.py:608
+#: ../usr/lib/live-installer-3/installer.py:607
 msgid "Setting hostname"
 msgstr "ഹോസ്റ്റ്പേര് സജ്ജീകരിക്കുന്നു"
 
-#: ../usr/lib/live-installer-3/installer.py:627
+#: ../usr/lib/live-installer-3/installer.py:626
 msgid "Setting locale"
 msgstr "പ്രാദേശികവിവരങ്ങൾ സജ്ജീകരിക്കുന്നു"
 
-#: ../usr/lib/live-installer-3/installer.py:645
+#: ../usr/lib/live-installer-3/installer.py:644
 msgid "Update apt cache"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:649
+#: ../usr/lib/live-installer-3/installer.py:648
 msgid "Update the new system"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:658
+#: ../usr/lib/live-installer-3/installer.py:657
 msgid "Localizing packages"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:680
+#: ../usr/lib/live-installer-3/installer.py:679
 #, fuzzy
 msgid "Configuring sensors"
 msgstr "ബൂട്ട്ലോഡർ ക്രമീകരിക്കുന്നു"
 
-#: ../usr/lib/live-installer-3/installer.py:688
+#: ../usr/lib/live-installer-3/installer.py:687
 msgid "Removing VirtualBox"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:696
+#: ../usr/lib/live-installer-3/installer.py:695
 msgid "Removing os-prober"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:702
+#: ../usr/lib/live-installer-3/installer.py:701
 msgid "Setting keyboard options"
 msgstr "കീബോഡ് ഐച്ഛികങ്ങൾ സജ്ജീകരിക്കുന്നു"
 
-#: ../usr/lib/live-installer-3/installer.py:739
+#: ../usr/lib/live-installer-3/installer.py:738
 msgid "Installing bootloader"
 msgstr "ബൂട്ട്ലോഡര്‍ ഇന്‍സ്റ്റോള്‍ ചെയ്യുന്നു"
 
-#: ../usr/lib/live-installer-3/installer.py:755
+#: ../usr/lib/live-installer-3/installer.py:754
 msgid "Grub not configured"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:756
+#: ../usr/lib/live-installer-3/installer.py:755
 #, fuzzy
 msgid ""
 "The grub bootloader was not configured properly! You need to configure it "
@@ -322,35 +322,30 @@ msgstr ""
 "മുന്നറിയിപ്പ്: ഗ്രബ് ബൂട്ട്ലോഡർ ശരിയായ വിധത്തിലല്ല ക്രമീകരിച്ചിരിക്കുന്നത്! താങ്കളത് സ്വയം "
 "ക്രമീകരിക്കേണ്ടതുണ്ട്."
 
-#: ../usr/lib/live-installer-3/installer.py:777
-#, fuzzy
-msgid "Configuring Plymouth"
-msgstr "ബൂട്ട്ലോഡർ ക്രമീകരിക്കുന്നു"
-
-#: ../usr/lib/live-installer-3/installer.py:790
+#: ../usr/lib/live-installer-3/installer.py:788
 #, fuzzy
 msgid "Configuring initramfs"
 msgstr "ബൂട്ട്ലോഡർ ക്രമീകരിക്കുന്നു"
 
-#: ../usr/lib/live-installer-3/installer.py:798
+#: ../usr/lib/live-installer-3/installer.py:796
 msgid "Cleaning APT"
 msgstr "എ.പി.റ്റി. ശുദ്ധമാക്കുന്നു"
 
-#: ../usr/lib/live-installer-3/installer.py:830
+#: ../usr/lib/live-installer-3/installer.py:828
 #, fuzzy
 msgid "Unmounting partitions"
 msgstr "%(partition)s  %(format)s ആയി ഫോർമാറ്റ് ചെയ്യുന്നു..."
 
-#: ../usr/lib/live-installer-3/installer.py:852
+#: ../usr/lib/live-installer-3/installer.py:850
 #: ../usr/lib/live-installer-3/gtk_interface.py:848
 msgid "Installation finished"
 msgstr "ഇൻസ്റ്റലേഷൻ പുർണ്ണമായി"
 
-#: ../usr/lib/live-installer-3/installer.py:856
+#: ../usr/lib/live-installer-3/installer.py:854
 msgid "Configuring bootloader"
 msgstr "ബൂട്ട്ലോഡർ ക്രമീകരിക്കുന്നു"
 
-#: ../usr/lib/live-installer-3/installer.py:863
+#: ../usr/lib/live-installer-3/installer.py:861
 msgid "Checking bootloader"
 msgstr "ബൂട്ട്ലോഡർ പരിശോധിക്കുന്നു"
 
@@ -889,6 +884,10 @@ msgstr "%s ഇൻസ്റ്റോളർ"
 #, fuzzy
 msgid "Install the operating system"
 msgstr "ഓപ്പറേറ്റിങ് സിസ്റ്റം"
+
+#, fuzzy
+#~ msgid "Configuring Plymouth"
+#~ msgstr "ബൂട്ട്ലോഡർ ക്രമീകരിക്കുന്നു"
 
 #~ msgid "Device:"
 #~ msgstr "ഉപകരണം:"
