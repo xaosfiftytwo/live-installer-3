@@ -327,13 +327,11 @@ class PartitionSetup(Gtk.TreeStore):
                                         installer.window)
                 if not dialog:
                     continue  # the user said No, skip this disk
-                installer.window.window.set_cursor(Gdk.Cursor(Gdk.CursorType.WATCH))
                 if not already_done_full_disk_format:
                     assign_mount_format = self.full_disk_format(disk_device)
                     already_done_full_disk_format = True
                 else:
                     self.full_disk_format(disk_device) # Format but don't assign mount points
-                installer.window.window.set_cursor(None)
                 disk = parted.Disk(disk_device)
 
             partitions = []
