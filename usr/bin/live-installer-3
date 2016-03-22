@@ -13,6 +13,6 @@ if [ $UID -ne 0 ]; then
   fi
 fi
 
-$LAUNCHER "$PYTHON -tt${optimize} /usr/lib/live-installer-3/main.py \"$@\""
+$LAUNCHER "$PYTHON -tt${optimize} /usr/lib/live-installer-3/main.py $@"
 
 

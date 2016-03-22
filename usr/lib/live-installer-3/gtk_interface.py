@@ -1,4 +1,4 @@
-#! /usr/bin/env python3
+#! /usr/bin/python3
 
 import gi
 gi.require_version('Gtk', '3.0')
@@ -45,6 +45,7 @@ class InstallerWindow():
 
     def __init__(self, fullscreen=False):
         #Build the Setup object (where we put all our choices)
+        self.fullscreen = fullscreen
         self.setup = installer.Setup()
 
         # Set distribution name and version
@@ -85,7 +86,7 @@ class InstallerWindow():
         self.go = self.builder.get_object
         self.window = self.go("main_window")
         self.window.set_position(Gtk.WindowPosition.CENTER)
-        self.window.set_resizable(False)
+        self.window.set_resizable(True)
         self.go("notebook1").set_show_tabs(False)
 
         self.treeview_language_list = self.go("treeview_language_list")
@@ -231,8 +232,8 @@ class InstallerWindow():
         self.help_label = self.go("help_label")
         self.help_label.modify_fg(Gtk.StateType.NORMAL, fgColor)
 
-        if(fullscreen):
-            # dedicated installer mode thingum
+        if self.fullscreen:
+            # dedicated installer mode thingum (OEM setup)
             self.window.maximize()
             self.window.fullscreen()
 
@@ -259,6 +260,13 @@ class InstallerWindow():
         # Start translating here
         self.on_treeview_language_list_cursor_changed(self.treeview_language_list)
 
+        # Let the user connect to the internet
+        if not has_internet():
+            msg = _("Please, click on the network manager's system tray icon to connect to the internet before you continue.\n\n"
+                    "You can still install %s without an internet connection.\n"
+                    "Without an internet connection your system will not be upgraded and some packages cannot be localized." % self.setup.distribution_name)
+            WarningDialog(_("No internet connection"), msg)
+
         # make sure we're on the right page (no pun.)
         self.activate_page(0)
 
@@ -269,10 +277,23 @@ class InstallerWindow():
     # Main window signals
     # ===================================================================
 
+    def on_eventbox_main_key_release_event(self, widget, event):
+        if self.fullscreen:
+            # Change window size to normal when Escape key has been hit
+            keyname = Gdk.keyval_name(event.keyval)
+            #print(keyname)
+            if keyname == 'Escape':
+                try:
+                    self.window.unfullscreen()
+                    self.window.unmaximize()
+                    self.fullscreen = False
+                except:
+                    pass
+
     def on_button_quit_clicked(self, widget):
         self.on_main_window_delete_event(widget)
 
-    def on_main_window_delete_event(self, widget, data=None):
+    def on_main_window_delete_event(self, widget, event=None):
         if QuestionDialog(_("Quit?"), _("Are you sure you want to quit the installer?")):
             Gtk.main_quit()
             return False
@@ -289,8 +310,8 @@ class InstallerWindow():
     # Main window timezones signals
     # ===================================================================
 
-    def on_event_timezones_button_release_event(self, widget, data=None):
-        timezones.cb_map_clicked, self.timezones_model
+    def on_event_timezones_button_release_event(self, widget, event=None):
+        timezones.cb_map_clicked(widget, event, self.timezones_model)
 
     # ===================================================================
     # Main window language signals
@@ -345,6 +366,7 @@ class InstallerWindow():
         active = combobox.get_active()
         (self.setup.keyboard_model_description,
          self.setup.keyboard_model) = model[active]
+        print(("Keyboard = {} ({})".format(self.setup.keyboard_model, self.setup.keyboard_model_description)))
         shell_exec('setxkbmap -model ' + self.setup.keyboard_model)
         self.setup.print_setup()
 
@@ -383,10 +405,7 @@ class InstallerWindow():
 
     def on_entry_your_name_text_notify(self, entry, prop):
         self.setup.real_name = entry.props.text
-        text = entry.props.text.strip().lower()
-        if " " in entry.props.text:
-            elements = text.split()
-            text = elements[0]
+        text = entry.props.text.strip().lower().replace(" ", "-")
         self.setup.username = text
         self.go("entry_username").set_text(text)
         self.setup.print_setup()
@@ -481,7 +500,10 @@ class InstallerWindow():
         if __debug__:
             self.window.set_title((_("{} Installer").format(self.setup.distribution_name)) + ' (debug)')
         else:
-            self.window.set_title((_("{} Installer").format(self.setup.distribution_name)))
+            if self.setup.oem_setup:
+                self.window.set_title((_("{} OEM Setup").format(self.setup.distribution_name)))
+            else:
+                self.window.set_title((_("{} Installer").format(self.setup.distribution_name)))
 
         # Wizard pages
         (self.PAGE_LANGUAGE,
@@ -504,6 +526,10 @@ class InstallerWindow():
         self.wizard_pages[self.PAGE_OVERVIEW] = WizardPage(_("Summary"), "summary.svg")
         self.wizard_pages[self.PAGE_INSTALL] = WizardPage(_("Installing {}...").format(self.setup.distribution_name), "install.svg")
         self.wizard_pages[self.PAGE_CUSTOMPAUSED] = WizardPage(_("Installation is paused: please finish the custom installation"), "install.svg")
+
+        # Help text for the language page
+        help_text = _(self.wizard_pages[self.PAGE_LANGUAGE].help_text)
+        self.go("help_label").set_markup("<big><b>%s</b></big>" % help_text)
 
         # Navigation buttons
         self.go("button_quit").set_label(_('Quit'))
@@ -569,11 +595,11 @@ class InstallerWindow():
         # custom install warning
         text = self.wrap_text(_("You have selected to manage your partitions manually, this feature is for ADVANCED USERS ONLY."), 100)
         self.go("label_custom_install_directions_1").set_label(text)
-        text = self.wrap_text(_("Before continuing, please mount your target filesystem(s) at /target."), 100)
+        text = self.wrap_text(_("Before continuing, please mount your target filesystem(s) at %s." % self.setup.target_dir), 100)
         self.go("label_custom_install_directions_2").set_label(text)
-        text = self.wrap_text(_("Do NOT mount virtual devices such as /dev, /proc, /sys, etc on /target/."), 100)
+        text = self.wrap_text(_("Do NOT mount virtual devices such as /dev, /proc, /sys, etc on %s/." % self.setup.target_dir), 100)
         self.go("label_custom_install_directions_3").set_label(text)
-        text = self.wrap_text(_("During the install, you will be given time to chroot into /target and install any packages that will be needed to boot your new system."), 100)
+        text = self.wrap_text(_("During the install, you will be given time to chroot into %s and install any packages that will be needed to boot your new system." % self.setup.target_dir), 100)
         self.go("label_custom_install_directions_4").set_label(text)
         text = self.wrap_text(_("During the install, you will be required to write your own /etc/fstab."), 100)
         self.go("label_custom_install_directions_5").set_label(text)
@@ -583,13 +609,13 @@ class InstallerWindow():
         # custom install installation paused directions
         text = self.wrap_text(_("Please do the following and then click Forward to finish installation:"), 100)
         self.go("label_custom_install_paused_1").set_label(text)
-        text = self.wrap_text(_("Create /target/etc/fstab for the filesystems as they will be mounted in your new system, matching those currently mounted at /target (without using the /target prefix in the mount paths themselves)."), 100)
+        text = self.wrap_text(_("Create %s/etc/fstab for the filesystems as they will be mounted in your new system, matching those currently mounted at %s (without using the %s prefix in the mount paths themselves)."  % (self.setup.target_dir, self.setup.target_dir, self.setup.target_dir)), 100)
         self.go("label_custom_install_paused_2").set_label(text)
-        text = self.wrap_text(_("Install any packages that may be needed for first boot (mdadm, cryptsetup, dmraid, etc) by calling \"sudo chroot /target\" followed by the relevant apt-get/aptitude installations."), 100)
+        text = self.wrap_text(_("Install any packages that may be needed for first boot (mdadm, cryptsetup, dmraid, etc) by calling \"sudo chroot %s\" followed by the relevant apt-get/aptitude installations." % self.setup.target_dir), 100)
         self.go("label_custom_install_paused_3").set_label(text)
-        text = self.wrap_text(_("Note that in order for update-initramfs to work properly in some cases (such as dm-crypt), you may need to have drives currently mounted using the same block device name as they appear in /target/etc/fstab."), 100)
+        text = self.wrap_text(_("Note that in order for update-initramfs to work properly in some cases (such as dm-crypt), you may need to have drives currently mounted using the same block device name as they appear in %s/etc/fstab." % self.setup.target_dir), 100)
         self.go("label_custom_install_paused_4").set_label(text)
-        text = self.wrap_text(_("Double-check that your /target/etc/fstab is correct, matches what your new system will have at first boot, and matches what is currently mounted at /target."), 100)
+        text = self.wrap_text(_("Double-check that your %s/etc/fstab is correct, matches what your new system will have at first boot, and matches what is currently mounted at %s." % (self.setup.target_dir, self.setup.target_dir)), 100)
         self.go("label_custom_install_paused_5").set_label(text)
 
         # Overview treeview column
@@ -607,6 +633,7 @@ class InstallerWindow():
         self.go("help_icon").set_from_pixbuf(pb)
 
         self.go("notebook1").set_current_page(index)
+
         # TODO: move other page-depended actions from the wizard_cb into here below
         if index == self.PAGE_PARTITIONS:
             self.setup.skip_mount = False
@@ -665,6 +692,9 @@ class InstallerWindow():
                 elif(self.setup.username is None or self.setup.username == ""):
                     errorFound = True
                     errorMessage = _("Please provide a username.")
+                elif self.setup.username[-4:] == "-oem" and self.setup.oem_setup:
+                    errorFound = True
+                    errorMessage = _("Please provide a username without -oem.")
                 elif(self.setup.password1 is None or self.setup.password1 == ""):
                     errorFound = True
                     errorMessage = _("Please provide a password for your user account.")
@@ -687,9 +717,20 @@ class InstallerWindow():
                 if (errorFound):
                     WarningDialog(_("Error"), errorMessage)
                 else:
-                    self.activate_page(self.PAGE_PARTITIONS)
-                    partitioning.build_partitions(self)
-                    self.build_popup_menu()
+                    if self.setup.oem_setup:
+                        self.activate_page(self.PAGE_OVERVIEW)
+                        self.show_overview()
+                        self.go("treeview_overview").expand_all()
+                        self.go("button_next").set_label(_("Apply"))
+                        self.go("img_forward").hide()
+                    else:
+                        # Set OEM user to always autologin
+                        if self.setup.username[-4:] == "-oem":
+                            self.setup.autologin = True
+
+                        self.activate_page(self.PAGE_PARTITIONS)
+                        partitioning.build_partitions(self)
+                        self.build_popup_menu()
             elif(sel == self.PAGE_PARTITIONS):
                 model = self.go("treeview_disks").get_model()
 
@@ -809,7 +850,10 @@ class InstallerWindow():
                 if (self.setup.skip_mount):
                     self.activate_page(self.PAGE_CUSTOMWARNING)
                 else:
-                    self.activate_page(self.PAGE_PARTITIONS)
+                    if self.setup.oem_setup:
+                        self.activate_page(self.PAGE_USER)
+                    else:
+                        self.activate_page(self.PAGE_PARTITIONS)
             elif(sel == self.PAGE_CUSTOMWARNING):
                 self.activate_page(self.PAGE_PARTITIONS)
             elif(sel == self.PAGE_PARTITIONS):
@@ -844,10 +888,49 @@ class InstallerWindow():
         del self.threads[name]
 
         if not critical_error_happened:
-            # Done: ask to reboot
-            reboot = QuestionDialog(_("Installation finished"),
-                                    _("Installation is now complete. Do you want to restart your computer to use the new system?"))
-            if reboot:
+            if self.setup.oem_setup:
+                # Remove EOM setup files
+                fls = ["/etc/xdg/autostart/oem-setup.desktop",
+                       "/etc/sudoers.d/oem-no-pwd",
+                       "/root/filesystem.packages-remove"]
+                for f in fls:
+                    if exists(f):
+                        os.remove(f)
+
+                # Remove OEM user after reboot
+                rm_oem_user = "/usr/sbin/remove-oem-user"
+                systemd_service = "/lib/systemd/system/remove-oem-user.service"
+                with open(rm_oem_user, "w") as scr:
+                    cont = "#!/bin/bash\n" \
+                           "deluser --remove-home %s\n" \
+                           "systemctl disable remove-oem-user\n" \
+                           "rm %s 2>/dev/null\n" \
+                           "rm %s 2>/dev/null\n" % (self.setup.logged_user, systemd_service, rm_oem_user)
+                    scr.write(cont)
+                os.system("chmod +x %s" % rm_oem_user)
+
+                with open(systemd_service, "w") as srv:
+                    cont = "[Unit]\n" \
+                           "Description=Remove OEM user\n\n" \
+                           "[Service]\n" \
+                           "ExecStart=%s\n" \
+                           "Type=oneshot\n" \
+                           "User=root\n\n" \
+                           "[Install]\n" \
+                           "WantedBy=multi-user.target" % rm_oem_user
+                    srv.write(cont)
+                shell_exec("systemctl enable remove-oem-user")
+
+                # Done: reboot
+                MessageDialog(_("Setup finished"),
+                              _("Setup is now complete. The system will now reboot."))
+                answer = True
+
+            else:
+                # Done: ask to reboot
+                answer = QuestionDialog(_("Installation finished"),
+                                        _("Installation is now complete. Do you want to restart your computer to use the new system?"))
+            if answer:
                 # Reboot
                 shell_exec('reboot')
             else:
@@ -877,12 +960,12 @@ class InstallerWindow():
                     app = getoutput("which kate")
                     if app == "":
                         app = "xdg-open"
-                    ExecuteThreadedCommands("sudo -H %s /target/etc/fstab &" % app).start()
+                    ExecuteThreadedCommands("sudo -H %s %s/etc/fstab &" % (app, self.setup.target_dir)).start()
                 except Exception as detail:
                     print((">> Cannot open /etc/fstab for editing: {}".format(detail)))
 
                 try:
-                    ExecuteThreadedCommands("sudo -H x-terminal-emulator --hold -e \"chroot /target\" &").start()
+                    ExecuteThreadedCommands("sudo -H x-terminal-emulator --hold -e \"chroot %s\" &" % self.setup.target_dir).start()
                 except Exception as detail:
                     print((">> Cannot open a chrooted terminal: {}".format(detail)))
 
@@ -906,26 +989,28 @@ class InstallerWindow():
         model.append(top, (_("Automatic login: ") + bold(_("enabled") if self.setup.autologin else _("disabled")),))
         top = model.append(None, (_("System settings"),))
         model.append(top, (_("Hostname: ") + bold(self.setup.hostname),))
-        top = model.append(None, (_("Filesystem operations"),))
-        model.append(top, (bold(_("Install Grub on {}").format(self.setup.grub_device)) if self.setup.grub_device else _("Do not install Grub"),))
 
-        if self.setup.skip_mount:
-            model.append(top, (bold(_("Use already-mounted /target.")),))
-            return
-        for p in self.setup.partitions:
-            if p.mount_as:
-                mount = p.mount_as
-                label = ''
-                if p.label != '':
-                    label = " ({})".format(p.label)
-                if self.setup.boot_partition == p.path:
-                    mount += " ({})".format(_("set boot flag"))
-                model.append(top, (bold(_("Mount {}{} as {}").format(p.path, label, mount)),))
-        for p in self.setup.partitions:
-            if p.encrypt:
-                model.append(top, (bold(_("Encrypt {} and format as {}").format(p.path, p.format_as)),))
-            elif p.format_as:
-                model.append(top, (bold(_("Format {} as {}").format(p.path, p.format_as)),))
+        if not self.setup.oem_setup:
+            top = model.append(None, (_("Filesystem operations"),))
+            model.append(top, (bold(_("Install Grub on {}").format(self.setup.grub_device)) if self.setup.grub_device else _("Do not install Grub"),))
+
+            if self.setup.skip_mount:
+                model.append(top, (bold(_("Use already-mounted %s." % self.setup.target_dir)),))
+                return
+            for p in self.setup.partitions:
+                if p.mount_as:
+                    mount = p.mount_as
+                    label = ''
+                    if p.label != '':
+                        label = " ({})".format(p.label)
+                    if self.setup.boot_partition == p.path:
+                        mount += " ({})".format(_("set boot flag"))
+                    model.append(top, (bold(_("Mount {}{} as {}").format(p.path, label, mount)),))
+            for p in self.setup.partitions:
+                if p.encrypt:
+                    model.append(top, (bold(_("Encrypt {} and format as {}").format(p.path, p.format_as)),))
+                elif p.format_as:
+                    model.append(top, (bold(_("Format {} as {}").format(p.path, p.format_as)),))
 
     def update_progress(self, fail=False, done=False, pulse=False, total=0, current=0, message=""):
         # Needed to use idle_add to update the UI in python3
@@ -1052,6 +1137,10 @@ class InstallerWindow():
         ''' Do some xml kung-fu and load the keyboard stuffs '''
         # Determine the layouts in use
         (keyboard_geom, self.setup.keyboard_layout) = getoutput("setxkbmap -query | awk -F\"(,|[ ]+)\" '/^(model:|layout:)/ {print $2}'")
+        # Set default keyboard model if it is not set
+        if keyboard_geom == "None":
+            keyboard_geom = "pc105"
+            shell_exec('setxkbmap -model ' + keyboard_geom)
 
         # Build the models
         from collections import defaultdict
@@ -1075,6 +1164,7 @@ class InstallerWindow():
             iterator = models.append((desc, name))
             if name == keyboard_geom:
                 set_keyboard_model = iterator
+                set_keyboard_description = desc
         for node in xml.iterfind('.//layoutList/layout'):
             name, desc = node.find('configItem/name').text, node.find('configItem/description').text
             variants[name].append((desc, None))
@@ -1092,13 +1182,16 @@ class InstallerWindow():
         # Preselect currently active keyboard info
         try:
             self.go("combobox_kb_model").set_active_iter(set_keyboard_model)
-        except NameError: pass  # set_keyboard_model not set
+            self.setup.keyboard_model_description = set_keyboard_description
+        except NameError:
+            pass  # set_keyboard_model not set
         try:
             treeview = self.go("treeview_layouts")
             path = layouts.get_path(set_keyboard_layout)
             treeview.set_cursor(path)
             treeview.scroll_to_cell(path)
-        except NameError: pass  # set_keyboard_layout not set
+        except NameError:
+            pass  # set_keyboard_layout not set
 
     def _generate_keyboard_layout_preview(self):
         filename = "/tmp/live-install-keyboard-layout.png"
@@ -1220,29 +1313,34 @@ class InstallerWindow():
         self.setup.print_setup()
 
     def _on_face_browse_menuitem_activated(self, menuitem):
-        dialog = SelectImageDialog(_("Select image"))
+        title = _("Select image")
+        dialog = SelectImageDialog(title)
         path = dialog.show()
         if path is not None:
-            image = PIL.Image.open(path)
-            width, height = image.size
-            if width > height:
-                new_width = height
-                new_height = height
-            elif height > width:
-                new_width = width
-                new_height = width
-            else:
-                new_width = width
-                new_height = height
-            left = (width - new_width) // 2
-            top = (height - new_height) // 2
-            right = (width + new_width) // 2
-            bottom = (height + new_height) // 2
-            image = image.crop((left, top, right, bottom))
-            image.thumbnail((96, 96), PIL.Image.ANTIALIAS)
-            face_path = "/tmp/live-installer-3-face.png"
-            image.save(face_path, "png")
-            self.face_button.set_picture_from_file(face_path)
+            try:
+                image = PIL.Image.open(path)
+                width, height = image.size
+                if width > height:
+                    new_width = height
+                    new_height = height
+                elif height > width:
+                    new_width = width
+                    new_height = width
+                else:
+                    new_width = width
+                    new_height = height
+                left = (width - new_width) // 2
+                top = (height - new_height) // 2
+                right = (width + new_width) // 2
+                bottom = (height + new_height) // 2
+                image = image.crop((left, top, right, bottom))
+                image.thumbnail((96, 96), PIL.Image.ANTIALIAS)
+                face_path = "/tmp/live-installer-3-face.png"
+                image.save(face_path, "png")
+                self.face_button.set_picture_from_file(face_path)
+            except Exception as detail:
+                ErrorDialog(title,
+                            "{}\n\n{}".format(_("Unable to convert the image."), detail))
 
     def _on_face_menuitem_activated(self, path):
         if exists(path):

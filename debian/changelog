@@ -1,3 +1,15 @@
+live-installer-3 (2016.03.22) debian; urgency=low
+
+  * Include OEM install
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Tue, 22 Mar 2016 16:35:44 +0100
+
+live-installer-3 (2016.03.05) debian; urgency=low
+
+  * Improved EFI installation for pen drives
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Sat, 05 Mar 2016 19:23:18 +0100
+
 live-installer-3 (2016.01.31) debian; urgency=low
 
   * Removed mouse pointer change when formatting an empty drive

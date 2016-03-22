@@ -1,4 +1,4 @@
-#! /usr/bin/env python3
+#! /usr/bin/python3
 
 import subprocess
 import urllib.request
@@ -10,13 +10,16 @@ import fnmatch
 
 
 def shell_exec_popen(command, kwargs={}):
-    print(('Executing:', command))
+    print(("Executing: %s" % command))
     #return subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, **kwargs)
     return subprocess.Popen(command, shell=True, bufsize=0, stdout=subprocess.PIPE, universal_newlines=True, **kwargs)
 
 
-def shell_exec(command):
-    print(('Executing:', command))
+def shell_exec(command, logger=None):
+    if logger is not None:
+        logger.write(command, "utils.shell_exec")
+    else:
+        print(("Executing: %s" % command))
     return subprocess.call(command, shell=True)
 
 
@@ -33,9 +36,9 @@ def getoutput(command, always_as_list=False):
     return output
 
 
-def chroot_exec(command):
+def chroot_exec(command, target):
     command = command.replace('"', "'").strip()  # FIXME
-    return shell_exec('chroot /target/ /bin/sh -c "%s"' % command)
+    return shell_exec('chroot %s/ /bin/sh -c "%s"' % (target, command))
 
 
 def memoize(func):
@@ -89,16 +92,6 @@ def hasInternetConnection(testUrl='http://google.com'):
     return False
 
 
-# Check if running in VB
-def runningInVirtualBox():
-    dmiBIOSVersion = getoutput("dmidecode -t0 | grep 'Version:' | awk -F ': ' '{print $2}'")
-    dmiSystemProduct = getoutput("dmidecode -t1 | grep 'Product Name:' | awk -F ': ' '{print $2}'")
-    dmiBoardProduct = getoutput("dmidecode -t2 | grep 'Product Name:' | awk -F ': ' '{print $2}'")
-    if dmiBIOSVersion != "VirtualBox" and dmiSystemProduct != "VirtualBox" and dmiBoardProduct != "VirtualBox":
-        return False
-    return True
-
-
 # Check if is 64-bit system
 def isAmd64():
     machine = getoutput("uname -m")[0]
@@ -132,31 +125,6 @@ def getPackageVersion(package, candidate=False):
     if 'none' in version:
         version = ''
     return version
-
-
-# Class to run commands in a thread and return the output in a queue
-class ExecuteThreadedCommands(threading.Thread):
-
-    def __init__(self, commandList, theQueue=None, returnOutput=False):
-        super(ExecuteThreadedCommands, self).__init__()
-        self.commands = commandList
-        self.queue = theQueue
-        self.returnOutput = returnOutput
-
-    def run(self):
-        if isinstance(self.commands, (list, tuple)):
-            for cmd in self.commands:
-                self.exec_cmd(cmd)
-        else:
-            self.exec_cmd(self.commands)
-
-    def exec_cmd(self, cmd):
-        if self.returnOutput:
-            ret = getoutput(cmd)
-        else:
-            ret = shell_exec(cmd)
-        if self.queue is not None:
-            self.queue.put(ret)
 
 
 # Check for internet connection
@@ -262,3 +230,45 @@ def get_files_from_dir(directory, pattern=''):
             for f in fnmatch.filter(files, pattern):
                 found_files.append(os.path.join(root, f))
     return found_files
+
+
+# Class to run commands in a thread and return the output in a queue
+class ExecuteThreadedCommands(threading.Thread):
+
+    def __init__(self, commandList, theQueue=None, returnOutput=False):
+        super(ExecuteThreadedCommands, self).__init__()
+        self.commands = commandList
+        self.queue = theQueue
+        self.returnOutput = returnOutput
+
+    def run(self):
+        if isinstance(self.commands, (list, tuple)):
+            for cmd in self.commands:
+                self.exec_cmd(cmd)
+        else:
+            self.exec_cmd(self.commands)
+
+    def exec_cmd(self, cmd):
+        if self.returnOutput:
+            ret = getoutput(cmd)
+        else:
+            ret = shell_exec(cmd)
+        if self.queue is not None:
+            self.queue.put(ret)
+
+
+# Run passed function in a thread
+# Example usage
+# def someOtherFunc(data, key):
+#    print "someOtherFunc was called : data=%s; key=%s" % (str(data), str(key))
+# t1 = FuncThread(someOtherFunc, [1,2], 6)
+# t1.start()
+# t1.join()
+class FuncThread(threading.Thread):
+    def __init__(self, target, *args):
+        super(FuncThread, self).__init__()
+        self._target = target
+        self._args = args
+
+    def run(self):
+        self._target(*self._args)

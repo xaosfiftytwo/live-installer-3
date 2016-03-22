@@ -1,4 +1,4 @@
-#! /usr/bin/env python3
+#! /usr/bin/python3
 
 # Reference: http://webkitgtk.org/reference/webkitgtk/stable/webkitgtk-webkitwebview.html
 #            http://webkitgtk.org/reference/webkitgtk/stable/WebKitWebSettings.html

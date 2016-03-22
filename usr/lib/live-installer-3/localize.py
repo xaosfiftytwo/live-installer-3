@@ -1,8 +1,8 @@
-#! /usr/bin/env python3
+#! /usr/bin/python3
 
 import os
 import re
-from utils import chroot_exec, get_config_dict
+from utils import chroot_exec, get_config_dict, shell_exec
 import apt
 import apt_pkg
 
@@ -10,13 +10,14 @@ CONFIG_FILE = '/etc/live-installer-3/live-installer-3.conf'
 
 
 class Localize():
-    def __init__(self, setup, our_total, our_current):
+    def __init__(self, setup, our_total, our_current, target_dir):
         self.cache = apt.Cache()
         self.setup = setup
         self.language = setup.language
         self.username = setup.username
         self.our_current = our_current
         self.our_total = our_total
+        self.target_dir = target_dir
         self.locale = self.language.lower().split("_")
         self.scriptDir = os.path.dirname(os.path.realpath(__file__))
         self.edition = 'all'
@@ -46,7 +47,7 @@ class Localize():
                 packages = config.get(self.edition, '').strip()
                 if packages != "":
                     self.update_progress(total=self.our_total, current=self.our_current, message=_("Install additional localized packages"))
-                    chroot_exec("apt-get --yes --force-yes install %s" % packages)
+                    self.exec_cmd("apt-get --yes --force-yes install %s" % packages)
             except Exception as detail:
                 msg = "ERROR: %s" % detail
                 print(msg)
@@ -59,43 +60,33 @@ class Localize():
             if self.isPackageInstalled("kde-runtime"):
                 print(" --> Localizing KDE")
                 self.update_progress(total=self.our_total, current=self.our_current, message=_("Localizing KDE"))
-                lan = "".join(self.locale)
-                package = "kde-l10n-%s" % lan
-                print(("    > package = %s" % package))
-                if not self.doesPackageExist(package):
-                    lan = self.locale[0]
-                    package = "kde-l10n-%s" % lan
-                    print(("    > package = %s" % package))
-                    if not self.doesPackageExist(package):
-                        package = ""
+                package = self.get_localized_package("kde-l10n")
                 if package != "":
-                    chroot_exec("apt-get install --yes --force-yes %s" % package)
+                    self.exec_cmd("apt-get install --yes --force-yes %s" % package)
 
             # Localize LibreOffice
             self.our_current += 1
             if self.isPackageInstalled("libreoffice"):
                 print(" --> Localizing LibreOffice")
                 self.update_progress(total=self.our_total, current=self.our_current, message=_("Localizing LibreOffice"))
-                lan = "-".join(self.locale)
-                package = "libreoffice-l10n-%s" % lan
-                print(("    > package = %s" % package))
-                if not self.doesPackageExist(package):
-                    lan = self.locale[0]
-                    package = "libreoffice-l10n-%s" % lan
-                    print(("    > package = %s" % package))
-                    if not self.doesPackageExist(package):
-                        package = ""
+                package = self.get_localized_package("libreoffice-l10n")
                 if package != "":
-                    chroot_exec("apt-get install --yes --force-yes %s" % package)
-                    chroot_exec("apt-get install --yes --force-yes libreoffice-help-%s" % lan)
-                    chroot_exec("apt-get install --yes --force-yes myspell-%s" % lan)
+                    self.exec_cmd("apt-get install --yes --force-yes %s" % package)
+                package = self.get_localized_package("libreoffice-help")
+                if package != "":
+                    self.exec_cmd("apt-get install --yes --force-yes %s" % package)
+                package = self.get_localized_package("myspell")
+                if package != "":
+                    self.exec_cmd("apt-get install --yes --force-yes %s" % package)
 
             # Localize AbiWord
             self.our_current += 1
             if self.isPackageInstalled("abiword"):
                 print(" --> Localizing AbiWord")
                 self.update_progress(total=self.our_total, current=self.our_current, message=_("Localizing AbiWord"))
-                chroot_exec("apt-get install --yes --force-yes aspell-%s" % self.locale[0])
+                package = self.get_localized_package("aspell")
+                if package != "":
+                    self.exec_cmd("apt-get install --yes --force-yes %s" % package)
 
             # Localize Firefox
             self.our_current += 1
@@ -109,36 +100,33 @@ class Localize():
                     esr = "esr-"
                 print(" --> Localizing Firefox")
                 self.update_progress(total=self.our_total, current=self.our_current, message=_("Localizing Firefox"))
-                lan = "-".join(self.locale)
-                package = "firefox-%sl10n-%s" % (esr, lan)
-                print(("    > package = %s" % package))
-                if not self.doesPackageExist(package):
-                    lan = self.locale[0]
-                    package = "firefox-%sl10n-%s" % (esr, lan)
-                    print(("    > package = %s" % package))
-                    if not self.doesPackageExist(package):
-                        package = ""
+                package = self.get_localized_package("firefox-%sl10n" % esr)
                 if package != "":
-                    chroot_exec("apt-get install --yes --force-yes %s %s" % (ff, package))
-                    self.localizePref("/target/home/{}/.mozilla/firefox/mwad0hks.default/prefs.js".format(self.username))
+                    self.exec_cmd("apt-get install --yes --force-yes %s %s" % (ff, package))
+                    self.localizePref("%s/home/%s/.mozilla/firefox/mwad0hks.default/prefs.js" % (self.target_dir, self.username))
 
             # Localize Thunderbird
             self.our_current += 1
             if self.isPackageInstalled("thunderbird"):
                 print(" --> Localizing Thunderbird")
                 self.update_progress(total=self.our_total, current=self.our_current, message=_("Localizing Thunderbird"))
-                lan = "-".join(self.locale)
-                package = "thunderbird-l10n-%s" % lan
-                print(("    > package = %s" % package))
-                if not self.doesPackageExist(package):
-                    lan = self.locale[0]
-                    package = "thunderbird-l10n-%s" % lan
-                    print(("    > package = %s" % package))
-                    if not self.doesPackageExist(package):
-                        package = ""
+                package = self.get_localized_package("thunderbird-l10n")
                 if package != "":
-                    chroot_exec("apt-get install --yes --force-yes %s" % package)
-                    self.localizePref("/target/home/{}/.thunderbird/pjzwmea6.default/prefs.js".format(self.username))
+                    self.exec_cmd("apt-get install --yes --force-yes %s" % package)
+                    self.localizePref("%s/home/%s/.thunderbird/pjzwmea6.default/prefs.js" % (self.target_dir, self.username))
+
+    def get_localized_package(self, package):
+        lan = "".join(self.locale)
+        pck = "{}-{}".format(package, lan)
+        if not self.doesPackageExist(pck):
+            lan = "-".join(self.locale)
+            pck = "{}-{}".format(package, lan)
+            if not self.doesPackageExist(pck):
+                lan = self.locale[0]
+                pck = "{}-{}".format(package, lan)
+                if not self.doesPackageExist(pck):
+                    pck = ''
+        return pck
 
     def localizePref(self, prefsPath):
         if os.path.exists(prefsPath):
@@ -190,3 +178,9 @@ class Localize():
         except:
             pass
         return isInstalled
+
+    def exec_cmd(self, command):
+        if self.setup.oem_setup:
+            shell_exec(command)
+        else:
+            chroot_exec(command, self.setup.target_dir)

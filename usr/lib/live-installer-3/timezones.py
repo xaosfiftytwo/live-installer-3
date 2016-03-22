@@ -1,4 +1,4 @@
-#! /usr/bin/env python3
+#! /usr/bin/python3
 
 import gi
 gi.require_version('Gtk', '3.0')
@@ -122,6 +122,12 @@ def cb_menu_selected(widget, timezone):
 
 def cb_map_clicked(widget, event, model):
     x, y = event.x, event.y
+    et_alloc = installer.go("event_timezones").get_allocation()
+    #print((">> event w=%d, h=%d" % (et_alloc.width, et_alloc.height)))
+    it_alloc = installer.go("image_timezones").get_allocation()
+    #print((">> image w=%d, h=%d" % (it_alloc.width, it_alloc.height)))
+    x = x - ((et_alloc.width - it_alloc.width) / 2)
+    y = y - ((et_alloc.height - it_alloc.height) /2)
     if event.window != installer.go("event_timezones").get_window():
         dx, dy = event.window.get_position()
         x, y = x + dx, y + dy

@@ -1,4 +1,4 @@
-#! /usr/bin/env python3
+#! /usr/bin/python3
 
 # Make sure the right Gtk version is loaded
 import gi

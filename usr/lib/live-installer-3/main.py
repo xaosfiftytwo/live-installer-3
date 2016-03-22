@@ -1,4 +1,4 @@
-#!/usr/bin/python3 -OO
+#! /usr/bin/python3 -OO
 
 import gi
 gi.require_version('Gtk', '3.0')
@@ -9,6 +9,18 @@ sys.path.insert(1, '/usr/lib/live-installer-3')
 from gtk_interface import InstallerWindow
 from utils import getoutput
 from dialogs import ErrorDialog
+import argparse
+
+
+# Handle arguments
+parser = argparse.ArgumentParser(description="Live Installer")
+parser.add_argument('-o', '--oem', action="store_true", help='Start as OEM user.')
+args, extra = parser.parse_known_args()
+oem = args.oem
+
+
+# install can be parsed as a boot parameter
+install = "install" in getoutput("cat /proc/cmdline")
 
 
 def uncaught_excepthook(*args):
@@ -24,12 +36,20 @@ def uncaught_excepthook(*args):
                        not isinstance(v, (BuiltinFunctionType,
                                           ClassType, ModuleType, TypeType))})
         if sys.stdin.isatty() and (sys.stdout.isatty() or sys.stderr.isatty()):
+            can_debug = False
             try:
                 import ipdb as pdb  # try to import the IPython debugger
+                can_debug = True
             except ImportError:
-                import pdb as pdb
-            print(('\nStarting interactive debug prompt ...'))
-            pdb.pm()
+                try:
+                    import pdb as pdb
+                    can_debug = True
+                except ImportError:
+                    pass
+
+            if can_debug:
+                print(('\nStarting interactive debug prompt ...'))
+                pdb.pm()
     else:
         import traceback
         details = '\n'.join(traceback.format_exception(*args)).replace('<', '').replace('>', '')
@@ -51,7 +71,10 @@ if __name__ == "__main__":
         # Debian Jessie: 3.4.2
         GObject.threads_init()
 
-        InstallerWindow(fullscreen=("install" in getoutput("cat /proc/cmdline")))
+        fs = False
+        if install or oem:
+            fs = True
+        InstallerWindow(fullscreen=fs)
         Gtk.main()
     except KeyboardInterrupt:
         pass
