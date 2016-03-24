@@ -12,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: live-installer-3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-22 16:35+0100\n"
-"PO-Revision-Date: 2016-03-22 15:07+0000\n"
-"Last-Translator: Arjen Balfoort <schoelje@solydxk.com>\n"
+"POT-Creation-Date: 2016-03-24 08:18+0100\n"
+"PO-Revision-Date: 2016-03-22 17:33+0000\n"
+"Last-Translator: Franco Frolloni <frolloni@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/solydxk/live-installer-3/"
 "language/it/)\n"
 "Language: it\n"
@@ -371,6 +371,12 @@ msgid ""
 "Without an internet connection your system will not be upgraded and some "
 "packages cannot be localized."
 msgstr ""
+"Prego, clicca sull'icona del gestore di rete nel pannello per connettersi ad "
+"internet prima di continuare\n"
+"\n"
+"Puoi anche installare %s senza connessione internet.\n"
+"Senza connessione il tuo sistema non sarà aggiornato ed alcuni pacchetti non "
+"potranno essere localizzati."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:268
 #: ../usr/lib/live-installer-3/gtk_interface.py:352
@@ -699,7 +705,7 @@ msgstr "Inserisci un nome utente"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:697
 msgid "Please provide a username without -oem."
-msgstr ""
+msgstr "Inserisci un nome utente senza -oem."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:700
 msgid "Please provide a password for your user account."
@@ -953,7 +959,7 @@ msgstr "Seleziona un'immagine"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1343
 msgid "Unable to convert the image."
-msgstr ""
+msgstr "Non è stato possibile convertire l'immagine"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1374
 msgid "Take a photo"

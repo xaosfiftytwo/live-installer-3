@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: live-installer-3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-22 16:35+0100\n"
-"PO-Revision-Date: 2016-03-22 15:16+0000\n"
-"Last-Translator: Arjen Balfoort <schoelje@solydxk.com>\n"
+"POT-Creation-Date: 2016-03-24 08:18+0100\n"
+"PO-Revision-Date: 2016-03-22 20:02+0000\n"
+"Last-Translator: Anders Dalen <anders@andersdalen.no>\n"
 "Language-Team: Norwegian Bokmål (http://www.transifex.com/solydxk/live-"
 "installer-3/language/nb/)\n"
 "Language: nb\n"
@@ -351,7 +351,7 @@ msgstr "Sjekker oppstartslasteren"
 #: ../usr/lib/live-installer-3/installer.py:953
 #, python-format
 msgid "No %s file found!"
-msgstr ""
+msgstr "Ingen %s-fil funnet!"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:265
 #, python-format
@@ -363,6 +363,12 @@ msgid ""
 "Without an internet connection your system will not be upgraded and some "
 "packages cannot be localized."
 msgstr ""
+"Vennligst klikk på systemikonet til nettverks-behandleren for å koble til "
+"internett før du fortsetter.\n"
+"\n"
+"Du kan fortsatt installere %s uten en internettforbindelse.\n"
+"Uten en internettforbindelse vil ikke systemet ditt bli oppgradert og noen "
+"pakker vil ikke oversettes."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:268
 #: ../usr/lib/live-installer-3/gtk_interface.py:352
@@ -394,7 +400,7 @@ msgstr "{} Installasjonsprogram"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:504
 msgid "{} OEM Setup"
-msgstr ""
+msgstr "{} OEM Installering"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:520
 #: ../usr/lib/live-installer-3/gtk_interface.py:540
@@ -687,7 +693,7 @@ msgstr "Vennligst skriv et brukernavn."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:697
 msgid "Please provide a username without -oem."
-msgstr ""
+msgstr "Vennligst angi et brukernavn uten -oem."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:700
 msgid "Please provide a password for your user account."
@@ -789,11 +795,11 @@ msgstr ""
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:925
 msgid "Setup finished"
-msgstr ""
+msgstr "Installeringen er ferdig"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:926
 msgid "Setup is now complete. The system will now reboot."
-msgstr ""
+msgstr "Installasjonen er ferdig. Systemet vil nå restarte."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:932
 msgid ""
@@ -939,7 +945,7 @@ msgstr "Velg bilde"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1343
 msgid "Unable to convert the image."
-msgstr ""
+msgstr "Kan ikke konvertere bildet."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1374
 msgid "Take a photo"

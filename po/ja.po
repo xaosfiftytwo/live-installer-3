@@ -4,15 +4,16 @@
 #
 # Translators:
 # Arjen Balfoort <schoelje@solydxk.com>, 2015-2016
+# BALLOON a.k.a. Fu-sen., 2016
 # BALLOON a.k.a. Fu-sen., 2015-2016
 # BALLOON a.k.a. Fu-sen. <fu-sen+solydxk@shigakeiichi.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: live-installer-3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-22 16:35+0100\n"
-"PO-Revision-Date: 2016-03-22 15:10+0000\n"
-"Last-Translator: Arjen Balfoort <schoelje@solydxk.com>\n"
+"POT-Creation-Date: 2016-03-24 08:18+0100\n"
+"PO-Revision-Date: 2016-03-23 00:28+0000\n"
+"Last-Translator: BALLOON a.k.a. Fu-sen.\n"
 "Language-Team: Japanese (http://www.transifex.com/solydxk/live-installer-3/"
 "language/ja/)\n"
 "Language: ja\n"
@@ -355,7 +356,7 @@ msgstr "ブートローダーを確認しています"
 #: ../usr/lib/live-installer-3/installer.py:953
 #, python-format
 msgid "No %s file found!"
-msgstr ""
+msgstr "ファイル %s が見つかりません！"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:265
 #, python-format
@@ -367,6 +368,12 @@ msgid ""
 "Without an internet connection your system will not be upgraded and some "
 "packages cannot be localized."
 msgstr ""
+"続行する前にインターネットに接続するために、ネットワーク管理のシステムトレイ"
+"アイコンをクリックしてください。\n"
+"\n"
+"またはインターネットに接続せず %s をインストールすることができます。\n"
+"インターネット接続しない場合、システムがアップグレードされず、いくつかのパッ"
+"ケージはローカライズする事ができません。"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:268
 #: ../usr/lib/live-installer-3/gtk_interface.py:352
@@ -398,7 +405,7 @@ msgstr "{} インストーラ"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:504
 msgid "{} OEM Setup"
-msgstr ""
+msgstr "{} OEM セットアップ"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:520
 #: ../usr/lib/live-installer-3/gtk_interface.py:540
@@ -687,7 +694,7 @@ msgstr "ユーザー名を入力してください"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:697
 msgid "Please provide a username without -oem."
-msgstr ""
+msgstr "-oem を外してユーザー名を入力してください。"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:700
 msgid "Please provide a password for your user account."
@@ -787,11 +794,11 @@ msgstr ""
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:925
 msgid "Setup finished"
-msgstr ""
+msgstr "セットアップ完了"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:926
 msgid "Setup is now complete. The system will now reboot."
-msgstr ""
+msgstr "セットアップが完了しました。システムは再起動します。"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:932
 msgid ""
@@ -939,7 +946,7 @@ msgstr "画像を選択"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1343
 msgid "Unable to convert the image."
-msgstr ""
+msgstr "画像を変換することができません。"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1374
 msgid "Take a photo"

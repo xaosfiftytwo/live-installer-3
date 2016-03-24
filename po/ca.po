@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: live-installer-3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-22 16:35+0100\n"
-"PO-Revision-Date: 2016-03-22 14:36+0000\n"
-"Last-Translator: Arjen Balfoort <schoelje@solydxk.com>\n"
+"POT-Creation-Date: 2016-03-24 08:18+0100\n"
+"PO-Revision-Date: 2016-03-22 17:45+0000\n"
+"Last-Translator: Eduard Selma <selma@tinet.cat>\n"
 "Language-Team: Catalan (http://www.transifex.com/solydxk/live-installer-3/"
 "language/ca/)\n"
 "Language: ca\n"
@@ -359,7 +359,7 @@ msgstr "Comprovant el gestor d'arrencada "
 #: ../usr/lib/live-installer-3/installer.py:953
 #, python-format
 msgid "No %s file found!"
-msgstr ""
+msgstr "No he trobat el fitxer %s! "
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:265
 #, python-format
@@ -371,6 +371,12 @@ msgid ""
 "Without an internet connection your system will not be upgraded and some "
 "packages cannot be localized."
 msgstr ""
+"Si us plau, cliqueu sobre la icona del network manager al panell per "
+"connectar-vos a internet abans de continuar.\n"
+"\n"
+"Tanmateix, podeu instal·lar %s sense connexió a internet.\n"
+"Però sense connexió a internet el vostre sistema no es podrà actualitzar i "
+"alguns paquets no es podran localitzar al català. "
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:268
 #: ../usr/lib/live-installer-3/gtk_interface.py:352
@@ -402,7 +408,7 @@ msgstr "Instal·lador {} "
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:504
 msgid "{} OEM Setup"
-msgstr ""
+msgstr "{} Configuració OEM "
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:520
 #: ../usr/lib/live-installer-3/gtk_interface.py:540
@@ -679,6 +685,9 @@ msgid ""
 "Double-check that your %s/etc/fstab is correct, matches what your new system "
 "will have at first boot, and matches what is currently mounted at %s."
 msgstr ""
+"Comproveu que el vostre %s/etc/fstab sigui correcte, coincideixi amb el que "
+"el vostre sistema tindrài en la primera arrencada i amb el que estigui "
+"actualment muntat a %s."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:622
 msgid "Overview"
@@ -698,7 +707,7 @@ msgstr "Si us plau, introduïu un nom d'usuari. "
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:697
 msgid "Please provide a username without -oem."
-msgstr ""
+msgstr "Si us plau, doneu un nom d'usuari sense -oem."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:700
 msgid "Please provide a password for your user account."
@@ -801,11 +810,11 @@ msgstr ""
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:925
 msgid "Setup finished"
-msgstr ""
+msgstr "Configuració acabada "
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:926
 msgid "Setup is now complete. The system will now reboot."
-msgstr ""
+msgstr "S'ha completat la configuració. El sistema ara arrencarà de nou. "
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:932
 msgid ""
@@ -952,7 +961,7 @@ msgstr "Trieu la imatge "
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1343
 msgid "Unable to convert the image."
-msgstr ""
+msgstr "No puc convertir la imatge. "
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1374
 msgid "Take a photo"

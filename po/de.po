@@ -11,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: live-installer-3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-22 16:35+0100\n"
-"PO-Revision-Date: 2016-03-22 15:02+0000\n"
-"Last-Translator: Arjen Balfoort <schoelje@solydxk.com>\n"
+"POT-Creation-Date: 2016-03-24 08:18+0100\n"
+"PO-Revision-Date: 2016-03-23 16:29+0000\n"
+"Last-Translator: ilu lu\n"
 "Language-Team: German (http://www.transifex.com/solydxk/live-installer-3/"
 "language/de/)\n"
 "Language: de\n"
@@ -360,7 +360,7 @@ msgstr "Prüfe Systemstarter (bootloader)"
 #: ../usr/lib/live-installer-3/installer.py:953
 #, python-format
 msgid "No %s file found!"
-msgstr ""
+msgstr "Keine %s Datei gefunden!"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:265
 #, python-format
@@ -372,6 +372,12 @@ msgid ""
 "Without an internet connection your system will not be upgraded and some "
 "packages cannot be localized."
 msgstr ""
+"Bitte auf den Netzwerk-Manager im Benachrichtigungsbereich klicken, um zum "
+"Internet zu verbinden, bevor es weitergeht.\n"
+"\n"
+"Die Installation von %s ist auch ohne Internet möglich.\n"
+"Ohne Internetverbindung kann das System nicht aktualisiert und einige Pakete "
+"nicht lokalisiert werden."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:268
 #: ../usr/lib/live-installer-3/gtk_interface.py:352
@@ -403,7 +409,7 @@ msgstr "{} Installer"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:504
 msgid "{} OEM Setup"
-msgstr ""
+msgstr "{} OEM-Konfiguration"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:520
 #: ../usr/lib/live-installer-3/gtk_interface.py:540
@@ -700,7 +706,7 @@ msgstr "Bitte einen Benutzernamen eingeben."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:697
 msgid "Please provide a username without -oem."
-msgstr ""
+msgstr "Bitte einen Benutzernamen ohne -oem angeben."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:700
 msgid "Please provide a password for your user account."
@@ -803,11 +809,12 @@ msgstr ""
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:925
 msgid "Setup finished"
-msgstr ""
+msgstr "Konfiguration beendet"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:926
 msgid "Setup is now complete. The system will now reboot."
 msgstr ""
+"Die Konfiguration ist jetzt vollständig. Das System wird jetzt neu starten."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:932
 msgid ""
@@ -955,7 +962,7 @@ msgstr "Dateiabbild (image) auswählen"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1343
 msgid "Unable to convert the image."
-msgstr ""
+msgstr "Das Bild kann nicht konvertiert werden."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1374
 msgid "Take a photo"

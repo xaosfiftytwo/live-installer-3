@@ -1,60 +1,58 @@
-# Turkish translation for linuxmint
-# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
-# This file is distributed under the same license as the linuxmint package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
 #
+# Translators:
+# Arjen Balfoort <schoelje@solydxk.com>, 2016
+# Butterfly <gokhanlnx@gmail.com>, 2016
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010
 msgid ""
 msgstr ""
-"Project-Id-Version: linuxmint\n"
+"Project-Id-Version: live-installer-3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-22 09:20+0100\n"
-"PO-Revision-Date: 2014-06-03 14:57+0000\n"
-"Last-Translator: kelebek333 <Unknown>\n"
-"Language-Team: Turkish <tr@li.org>\n"
+"POT-Creation-Date: 2016-03-24 08:18+0100\n"
+"PO-Revision-Date: 2016-03-23 13:52+0000\n"
+"Last-Translator: Butterfly <gokhanlnx@gmail.com>\n"
+"Language-Team: Turkish (http://www.transifex.com/solydxk/live-installer-3/"
+"language/tr/)\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-09-11 21:48+0000\n"
-"X-Generator: Launchpad (build 17196)\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../usr/lib/live-installer-3/localize.py:49
 msgid "Install additional localized packages"
-msgstr ""
+msgstr "Ek yerel paketleri yükleyin"
 
 #: ../usr/lib/live-installer-3/localize.py:62
-#, fuzzy
 msgid "Localizing KDE"
-msgstr "Yerelleştirme"
+msgstr "KDE yerelleştiriliyor"
 
 #: ../usr/lib/live-installer-3/localize.py:71
-#, fuzzy
 msgid "Localizing LibreOffice"
-msgstr "Paketler yerelleştiriliyor"
+msgstr "LibreOffice yerelleştiriliyor"
 
 #: ../usr/lib/live-installer-3/localize.py:86
-#, fuzzy
 msgid "Localizing AbiWord"
-msgstr "Yerelleştirme"
+msgstr "AbiWord yerelleştiriliyor"
 
 #: ../usr/lib/live-installer-3/localize.py:102
-#, fuzzy
 msgid "Localizing Firefox"
-msgstr "Paketler yerelleştiriliyor"
+msgstr "Firefox yerelleştiriliyor"
 
 #: ../usr/lib/live-installer-3/localize.py:112
 msgid "Localizing Thunderbird"
-msgstr ""
+msgstr "Thunderbird yerelleştiriliyor"
 
 #: ../usr/lib/live-installer-3/partitioning.py:170
 #: ../usr/lib/live-installer-3/partitioning.py:515
 msgid "Unknown"
-msgstr ""
+msgstr "Bilinmeyen"
 
 #: ../usr/lib/live-installer-3/partitioning.py:297
-#, fuzzy
 msgid "Removable:"
-msgstr "Çıkartılabilir aygıt:"
+msgstr "Kaldırılabilir:"
 
 #: ../usr/lib/live-installer-3/partitioning.py:324
 #: ../usr/lib/live-installer-3/gtk_interface.py:743
@@ -67,25 +65,20 @@ msgid "Installation Tool"
 msgstr "Kurulum Aracı"
 
 #: ../usr/lib/live-installer-3/partitioning.py:325
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "No partition table was found on the hard drive: {disk_description}. Do you "
 "want the installer to create a set of partitions for you? Note: This will "
 "ERASE ALL DATA present on this disk."
 msgstr ""
-"Sabit disk üzerinde hiç bir bölüm tablosu bulunamamıştır. Yükleyicinin "
-"geleneksel bölümleri sizin için hazırlamasını ister misiniz? Not: Bu seçenek "
-"ile diskinizin üzerinde ki tüm veriler silinecektir."
 
 #: ../usr/lib/live-installer-3/partitioning.py:510
-#, fuzzy
 msgid "Logical partition"
-msgstr "Bölümü Düzenle"
+msgstr "Mantıksal bölüm"
 
 #: ../usr/lib/live-installer-3/partitioning.py:511
-#, fuzzy
 msgid "Extended partition"
-msgstr "Bölümü Düzenle"
+msgstr "Uzatılmış bölüm"
 
 #: ../usr/lib/live-installer-3/partitioning.py:512
 #: ../usr/lib/live-installer-3/gtk_interface.py:561
@@ -93,18 +86,16 @@ msgid "Free space"
 msgstr "Boş alan"
 
 #: ../usr/lib/live-installer-3/partitioning.py:532
-#, fuzzy
 msgid "Encryption password"
-msgstr "Tanımlama"
+msgstr "Şifreleme parolası"
 
 #: ../usr/lib/live-installer-3/partitioning.py:533
-#, fuzzy
 msgid "Password for the encrypted partition:"
-msgstr "Lütfen kullanıcı hesabınız için bir parola oluşturun"
+msgstr "Şifrelenmiş disk bölümü için parola:"
 
 #: ../usr/lib/live-installer-3/partitioning.py:644
 msgid "Edit partition"
-msgstr "Bölümü Düzenle"
+msgstr "Bölümü düzenle"
 
 #: ../usr/lib/live-installer-3/partitioning.py:651
 #: ../usr/lib/live-installer-3/gtk_interface.py:553
@@ -113,9 +104,8 @@ msgstr "Aygıt"
 
 #: ../usr/lib/live-installer-3/partitioning.py:652
 #: ../usr/lib/live-installer-3/gtk_interface.py:558
-#, fuzzy
 msgid "Format as"
-msgstr "Biçimlendir:"
+msgstr "Biçimlendirme türü"
 
 #: ../usr/lib/live-installer-3/partitioning.py:653
 #: ../usr/lib/live-installer-3/gtk_interface.py:557
@@ -124,21 +114,19 @@ msgstr "Bağlama noktası"
 
 #: ../usr/lib/live-installer-3/partitioning.py:654
 msgid "Label (optional)"
-msgstr ""
+msgstr "Etiket (isteğe bağlı)"
 
 #: ../usr/lib/live-installer-3/partitioning.py:655
-#, fuzzy
 msgid "Encryption/password"
-msgstr "Tanımlama"
+msgstr "Şifreleme/parola"
 
 #: ../usr/lib/live-installer-3/partitioning.py:742
 #: ../usr/lib/live-installer-3/partitioning.py:749
 #: ../usr/lib/live-installer-3/partitioning.py:778
 #: ../usr/lib/live-installer-3/partitioning.py:782
 #: ../usr/lib/live-installer-3/partitioning.py:788
-#, fuzzy
 msgid "Encryption"
-msgstr "Tanımlama"
+msgstr "Şifreleme"
 
 #: ../usr/lib/live-installer-3/partitioning.py:743
 msgid ""
@@ -161,9 +149,8 @@ msgid ""
 msgstr ""
 
 #: ../usr/lib/live-installer-3/partitioning.py:779
-#, fuzzy
 msgid "Provide an encryption password for partition:"
-msgstr "Lütfen kullanıcı hesabınız için bir parola oluşturun"
+msgstr ""
 
 #: ../usr/lib/live-installer-3/partitioning.py:783
 msgid ""
@@ -181,13 +168,10 @@ msgid "Installation error"
 msgstr "Kurulum hatası"
 
 #: ../usr/lib/live-installer-3/installer.py:149
-#, fuzzy
 msgid ""
 "Installation is now paused. Please read the instructions on the page "
 "carefully before clicking Forward to finish the installation."
 msgstr ""
-"Kurulum şimdi durduruldu. Lütfen sayfadaki talimatları dikkatlice okuyun ve "
-"kurulumu bitirmek için İleri düğmesine tıklayın."
 
 #: ../usr/lib/live-installer-3/installer.py:150
 msgid "Verify that fstab is correct (use blkid to check the UUIDs)."
@@ -199,19 +183,18 @@ msgid ""
 msgstr ""
 
 #: ../usr/lib/live-installer-3/installer.py:153
-#, fuzzy
 msgid "Installation paused"
-msgstr "Kurulum Durduruldu"
+msgstr "Kurulum durduruldu"
 
 #: ../usr/lib/live-installer-3/installer.py:200
-#, fuzzy, python-format
+#, python-format
 msgid "Encrypting %(partition)s ..."
-msgstr "%(partition)s %(format)s olarak formatlanıyor..."
+msgstr "Şifreleniyor %(partition)s ..."
 
 #: ../usr/lib/live-installer-3/installer.py:206
-#, fuzzy, python-format
+#, python-format
 msgid "Formatting %(partition)s as %(format)s ..."
-msgstr "%(partition)s %(format)s olarak formatlanıyor..."
+msgstr "%(partition)s biçimlendiriliyor, türü %(format)s ..."
 
 #: ../usr/lib/live-installer-3/installer.py:249
 #: ../usr/lib/live-installer-3/installer.py:263
@@ -220,17 +203,15 @@ msgid "Mounting %(partition)s on %(mountpoint)s"
 msgstr "%(mountpoint)s üzerinde %(partition)s bağlanıyor..."
 
 #: ../usr/lib/live-installer-3/installer.py:279
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "You must first manually mount your target filesystem(s) at %s to do a custom "
 "install!"
 msgstr ""
-"HATA: Özelleştirilmiş bir kurulum için, öncelikle hedef dosya sistemini /"
-"target hedefine bağlamalısınız."
 
 #: ../usr/lib/live-installer-3/installer.py:282
 msgid "Not mounted"
-msgstr ""
+msgstr "Bağlanmadı"
 
 #: ../usr/lib/live-installer-3/installer.py:290
 msgid ""
@@ -241,37 +222,31 @@ msgstr ""
 
 #: ../usr/lib/live-installer-3/installer.py:293
 msgid "Base filesystem does not exist"
-msgstr ""
+msgstr "Taban dosya sistemi mevcut değil"
 
 #: ../usr/lib/live-installer-3/installer.py:347
-#, fuzzy
 msgid "Copying"
-msgstr "Kopyalanıyor %s"
+msgstr "Kopyalanıyor"
 
 #: ../usr/lib/live-installer-3/installer.py:366
-#, fuzzy
 msgid "Entering the system ..."
-msgstr "Yeni sisteme giriliyor.."
+msgstr "Sisteme giriliyor..."
 
 #: ../usr/lib/live-installer-3/installer.py:391
-#, fuzzy
 msgid "Installing EFI packages..."
-msgstr "Linux Mint kuruluyor..."
+msgstr "EFI paketleri kuruluyor"
 
 #: ../usr/lib/live-installer-3/installer.py:435
-#, fuzzy
 msgid "Installing drivers"
-msgstr "Önyükleyici kuruluyor"
+msgstr "Sürücüler kuruluyor"
 
 #: ../usr/lib/live-installer-3/installer.py:447
-#, fuzzy
 msgid "Adding new user to the system"
-msgstr "Kullanıcı sisteme ekleniyor"
+msgstr "Yeni kullanıcı sisteme ekleniyor"
 
 #: ../usr/lib/live-installer-3/installer.py:494
-#, fuzzy
 msgid "Writing filesystem mount information to /etc/fstab"
-msgstr "Dosya sistemi bağlama bilgileri yazılıyor"
+msgstr "Dosya sistemi bağlama bilgisi /etc/fstab dosyasına yazılıyor"
 
 #: ../usr/lib/live-installer-3/installer.py:624
 msgid "Setting hostname"
@@ -283,11 +258,11 @@ msgstr "Yerelleştirme ayarlanıyor"
 
 #: ../usr/lib/live-installer-3/installer.py:664
 msgid "Update apt cache"
-msgstr ""
+msgstr "Apt önbelleğini güncelle"
 
 #: ../usr/lib/live-installer-3/installer.py:668
 msgid "Update the new system"
-msgstr ""
+msgstr "Yeni sistem güncelleniyor"
 
 #: ../usr/lib/live-installer-3/installer.py:677
 msgid "Localizing packages"
@@ -298,39 +273,35 @@ msgid "Setting keyboard options"
 msgstr "Klavye seçenekleri ayarlanıyor"
 
 #: ../usr/lib/live-installer-3/installer.py:761
-#, fuzzy
 msgid "Configuring sensors"
-msgstr "Önyükleyici yapılandırılıyor"
+msgstr "Algılayıcılar yapılandırılıyor"
 
 #: ../usr/lib/live-installer-3/installer.py:769
 msgid "Removing VirtualBox"
-msgstr ""
+msgstr "VirtualBox siliniyor"
 
 #: ../usr/lib/live-installer-3/installer.py:777
 msgid "Removing os-prober"
-msgstr ""
+msgstr "Os-prober siliniyor"
 
 #: ../usr/lib/live-installer-3/installer.py:784
 msgid "Installing bootloader"
 msgstr "Önyükleyici kuruluyor"
 
 #: ../usr/lib/live-installer-3/installer.py:806
-#, fuzzy
 msgid ""
 "The grub bootloader was not configured properly! You need to configure it "
 "manually."
 msgstr ""
-"UYARI: Grub önyükleyici düzgün yapılandırılmamış! Elle yapılandırmanız "
-"gerekiyor."
+"Grub önyükleyici düzgün yapılandırılmadı! Elle yapılandırmanız gerekiyor."
 
 #: ../usr/lib/live-installer-3/installer.py:809
 msgid "Grub not configured"
-msgstr ""
+msgstr "Grub yapılandırılmadı"
 
 #: ../usr/lib/live-installer-3/installer.py:843
-#, fuzzy
 msgid "Configuring initramfs"
-msgstr "Önyükleyici yapılandırılıyor"
+msgstr "Initramfs yapılandırılıyor"
 
 #: ../usr/lib/live-installer-3/installer.py:851
 msgid "Cleaning APT"
@@ -341,9 +312,8 @@ msgid "Removing live configuration (packages)"
 msgstr "Kurulum ayarları siliniyor (paketler)"
 
 #: ../usr/lib/live-installer-3/installer.py:905
-#, fuzzy
 msgid "Unmounting partitions"
-msgstr "%(partition)s %(format)s olarak formatlanıyor..."
+msgstr "Disk bölümleri ayrılıyor"
 
 #: ../usr/lib/live-installer-3/installer.py:927
 #: ../usr/lib/live-installer-3/gtk_interface.py:931
@@ -377,15 +347,15 @@ msgstr ""
 #: ../usr/lib/live-installer-3/gtk_interface.py:268
 #: ../usr/lib/live-installer-3/gtk_interface.py:352
 msgid "No internet connection"
-msgstr ""
+msgstr "İnternet bağlantısı yok"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:297
 msgid "Quit?"
-msgstr ""
+msgstr "Çıkış?"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:297
 msgid "Are you sure you want to quit the installer?"
-msgstr ""
+msgstr "Kurucudan çıkmak istediğinize emin misiniz?"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:350
 msgid ""
@@ -396,13 +366,12 @@ msgstr ""
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:501
 #: ../usr/lib/live-installer-3/gtk_interface.py:506
-#, fuzzy
 msgid "{} Installer"
-msgstr "%s Yükleyici"
+msgstr "{} Kurucu"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:504
 msgid "{} OEM Setup"
-msgstr ""
+msgstr "{} OEM Kurulum"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:520
 #: ../usr/lib/live-installer-3/gtk_interface.py:540
@@ -426,33 +395,30 @@ msgid "Partitioning"
 msgstr "Bölümleme"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:525
-#, fuzzy
 msgid "Please make sure you wish to manage partitions manually"
-msgstr "Lütfen, disk bölümlerini elle yönetmek istediğinizden emin olunuz"
+msgstr "Lütfen disk bölümlerini elle yönetmek istediğinize emin olunuz"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:526
 msgid "Summary"
 msgstr "Özet"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:527
-#, fuzzy
 msgid "Installing {}..."
-msgstr "Linux Mint kuruluyor..."
+msgstr "Kuruluyor {}..."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:528
-#, fuzzy
 msgid "Installation is paused: please finish the custom installation"
-msgstr "Kurulum durduruldu: Lütfen özelleştirilmiş kurulumu bitiriniz"
+msgstr "Kurulum duraklatıldı: lütfen özel kurulumu bitiriniz"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:535
 #: ../usr/lib/live-installer-3/gtk_interface.py:565
 msgid "Quit"
-msgstr ""
+msgstr "Çıkış"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:536
 #: ../usr/lib/live-installer-3/gtk_interface.py:566
 msgid "Back"
-msgstr ""
+msgstr "Geri"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:537
 #: ../usr/lib/live-installer-3/gtk_interface.py:567
@@ -462,46 +428,43 @@ msgstr "İleri"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:541
 msgid "Country"
-msgstr ""
+msgstr "Ülke"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:544
 msgid "Selected timezone:"
 msgstr "Seçilen zaman dilimi:"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:545
-#, fuzzy
 msgid "Select timezone"
-msgstr "Seçilen zaman dilimi:"
+msgstr "Zaman dilimini seç"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:548
 msgid "Refresh"
-msgstr ""
+msgstr "Tazele"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:549
 msgid "_Expert mode"
-msgstr ""
+msgstr "_Gelişmiş kip"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:550
-#, fuzzy
 msgid "_Edit partitions"
-msgstr "Bölümleri düzenle"
+msgstr "_Disk bölümlerini düzenle"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:554
 msgid "Grub"
-msgstr ""
+msgstr "Grub"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:555
 msgid "Type"
-msgstr "Tip"
+msgstr "Tür"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:556
 msgid "Label"
-msgstr ""
+msgstr "Etiket"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:559
-#, fuzzy
 msgid "Encrypt"
-msgstr "Tanımlama"
+msgstr "Şifreleme"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:560
 msgid "Size"
@@ -516,9 +479,8 @@ msgid "Variant"
 msgstr "Değişken"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:572
-#, fuzzy
 msgid "Use this box to test your keyboard layout."
-msgstr "Klavye düzenini sınamak için bu kutuyu kullanın"
+msgstr "Bu kutuyu klavye düzenini test etmek için kullanın."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:573
 msgid "Model"
@@ -526,66 +488,63 @@ msgstr "Model"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:576
 msgid "Click to change your picture"
-msgstr ""
+msgstr "Resminizi değiştirmek için tıklayın"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:577
-#, fuzzy
 msgid "Take a photo..."
-msgstr "Bir fotoğraf çek"
+msgstr "Bir resim çekin..."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:578
 msgid "Browse for more pictures..."
-msgstr ""
+msgstr "Daha fazla resim için gözat..."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:579
 msgid "Your full name"
 msgstr "Tam adınız"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:580
-#, fuzzy
 msgid "This will be shown in the About Me application."
-msgstr "Bu kısım \"Benim Hakkımda\" uygulamasında gösterilecek"
+msgstr "Bu, Hakkımda uygulamasında görünecek."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:581
 msgid "Your username"
 msgstr "Kullanıcı adınız"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:582
-#, fuzzy
 msgid "This is the name you will use to log in to your computer."
-msgstr "Bu Bilgisayarınızda oturum açarken kullanacağınız isimdir"
+msgstr "Bu bilgisayarınıza girmek için kullanacağınız addır."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:583
 msgid "Your password"
 msgstr "Parolanız"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:584
-#, fuzzy
 msgid "Please enter your password twice to ensure it is correct."
-msgstr "Doğruluğunu sağlamak için parolanızı lütfen iki kere girin"
+msgstr "Lütfen emin olmak için şifrenizi doğru biçimde iki kere giriniz."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:585
 msgid "Hostname"
 msgstr "Makine adı"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:586
-#, fuzzy
 msgid "This hostname will be the computer's name on the network."
-msgstr "Bu makine adı bilgisayarın ağ üzerindeki adı olacaktır"
+msgstr "Bu makine adı bilgisayarın ağdaki ismi olacak"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:587
 msgid "Automatic login"
-msgstr ""
+msgstr "Otomatik giriş"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:588
 msgid ""
 "If enabled, the login screen is skipped when the system starts, and you are "
 "signed into your desktop session automatically."
 msgstr ""
+"Eğer etkinleştirirseniz, sistem başlatılırken oturum açma ekranı atlanacak, "
+"ve sizin masaüstü oturmunuz otomatik olarak başlatılacak."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:590
 msgid "Log in automatically on system boot"
-msgstr ""
+msgstr "Sistem açılışında otomatik giriş yap"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:591
 msgid "Your picture"
@@ -608,68 +567,60 @@ msgstr ""
 "KULLANICILAR içindir."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:598
-#, fuzzy, python-format
+#, python-format
 msgid "Before continuing, please mount your target filesystem(s) at %s."
 msgstr ""
-"Devam etmeden önce, lütfen hedef dosya sisteminizi /target hedefine "
-"bağlayınız."
+"Devam etmeden önce, lütfen hedef dosya sisteminizi %s hedefine bağlayınız."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:600
-#, fuzzy, python-format
+#, python-format
 msgid "Do NOT mount virtual devices such as /dev, /proc, /sys, etc on %s/."
 msgstr ""
-"/dev, /proc, /sys, vb. gibi sanal sürücüleri /target/ hedefine BAĞLAMAYINIZ."
+"/dev, /proc, /sys, vb. gibi sanal sürücüleri %s/ hedefine BAĞLAMAYINIZ."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:602
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "During the install, you will be given time to chroot into %s and install any "
 "packages that will be needed to boot your new system."
 msgstr ""
-"Kurulum sırasında, /target hedefine chroot ile ulaşarak yeni sistemin "
-"başlatılmasına ihtiyaç olacak herhangi paketi yüklemenize imkan verilecek."
+"Kurulum sırasında, size %s için chroot erişimi sağlamanıza imkan verilecek "
+"ve böylece yeni sisteminizi açabilmeniz için gerekli paketleri "
+"yükleyebileceksiniz."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:604
 msgid "During the install, you will be required to write your own /etc/fstab."
 msgstr "Kurulum sırasında, kendi /etc/fstab dosyanızı yazmanız gerekebilir."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:606
-#, fuzzy
 msgid ""
 "If you aren't sure what any of this means, please go back and deselect "
 "manual partition management."
 msgstr ""
-"Eğer bunun ne manaya geldiğinden emin değilseniz, lütfen geri gidiniz ve "
-"elle disk bölümü yönetimini seçmeyiniz."
+"Eğer bunun ne manaya geldiğinden emin değilseniz, lütfen geri gidin ve elle "
+"disk bölümleme yönetimi seçimini iptal edin."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:610
-#, fuzzy
 msgid "Please do the following and then click Forward to finish installation:"
 msgstr ""
-"Lütfen aşağıdakileri uygulayınız ve İleri düğmesine tıklayarak kurulumu "
-"bitiriniz:"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:612
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "Create %s/etc/fstab for the filesystems as they will be mounted in your new "
 "system, matching those currently mounted at %s (without using the %s prefix "
 "in the mount paths themselves)."
 msgstr ""
-"Yeni sisteminizin dosya sistemini bağlamayı sağlayacak /target/etc/fstab "
-"dosyası oluştunuz,  bunun içeriği bağlanacak olan /target hedefiyle "
-"eşleşmelidir (bağlama yollarını /target öndeğişkenini kullanmadan "
-"belirleyiniz)."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:614
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "Install any packages that may be needed for first boot (mdadm, cryptsetup, "
 "dmraid, etc) by calling \"sudo chroot %s\" followed by the relevant apt-get/"
 "aptitude installations."
 msgstr ""
 "İlk başlangıçta ihtiyaç olabilecek paketleri (mdadm, cryptsetup, dmraid, "
-"vb.) \"sudo chroot /target\" yardımıyla apt-get/aptitude komutları ile "
+"vb.) \"sudo chroot %s\" yardımıyla apt-get/aptitude komutları ile "
 "kurabilirsiniz."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:616
@@ -681,58 +632,50 @@ msgid ""
 msgstr ""
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:618
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "Double-check that your %s/etc/fstab is correct, matches what your new system "
 "will have at first boot, and matches what is currently mounted at %s."
 msgstr ""
-"/target/etc/fstab doğruluğunu dikkatlice kontrol ediniz, bunun eşleşmesi "
-"sizin yeni sisteminizi başlatabilmeniz açısından önemlidir, bu eşleşme /"
-"target hedefinin bağlanmasını sağlayacaktır."
+"%s/etc/fstab doğruluğunu dikkatlice kontrol ediniz, bunun eşleşmesi sizin "
+"yeni sisteminizi başlatabilmeniz açısından önemlidir, bu eşleşme %s "
+"hedefinin bağlanmasını sağlayacaktır."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:622
 msgid "Overview"
 msgstr "Genel Bakış"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:625
-#, fuzzy
 msgid "Calculating file indexes ..."
-msgstr "Dosya endeksleri hesaplanıyor..."
+msgstr "Dosya dizinleri hesaplanıyor ..."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:691
-#, fuzzy
 msgid "Please provide your full name."
-msgstr "Lütfen tam adınızı belirtin"
+msgstr "Lütfen tam adınızı giriniz."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:694
-#, fuzzy
 msgid "Please provide a username."
-msgstr "Lütfen bir kullanıcı adı belirtin"
+msgstr "Lütfen kullanıcı adınızı giriniz."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:697
-#, fuzzy
 msgid "Please provide a username without -oem."
-msgstr "Lütfen bir kullanıcı adı belirtin"
+msgstr ""
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:700
-#, fuzzy
 msgid "Please provide a password for your user account."
-msgstr "Lütfen kullanıcı hesabınız için bir parola oluşturun"
+msgstr "Lütfen kullanıcı hesabınız için bir şifre giriniz."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:703
-#, fuzzy
 msgid "Your passwords do not match."
-msgstr "Parolalarınız eşleşmiyor"
+msgstr "Şifreleriniz eşleşmedi."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:706
-#, fuzzy
 msgid "Please provide a hostname."
-msgstr "Lütfen bir makine adı belirtin"
+msgstr "Lütfen bir makine adı giriniz."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:710
-#, fuzzy
 msgid "Your username cannot start with a digit."
-msgstr "Kullanıcı adınız boşluk içeremez"
+msgstr "Kullanıcı adı bir rakam ile başlamamalı."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:713
 msgid ""
@@ -743,30 +686,25 @@ msgstr ""
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:718
 msgid "Error"
-msgstr ""
+msgstr "Hata"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:724
 #: ../usr/lib/live-installer-3/gtk_interface.py:816
 #: ../usr/lib/live-installer-3/gtk_interface.py:823
 msgid "Apply"
-msgstr ""
+msgstr "Uygula"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:744
-#, fuzzy
 msgid ""
 "Please indicate a filesystem to format the root (/) partition with before "
 "proceeding."
 msgstr ""
-"Lütfen onaylamadan önce kök (/) bölümünü biçimlendirmek için bir dosya "
-"sistemini belirtiniz."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:748
-#, fuzzy
 msgid "<b>Please select a root (/) partition.</b>"
-msgstr "<b>Lütfen bir root bölümü seçin</b>"
+msgstr "<b>Lütfen root (/) bölümü seçiniz.</b>"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:749
-#, fuzzy
 msgid ""
 "A root partition is needed to install the system.\n"
 "\n"
@@ -774,12 +712,6 @@ msgid ""
 " - Recommended size: 30GB\n"
 " - Recommended filesystem format: ext4\n"
 msgstr ""
-"Linux Mint kurulumu için bir root disk bölümüne ihtiyaç vardır.\n"
-"\n"
-" -Bağlama noktası:/\n"
-" -Önerilen boyut:10 GB'dan büyük\n"
-" -Önerilen biçim: ext4\n"
-" "
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:766
 msgid "The EFI partition is too small. It must be at least 100MB."
@@ -791,9 +723,8 @@ msgid "The EFI partition must be formatted as vfat."
 msgstr "EFI disk bölümü vfat olarak biçimlendirilmelidir."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:780
-#, fuzzy
 msgid "<b>Please select an EFI partition.</b>"
-msgstr "<b>Lütfen bir EFI disk bölümü seçiniz</b>"
+msgstr "<b>Lütfen bir EFI bölümü seçiniz.</b>"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:781
 msgid ""
@@ -821,11 +752,11 @@ msgstr ""
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:925
 msgid "Setup finished"
-msgstr ""
+msgstr "Kurulum bittiğinde"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:926
 msgid "Setup is now complete. The system will now reboot."
-msgstr ""
+msgstr "Kurulum tamamlandı. Sistem şimdi yeniden başlatılacak."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:932
 msgid ""
@@ -865,15 +796,15 @@ msgstr "Kullanıcı adı: "
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:989
 msgid "Automatic login: "
-msgstr ""
+msgstr "Otomatik oturum aç:"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:989
 msgid "enabled"
-msgstr ""
+msgstr "etkin"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:989
 msgid "disabled"
-msgstr ""
+msgstr "pasif"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:990
 msgid "System settings"
@@ -888,14 +819,12 @@ msgid "Filesystem operations"
 msgstr "Dosya sistemi işlemleri"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:995
-#, fuzzy
 msgid "Install Grub on {}"
-msgstr "Önyükleyiciyi %s üzerine kur"
+msgstr "Grubu {} üstüne kur"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:995
-#, fuzzy
 msgid "Do not install Grub"
-msgstr "Önyükleyiciyi kurma"
+msgstr "Grub kurma"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:998
 #, python-format
@@ -904,21 +833,19 @@ msgstr ""
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1007
 msgid "set boot flag"
-msgstr ""
+msgstr "Açılış bayrağı ayarla"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1008
-#, fuzzy
 msgid "Mount {}{} as {}"
-msgstr "Biçimlendir:"
+msgstr ""
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1011
 msgid "Encrypt {} and format as {}"
 msgstr ""
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1013
-#, fuzzy
 msgid "Format {} as {}"
-msgstr "Biçimlendir:"
+msgstr ""
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1208
 msgid "Assign to /"
@@ -934,13 +861,12 @@ msgstr "/boot/efi için atama"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1222
 msgid "Advanced..."
-msgstr ""
+msgstr "Gelişmiş..."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1236
 #: ../usr/lib/live-installer-3/gtk_interface.py:1262
-#, fuzzy
 msgid "Grub install"
-msgstr "%s Yükleyici"
+msgstr "Grub kur"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1237
 msgid ""
@@ -962,154 +888,29 @@ msgid ""
 msgstr ""
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1316
-#, fuzzy
 msgid "Select image"
-msgstr "Seçilen zaman dilimi:"
+msgstr "Resim seç"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1343
 msgid "Unable to convert the image."
-msgstr ""
+msgstr "Resim dönüştürülemiyor."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1374
-#, fuzzy
 msgid "Take a photo"
-msgstr "Bir fotoğraf çek"
+msgstr "Resim çek"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1375
-#, fuzzy
 msgid "Unable to take a photo."
-msgstr "Bir fotoğraf çek"
+msgstr "Resim çekilemiyor."
 
 #: ../usr/share/applications/live-installer-3.desktop.in.h:1
-#, fuzzy
 msgid "Install"
-msgstr "%s Yükleyici"
+msgstr "Kur"
 
 #: ../usr/share/applications/live-installer-3.desktop.in.h:2
-#, fuzzy
 msgid "Live Installer"
-msgstr "%s Yükleyici"
+msgstr "Çalışan kurucu"
 
 #: ../usr/share/applications/live-installer-3.desktop.in.h:3
-#, fuzzy
 msgid "Install the operating system"
-msgstr "İşletim sistemi"
-
-#, fuzzy
-#~ msgid "Configuring Plymouth"
-#~ msgstr "Önyükleyici yapılandırılıyor"
-
-#~ msgid "Images"
-#~ msgstr "Resimler"
-
-#~ msgid "The EFI partition is not bootable. Please edit the partition flags."
-#~ msgstr ""
-#~ "EFI disk bölümü başlatılabilir değil. Lütfen disk bölümü bayrağını "
-#~ "düzenleyin."
-
-#~ msgid "Device:"
-#~ msgstr "Aygıt:"
-
-#~ msgid "Format as:"
-#~ msgstr "Biçimlendir:"
-
-#~ msgid "Mount point:"
-#~ msgstr "Bağlama noktası:"
-
-#, fuzzy
-#~ msgid "Your username must be lower case."
-#~ msgstr "Kullanıcı adınız küçük harfli olmalıdır"
-
-#, fuzzy
-#~ msgid "The hostname must be lower case."
-#~ msgstr "Makine adınız küçük harfli olmalıdır"
-
-#, fuzzy
-#~ msgid "The hostname may not contain whitespace characters."
-#~ msgstr "Makine adınız boşluk içeremez"
-
-#~ msgid "Operating system"
-#~ msgstr "İşletim sistemi"
-
-#, fuzzy
-#~ msgid "Click this button to take a new picture of yourself with the webcam."
-#~ msgstr "Web kamerası ile yeni bir resim almak için bu düğmeye tıklayınız"
-
-#, fuzzy
-#~ msgid "The installer did not detect any webcams."
-#~ msgstr "Kurulum aracı herhangi bir web kamerası algılayamadı"
-
-#~ msgid "Select a picture"
-#~ msgstr "Bir resim seçiniz"
-
-#, fuzzy
-#~ msgid "Click this button to choose a picture from the hard disk."
-#~ msgstr "Hesabınıza bir resim seçmek için bu düğmeye tıklayınız"
-
-#~ msgid "Do not install bootloader"
-#~ msgstr "Önyükleyiciyi kurma"
-
-#~ msgid "Advanced options"
-#~ msgstr "Gelişmiş seçenekler"
-
-#~ msgid "Bootloader"
-#~ msgstr "Önyükleyici"
-
-#~ msgid "Install GRUB"
-#~ msgstr "GRUB'ı Kur"
-
-#, fuzzy
-#~ msgid "GRUB is a bootloader used to load the Linux kernel."
-#~ msgstr "GRUB Linux çekirdeğini yüklemekte kullanılan bir önyükleyicidir."
-
-#~ msgid "Edit"
-#~ msgstr "Düzenle"
-
-#, fuzzy
-#~ msgid "Install Plymouth"
-#~ msgstr "Kur"
-
-#, fuzzy
-#~ msgid "Install SolydXK"
-#~ msgstr "Kur"
-
-#, fuzzy
-#~ msgid "Passwords do not match."
-#~ msgstr "Parolalar eşleşmiyor"
-
-#, fuzzy
-#~ msgid "Passwords match."
-#~ msgstr "Parolalar eşlendi"
-
-#~ msgid "Indexing files to be copied.."
-#~ msgstr "Kopyalanacak dosyalar listeleniyor..."
-
-#~ msgid "Restoring meta-information on %s"
-#~ msgstr "%s üzerindeki meta-bilgisi geri getiriliyor"
-
-#~ msgid "unallocated"
-#~ msgstr "ayrılmamış"
-
-#~ msgid "Hard drive"
-#~ msgstr "Sabit sürücü"
-
-#~ msgid "Format?"
-#~ msgstr "Biçimlendir?"
-
-#~ msgid "Install Linux Mint on the selected drive:"
-#~ msgstr "Linux Mint'i seçilen sürücü üstüne kurunuz:"
-
-#~ msgid "Manually mount partitions (ADVANCED USERS ONLY)."
-#~ msgstr "Disk bölümlerini elle bağla (İLERİ SEVİYE KULLANICILAR İÇİN)."
-
-#~ msgid "Extended"
-#~ msgstr "Genişletilmiş"
-
-#~ msgid "Format %(partition)s as %(format)s"
-#~ msgstr "%(format)s olarak %(partition)s biçimlendiriliyor..."
-
-#~ msgid "Mount %(partition)s as %(mountpoint)s"
-#~ msgstr "%(mountpoint)s olarak %(partition)s bağlanıyor..."
-
-#~ msgid "Could not build supported filesystems list!"
-#~ msgstr "Desteklenen dosya sistemleri listesi çıkartılamıyor!"
+msgstr "İşletim sistemini kur"

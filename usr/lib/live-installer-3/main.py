@@ -7,7 +7,7 @@ from gi.repository import Gtk, GObject
 import sys
 sys.path.insert(1, '/usr/lib/live-installer-3')
 from gtk_interface import InstallerWindow
-from utils import getoutput
+from utils import getoutput, shell_exec
 from dialogs import ErrorDialog
 import argparse
 
