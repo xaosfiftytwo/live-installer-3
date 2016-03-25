@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: live-installer-3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-24 08:18+0100\n"
-"PO-Revision-Date: 2016-03-22 18:41+0000\n"
-"Last-Translator: Magnus Johansson <johanssongreppet@yahoo.se>\n"
+"POT-Creation-Date: 2016-03-25 18:43+0100\n"
+"PO-Revision-Date: 2016-03-25 17:35+0000\n"
+"Last-Translator: Arjen Balfoort <schoelje@solydxk.com>\n"
 "Language-Team: Swedish (http://www.transifex.com/solydxk/live-installer-3/"
 "language/sv/)\n"
 "Language: sv\n"
@@ -20,27 +20,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../usr/lib/live-installer-3/localize.py:49
+#: ../usr/lib/live-installer-3/localize.py:45
 msgid "Install additional localized packages"
 msgstr "Installera ytterligare översatta paket"
 
-#: ../usr/lib/live-installer-3/localize.py:62
+#: ../usr/lib/live-installer-3/localize.py:57
 msgid "Localizing KDE"
 msgstr "Översätter KDE"
 
-#: ../usr/lib/live-installer-3/localize.py:71
+#: ../usr/lib/live-installer-3/localize.py:65
 msgid "Localizing LibreOffice"
 msgstr "Översätter LibreOffice"
 
-#: ../usr/lib/live-installer-3/localize.py:86
+#: ../usr/lib/live-installer-3/localize.py:79
 msgid "Localizing AbiWord"
 msgstr "Översätter AbiWord"
 
-#: ../usr/lib/live-installer-3/localize.py:102
+#: ../usr/lib/live-installer-3/localize.py:94
 msgid "Localizing Firefox"
 msgstr "Översätter Firefox"
 
-#: ../usr/lib/live-installer-3/localize.py:112
+#: ../usr/lib/live-installer-3/localize.py:103
 msgid "Localizing Thunderbird"
 msgstr "Översätter Thunderbird"
 
@@ -54,12 +54,12 @@ msgid "Removable:"
 msgstr "Borttagbar:"
 
 #: ../usr/lib/live-installer-3/partitioning.py:324
-#: ../usr/lib/live-installer-3/gtk_interface.py:743
-#: ../usr/lib/live-installer-3/gtk_interface.py:747
-#: ../usr/lib/live-installer-3/gtk_interface.py:766
-#: ../usr/lib/live-installer-3/gtk_interface.py:771
+#: ../usr/lib/live-installer-3/gtk_interface.py:752
+#: ../usr/lib/live-installer-3/gtk_interface.py:756
 #: ../usr/lib/live-installer-3/gtk_interface.py:775
-#: ../usr/lib/live-installer-3/gtk_interface.py:779
+#: ../usr/lib/live-installer-3/gtk_interface.py:780
+#: ../usr/lib/live-installer-3/gtk_interface.py:784
+#: ../usr/lib/live-installer-3/gtk_interface.py:788
 msgid "Installation Tool"
 msgstr "Installationsverktyg"
 
@@ -83,7 +83,7 @@ msgid "Extended partition"
 msgstr "Utökad partition"
 
 #: ../usr/lib/live-installer-3/partitioning.py:512
-#: ../usr/lib/live-installer-3/gtk_interface.py:561
+#: ../usr/lib/live-installer-3/gtk_interface.py:570
 msgid "Free space"
 msgstr "Ledigt utrymme"
 
@@ -100,17 +100,17 @@ msgid "Edit partition"
 msgstr "Redigera partition"
 
 #: ../usr/lib/live-installer-3/partitioning.py:651
-#: ../usr/lib/live-installer-3/gtk_interface.py:553
+#: ../usr/lib/live-installer-3/gtk_interface.py:562
 msgid "Device"
 msgstr "Enhet"
 
 #: ../usr/lib/live-installer-3/partitioning.py:652
-#: ../usr/lib/live-installer-3/gtk_interface.py:558
+#: ../usr/lib/live-installer-3/gtk_interface.py:567
 msgid "Format as"
 msgstr "Formatera som"
 
 #: ../usr/lib/live-installer-3/partitioning.py:653
-#: ../usr/lib/live-installer-3/gtk_interface.py:557
+#: ../usr/lib/live-installer-3/gtk_interface.py:566
 msgid "Mount point"
 msgstr "Monteringspunkt"
 
@@ -178,12 +178,12 @@ msgstr ""
 msgid "You need to choose a mount point for partition:"
 msgstr "Du behöver välja en monteringspunkt för partition:"
 
-#: ../usr/lib/live-installer-3/installer.py:139
-#: ../usr/lib/live-installer-3/installer.py:164
+#: ../usr/lib/live-installer-3/installer.py:142
+#: ../usr/lib/live-installer-3/installer.py:167
 msgid "Installation error"
 msgstr "Installationsfel"
 
-#: ../usr/lib/live-installer-3/installer.py:149
+#: ../usr/lib/live-installer-3/installer.py:152
 msgid ""
 "Installation is now paused. Please read the instructions on the page "
 "carefully before clicking Forward to finish the installation."
@@ -191,39 +191,39 @@ msgstr ""
 "Installationen är nu hejdad. Var vänlig och läs noggrannt instruktionerna på "
 "sidan innan du klickar på Framåt för att avsluta installationen."
 
-#: ../usr/lib/live-installer-3/installer.py:150
+#: ../usr/lib/live-installer-3/installer.py:153
 msgid "Verify that fstab is correct (use blkid to check the UUIDs)."
 msgstr ""
 "Verifiera att fstab är korrekt (använd blkid för att kontrollera UUID:na)."
 
-#: ../usr/lib/live-installer-3/installer.py:151
+#: ../usr/lib/live-installer-3/installer.py:154
 msgid ""
 "A chrooted terminal and fstab will be opened after you close this message."
 msgstr ""
 "En chrotad terminal och fstab kommer att öppnas sedan du stängt detta "
 "meddelande."
 
-#: ../usr/lib/live-installer-3/installer.py:153
+#: ../usr/lib/live-installer-3/installer.py:156
 msgid "Installation paused"
 msgstr "Installation hejdad"
 
-#: ../usr/lib/live-installer-3/installer.py:200
+#: ../usr/lib/live-installer-3/installer.py:206
 #, python-format
 msgid "Encrypting %(partition)s ..."
 msgstr "Krypterar %(partition)s ..."
 
-#: ../usr/lib/live-installer-3/installer.py:206
+#: ../usr/lib/live-installer-3/installer.py:212
 #, python-format
 msgid "Formatting %(partition)s as %(format)s ..."
 msgstr "Formaterar %(partition)s som %(format)s ..."
 
-#: ../usr/lib/live-installer-3/installer.py:249
-#: ../usr/lib/live-installer-3/installer.py:263
+#: ../usr/lib/live-installer-3/installer.py:255
+#: ../usr/lib/live-installer-3/installer.py:269
 #, python-format
 msgid "Mounting %(partition)s on %(mountpoint)s"
 msgstr "Monterar %(partition)s på %(mountpoint)s"
 
-#: ../usr/lib/live-installer-3/installer.py:279
+#: ../usr/lib/live-installer-3/installer.py:285
 #, python-format
 msgid ""
 "You must first manually mount your target filesystem(s) at %s to do a custom "
@@ -232,11 +232,11 @@ msgstr ""
 "Du måste först manuellt montera ditt målfilsystem på %s för att göra en "
 "anpassad installation!"
 
-#: ../usr/lib/live-installer-3/installer.py:282
+#: ../usr/lib/live-installer-3/installer.py:288
 msgid "Not mounted"
 msgstr "Ej monterad"
 
-#: ../usr/lib/live-installer-3/installer.py:290
+#: ../usr/lib/live-installer-3/installer.py:296
 msgid ""
 "Something is wrong with the installation medium! This is usually caused by "
 "burning tools which are not compatible with {}. Please burn the ISO image to "
@@ -246,63 +246,63 @@ msgstr ""
 "brännarprogram som inte är kompatibla med {}. Var vänlig och bränn ISO-"
 "avbildningen med ett annat program."
 
-#: ../usr/lib/live-installer-3/installer.py:293
+#: ../usr/lib/live-installer-3/installer.py:299
 msgid "Base filesystem does not exist"
 msgstr "Basfilsystem finns ej."
 
-#: ../usr/lib/live-installer-3/installer.py:347
+#: ../usr/lib/live-installer-3/installer.py:353
 msgid "Copying"
 msgstr "Kopierar"
 
-#: ../usr/lib/live-installer-3/installer.py:366
+#: ../usr/lib/live-installer-3/installer.py:390
 msgid "Entering the system ..."
 msgstr "Går in i systemet ..."
 
-#: ../usr/lib/live-installer-3/installer.py:391
+#: ../usr/lib/live-installer-3/installer.py:413
 msgid "Installing EFI packages..."
 msgstr "Installerar EFI-paket ..."
 
-#: ../usr/lib/live-installer-3/installer.py:435
+#: ../usr/lib/live-installer-3/installer.py:437
 msgid "Installing drivers"
 msgstr "Installerar drivrutiner"
 
-#: ../usr/lib/live-installer-3/installer.py:447
+#: ../usr/lib/live-installer-3/installer.py:452
 msgid "Adding new user to the system"
 msgstr "Lägger till ny användare"
 
-#: ../usr/lib/live-installer-3/installer.py:494
+#: ../usr/lib/live-installer-3/installer.py:500
 msgid "Writing filesystem mount information to /etc/fstab"
 msgstr "Skriver monteringsinformation för filsystemet till /etc/fstab"
 
-#: ../usr/lib/live-installer-3/installer.py:624
+#: ../usr/lib/live-installer-3/installer.py:639
 msgid "Setting hostname"
 msgstr "Anger datornamn"
 
-#: ../usr/lib/live-installer-3/installer.py:646
+#: ../usr/lib/live-installer-3/installer.py:660
 msgid "Setting locale"
 msgstr "Anger plats"
 
-#: ../usr/lib/live-installer-3/installer.py:664
+#: ../usr/lib/live-installer-3/installer.py:676
 msgid "Update apt cache"
 msgstr "Uppdatera apt-cache"
 
-#: ../usr/lib/live-installer-3/installer.py:668
+#: ../usr/lib/live-installer-3/installer.py:678
 msgid "Update the new system"
 msgstr "Uppdatera det nya systemet"
 
-#: ../usr/lib/live-installer-3/installer.py:677
+#: ../usr/lib/live-installer-3/installer.py:685
 msgid "Localizing packages"
 msgstr "Översätter paketen"
 
-#: ../usr/lib/live-installer-3/installer.py:698
+#: ../usr/lib/live-installer-3/installer.py:703
 msgid "Setting keyboard options"
 msgstr "Ställer in tangentbordet"
 
-#: ../usr/lib/live-installer-3/installer.py:761
+#: ../usr/lib/live-installer-3/installer.py:765
 msgid "Configuring sensors"
 msgstr "Konfigureringssensorer"
 
-#: ../usr/lib/live-installer-3/installer.py:769
+#: ../usr/lib/live-installer-3/installer.py:771
 msgid "Removing VirtualBox"
 msgstr "Tar bort VirtualBox"
 
@@ -310,56 +310,52 @@ msgstr "Tar bort VirtualBox"
 msgid "Removing os-prober"
 msgstr "Tar bort os-prober"
 
-#: ../usr/lib/live-installer-3/installer.py:784
+#: ../usr/lib/live-installer-3/installer.py:783
 msgid "Installing bootloader"
 msgstr "Installerar starthanterare"
 
-#: ../usr/lib/live-installer-3/installer.py:806
+#: ../usr/lib/live-installer-3/installer.py:805
 msgid ""
 "The grub bootloader was not configured properly! You need to configure it "
 "manually."
 msgstr ""
 "GRUB konfigurerades ej ordentligt! Du behöver konfigurera den manuellt."
 
-#: ../usr/lib/live-installer-3/installer.py:809
+#: ../usr/lib/live-installer-3/installer.py:808
 msgid "Grub not configured"
 msgstr "GRUB är ej konfigurerad"
 
-#: ../usr/lib/live-installer-3/installer.py:843
-msgid "Configuring initramfs"
-msgstr "Konfigurerar initramfs"
-
-#: ../usr/lib/live-installer-3/installer.py:851
+#: ../usr/lib/live-installer-3/installer.py:834
 msgid "Cleaning APT"
 msgstr "Rensar APT"
 
-#: ../usr/lib/live-installer-3/installer.py:893
+#: ../usr/lib/live-installer-3/installer.py:866
 msgid "Removing live configuration (packages)"
 msgstr "Avlägsnar direktkörningskonfiguration (paket)"
 
-#: ../usr/lib/live-installer-3/installer.py:905
+#: ../usr/lib/live-installer-3/installer.py:908
 msgid "Unmounting partitions"
 msgstr "Avmonterar partitioner"
 
-#: ../usr/lib/live-installer-3/installer.py:927
-#: ../usr/lib/live-installer-3/gtk_interface.py:931
+#: ../usr/lib/live-installer-3/installer.py:930
+#: ../usr/lib/live-installer-3/gtk_interface.py:940
 msgid "Installation finished"
 msgstr "Installationen är klar"
 
-#: ../usr/lib/live-installer-3/installer.py:931
+#: ../usr/lib/live-installer-3/installer.py:934
 msgid "Configuring bootloader"
 msgstr "Konfigurerar starhanteraren"
 
-#: ../usr/lib/live-installer-3/installer.py:938
+#: ../usr/lib/live-installer-3/installer.py:941
 msgid "Checking bootloader"
 msgstr "Kontrollerar starthanteraren"
 
-#: ../usr/lib/live-installer-3/installer.py:953
+#: ../usr/lib/live-installer-3/installer.py:956
 #, python-format
 msgid "No %s file found!"
 msgstr "Ingen %s funnen!"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:265
+#: ../usr/lib/live-installer-3/gtk_interface.py:273
 #, python-format
 msgid ""
 "Please, click on the network manager's system tray icon to connect to the "
@@ -376,20 +372,20 @@ msgstr ""
 "Utan en internetanslutning kommer ditt system ej att uppgraderas och vissa "
 "paket inte att översättas."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:268
-#: ../usr/lib/live-installer-3/gtk_interface.py:352
+#: ../usr/lib/live-installer-3/gtk_interface.py:276
+#: ../usr/lib/live-installer-3/gtk_interface.py:361
 msgid "No internet connection"
 msgstr "Ingen internetanslutning"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:297
+#: ../usr/lib/live-installer-3/gtk_interface.py:306
 msgid "Quit?"
 msgstr "Vill du avsluta?"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:297
+#: ../usr/lib/live-installer-3/gtk_interface.py:306
 msgid "Are you sure you want to quit the installer?"
 msgstr "Är du säker på att du vill avsluta installationen?"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:350
+#: ../usr/lib/live-installer-3/gtk_interface.py:359
 msgid ""
 "Cannot download and install additional locale packages: no internet "
 "connection\n"
@@ -399,180 +395,180 @@ msgstr ""
 "internetanslutning.\n"
 "Konfigurationen kommer ändå att behålla ditt valda språk."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:501
-#: ../usr/lib/live-installer-3/gtk_interface.py:506
+#: ../usr/lib/live-installer-3/gtk_interface.py:510
+#: ../usr/lib/live-installer-3/gtk_interface.py:515
 msgid "{} Installer"
 msgstr "{} Installerare"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:504
+#: ../usr/lib/live-installer-3/gtk_interface.py:513
 msgid "{} OEM Setup"
 msgstr "{} OEM-inställningar"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:520
-#: ../usr/lib/live-installer-3/gtk_interface.py:540
+#: ../usr/lib/live-installer-3/gtk_interface.py:529
+#: ../usr/lib/live-installer-3/gtk_interface.py:549
 msgid "Language"
 msgstr "Språk"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:521
+#: ../usr/lib/live-installer-3/gtk_interface.py:530
 msgid "Timezone"
 msgstr "Tidszon"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:522
+#: ../usr/lib/live-installer-3/gtk_interface.py:531
 msgid "Keyboard layout"
 msgstr "Tangentbordsutläggning"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:523
+#: ../usr/lib/live-installer-3/gtk_interface.py:532
 msgid "User info"
 msgstr "Användarinformation"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:524
+#: ../usr/lib/live-installer-3/gtk_interface.py:533
 msgid "Partitioning"
 msgstr "Partitionering"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:525
+#: ../usr/lib/live-installer-3/gtk_interface.py:534
 msgid "Please make sure you wish to manage partitions manually"
 msgstr "Var vänlig och se till så att du önskar hantera partitioner manullet"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:526
+#: ../usr/lib/live-installer-3/gtk_interface.py:535
 msgid "Summary"
 msgstr "Sammanfattning"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:527
+#: ../usr/lib/live-installer-3/gtk_interface.py:536
 msgid "Installing {}..."
 msgstr "Installerar {} ..."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:528
+#: ../usr/lib/live-installer-3/gtk_interface.py:537
 msgid "Installation is paused: please finish the custom installation"
 msgstr ""
 "Installationen är hejdad: var vänlig och slutför den anpassade installation"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:535
-#: ../usr/lib/live-installer-3/gtk_interface.py:565
+#: ../usr/lib/live-installer-3/gtk_interface.py:544
+#: ../usr/lib/live-installer-3/gtk_interface.py:574
 msgid "Quit"
 msgstr "Avsluta"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:536
-#: ../usr/lib/live-installer-3/gtk_interface.py:566
+#: ../usr/lib/live-installer-3/gtk_interface.py:545
+#: ../usr/lib/live-installer-3/gtk_interface.py:575
 msgid "Back"
 msgstr "Bakåt"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:537
-#: ../usr/lib/live-installer-3/gtk_interface.py:567
-#: ../usr/lib/live-installer-3/gtk_interface.py:646
+#: ../usr/lib/live-installer-3/gtk_interface.py:546
+#: ../usr/lib/live-installer-3/gtk_interface.py:576
+#: ../usr/lib/live-installer-3/gtk_interface.py:655
 msgid "Forward"
 msgstr "Framåt"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:541
+#: ../usr/lib/live-installer-3/gtk_interface.py:550
 msgid "Country"
 msgstr "Land"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:544
+#: ../usr/lib/live-installer-3/gtk_interface.py:553
 msgid "Selected timezone:"
 msgstr "Vald tidszon:"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:545
+#: ../usr/lib/live-installer-3/gtk_interface.py:554
 msgid "Select timezone"
 msgstr "Välj tidszon"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:548
+#: ../usr/lib/live-installer-3/gtk_interface.py:557
 msgid "Refresh"
 msgstr "Förnya"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:549
+#: ../usr/lib/live-installer-3/gtk_interface.py:558
 msgid "_Expert mode"
 msgstr "_Expertläge"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:550
+#: ../usr/lib/live-installer-3/gtk_interface.py:559
 msgid "_Edit partitions"
 msgstr "_Redigera partitioner"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:554
+#: ../usr/lib/live-installer-3/gtk_interface.py:563
 msgid "Grub"
 msgstr "GRUB"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:555
+#: ../usr/lib/live-installer-3/gtk_interface.py:564
 msgid "Type"
 msgstr "Typ"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:556
+#: ../usr/lib/live-installer-3/gtk_interface.py:565
 msgid "Label"
 msgstr "Etikett"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:559
+#: ../usr/lib/live-installer-3/gtk_interface.py:568
 msgid "Encrypt"
 msgstr "Kryptera"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:560
+#: ../usr/lib/live-installer-3/gtk_interface.py:569
 msgid "Size"
 msgstr "Storlek"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:570
+#: ../usr/lib/live-installer-3/gtk_interface.py:579
 msgid "Layout"
 msgstr "Utseende"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:571
+#: ../usr/lib/live-installer-3/gtk_interface.py:580
 msgid "Variant"
 msgstr "Variant"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:572
+#: ../usr/lib/live-installer-3/gtk_interface.py:581
 msgid "Use this box to test your keyboard layout."
 msgstr "Använd denna box för att testa ditt tangentbord."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:573
+#: ../usr/lib/live-installer-3/gtk_interface.py:582
 msgid "Model"
 msgstr "Modell"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:576
+#: ../usr/lib/live-installer-3/gtk_interface.py:585
 msgid "Click to change your picture"
 msgstr "Klicka för att byta bild"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:577
+#: ../usr/lib/live-installer-3/gtk_interface.py:586
 msgid "Take a photo..."
 msgstr "Ta ett foto ..."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:578
+#: ../usr/lib/live-installer-3/gtk_interface.py:587
 msgid "Browse for more pictures..."
 msgstr "Bläddra efter fler bilder ..."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:579
+#: ../usr/lib/live-installer-3/gtk_interface.py:588
 msgid "Your full name"
 msgstr "Ditt fullständiga namn"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:580
+#: ../usr/lib/live-installer-3/gtk_interface.py:589
 msgid "This will be shown in the About Me application."
 msgstr "Detta kommer att visas i programmet Om mig."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:581
+#: ../usr/lib/live-installer-3/gtk_interface.py:590
 msgid "Your username"
 msgstr "Ditt användarnamn"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:582
+#: ../usr/lib/live-installer-3/gtk_interface.py:591
 msgid "This is the name you will use to log in to your computer."
 msgstr "Detta är namnet du kommer att använda för att logga in på din dator."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:583
+#: ../usr/lib/live-installer-3/gtk_interface.py:592
 msgid "Your password"
 msgstr "Ditt lösenord"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:584
+#: ../usr/lib/live-installer-3/gtk_interface.py:593
 msgid "Please enter your password twice to ensure it is correct."
 msgstr ""
 "Var vänlig och ange ditt lösenord två gånger för att se till så att det är "
 "korrekt."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:585
+#: ../usr/lib/live-installer-3/gtk_interface.py:594
 msgid "Hostname"
 msgstr "Datornamn"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:586
+#: ../usr/lib/live-installer-3/gtk_interface.py:595
 msgid "This hostname will be the computer's name on the network."
 msgstr "Detta namn kommer att bli datorns namn i nätverket."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:587
+#: ../usr/lib/live-installer-3/gtk_interface.py:596
 msgid "Automatic login"
 msgstr "Automatisk inloggning"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:588
+#: ../usr/lib/live-installer-3/gtk_interface.py:597
 msgid ""
 "If enabled, the login screen is skipped when the system starts, and you are "
 "signed into your desktop session automatically."
@@ -580,15 +576,15 @@ msgstr ""
 "Om aktiverad kommer inloggningen att hoppas över när systemet startas och du "
 "loggas in automatiskt."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:590
+#: ../usr/lib/live-installer-3/gtk_interface.py:599
 msgid "Log in automatically on system boot"
 msgstr "Logga in automatiskt vid systemstart"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:591
+#: ../usr/lib/live-installer-3/gtk_interface.py:600
 msgid "Your picture"
 msgstr "Din bild"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:592
+#: ../usr/lib/live-installer-3/gtk_interface.py:601
 msgid ""
 "This picture represents your user account. It is used in the login screen "
 "and a few other places."
@@ -596,7 +592,7 @@ msgstr ""
 "Denna bild representerar ditt användarkonto. Den används vid inloggningen "
 "och på några andra ställen."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:596
+#: ../usr/lib/live-installer-3/gtk_interface.py:605
 msgid ""
 "You have selected to manage your partitions manually, this feature is for "
 "ADVANCED USERS ONLY."
@@ -604,17 +600,17 @@ msgstr ""
 "Du har valt att hantera partitioner manuellt; denna funktion är endast för "
 "AVANCERADE ANVÄNDARE."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:598
+#: ../usr/lib/live-installer-3/gtk_interface.py:607
 #, python-format
 msgid "Before continuing, please mount your target filesystem(s) at %s."
 msgstr "Innan du fortsätter, var vänlig och montera ditt målfilsystem vid %s."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:600
+#: ../usr/lib/live-installer-3/gtk_interface.py:609
 #, python-format
 msgid "Do NOT mount virtual devices such as /dev, /proc, /sys, etc on %s/."
 msgstr "Montera EJ virtuella enheter som /dev, /proc, /sys etc. på %s/."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:602
+#: ../usr/lib/live-installer-3/gtk_interface.py:611
 #, python-format
 msgid ""
 "During the install, you will be given time to chroot into %s and install any "
@@ -623,13 +619,13 @@ msgstr ""
 "Under installationen kommer du att få tillfälle att chrota in i %s och "
 "installera paket som behövs för att starta ditt nya system."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:604
+#: ../usr/lib/live-installer-3/gtk_interface.py:613
 msgid "During the install, you will be required to write your own /etc/fstab."
 msgstr ""
 "Under installationen kommer du att vara tvungen att skriva en egen /etc/"
 "fstab."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:606
+#: ../usr/lib/live-installer-3/gtk_interface.py:615
 msgid ""
 "If you aren't sure what any of this means, please go back and deselect "
 "manual partition management."
@@ -637,13 +633,13 @@ msgstr ""
 "Om du inte är säker på vad allt detta innebär, var vänlig och gå tillbaka "
 "och avmarkera manuell partitionshantering."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:610
+#: ../usr/lib/live-installer-3/gtk_interface.py:619
 msgid "Please do the following and then click Forward to finish installation:"
 msgstr ""
 "Var vänlig och gör följande och därefter avsluta installationen genom klicka "
 "på Framåt:"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:612
+#: ../usr/lib/live-installer-3/gtk_interface.py:621
 #, python-format
 msgid ""
 "Create %s/etc/fstab for the filesystems as they will be mounted in your new "
@@ -654,7 +650,7 @@ msgstr ""
 "och matcha de för närvarande monterade vid %s (utan att använda prefixet %s "
 "i monteringsvägarna)."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:614
+#: ../usr/lib/live-installer-3/gtk_interface.py:623
 #, python-format
 msgid ""
 "Install any packages that may be needed for first boot (mdadm, cryptsetup, "
@@ -665,7 +661,7 @@ msgstr ""
 "cryptsetup, dmraid, etc) genom att ange \"sudo chroot %s\" följt av "
 "relevanta apt-get/aptitude-installationer."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:616
+#: ../usr/lib/live-installer-3/gtk_interface.py:625
 #, python-format
 msgid ""
 "Note that in order for update-initramfs to work properly in some cases (such "
@@ -676,7 +672,7 @@ msgstr ""
 "(såsom dm-crypt), kan du behöva ha redan monterade enheter att använda samma "
 "blockenhetsnamn som i %s/etc/fstab."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:618
+#: ../usr/lib/live-installer-3/gtk_interface.py:627
 #, python-format
 msgid ""
 "Double-check that your %s/etc/fstab is correct, matches what your new system "
@@ -685,43 +681,43 @@ msgstr ""
 "Dubbelkontrollera att din %s/etc/fstab är korrekt och matchar det ditt "
 "system kommer att ha vid första systemstart och det som är monterat vid %s."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:622
+#: ../usr/lib/live-installer-3/gtk_interface.py:631
 msgid "Overview"
 msgstr "Översikt"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:625
+#: ../usr/lib/live-installer-3/gtk_interface.py:634
 msgid "Calculating file indexes ..."
 msgstr "Beräknar filinnehåll ..."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:691
+#: ../usr/lib/live-installer-3/gtk_interface.py:700
 msgid "Please provide your full name."
 msgstr "Vänligen ange ditt fullständiga namn."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:694
+#: ../usr/lib/live-installer-3/gtk_interface.py:703
 msgid "Please provide a username."
 msgstr "Vänligen ange ett användarnamn."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:697
+#: ../usr/lib/live-installer-3/gtk_interface.py:706
 msgid "Please provide a username without -oem."
 msgstr "Vänligen ange ett användarnamn utan -oem."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:700
+#: ../usr/lib/live-installer-3/gtk_interface.py:709
 msgid "Please provide a password for your user account."
 msgstr "Vänligen ange ett lösenord för ditt användarkonto."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:703
+#: ../usr/lib/live-installer-3/gtk_interface.py:712
 msgid "Your passwords do not match."
 msgstr "Dina lösenord överensstämmer ej."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:706
+#: ../usr/lib/live-installer-3/gtk_interface.py:715
 msgid "Please provide a hostname."
 msgstr "Vänligen ange ett datornamn."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:710
+#: ../usr/lib/live-installer-3/gtk_interface.py:719
 msgid "Your username cannot start with a digit."
 msgstr "Ditt användarnamn kan inte börja med en siffra."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:713
+#: ../usr/lib/live-installer-3/gtk_interface.py:722
 msgid ""
 "The hostname is incorrect:\n"
 "not more than 63 characters between periods\n"
@@ -731,17 +727,17 @@ msgstr ""
 "ej mer än 63 tecken mellan punkter\n"
 "och ej mer än 255 tecken totalt."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:718
+#: ../usr/lib/live-installer-3/gtk_interface.py:727
 msgid "Error"
 msgstr "Fel"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:724
-#: ../usr/lib/live-installer-3/gtk_interface.py:816
-#: ../usr/lib/live-installer-3/gtk_interface.py:823
+#: ../usr/lib/live-installer-3/gtk_interface.py:733
+#: ../usr/lib/live-installer-3/gtk_interface.py:825
+#: ../usr/lib/live-installer-3/gtk_interface.py:832
 msgid "Apply"
 msgstr "Tillämpa"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:744
+#: ../usr/lib/live-installer-3/gtk_interface.py:753
 msgid ""
 "Please indicate a filesystem to format the root (/) partition with before "
 "proceeding."
@@ -749,11 +745,11 @@ msgstr ""
 "Vänligen ange ett filsystem att formatera rotpartitionen (/) med innan du "
 "fortsätter."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:748
+#: ../usr/lib/live-installer-3/gtk_interface.py:757
 msgid "<b>Please select a root (/) partition.</b>"
 msgstr "<b>Vänligen välj en rotpartition (/).</b>"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:749
+#: ../usr/lib/live-installer-3/gtk_interface.py:758
 msgid ""
 "A root partition is needed to install the system.\n"
 "\n"
@@ -767,20 +763,20 @@ msgstr ""
 "- Rekommenderad storlek: 30 GB\n"
 "- Rekommenderat format: ext4\n"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:766
+#: ../usr/lib/live-installer-3/gtk_interface.py:775
 msgid "The EFI partition is too small. It must be at least 100MB."
 msgstr "EFI-partitionen är för liten. Den måste rymma minst 100MB."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:771
-#: ../usr/lib/live-installer-3/gtk_interface.py:775
+#: ../usr/lib/live-installer-3/gtk_interface.py:780
+#: ../usr/lib/live-installer-3/gtk_interface.py:784
 msgid "The EFI partition must be formatted as vfat."
 msgstr "EFI-partitionen måste vara formaterad som vfat."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:780
+#: ../usr/lib/live-installer-3/gtk_interface.py:789
 msgid "<b>Please select an EFI partition.</b>"
 msgstr "<b>Vänligen välj en EFI-partition.</b>"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:781
+#: ../usr/lib/live-installer-3/gtk_interface.py:790
 msgid ""
 "An EFI system partition is needed with the following requirements:\n"
 "\n"
@@ -803,15 +799,15 @@ msgstr ""
 "För att säkerställa kompatibilitet med Windows rekommenderar vi att du "
 "använder diskens första partition som EFI-systempartition."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:925
+#: ../usr/lib/live-installer-3/gtk_interface.py:934
 msgid "Setup finished"
 msgstr "Installationen avslutades"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:926
+#: ../usr/lib/live-installer-3/gtk_interface.py:935
 msgid "Setup is now complete. The system will now reboot."
 msgstr "Installationen är nu färdig. Datorn kommer att startas om."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:932
+#: ../usr/lib/live-installer-3/gtk_interface.py:941
 msgid ""
 "Installation is now complete. Do you want to restart your computer to use "
 "the new system?"
@@ -819,109 +815,109 @@ msgstr ""
 "Installationen är nu klar. Vill du starta om datorn och börja använda det "
 "nya systemet?"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:980
+#: ../usr/lib/live-installer-3/gtk_interface.py:989
 msgid "Localization"
 msgstr "Landsanpassning"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:981
+#: ../usr/lib/live-installer-3/gtk_interface.py:990
 msgid "Language: "
 msgstr "Språk: "
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:982
+#: ../usr/lib/live-installer-3/gtk_interface.py:991
 msgid "Timezone: "
 msgstr "Tidszon: "
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:983
+#: ../usr/lib/live-installer-3/gtk_interface.py:992
 msgid "Keyboard layout: "
 msgstr "Tangentbordslayout: "
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:986
+#: ../usr/lib/live-installer-3/gtk_interface.py:995
 msgid "User settings"
 msgstr "Användarinställningar"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:987
+#: ../usr/lib/live-installer-3/gtk_interface.py:996
 msgid "Real name: "
 msgstr "Namn: "
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:988
+#: ../usr/lib/live-installer-3/gtk_interface.py:997
 msgid "Username: "
 msgstr "Användarnamn: "
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:989
+#: ../usr/lib/live-installer-3/gtk_interface.py:998
 msgid "Automatic login: "
 msgstr "Automatisk inloggning:"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:989
+#: ../usr/lib/live-installer-3/gtk_interface.py:998
 msgid "enabled"
 msgstr "aktiverad"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:989
+#: ../usr/lib/live-installer-3/gtk_interface.py:998
 msgid "disabled"
 msgstr "inaktiverad"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:990
+#: ../usr/lib/live-installer-3/gtk_interface.py:999
 msgid "System settings"
 msgstr "Systeminställningar"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:991
+#: ../usr/lib/live-installer-3/gtk_interface.py:1000
 msgid "Hostname: "
 msgstr "Datornamn:"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:994
+#: ../usr/lib/live-installer-3/gtk_interface.py:1003
 msgid "Filesystem operations"
 msgstr "Filsystemsåtgärder"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:995
+#: ../usr/lib/live-installer-3/gtk_interface.py:1004
 msgid "Install Grub on {}"
 msgstr "Installera GRUB på {}"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:995
+#: ../usr/lib/live-installer-3/gtk_interface.py:1004
 msgid "Do not install Grub"
 msgstr "Installera ej GRUB"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:998
+#: ../usr/lib/live-installer-3/gtk_interface.py:1007
 #, python-format
 msgid "Use already-mounted %s."
 msgstr "Använd färdigmonterade %s."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1007
+#: ../usr/lib/live-installer-3/gtk_interface.py:1016
 msgid "set boot flag"
 msgstr "ange startflagga"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1008
+#: ../usr/lib/live-installer-3/gtk_interface.py:1017
 msgid "Mount {}{} as {}"
 msgstr "Montera {}{} som {}"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1011
+#: ../usr/lib/live-installer-3/gtk_interface.py:1020
 msgid "Encrypt {} and format as {}"
 msgstr "Kryptera {} och formatera som {}"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1013
+#: ../usr/lib/live-installer-3/gtk_interface.py:1022
 msgid "Format {} as {}"
 msgstr "Formatera {} som {}"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1208
+#: ../usr/lib/live-installer-3/gtk_interface.py:1239
 msgid "Assign to /"
 msgstr "Tilldela /"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1211
+#: ../usr/lib/live-installer-3/gtk_interface.py:1242
 msgid "Assign to /home"
 msgstr "Enhetstilldelning: /home"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1217
+#: ../usr/lib/live-installer-3/gtk_interface.py:1248
 msgid "Assign to /boot/efi"
 msgstr "Tilldela /boot/efi"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1222
+#: ../usr/lib/live-installer-3/gtk_interface.py:1253
 msgid "Advanced..."
 msgstr "Avancerat ..."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1236
-#: ../usr/lib/live-installer-3/gtk_interface.py:1262
+#: ../usr/lib/live-installer-3/gtk_interface.py:1267
+#: ../usr/lib/live-installer-3/gtk_interface.py:1293
 msgid "Grub install"
 msgstr "GRUB-installation"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1237
+#: ../usr/lib/live-installer-3/gtk_interface.py:1268
 msgid ""
 "You chose to NOT install Grub on your system.\n"
 "Without a bootloader like Grub your system might not boot.\n"
@@ -933,7 +929,7 @@ msgstr ""
 "\n"
 "Är du säker på att du vill fortsätta?"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1263
+#: ../usr/lib/live-installer-3/gtk_interface.py:1294
 msgid ""
 "You chose to install Grub on a partition.\n"
 "It is recommended to install Grub on a disk instead of a partition.\n"
@@ -952,19 +948,19 @@ msgstr ""
 "\n"
 "Är du säker på att du vill fortsätta?"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1316
+#: ../usr/lib/live-installer-3/gtk_interface.py:1347
 msgid "Select image"
 msgstr "Välj bild"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1343
+#: ../usr/lib/live-installer-3/gtk_interface.py:1374
 msgid "Unable to convert the image."
 msgstr "Kunde inte konvertera bilden."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1374
+#: ../usr/lib/live-installer-3/gtk_interface.py:1405
 msgid "Take a photo"
 msgstr "Ta ett foto"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1375
+#: ../usr/lib/live-installer-3/gtk_interface.py:1406
 msgid "Unable to take a photo."
 msgstr "Kunde inte ta ett foto."
 

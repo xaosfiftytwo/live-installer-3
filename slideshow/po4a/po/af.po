@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: live-installer-3.slideshow\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-10-09 12:56+0200\n"
+"POT-Creation-Date: 2016-03-25 15:46+0100\n"
 "PO-Revision-Date: 2012-10-18 19:02+0000\n"
 "Last-Translator: Bernhard Breytenbach <Unknown>\n"
 "Language-Team: Afrikaans <af@li.org>\n"
@@ -77,7 +77,7 @@ msgstr ""
 #. type: Content of: <div><div><ul><li>
 #: en/20_giants.html:7
 msgid ""
-"SolydXK uses either the lightweight Xfce desktop for SoldyX or the highly "
+"SolydXK uses either the lightweight Xfce desktop for SolydX or the highly "
 "configurable and stunningly appealing KDE desktop for SolydK."
 msgstr ""
 

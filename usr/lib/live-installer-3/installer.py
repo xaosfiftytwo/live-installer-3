@@ -10,12 +10,12 @@
 
 from utils import shell_exec, shell_exec_popen, getoutput, chroot_exec, \
                   get_config_dict, has_internet, in_virtualbox, \
-                  get_boot_parameters, get_files_from_dir
+                  get_boot_parameters, get_files_from_dir, isPackageInstalled
 from localize import Localize
 from encryption import clear_partition, encrypt_partition
 from partitioning import get_partition_label
 import os
-from os.path import exists, isdir, basename, getmtime, isfile
+from os.path import exists, isdir, basename, join, dirname
 import time
 import sys
 import threading
@@ -33,6 +33,8 @@ PAUSE
 class InstallerEngine(threading.Thread):
     def __init__(self, theQueue, setup):
         super(InstallerEngine, self).__init__()
+        # Save current dir
+        self.scriptDir = dirname(os.path.realpath(__file__))
         # Create a pause event
         self.pause_event = threading.Event()
         # Save the parameters
@@ -51,6 +53,7 @@ class InstallerEngine(threading.Thread):
         self.detachable = False
         self.ssd_partition = ""
         self.sorted_partitions = []
+        self.installBroadcom = False
 
         # Log
         self.log = Logger("/var/log/live-installer-3.log")
@@ -62,7 +65,7 @@ class InstallerEngine(threading.Thread):
         manual_partitions = []
         if self.setup.skip_mount and not self.setup.oem_setup:
             # Create partition objects with the information of the manually mounted partitions
-            manual_mounts = getoutput("cat /proc/mounts | grep -Ev '%s/dev|%s/sys|%s/proc' | grep %s" % (self.setup.target_dir, self.setup.target_dir, self.setup.target_dir, self.setup.target_dir), always_as_list=True)
+            manual_mounts = getoutput("cat /proc/mounts | grep -Ev '%s/dev|%s/sys|%s/proc' | grep %s" % (self.setup.target_dir, self.setup.target_dir, self.setup.target_dir, self.setup.target_dir), always_as_list=True, logger=self.log)
             if manual_mounts[0] != '':
                 try:
                     for manual_mount in manual_mounts:
@@ -164,9 +167,10 @@ class InstallerEngine(threading.Thread):
                                _("Installation error"),
                                str(detail1))
 
-    def update_progress(self, fail=False, done=False, pulse=False, total=0, current=0, message=""):
-        self.log.write(message, "InstallerEngine.update_progress", "info")
-        info_list = [UPDATE, fail, done, pulse, total, current, message]
+    def update_progress(self, fail=False, done=False, pulse=False, message=""):
+        self.our_current += 1
+        self.log.write("%s (%s of %s)" % (message, self.our_current, self.our_total), "InstallerEngine.update_progress", "info")
+        info_list = [UPDATE, fail, done, pulse, self.our_total, self.our_current, message]
         self.queue.put(info_list)
 
     def show_dialog(self, dialog_type=ERROR, title="", message=""):
@@ -196,15 +200,17 @@ class InstallerEngine(threading.Thread):
         for partition in self.sorted_partitions:
             if partition.format_as is not None and partition.format_as != "":
                 # Encrypt partition when needed
+                self.our_total = 4
+                self.our_current = 0
                 if partition.encrypt:
                     msg = _("Encrypting %(partition)s ..." % {'partition':partition.enc_status["device"]})
-                    self.update_progress(total=4, current=1, pulse=True, message=msg)
+                    self.update_progress(pulse=True, message=msg)
                     clear_partition(partition)
                     partition.path = encrypt_partition(partition)
 
                 # report it. should grab the total count of filesystems to be formatted ..
                 msg = _("Formatting %(partition)s as %(format)s ..." % {'partition':partition.path, 'format':partition.format_as})
-                self.update_progress(total=4, current=2, pulse=True, message=msg)
+                self.update_progress(pulse=True, message=msg)
 
                 # Check if a previous LUKS partition needs closing first
                 if partition.path == partition.enc_status['device'] and \
@@ -247,7 +253,7 @@ class InstallerEngine(threading.Thread):
         # Mount the installation media
         self.log.write(" --> Mounting partitions", "InstallerEngine.step_mount_source", "info")
         msg = _("Mounting %(partition)s on %(mountpoint)s") % {'partition':self.media, 'mountpoint':"/source/"}
-        self.update_progress(total=4, current=3, message=msg)
+        self.update_progress(message=msg)
         self.do_mount(self.media, "/source/", self.media_type, options="loop")
 
     def step_mount_partitions(self):
@@ -261,7 +267,7 @@ class InstallerEngine(threading.Thread):
                 if partition.mount_as != "/":
                     target += partition.mount_as
                 msg = _("Mounting %(partition)s on %(mountpoint)s") % {'partition':partition.path, 'mountpoint':target}
-                self.update_progress(total=4, current=4, message=msg)
+                self.update_progress(message=msg)
                 self.local_exec("mkdir -p %s 2>/dev/null" % target)
                 partition_type = partition.type
                 if partition_type.startswith('fat'):
@@ -321,7 +327,7 @@ class InstallerEngine(threading.Thread):
             EXCLUDE_DIRS = "home/* dev/* proc/* sys/* tmp/* run/* mnt/* media/* lost+found source".split()
 
             # assume: #(files to copy) ~= #(used inodes on /)
-            self.our_total = int(getoutput("df --inodes /{src} | awk '/^.+?\/{src}$/{{ print $3 }}'".format(src=SOURCE.strip('/'))))
+            self.our_total = int(getoutput("df --inodes /{src} | awk '/^.+?\/{src}$/{{ print $3 }}'".format(src=SOURCE.strip('/')), logger=self.log))
             self.log.write(" --> Copying {} files".format(self.our_total), "InstallerEngine.init_install", "info")
             rsync_filter = ' '.join('--exclude=' + SOURCE + d for d in EXCLUDE_DIRS)
             rsync = shell_exec_popen("rsync --ignore-errors --verbose --archive --no-D --acls "
@@ -344,7 +350,7 @@ class InstallerEngine(threading.Thread):
                     # Check if localtime is on the second to prevent flooding the queue
                     sec = time.localtime()[5]
                     if sec != prev_sec:
-                        self.update_progress(total=self.our_total, current=self.our_current, message="{} {}".format(_("Copying"), line))
+                        self.update_progress(message="{} {}".format(_("Copying"), line))
                         prev_sec = sec
 
             rsync_return_code = rsync.poll()
@@ -358,12 +364,30 @@ class InstallerEngine(threading.Thread):
                     self.local_exec("mv %s/root /tmp/root.install" % self.setup.target_dir)
                 self.local_exec("mv /tmp/root %s/" % self.setup.target_dir)
 
+            # Check if we need to install offline Broadcom drivers
+            ddm_path = '/usr/bin/ddm'
+            if exists(ddm_path):
+                device_ids = getoutput("lspci -n -d 14e4: | awk '{print $3}' | cut -d':' -f 2", True, logger=self.log)
+                if device_ids:
+                    #print "Broadcom deviceids: {}".format(' '.join(device_ids))
+                    wl_ids = getoutput("cat {} | grep 'WLDEBIAN=' | cut -d'=' -f 2".format(ddm_path), logger=self.log).split('|')
+                    for did in device_ids:
+                        did = did.strip()
+                        for wl_id in wl_ids:
+                            if did == wl_id:
+                                self.log.write("Supported Broadcom deviceid found: {}".format(did), "InstallerEngine.init_install", "info")
+                                self.installBroadcom = True
+                                break
+                        if self.installBroadcom:
+                            break
+
             # Steps:
-            self.our_total = 4 + 9
+            self.our_total = self.get_progress_total()
             self.our_current = 0
+
             # chroot
             self.log.write(" --> Chrooting", "InstallerEngine.init_install", "info")
-            self.update_progress(total=self.our_total, current=self.our_current, message=_("Entering the system ..."))
+            self.update_progress(message=_("Entering the system ..."))
             self.local_exec("mount --bind /dev/ %s/dev/" % self.setup.target_dir)
             self.local_exec("mount --bind /dev/shm %s/dev/shm" % self.setup.target_dir)
             self.local_exec("mount --bind /dev/pts %s/dev/pts" % self.setup.target_dir)
@@ -372,12 +396,12 @@ class InstallerEngine(threading.Thread):
             self.local_exec("mv %s/etc/resolv.conf %s/etc/resolv.conf.bk" % (self.setup.target_dir, self.setup.target_dir))
             self.local_exec("cp -f /etc/resolv.conf %s/etc/resolv.conf" % self.setup.target_dir)
 
-            kernelversion = getoutput("uname -r")
+            kernelversion = getoutput("uname -r", logger=self.log)
             self.local_exec("cp /lib/live/mount/medium/live/vmlinuz %s/boot/vmlinuz-%s" % (self.setup.target_dir, kernelversion))
             found_initrd = False
             for initrd in ["/lib/live/mount/medium/live/initrd.img", "/lib/live/mount/medium/live/initrd.lz"]:
                 if exists(initrd):
-                    self.local_exec("cp %s %s/boot/initrd.img-%s" % (self.setup.target_dir, initrd, kernelversion))
+                    self.local_exec("cp %s %s/boot/initrd.img-%s" % (initrd, self.setup.target_dir, kernelversion))
                     found_initrd = True
                     break
 
@@ -385,10 +409,8 @@ class InstallerEngine(threading.Thread):
                 self.log.write("No initrd found!", "InstallerEngine.init_install", "error")
 
             if self.setup.gptonefi:
-                self.our_total += 1
-                self.our_current += 1
                 self.log.write(" --> Installing EFI packages", "InstallerEngine.init_install", "info")
-                self.update_progress(total=self.our_total, current=self.our_current, message=_("Installing EFI packages..."))
+                self.update_progress(message=_("Installing EFI packages..."))
 
                 self.local_exec("mkdir -p %s/debs" % self.setup.target_dir)
                 self.local_exec("cp /lib/live/mount/medium/offline/*efi*.deb %s/debs/" % self.setup.target_dir)
@@ -410,29 +432,9 @@ class InstallerEngine(threading.Thread):
             #     print " --> Failed to mount CDROM. Install will fail"
             # self.exec_cmd("apt-cdrom -o Acquire::cdrom::AutoDetect=false -m add")
 
-            # Install offline Broadcom drivers
-            installBroadcom = False
-            ddm_path = '/usr/bin/ddm'
-            if exists(ddm_path):
-                device_ids = getoutput("lspci -n -d 14e4: | awk '{print $3}' | cut -d':' -f 2", True)
-                if device_ids:
-                    #print "Broadcom deviceids: {}".format(' '.join(device_ids))
-                    wl_ids = getoutput("cat {} | grep 'WLDEBIAN=' | cut -d'=' -f 2".format(ddm_path)).split('|')
-                    for did in device_ids:
-                        did = did.strip()
-                        for wl_id in wl_ids:
-                            if did == wl_id:
-                                self.log.write("Supported Broadcom deviceid found: {}".format(did), "InstallerEngine.init_install", "info")
-                                installBroadcom = True
-                                break
-                        if installBroadcom:
-                            break
-
-            if installBroadcom:
-                self.our_total += 1
-                self.our_current += 1
+            if self.installBroadcom:
                 self.log.write(" --> Installing drivers", "InstallerEngine.init_install", "info")
-                self.update_progress(total=self.our_total, current=self.our_current, message=_("Installing drivers"))
+                self.update_progress(message=_("Installing drivers"))
                 self.local_exec("mkdir -p %s/debs" % self.setup.target_dir)
                 self.local_exec("cp /lib/live/mount/medium/offline/broadcom*.deb %s/debs/" % self.setup.target_dir)
                 self.exec_cmd("dpkg --force-confdef --force-confnew --force-depends --force-overwrite -i /debs/*.deb")
@@ -440,11 +442,14 @@ class InstallerEngine(threading.Thread):
                 self.local_exec("rm -rf %s/debs" % self.setup.target_dir)
                 with open("%s/etc/modprobe.d/blacklist-broadcom.conf" % self.setup.target_dir, "w") as conf:
                     conf.write('blacklist b43 brcmsmac bcma ssb')
+        else:
+            # Steps when in OEM user setup:
+            self.our_total = self.get_progress_total()
+            self.our_current = 0
 
         # add new user
         self.log.write(" --> Adding new user", "InstallerEngine.init_install", "info")
-        self.our_current += 1
-        self.update_progress(total=self.our_total, current=self.our_current, message=_("Adding new user to the system"))
+        self.update_progress(message=_("Adding new user to the system"))
         self.exec_cmd('adduser --disabled-login --gecos "{real_name}" {username}'.format(real_name=self.setup.real_name.replace('"', r'\"'), username=self.setup.username))
         for group in 'adm audio bluetooth cdrom dialout dip fax floppy fuse lpadmin netdev plugdev powerdev sambashare scanner sudo tape users vboxsf video'.split():
             self.exec_cmd("adduser {user} {group}".format(user=self.setup.username, group=group))
@@ -455,13 +460,15 @@ class InstallerEngine(threading.Thread):
         if not exists(user_dir):
             self.log.write("Create user dir: {}".format(user_dir), "InstallerEngine.init_install", "info")
             self.local_exec("mkdir {}".format(user_dir))
-            self.local_exec("cp -R /etc/skel/.* {}/".format(user_dir))
-            self.local_exec("chown -R {}:{} {}".format(self.setup.username, self.setup.username, user_dir))
+
+        # Copy the skel files to the new user's home directory
+        self.local_exec("cp -R /etc/skel/.* {}/".format(user_dir))
+        self.local_exec("chown -R {}:{} {}".format(self.setup.username, self.setup.username, user_dir))
 
         # Save passwords
         # Using a temporary file fails for the new user (but correctly sets the root's password)
         # Using mkpasswd prevents not setting a password when special characters like $ or " are used
-        pwd = getoutput("mkpasswd '{}'".format(self.setup.password1))
+        pwd = getoutput("mkpasswd '{}'".format(self.setup.password1), logger=self.log)
         self.log.write("Encrypt password {} for user {} to {}".format(self.setup.password1, self.setup.username, pwd), "InstallerEngine.init_install")
         self.exec_cmd("echo '{}:{}' | chpasswd -e".format(self.setup.username, pwd))
         self.exec_cmd("echo 'root:{}' | chpasswd -e".format(pwd))
@@ -490,8 +497,7 @@ class InstallerEngine(threading.Thread):
 
         # write the /etc/fstab and /etc/crypttab
         if not self.setup.oem_setup:
-            self.our_current += 1
-            self.update_progress(total=self.our_total, current=self.our_current, message=_("Writing filesystem mount information to /etc/fstab"))
+            self.update_progress(message=_("Writing filesystem mount information to /etc/fstab"))
             if not exists("%s/etc/fstab" % self.setup.target_dir):
                 self.local_exec("echo -e '# <file system>\t<mount point>\t<type>\t<options>\t<dump>\t<pass>' > %s/etc/fstab" % self.setup.target_dir)
 
@@ -501,7 +507,7 @@ class InstallerEngine(threading.Thread):
             self.log.write("{}\n>> Compare fstab/crypttab UUIDS with blkid output <<\n"
                            "fstab: /dev/mapper/sdXY UUIDs, crypttab: /dev/sdXY UUIDS\n"
                            "{} blkid {}\n{}\n{}\n".format(border * 2, border, border,
-                           "\n".join(getoutput("blkid")), border * 2), "InstallerEngine.init_install", "info")
+                           "\n".join(getoutput("blkid", logger=self.log)), border * 2), "InstallerEngine.init_install", "info")
 
             fstab_path = "%s/etc/fstab" % self.setup.target_dir
             crypttab_path = "%s/etc/crypttab" % self.setup.target_dir
@@ -561,19 +567,29 @@ class InstallerEngine(threading.Thread):
                     sysfs.write(sysfs_cont)
 
                 # Browser RAM cache
-                cache_path = "%s/etc/profile.d/browser-cache.sh" % self.setup.target_dir
-                cache_cont = "# Create RAM cache for Firefox\n" \
-                             "USERIDS=$(cat /etc/passwd | grep bash | grep home | cut -d':' -f 3)\n" \
-                             "for ID in $USERIDS; do\n" \
-                             "  mkdir -p \"/run/user/$ID/firefox-cache\" &\n" \
-                             "  sleep 1\n" \
-                             "  mkdir -p \"/run/user/$ID/chromium-cache\" &\n" \
-                             "  sleep 1\n" \
-                             "done\n"
-                with open(cache_path, "w") as cache:
-                    cache.write(cache_cont)
                 # Only configure browser RAM cache for user on a pen drive
                 if self.detachable:
+                    cache_path = "%s/etc/profile.d/browser-cache.sh" % self.setup.target_dir
+                    cache_cont = "# Check for interactive bash and that we haven't already been sourced.\n" \
+                                 "if [ -n \"$BASH_VERSION\" -a -n \"$PS1\" -a -z \"$BASH_COMPLETION_COMPAT_DIR\" ]; then\n" \
+                                 "  # Create RAM cache for Firefox and Chromium\n" \
+                                 "  IDS=$(cat /etc/passwd | grep bash | grep home | cut -d':' -f 3)\n" \
+                                 "  for ID in $IDS; do\n" \
+                                 "    FF=\"/run/user/$ID/firefox-cache\"\n" \
+                                 "    if [ ! -e $FF ]; then\n" \
+                                 "      mkdir -p $FF &\n" \
+                                 "      chown -R $ID:$ID $FF\n" \
+                                 "    fi\n" \
+                                 "    CH=\"/run/user/$ID/chromium-cache\"\n" \
+                                 "    if [ ! -e $CH ]; then\n" \
+                                 "      mkdir -p $CH &\n" \
+                                 "      chown -R $ID:$ID $CH\n" \
+                                 "    fi\n" \
+                                 "  done\n" \
+                                 "fi\n"
+                    with open(cache_path, "w") as cache:
+                        cache.write(cache_cont)
+
                     prefs_path = "%s/home/%s/.mozilla/firefox/mwad0hks.default/prefs.js" % (self.setup.target_dir, self.setup.username)
                     if exists(prefs_path):
                         # Save to prefs file
@@ -603,14 +619,14 @@ class InstallerEngine(threading.Thread):
         extOpts = 'rw,errors=remount-ro'
         if self.ssd or self.detachable:
             extOpts = 'rw,errors=remount-ro,noatime'
-        uuid = "UUID=%s" % getoutput('blkid -s UUID -o value ' + partition_path) or partition_path
+        uuid = "UUID=%s" % getoutput('blkid -s UUID -o value ' + partition_path, logger=self.log) or partition_path
         fsck = 0 if partition_type in ('ntfs', 'swap', 'vfat') else 1 if partition_mount_as == '/' else 2
         opts = extOpts if 'ext' in partition_type else 'sw' if partition_type == 'swap' else 'defaults'
         with open(fstab_path, "a") as fstab:
             fstab.write('%s\t%s\t%s\t%s\t0\t%s\n' % (uuid, partition_mount_as, partition_type, opts, fsck))
 
     def write_crypttab(self, crypttab_path, device, mount_name):
-            crypttab_uuid = "UUID=%s" % getoutput('blkid -s UUID -o value ' + device) or device
+            crypttab_uuid = "UUID=%s" % getoutput('blkid -s UUID -o value ' + device, logger=self.log) or device
             if not exists(crypttab_path):
                 with open(crypttab_path, "w") as crypttab:
                     crypttab.write('# <target name>\t<source device>\t<key file>\t<options>')
@@ -620,8 +636,7 @@ class InstallerEngine(threading.Thread):
     def finish_install(self):
         # write host+hostname infos
         self.log.write(" --> Writing hostname", "InstallerEngine.finish_install", "info")
-        self.our_current += 1
-        self.update_progress(total=self.our_total, current=self.our_current, message=_("Setting hostname"))
+        self.update_progress(message=_("Setting hostname"))
         hostname_path = "%s/etc/hostname" % self.setup.target_dir
         with open(hostname_path, "w") as hostnamefh:
             line = "%s\n" % self.setup.hostname
@@ -642,8 +657,7 @@ class InstallerEngine(threading.Thread):
 
         # set the locale
         self.log.write(" --> Setting the locale", "InstallerEngine.finish_install", "info")
-        self.our_current += 1
-        self.update_progress(total=self.our_total, current=self.our_current, message=_("Setting locale"))
+        self.update_progress(message=_("Setting locale"))
         if self.setup.language != "en_US":
             self.local_exec("echo \"%s.UTF-8 UTF-8\" >> %s/etc/locale.gen" % (self.setup.language, self.setup.target_dir))
             self.exec_cmd("locale-gen")
@@ -659,43 +673,34 @@ class InstallerEngine(threading.Thread):
         # Upgrade the system if needed
         if has_internet():
             self.log.write(" --> Upgrade the new system when needed", "InstallerEngine.finish_install", "info")
-            self.our_total += 1
-            self.our_current += 1
-            self.update_progress(total=self.our_total, current=self.our_current, message=_("Update apt cache"))
+            self.update_progress(message=_("Update apt cache"))
             self.exec_cmd("apt-get update")
-            self.our_total += 1
-            self.our_current += 1
-            self.update_progress(total=self.our_total, current=self.our_current, message=_("Update the new system"))
+            self.update_progress(message=_("Update the new system"))
             self.exec_cmd("apt-get --assume-yes -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold --force-yes upgrade")
 
         # localizing
         if self.setup.language != "en_US":
             if exists("/lib/live/mount/medium/pool"):
                 self.log.write(" --> Localizing packages", "InstallerEngine.finish_install", "info")
-                self.our_total += 1
-                self.our_current += 1
-                self.update_progress(total=self.our_total, current=self.our_current, message=_("Localizing packages"))
+                self.update_progress(message=_("Localizing packages"))
                 self.local_exec("mkdir -p %s/debs" % self.setup.target_dir)
                 language_code = self.setup.language
                 if "_" in self.setup.language:
                     language_code = self.setup.language.split("_")[0]
-                l10ns = getoutput("find /lib/live/mount/medium/pool | grep 'l10n-%s\\|hunspell-%s'" % (language_code, language_code))
+                l10ns = getoutput("find /lib/live/mount/medium/pool | grep 'l10n-%s\\|hunspell-%s'" % (language_code, language_code), logger=self.log)
                 for l10n in l10ns.split("\n"):
                     self.local_exec("cp %s %s/debs/" % (l10n, self.setup.target_dir))
                 self.exec_cmd("dpkg -i /debs/*")
                 self.local_exec("rm -rf %s/debs" % self.setup.target_dir)
             if has_internet():
                 # Localize
-                loc = Localize(self.setup, self.our_total, self.our_current, self.setup.target_dir)
+                loc = Localize(self.setup, self.setup.target_dir)
                 loc.set_progress_hook(self.update_progress)
                 loc.start()
-                self.our_total += loc.our_current
-                self.our_current = loc.our_current
 
         # set the keyboard options..
         self.log.write(" --> Setting the keyboard", "InstallerEngine.finish_install", "info")
-        self.our_current += 1
-        self.update_progress(total=self.our_total, current=self.our_current, message=_("Setting keyboard options"))
+        self.update_progress(message=_("Setting keyboard options"))
         console_setup = "/etc/default/console-setup"
         if not self.setup.oem_setup:
             console_setup = "%s/etc/default/console-setup" % self.setup.target_dir
@@ -755,33 +760,27 @@ class InstallerEngine(threading.Thread):
                 self.local_exec("chmod 440 %s" % oem_no_pwd)
 
             # Configure sensors
-            self.our_current += 1
             if exists("%s/usr/sbin/sensors-detect" % self.setup.target_dir):
                 self.log.write(" --> Configuring sensors", "InstallerEngine.finish_install", "info")
-                self.update_progress(pulse=True, total=self.our_total, current=self.our_current, message=_("Configuring sensors"))
+                self.update_progress(message=_("Configuring sensors"))
                 self.exec_cmd('/usr/bin/yes YES | /usr/sbin/sensors-detect')
 
             # Remove VirtualBox when not installing to VirtualBox or installing to pen drive
             if not in_virtualbox() or self.detachable:
                 self.log.write(" --> Remove VirtualBox", "InstallerEngine.finish_install", "info")
-                self.our_total += 1
-                self.our_current += 1
-                self.update_progress(pulse=True, total=self.our_total, current=self.our_current, message=_("Removing VirtualBox"))
+                self.update_progress(pulse=True, message=_("Removing VirtualBox"))
                 self.exec_cmd("apt-get purge --assume-yes -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold --force-yes virtualbox*")
 
             # Remove os-prober when installing to pen drive
             if self.detachable:
                 self.log.write(" --> Remove os-prober", "InstallerEngine.finish_install", "info")
-                self.our_total += 1
-                self.our_current += 1
-                self.update_progress(pulse=True, total=self.our_total, current=self.our_current, message=_("Removing os-prober"))
+                self.update_progress(pulse=True, message=_("Removing os-prober"))
                 self.exec_cmd("apt-get purge --assume-yes -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold --force-yes os-prober")
 
             # write MBR (grub)
             self.log.write(" --> Configuring Grub", "InstallerEngine.finish_install", "info")
-            self.our_current += 1
             if self.setup.grub_device is not None:
-                self.update_progress(pulse=True, total=self.our_total, current=self.our_current, message=_("Installing bootloader"))
+                self.update_progress(pulse=True, message=_("Installing bootloader"))
 
                 if self.detachable:
                     # Install legacy grub on a pen drive
@@ -830,25 +829,9 @@ class InstallerEngine(threading.Thread):
                     cmd = "sed -i -e \'/GRUB_GFXMODE=/ c GRUB_GFXMODE=1024x768\' %s/etc/default/grub" % self.setup.target_dir
                     self.local_exec(cmd)
 
-                # /etc/default/grub could have been changed: update Grub
-                self.exec_cmd('update-grub')
-
-            # recreate initramfs (needed in case of skip_mount also, to include things like mdadm/dm-crypt/etc in case its needed to boot a custom install)
-            self.log.write(" --> Configuring Initramfs", "InstallerEngine.finish_install", "info")
-            self.our_current += 1
-            # Running update-initramfs takes a long time: check if it is necessary
-            initrd = "/boot/initrd.img-".format(getoutput("uname -r"))
-            update = getmtime(initrd) < time.time() - 86400 if isfile(initrd) else True
-            if update:
-                self.update_progress(pulse=True, total=self.our_total, current=self.our_current, message=_("Configuring initramfs"))
-                self.exec_cmd("/usr/sbin/update-initramfs -t -u -k all")
-                kernelversion = getoutput("uname -r")
-                self.exec_cmd("/usr/bin/sha1sum /boot/initrd.img-%s > /var/lib/initramfs-tools/%s" % (kernelversion, kernelversion))
-
             # Clean APT
             self.log.write(" --> Cleaning APT", "InstallerEngine.finish_install", "info")
-            self.our_current += 1
-            self.update_progress(pulse=True, total=self.our_total, current=self.our_current, message=_("Cleaning APT"))
+            self.update_progress(pulse=True, message=_("Cleaning APT"))
             cleanup = "#!/bin/bash\n" \
                       "sed -i 's/^deb cdrom/#deb cdrom/' /etc/apt/sources.list\n" \
                       "dpkg --configure -a\n" \
@@ -878,10 +861,11 @@ class InstallerEngine(threading.Thread):
                             f.write("{}\n".format(efi_path))
 
         # remove live-packages (or w/e)
-        self.our_current += 1
         self.log.write(" --> Removing live packages", "InstallerEngine.finish_install", "info")
         packages_remove = "/lib/live/mount/medium/live/filesystem.packages-remove"
+        msg = _("Removing live configuration (packages)")
         if self.setup.username[-4:] == "-oem":
+            self.update_progress(pulse=True, message=msg)
             # Save the filesystem.packages-remove file for the OEM setup
             self.local_exec("cp %s %s/root/" % (packages_remove, self.setup.target_dir))
             # But remove the live packages
@@ -890,7 +874,7 @@ class InstallerEngine(threading.Thread):
         else:
             if self.setup.oem_setup:
                 packages_remove = "/root/filesystem.packages-remove"
-            self.update_progress(pulse=True, total=self.our_total, current=self.our_current, message=_("Removing live configuration (packages)"))
+            self.update_progress(pulse=True, message=msg)
             if exists(packages_remove):
                 with open(packages_remove, "r") as fd:
                     line = fd.read().replace('\n', ' ')
@@ -898,11 +882,30 @@ class InstallerEngine(threading.Thread):
             else:
                 self.exec_cmd("apt-get remove --purge --assume-yes -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold --force-yes ^live-*")
 
+        # Create SHA file of initrd.img
+        kernelversion = getoutput("uname -r", logger=self.log)
+        self.exec_cmd("/usr/bin/sha1sum /boot/initrd.img-%s > /var/lib/initramfs-tools/%s" % (kernelversion, kernelversion))
+
         if not self.setup.oem_setup:
+            # NOT NEEDED ANYMORE: initramfs has been created when the live packages were purged
+            #
+            # recreate initramfs (needed in case of skip_mount also, to include things like mdadm/dm-crypt/etc in case its needed to boot a custom install)
+            #self.log.write(" --> Configuring Initramfs", "InstallerEngine.finish_install", "info")
+            ## Running update-initramfs takes a long time: check if it is necessary
+            #initrd = "/boot/initrd.img-".format(getoutput("uname -r", logger=self.log))
+            #update = getmtime(initrd) < time.time() - 86400 if isfile(initrd) else True
+            #if update:
+                #self.update_progress(pulse=True, message=_("Configuring initramfs"))
+                #self.exec_cmd("/usr/sbin/update-initramfs -t -u -k all")
+                #kernelversion = getoutput("uname -r", logger=self.log)
+                #self.exec_cmd("/usr/bin/sha1sum /boot/initrd.img-%s > /var/lib/initramfs-tools/%s" % (kernelversion, kernelversion))
+
+            # /etc/default/grub could have been changed: update Grub
+            shell_exec('update-grub', logger=self.log)
+
             # now unmount it
             self.log.write(" --> Unmounting partitions", "InstallerEngine.finish_install", "info")
-            self.our_current += 1
-            self.update_progress(pulse=True, total=self.our_total, current=self.our_current, message=_("Unmounting partitions"))
+            self.update_progress(message=_("Unmounting partitions"))
             self.local_exec("umount --force %s/dev/shm" % self.setup.target_dir)
             self.local_exec("umount --force %s/dev/pts" % self.setup.target_dir)
             #if self.setup.gptonefi:
@@ -928,14 +931,14 @@ class InstallerEngine(threading.Thread):
         self.log.write(" --> All done", "InstallerEngine.finish_install", "info")
 
     def do_configure_grub(self):
-        self.update_progress(pulse=True, total=self.our_total, current=self.our_current, message=_("Configuring bootloader"))
+        self.update_progress(message=_("Configuring bootloader"))
         self.log.write(" --> Running grub-mkconfig", "InstallerEngine.do_configure_grub", "info")
-        grub_output = getoutput("chroot %s/ /bin/sh -c \"grub-mkconfig -o /boot/grub/grub.cfg\"" % self.setup.target_dir)
+        grub_output = getoutput("chroot %s/ /bin/sh -c \"grub-mkconfig -o /boot/grub/grub.cfg\"" % self.setup.target_dir, logger=self.log)
         if grub_output:
             self.log.write("\n".join(grub_output), "InstallerEngine.do_configure_grub")
 
     def do_check_grub(self):
-        self.update_progress(pulse=True, total=self.our_total, current=self.our_current, message=_("Checking bootloader"))
+        self.update_progress(message=_("Checking bootloader"))
         self.log.write(" --> Checking Grub configuration", "InstallerEngine.do_check_grub", "info")
         time.sleep(5)
         found_entry = False
@@ -963,6 +966,47 @@ class InstallerEngine(threading.Thread):
         ''' Unmount a filesystem '''
         cmd = "umount %s" % mountpoint
         self.local_exec(cmd)
+
+    def get_progress_total(self):
+        total = 6
+
+        if not self.setup.oem_setup:
+            total += 6
+            if self.setup.gptonefi:
+                total += 1
+            if self.installBroadcom:
+                total += 1
+            if has_internet():
+                total += 1
+            if exists("/lib/live/mount/medium/pool"):
+                total += 1
+            if not in_virtualbox():
+                total += 1
+            if self.detachable:
+                total += 2
+            if self.setup.grub_device is not None:
+                total += 1
+
+        if has_internet():
+            total += 2
+            if self.setup.language != "en_US":
+                if exists("/lib/live/mount/medium/pool"):
+                    total += 1
+                localizeConf = join(self.scriptDir, "localize/%s" % self.setup.language)
+                if exists(localizeConf):
+                    total += 1
+                if isPackageInstalled("kde-runtime"):
+                    total += 1
+                if isPackageInstalled("libreoffice"):
+                    total += 1
+                if isPackageInstalled("abiword"):
+                    total += 1
+                if isPackageInstalled("firefox") or isPackageInstalled("firefox-esr"):
+                    total += 1
+                if isPackageInstalled("thunderbird"):
+                    total += 1
+
+        return total
 
 
 # Represents the choices made by the user

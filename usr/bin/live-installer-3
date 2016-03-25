@@ -7,7 +7,10 @@ for i in "$args"; do
   case $i in
     -o|--oem)
       # Change screen resolution if in OEM mode
-      xrandr --size 1024x768
+      SIZE=$(xrandr | grep 'x768 ' | head -1 | awk '{print $1}')
+      if [ "$SIZE" != "" ]; then
+        xrandr --size $SIZE
+      fi
       shift # past argument=value
       ;;
     -d|--debug)

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-22 09:20+0100\n"
+"POT-Creation-Date: 2016-03-25 18:29+0100\n"
 "PO-Revision-Date: 2014-06-07 14:07+0000\n"
 "Last-Translator: Stuartlittle1970@gmail.com <Stuartlittle1970@gmail.com>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -18,31 +18,31 @@ msgstr ""
 "X-Launchpad-Export-Date: 2014-09-11 21:48+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
 
-#: ../usr/lib/live-installer-3/localize.py:49
+#: ../usr/lib/live-installer-3/localize.py:45
 msgid "Install additional localized packages"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/localize.py:62
+#: ../usr/lib/live-installer-3/localize.py:57
 #, fuzzy
 msgid "Localizing KDE"
 msgstr "Локалізація"
 
-#: ../usr/lib/live-installer-3/localize.py:71
+#: ../usr/lib/live-installer-3/localize.py:65
 #, fuzzy
 msgid "Localizing LibreOffice"
 msgstr "Пакунки локалізації"
 
-#: ../usr/lib/live-installer-3/localize.py:86
+#: ../usr/lib/live-installer-3/localize.py:79
 #, fuzzy
 msgid "Localizing AbiWord"
 msgstr "Локалізація"
 
-#: ../usr/lib/live-installer-3/localize.py:102
+#: ../usr/lib/live-installer-3/localize.py:94
 #, fuzzy
 msgid "Localizing Firefox"
 msgstr "Пакунки локалізації"
 
-#: ../usr/lib/live-installer-3/localize.py:112
+#: ../usr/lib/live-installer-3/localize.py:103
 msgid "Localizing Thunderbird"
 msgstr ""
 
@@ -57,12 +57,12 @@ msgid "Removable:"
 msgstr "Знімний пристрій:"
 
 #: ../usr/lib/live-installer-3/partitioning.py:324
-#: ../usr/lib/live-installer-3/gtk_interface.py:743
-#: ../usr/lib/live-installer-3/gtk_interface.py:747
-#: ../usr/lib/live-installer-3/gtk_interface.py:766
-#: ../usr/lib/live-installer-3/gtk_interface.py:771
+#: ../usr/lib/live-installer-3/gtk_interface.py:752
+#: ../usr/lib/live-installer-3/gtk_interface.py:756
 #: ../usr/lib/live-installer-3/gtk_interface.py:775
-#: ../usr/lib/live-installer-3/gtk_interface.py:779
+#: ../usr/lib/live-installer-3/gtk_interface.py:780
+#: ../usr/lib/live-installer-3/gtk_interface.py:784
+#: ../usr/lib/live-installer-3/gtk_interface.py:788
 msgid "Installation Tool"
 msgstr "Інструмент встановлення"
 
@@ -88,7 +88,7 @@ msgid "Extended partition"
 msgstr "Редагувати розділ"
 
 #: ../usr/lib/live-installer-3/partitioning.py:512
-#: ../usr/lib/live-installer-3/gtk_interface.py:561
+#: ../usr/lib/live-installer-3/gtk_interface.py:570
 msgid "Free space"
 msgstr "Вільне місце"
 
@@ -107,18 +107,18 @@ msgid "Edit partition"
 msgstr "Редагувати розділ"
 
 #: ../usr/lib/live-installer-3/partitioning.py:651
-#: ../usr/lib/live-installer-3/gtk_interface.py:553
+#: ../usr/lib/live-installer-3/gtk_interface.py:562
 msgid "Device"
 msgstr "Пристрій"
 
 #: ../usr/lib/live-installer-3/partitioning.py:652
-#: ../usr/lib/live-installer-3/gtk_interface.py:558
+#: ../usr/lib/live-installer-3/gtk_interface.py:567
 #, fuzzy
 msgid "Format as"
 msgstr "Форматувати як:"
 
 #: ../usr/lib/live-installer-3/partitioning.py:653
-#: ../usr/lib/live-installer-3/gtk_interface.py:557
+#: ../usr/lib/live-installer-3/gtk_interface.py:566
 msgid "Mount point"
 msgstr "Точка монтування"
 
@@ -175,12 +175,12 @@ msgstr ""
 msgid "You need to choose a mount point for partition:"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:139
-#: ../usr/lib/live-installer-3/installer.py:164
+#: ../usr/lib/live-installer-3/installer.py:142
+#: ../usr/lib/live-installer-3/installer.py:167
 msgid "Installation error"
 msgstr "Помилка під час встановлення"
 
-#: ../usr/lib/live-installer-3/installer.py:149
+#: ../usr/lib/live-installer-3/installer.py:152
 #, fuzzy
 msgid ""
 "Installation is now paused. Please read the instructions on the page "
@@ -189,37 +189,37 @@ msgstr ""
 "Встановлення в даний час призупинено. Будь ласка, прочитайте ретельно "
 "інструкцію на сторінці і натисніть Далі для завершення встановлення."
 
-#: ../usr/lib/live-installer-3/installer.py:150
+#: ../usr/lib/live-installer-3/installer.py:153
 msgid "Verify that fstab is correct (use blkid to check the UUIDs)."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:151
+#: ../usr/lib/live-installer-3/installer.py:154
 msgid ""
 "A chrooted terminal and fstab will be opened after you close this message."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:153
+#: ../usr/lib/live-installer-3/installer.py:156
 #, fuzzy
 msgid "Installation paused"
 msgstr "Встановлення призупинено"
 
-#: ../usr/lib/live-installer-3/installer.py:200
+#: ../usr/lib/live-installer-3/installer.py:206
 #, fuzzy, python-format
 msgid "Encrypting %(partition)s ..."
 msgstr "Форматування %(partition)s як %(format)s..."
 
-#: ../usr/lib/live-installer-3/installer.py:206
+#: ../usr/lib/live-installer-3/installer.py:212
 #, fuzzy, python-format
 msgid "Formatting %(partition)s as %(format)s ..."
 msgstr "Форматування %(partition)s як %(format)s..."
 
-#: ../usr/lib/live-installer-3/installer.py:249
-#: ../usr/lib/live-installer-3/installer.py:263
+#: ../usr/lib/live-installer-3/installer.py:255
+#: ../usr/lib/live-installer-3/installer.py:269
 #, python-format
 msgid "Mounting %(partition)s on %(mountpoint)s"
 msgstr "Монтування %(partition)s на %(mountpoint)s"
 
-#: ../usr/lib/live-installer-3/installer.py:279
+#: ../usr/lib/live-installer-3/installer.py:285
 #, fuzzy, python-format
 msgid ""
 "You must first manually mount your target filesystem(s) at %s to do a custom "
@@ -228,81 +228,81 @@ msgstr ""
 "ПОМИЛКА: Ви повинні спочатку вручну змонтувати вашу цільову файлову "
 "систему(и) в /target щоб зробити вибіркове встановлення!"
 
-#: ../usr/lib/live-installer-3/installer.py:282
+#: ../usr/lib/live-installer-3/installer.py:288
 msgid "Not mounted"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:290
+#: ../usr/lib/live-installer-3/installer.py:296
 msgid ""
 "Something is wrong with the installation medium! This is usually caused by "
 "burning tools which are not compatible with {}. Please burn the ISO image to "
 "DVD/USB using a different tool."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:293
+#: ../usr/lib/live-installer-3/installer.py:299
 msgid "Base filesystem does not exist"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:347
+#: ../usr/lib/live-installer-3/installer.py:353
 #, fuzzy
 msgid "Copying"
 msgstr "Копіювання %s"
 
-#: ../usr/lib/live-installer-3/installer.py:366
+#: ../usr/lib/live-installer-3/installer.py:390
 #, fuzzy
 msgid "Entering the system ..."
 msgstr "Вхід до нової системи..."
 
-#: ../usr/lib/live-installer-3/installer.py:391
+#: ../usr/lib/live-installer-3/installer.py:413
 #, fuzzy
 msgid "Installing EFI packages..."
 msgstr "Встановлення Linux Mint..."
 
-#: ../usr/lib/live-installer-3/installer.py:435
+#: ../usr/lib/live-installer-3/installer.py:437
 #, fuzzy
 msgid "Installing drivers"
 msgstr "Встановлення завантажувача"
 
-#: ../usr/lib/live-installer-3/installer.py:447
+#: ../usr/lib/live-installer-3/installer.py:452
 #, fuzzy
 msgid "Adding new user to the system"
 msgstr "Додавання користувача в систему"
 
-#: ../usr/lib/live-installer-3/installer.py:494
+#: ../usr/lib/live-installer-3/installer.py:500
 #, fuzzy
 msgid "Writing filesystem mount information to /etc/fstab"
 msgstr "Запис інформації монтування файлової системи"
 
-#: ../usr/lib/live-installer-3/installer.py:624
+#: ../usr/lib/live-installer-3/installer.py:639
 msgid "Setting hostname"
 msgstr "Налаштування назви хосту"
 
-#: ../usr/lib/live-installer-3/installer.py:646
+#: ../usr/lib/live-installer-3/installer.py:660
 msgid "Setting locale"
 msgstr "Налаштування мови"
 
-#: ../usr/lib/live-installer-3/installer.py:664
+#: ../usr/lib/live-installer-3/installer.py:676
 msgid "Update apt cache"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:668
+#: ../usr/lib/live-installer-3/installer.py:678
 msgid "Update the new system"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:677
+#: ../usr/lib/live-installer-3/installer.py:685
 msgid "Localizing packages"
 msgstr "Пакунки локалізації"
 
-#: ../usr/lib/live-installer-3/installer.py:698
+#: ../usr/lib/live-installer-3/installer.py:703
 msgid "Setting keyboard options"
 msgstr "Налаштування параметрів клавіатури"
 
-#: ../usr/lib/live-installer-3/installer.py:761
+#: ../usr/lib/live-installer-3/installer.py:765
 #, fuzzy
 msgid "Configuring sensors"
 msgstr "Налаштування завантажувача"
 
-#: ../usr/lib/live-installer-3/installer.py:769
+#: ../usr/lib/live-installer-3/installer.py:771
 msgid "Removing VirtualBox"
 msgstr ""
 
@@ -310,11 +310,11 @@ msgstr ""
 msgid "Removing os-prober"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:784
+#: ../usr/lib/live-installer-3/installer.py:783
 msgid "Installing bootloader"
 msgstr "Встановлення завантажувача"
 
-#: ../usr/lib/live-installer-3/installer.py:806
+#: ../usr/lib/live-installer-3/installer.py:805
 #, fuzzy
 msgid ""
 "The grub bootloader was not configured properly! You need to configure it "
@@ -323,47 +323,42 @@ msgstr ""
 "УВАГА! Завантажувач GRUB не був налаштований правильно! Вам треба "
 "наташтувати його вручну."
 
-#: ../usr/lib/live-installer-3/installer.py:809
+#: ../usr/lib/live-installer-3/installer.py:808
 msgid "Grub not configured"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:843
-#, fuzzy
-msgid "Configuring initramfs"
-msgstr "Налаштування завантажувача"
-
-#: ../usr/lib/live-installer-3/installer.py:851
+#: ../usr/lib/live-installer-3/installer.py:834
 msgid "Cleaning APT"
 msgstr "Очищення APT"
 
-#: ../usr/lib/live-installer-3/installer.py:893
+#: ../usr/lib/live-installer-3/installer.py:866
 msgid "Removing live configuration (packages)"
 msgstr "Вилучення тимчасових налаштувань (пакунків)"
 
-#: ../usr/lib/live-installer-3/installer.py:905
+#: ../usr/lib/live-installer-3/installer.py:908
 #, fuzzy
 msgid "Unmounting partitions"
 msgstr "Форматування %(partition)s як %(format)s..."
 
-#: ../usr/lib/live-installer-3/installer.py:927
-#: ../usr/lib/live-installer-3/gtk_interface.py:931
+#: ../usr/lib/live-installer-3/installer.py:930
+#: ../usr/lib/live-installer-3/gtk_interface.py:940
 msgid "Installation finished"
 msgstr "Встановлення завершено"
 
-#: ../usr/lib/live-installer-3/installer.py:931
+#: ../usr/lib/live-installer-3/installer.py:934
 msgid "Configuring bootloader"
 msgstr "Налаштування завантажувача"
 
-#: ../usr/lib/live-installer-3/installer.py:938
+#: ../usr/lib/live-installer-3/installer.py:941
 msgid "Checking bootloader"
 msgstr "Перевірка завантажувача"
 
-#: ../usr/lib/live-installer-3/installer.py:953
+#: ../usr/lib/live-installer-3/installer.py:956
 #, python-format
 msgid "No %s file found!"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:265
+#: ../usr/lib/live-installer-3/gtk_interface.py:273
 #, python-format
 msgid ""
 "Please, click on the network manager's system tray icon to connect to the "
@@ -374,224 +369,224 @@ msgid ""
 "packages cannot be localized."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:268
-#: ../usr/lib/live-installer-3/gtk_interface.py:352
+#: ../usr/lib/live-installer-3/gtk_interface.py:276
+#: ../usr/lib/live-installer-3/gtk_interface.py:361
 msgid "No internet connection"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:297
+#: ../usr/lib/live-installer-3/gtk_interface.py:306
 msgid "Quit?"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:297
+#: ../usr/lib/live-installer-3/gtk_interface.py:306
 msgid "Are you sure you want to quit the installer?"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:350
+#: ../usr/lib/live-installer-3/gtk_interface.py:359
 msgid ""
 "Cannot download and install additional locale packages: no internet "
 "connection\n"
 "Configuration will still be set to your selected language."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:501
-#: ../usr/lib/live-installer-3/gtk_interface.py:506
+#: ../usr/lib/live-installer-3/gtk_interface.py:510
+#: ../usr/lib/live-installer-3/gtk_interface.py:515
 #, fuzzy
 msgid "{} Installer"
 msgstr "%s Встановлювач"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:504
+#: ../usr/lib/live-installer-3/gtk_interface.py:513
 msgid "{} OEM Setup"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:520
-#: ../usr/lib/live-installer-3/gtk_interface.py:540
+#: ../usr/lib/live-installer-3/gtk_interface.py:529
+#: ../usr/lib/live-installer-3/gtk_interface.py:549
 msgid "Language"
 msgstr "Мова"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:521
+#: ../usr/lib/live-installer-3/gtk_interface.py:530
 msgid "Timezone"
 msgstr "Часовий пояс"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:522
+#: ../usr/lib/live-installer-3/gtk_interface.py:531
 msgid "Keyboard layout"
 msgstr "Розкладка клавіатури"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:523
+#: ../usr/lib/live-installer-3/gtk_interface.py:532
 msgid "User info"
 msgstr "Інформація користувача"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:524
+#: ../usr/lib/live-installer-3/gtk_interface.py:533
 msgid "Partitioning"
 msgstr "Розмітка"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:525
+#: ../usr/lib/live-installer-3/gtk_interface.py:534
 #, fuzzy
 msgid "Please make sure you wish to manage partitions manually"
 msgstr "Будь ласка, переконайтеся, що Ви хочете вручну керувати розділами"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:526
+#: ../usr/lib/live-installer-3/gtk_interface.py:535
 msgid "Summary"
 msgstr "Підсумок"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:527
+#: ../usr/lib/live-installer-3/gtk_interface.py:536
 #, fuzzy
 msgid "Installing {}..."
 msgstr "Встановлення Linux Mint..."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:528
+#: ../usr/lib/live-installer-3/gtk_interface.py:537
 #, fuzzy
 msgid "Installation is paused: please finish the custom installation"
 msgstr "Встановлення призупинене: Будь ласка закінчіть поточне встановлення"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:535
-#: ../usr/lib/live-installer-3/gtk_interface.py:565
+#: ../usr/lib/live-installer-3/gtk_interface.py:544
+#: ../usr/lib/live-installer-3/gtk_interface.py:574
 msgid "Quit"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:536
-#: ../usr/lib/live-installer-3/gtk_interface.py:566
+#: ../usr/lib/live-installer-3/gtk_interface.py:545
+#: ../usr/lib/live-installer-3/gtk_interface.py:575
 msgid "Back"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:537
-#: ../usr/lib/live-installer-3/gtk_interface.py:567
-#: ../usr/lib/live-installer-3/gtk_interface.py:646
+#: ../usr/lib/live-installer-3/gtk_interface.py:546
+#: ../usr/lib/live-installer-3/gtk_interface.py:576
+#: ../usr/lib/live-installer-3/gtk_interface.py:655
 msgid "Forward"
 msgstr "Наступний"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:541
+#: ../usr/lib/live-installer-3/gtk_interface.py:550
 msgid "Country"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:544
+#: ../usr/lib/live-installer-3/gtk_interface.py:553
 msgid "Selected timezone:"
 msgstr "Вибраний часовий пояс:"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:545
+#: ../usr/lib/live-installer-3/gtk_interface.py:554
 #, fuzzy
 msgid "Select timezone"
 msgstr "Вибраний часовий пояс:"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:548
+#: ../usr/lib/live-installer-3/gtk_interface.py:557
 msgid "Refresh"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:549
+#: ../usr/lib/live-installer-3/gtk_interface.py:558
 msgid "_Expert mode"
-msgstr ""
-
-#: ../usr/lib/live-installer-3/gtk_interface.py:550
-#, fuzzy
-msgid "_Edit partitions"
-msgstr "Редагувати розділи"
-
-#: ../usr/lib/live-installer-3/gtk_interface.py:554
-msgid "Grub"
-msgstr ""
-
-#: ../usr/lib/live-installer-3/gtk_interface.py:555
-msgid "Type"
-msgstr "Тип"
-
-#: ../usr/lib/live-installer-3/gtk_interface.py:556
-msgid "Label"
 msgstr ""
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:559
 #, fuzzy
+msgid "_Edit partitions"
+msgstr "Редагувати розділи"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:563
+msgid "Grub"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:564
+msgid "Type"
+msgstr "Тип"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:565
+msgid "Label"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:568
+#, fuzzy
 msgid "Encrypt"
 msgstr "Опис:"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:560
+#: ../usr/lib/live-installer-3/gtk_interface.py:569
 msgid "Size"
 msgstr "Розмір"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:570
+#: ../usr/lib/live-installer-3/gtk_interface.py:579
 msgid "Layout"
 msgstr "Розкладка"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:571
+#: ../usr/lib/live-installer-3/gtk_interface.py:580
 msgid "Variant"
 msgstr "Варіант"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:572
+#: ../usr/lib/live-installer-3/gtk_interface.py:581
 #, fuzzy
 msgid "Use this box to test your keyboard layout."
 msgstr "Використовуйте це вікно для перевірки розкладки клавіатури"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:573
+#: ../usr/lib/live-installer-3/gtk_interface.py:582
 msgid "Model"
 msgstr "Модель"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:576
+#: ../usr/lib/live-installer-3/gtk_interface.py:585
 msgid "Click to change your picture"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:577
+#: ../usr/lib/live-installer-3/gtk_interface.py:586
 #, fuzzy
 msgid "Take a photo..."
 msgstr "Зробити зняток"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:578
+#: ../usr/lib/live-installer-3/gtk_interface.py:587
 msgid "Browse for more pictures..."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:579
+#: ../usr/lib/live-installer-3/gtk_interface.py:588
 msgid "Your full name"
 msgstr "Ваше повне ім'я"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:580
+#: ../usr/lib/live-installer-3/gtk_interface.py:589
 #, fuzzy
 msgid "This will be shown in the About Me application."
 msgstr "Це буде відображатися в програмі  \"Про Мене\""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:581
+#: ../usr/lib/live-installer-3/gtk_interface.py:590
 msgid "Your username"
 msgstr "Ваше ім’я користувача"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:582
+#: ../usr/lib/live-installer-3/gtk_interface.py:591
 #, fuzzy
 msgid "This is the name you will use to log in to your computer."
 msgstr "Це ім'я, яке ви будете використовувати, щоб увійти на свій комп'ютер"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:583
+#: ../usr/lib/live-installer-3/gtk_interface.py:592
 msgid "Your password"
 msgstr "Ваш пароль"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:584
+#: ../usr/lib/live-installer-3/gtk_interface.py:593
 #, fuzzy
 msgid "Please enter your password twice to ensure it is correct."
 msgstr "Будь ласка, введіть пароль двічі, щоб переконатися, що він правильний"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:585
+#: ../usr/lib/live-installer-3/gtk_interface.py:594
 msgid "Hostname"
 msgstr "Ім'я комп'ютера"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:586
+#: ../usr/lib/live-installer-3/gtk_interface.py:595
 #, fuzzy
 msgid "This hostname will be the computer's name on the network."
 msgstr "Це ім'я буде використано як ім'я комп'ютера в мережі"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:587
+#: ../usr/lib/live-installer-3/gtk_interface.py:596
 msgid "Automatic login"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:588
+#: ../usr/lib/live-installer-3/gtk_interface.py:597
 msgid ""
 "If enabled, the login screen is skipped when the system starts, and you are "
 "signed into your desktop session automatically."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:590
+#: ../usr/lib/live-installer-3/gtk_interface.py:599
 msgid "Log in automatically on system boot"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:591
+#: ../usr/lib/live-installer-3/gtk_interface.py:600
 msgid "Your picture"
 msgstr "Ваше зображення"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:592
+#: ../usr/lib/live-installer-3/gtk_interface.py:601
 msgid ""
 "This picture represents your user account. It is used in the login screen "
 "and a few other places."
@@ -599,7 +594,7 @@ msgstr ""
 "Це зображення представляє Ваш обліковий запис. Воно використовується в "
 "екрані входу та кількох інших місцях."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:596
+#: ../usr/lib/live-installer-3/gtk_interface.py:605
 msgid ""
 "You have selected to manage your partitions manually, this feature is for "
 "ADVANCED USERS ONLY."
@@ -607,20 +602,20 @@ msgstr ""
 "Ви вибрали управління розділами вручну, ця функція тільки для ДОСВІДЧЕНИХ "
 "КОРИСТУВАЧІВ."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:598
+#: ../usr/lib/live-installer-3/gtk_interface.py:607
 #, fuzzy, python-format
 msgid "Before continuing, please mount your target filesystem(s) at %s."
 msgstr ""
 "Перш ніж продовжити, будь ласка, змонтуйте Вашу цільову(і) файлову(і) "
 "систему(и) на /target."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:600
+#: ../usr/lib/live-installer-3/gtk_interface.py:609
 #, fuzzy, python-format
 msgid "Do NOT mount virtual devices such as /dev, /proc, /sys, etc on %s/."
 msgstr ""
 "Не монтуйте віртуальні пристрої, такі як /dev, /proc, /sys, etc on /target/."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:602
+#: ../usr/lib/live-installer-3/gtk_interface.py:611
 #, fuzzy, python-format
 msgid ""
 "During the install, you will be given time to chroot into %s and install any "
@@ -629,12 +624,12 @@ msgstr ""
 "Під час встановлення, вам буде надано час вибирати  /target і встановлювати "
 "будь-які пакунки, які будуть потрібні для завантаження нової системи."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:604
+#: ../usr/lib/live-installer-3/gtk_interface.py:613
 msgid "During the install, you will be required to write your own /etc/fstab."
 msgstr ""
 "Під час встановлення, вам буде потрібно написати свій власний /etc/fstab."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:606
+#: ../usr/lib/live-installer-3/gtk_interface.py:615
 #, fuzzy
 msgid ""
 "If you aren't sure what any of this means, please go back and deselect "
@@ -643,14 +638,14 @@ msgstr ""
 "Якщо ви не впевнені, що все це означає, будь ласка, поверніться і скасуйте "
 "ручне керування розділами."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:610
+#: ../usr/lib/live-installer-3/gtk_interface.py:619
 #, fuzzy
 msgid "Please do the following and then click Forward to finish installation:"
 msgstr ""
 "Будь ласка, виконайте такі дії, а потім натисніть Далі для завершення "
 "встановлення:"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:612
+#: ../usr/lib/live-installer-3/gtk_interface.py:621
 #, fuzzy, python-format
 msgid ""
 "Create %s/etc/fstab for the filesystems as they will be mounted in your new "
@@ -661,7 +656,7 @@ msgstr ""
 "Вашій новій системі, що відповідають тим, які в даний час змонтовані на /"
 "target (без використання префікс /target у власних частинах монтування)"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:614
+#: ../usr/lib/live-installer-3/gtk_interface.py:623
 #, fuzzy, python-format
 msgid ""
 "Install any packages that may be needed for first boot (mdadm, cryptsetup, "
@@ -672,7 +667,7 @@ msgstr ""
 "(mdadm, cryptsetup, dmraid, інші) командою \"sudo chroot /target\" після "
 "встановлення apt-get/aptitude"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:616
+#: ../usr/lib/live-installer-3/gtk_interface.py:625
 #, fuzzy, python-format
 msgid ""
 "Note that in order for update-initramfs to work properly in some cases (such "
@@ -684,7 +679,7 @@ msgstr ""
 "встановлені в даний час  за допомогою того ж блоку ім'я пристрою, як вони "
 "відображуються в /target/etc/fstab."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:618
+#: ../usr/lib/live-installer-3/gtk_interface.py:627
 #, fuzzy, python-format
 msgid ""
 "Double-check that your %s/etc/fstab is correct, matches what your new system "
@@ -694,68 +689,68 @@ msgstr ""
 "який Ваша нова система буде мати при першому завантаженні, і відповідає "
 "тому, що в даний час встановлений на /target."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:622
+#: ../usr/lib/live-installer-3/gtk_interface.py:631
 msgid "Overview"
 msgstr "Перегляд"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:625
+#: ../usr/lib/live-installer-3/gtk_interface.py:634
 #, fuzzy
 msgid "Calculating file indexes ..."
 msgstr "Розрахунок індексів файлу ..."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:691
+#: ../usr/lib/live-installer-3/gtk_interface.py:700
 #, fuzzy
 msgid "Please provide your full name."
 msgstr "Будь ласка, вкажіть Ваше повне ім'я"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:694
+#: ../usr/lib/live-installer-3/gtk_interface.py:703
 #, fuzzy
 msgid "Please provide a username."
 msgstr "Будь ласка, вкажіть ім'я користувача"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:697
+#: ../usr/lib/live-installer-3/gtk_interface.py:706
 #, fuzzy
 msgid "Please provide a username without -oem."
 msgstr "Будь ласка, вкажіть ім'я користувача"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:700
+#: ../usr/lib/live-installer-3/gtk_interface.py:709
 #, fuzzy
 msgid "Please provide a password for your user account."
 msgstr "Будь ласка, вкажіть пароль для Вашого облікового запису користувача"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:703
+#: ../usr/lib/live-installer-3/gtk_interface.py:712
 #, fuzzy
 msgid "Your passwords do not match."
 msgstr "Ваші паролі не збігаються"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:706
+#: ../usr/lib/live-installer-3/gtk_interface.py:715
 #, fuzzy
 msgid "Please provide a hostname."
 msgstr "Будь ласка, вкажіть ім'я хосту"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:710
+#: ../usr/lib/live-installer-3/gtk_interface.py:719
 #, fuzzy
 msgid "Your username cannot start with a digit."
 msgstr "Ім'я користувача не може містити пробіли"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:713
+#: ../usr/lib/live-installer-3/gtk_interface.py:722
 msgid ""
 "The hostname is incorrect:\n"
 "not more than 63 characters between periods\n"
 "and not more than 255 characters total."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:718
+#: ../usr/lib/live-installer-3/gtk_interface.py:727
 msgid "Error"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:724
-#: ../usr/lib/live-installer-3/gtk_interface.py:816
-#: ../usr/lib/live-installer-3/gtk_interface.py:823
+#: ../usr/lib/live-installer-3/gtk_interface.py:733
+#: ../usr/lib/live-installer-3/gtk_interface.py:825
+#: ../usr/lib/live-installer-3/gtk_interface.py:832
 msgid "Apply"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:744
+#: ../usr/lib/live-installer-3/gtk_interface.py:753
 #, fuzzy
 msgid ""
 "Please indicate a filesystem to format the root (/) partition with before "
@@ -764,12 +759,12 @@ msgstr ""
 "Будь ласка, вкажіть файлову систему, щоб відформатувати розділ root(/) перед "
 "продовженням"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:748
+#: ../usr/lib/live-installer-3/gtk_interface.py:757
 #, fuzzy
 msgid "<b>Please select a root (/) partition.</b>"
 msgstr "<b>Будь ласка, виберіть кореневий розділ</b>"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:749
+#: ../usr/lib/live-installer-3/gtk_interface.py:758
 #, fuzzy
 msgid ""
 "A root partition is needed to install the system.\n"
@@ -785,21 +780,21 @@ msgstr ""
 " - Рекомендована файлова система: ext4\n"
 " "
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:766
+#: ../usr/lib/live-installer-3/gtk_interface.py:775
 msgid "The EFI partition is too small. It must be at least 100MB."
 msgstr "Розділ EFI замалий. Він має бути не менше 100 Мб."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:771
-#: ../usr/lib/live-installer-3/gtk_interface.py:775
+#: ../usr/lib/live-installer-3/gtk_interface.py:780
+#: ../usr/lib/live-installer-3/gtk_interface.py:784
 msgid "The EFI partition must be formatted as vfat."
 msgstr "Розділ EFI повинен бути відформатований як vfat."
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:780
+#: ../usr/lib/live-installer-3/gtk_interface.py:789
 #, fuzzy
 msgid "<b>Please select an EFI partition.</b>"
 msgstr "<b> Будь ласка, виберіть розділ EFI </ B>"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:781
+#: ../usr/lib/live-installer-3/gtk_interface.py:790
 msgid ""
 "An EFI system partition is needed with the following requirements:\n"
 "\n"
@@ -823,15 +818,15 @@ msgstr ""
 "перший розділ диска в якості системного розділу EFI.\n"
 " "
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:925
+#: ../usr/lib/live-installer-3/gtk_interface.py:934
 msgid "Setup finished"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:926
+#: ../usr/lib/live-installer-3/gtk_interface.py:935
 msgid "Setup is now complete. The system will now reboot."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:932
+#: ../usr/lib/live-installer-3/gtk_interface.py:941
 msgid ""
 "Installation is now complete. Do you want to restart your computer to use "
 "the new system?"
@@ -839,114 +834,114 @@ msgstr ""
 "Встановлення завершено. Ви хочете, перезавантажити комп'ютер, щоб "
 "використовувати нову систему?"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:980
+#: ../usr/lib/live-installer-3/gtk_interface.py:989
 msgid "Localization"
 msgstr "Локалізація"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:981
+#: ../usr/lib/live-installer-3/gtk_interface.py:990
 msgid "Language: "
 msgstr "Мова: "
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:982
+#: ../usr/lib/live-installer-3/gtk_interface.py:991
 msgid "Timezone: "
 msgstr "Часовий пояс: "
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:983
+#: ../usr/lib/live-installer-3/gtk_interface.py:992
 msgid "Keyboard layout: "
 msgstr "Розкладка клавіатури: "
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:986
+#: ../usr/lib/live-installer-3/gtk_interface.py:995
 msgid "User settings"
 msgstr "Налаштування користувача"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:987
+#: ../usr/lib/live-installer-3/gtk_interface.py:996
 msgid "Real name: "
 msgstr "Справжнє ім'я "
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:988
+#: ../usr/lib/live-installer-3/gtk_interface.py:997
 msgid "Username: "
 msgstr "Ім'я користувача: "
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:989
+#: ../usr/lib/live-installer-3/gtk_interface.py:998
 msgid "Automatic login: "
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:989
+#: ../usr/lib/live-installer-3/gtk_interface.py:998
 msgid "enabled"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:989
+#: ../usr/lib/live-installer-3/gtk_interface.py:998
 msgid "disabled"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:990
+#: ../usr/lib/live-installer-3/gtk_interface.py:999
 msgid "System settings"
 msgstr "Налаштування системи"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:991
+#: ../usr/lib/live-installer-3/gtk_interface.py:1000
 msgid "Hostname: "
 msgstr "Ім'я хосту: "
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:994
+#: ../usr/lib/live-installer-3/gtk_interface.py:1003
 msgid "Filesystem operations"
 msgstr "Операції з файловою системою"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:995
+#: ../usr/lib/live-installer-3/gtk_interface.py:1004
 #, fuzzy
 msgid "Install Grub on {}"
 msgstr "Встановити завантажувач в %s"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:995
+#: ../usr/lib/live-installer-3/gtk_interface.py:1004
 #, fuzzy
 msgid "Do not install Grub"
 msgstr "Не встановлювати завантажувач"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:998
+#: ../usr/lib/live-installer-3/gtk_interface.py:1007
 #, python-format
 msgid "Use already-mounted %s."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1007
+#: ../usr/lib/live-installer-3/gtk_interface.py:1016
 msgid "set boot flag"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1008
+#: ../usr/lib/live-installer-3/gtk_interface.py:1017
 #, fuzzy
 msgid "Mount {}{} as {}"
 msgstr "Форматувати як:"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1011
+#: ../usr/lib/live-installer-3/gtk_interface.py:1020
 msgid "Encrypt {} and format as {}"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1013
+#: ../usr/lib/live-installer-3/gtk_interface.py:1022
 #, fuzzy
 msgid "Format {} as {}"
 msgstr "Форматувати як:"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1208
+#: ../usr/lib/live-installer-3/gtk_interface.py:1239
 msgid "Assign to /"
 msgstr "Призначити як /"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1211
+#: ../usr/lib/live-installer-3/gtk_interface.py:1242
 msgid "Assign to /home"
 msgstr "Призначити як /home"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1217
+#: ../usr/lib/live-installer-3/gtk_interface.py:1248
 msgid "Assign to /boot/efi"
 msgstr "Призначити як /boot/efi"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1222
+#: ../usr/lib/live-installer-3/gtk_interface.py:1253
 msgid "Advanced..."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1236
-#: ../usr/lib/live-installer-3/gtk_interface.py:1262
+#: ../usr/lib/live-installer-3/gtk_interface.py:1267
+#: ../usr/lib/live-installer-3/gtk_interface.py:1293
 #, fuzzy
 msgid "Grub install"
 msgstr "%s Встановлювач"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1237
+#: ../usr/lib/live-installer-3/gtk_interface.py:1268
 msgid ""
 "You chose to NOT install Grub on your system.\n"
 "Without a bootloader like Grub your system might not boot.\n"
@@ -954,7 +949,7 @@ msgid ""
 "Are you sure you want to continue?"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1263
+#: ../usr/lib/live-installer-3/gtk_interface.py:1294
 msgid ""
 "You chose to install Grub on a partition.\n"
 "It is recommended to install Grub on a disk instead of a partition.\n"
@@ -965,21 +960,21 @@ msgid ""
 "Are you sure you want to continue?"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1316
+#: ../usr/lib/live-installer-3/gtk_interface.py:1347
 #, fuzzy
 msgid "Select image"
 msgstr "Вибраний часовий пояс:"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1343
+#: ../usr/lib/live-installer-3/gtk_interface.py:1374
 msgid "Unable to convert the image."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1374
+#: ../usr/lib/live-installer-3/gtk_interface.py:1405
 #, fuzzy
 msgid "Take a photo"
 msgstr "Зробити зняток"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1375
+#: ../usr/lib/live-installer-3/gtk_interface.py:1406
 #, fuzzy
 msgid "Unable to take a photo."
 msgstr "Зробити зняток"
@@ -998,6 +993,10 @@ msgstr "%s Встановлювач"
 #, fuzzy
 msgid "Install the operating system"
 msgstr "Операційна система"
+
+#, fuzzy
+#~ msgid "Configuring initramfs"
+#~ msgstr "Налаштування завантажувача"
 
 #, fuzzy
 #~ msgid "Configuring Plymouth"

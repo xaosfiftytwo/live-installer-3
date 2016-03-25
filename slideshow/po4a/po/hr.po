@@ -1,14 +1,15 @@
 #
 # Translators:
+# Arjen Balfoort <schoelje@solydxk.com>, 2016
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2011
 # Zoran Hulec <zhulec@yahoo.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: live-installer-3-slideshow\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-09 12:56+0200\n"
-"PO-Revision-Date: 2016-03-07 20:48+0000\n"
-"Last-Translator: Zoran Hulec <zhulec@yahoo.com>\n"
+"POT-Creation-Date: 2016-03-25 15:46+0100\n"
+"PO-Revision-Date: 2016-03-25 17:37+0000\n"
+"Last-Translator: Arjen Balfoort <schoelje@solydxk.com>\n"
 "Language-Team: Croatian (http://www.transifex.com/solydxk/live-installer-3-"
 "slideshow/language/hr/)\n"
 "Language: hr\n"
@@ -76,7 +77,7 @@ msgstr ""
 #. type: Content of: <div><div><ul><li>
 #: en/20_giants.html:7
 msgid ""
-"SolydXK uses either the lightweight Xfce desktop for SoldyX or the highly "
+"SolydXK uses either the lightweight Xfce desktop for SolydX or the highly "
 "configurable and stunningly appealing KDE desktop for SolydK."
 msgstr ""
 "SolydXK koristi lagani Xfce desktop za SolydX, ili visoko prilagodljivi i "

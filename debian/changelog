@@ -1,3 +1,9 @@
+live-installer-3 (2016.03.25) debian; urgency=low
+
+  * Reload translations when internet connection has been established
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Fri, 25 Mar 2016 12:48:55 +0100
+
 live-installer-3 (2016.03.24) debian; urgency=low
 
   * Include OEM install

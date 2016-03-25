@@ -2,21 +2,18 @@
 
 import os
 import re
-from utils import chroot_exec, get_config_dict, shell_exec
-import apt
-import apt_pkg
+from utils import chroot_exec, get_config_dict, shell_exec, \
+                  doesPackageExist, isPackageInstalled
+
 
 CONFIG_FILE = '/etc/live-installer-3/live-installer-3.conf'
 
 
 class Localize():
-    def __init__(self, setup, our_total, our_current, target_dir):
-        self.cache = apt.Cache()
+    def __init__(self, setup, target_dir):
         self.setup = setup
         self.language = setup.language
         self.username = setup.username
-        self.our_current = our_current
-        self.our_total = our_total
         self.target_dir = target_dir
         self.locale = self.language.lower().split("_")
         self.scriptDir = os.path.dirname(os.path.realpath(__file__))
@@ -38,7 +35,6 @@ class Localize():
         self.languageSpecific()
 
     def languageSpecific(self):
-        self.our_current += 1
         localizeConf = os.path.join(self.scriptDir, "localize/%s" % self.language)
         if os.path.exists(localizeConf):
             try:
@@ -46,29 +42,27 @@ class Localize():
                 config = get_config_dict(localizeConf)
                 packages = config.get(self.edition, '').strip()
                 if packages != "":
-                    self.update_progress(total=self.our_total, current=self.our_current, message=_("Install additional localized packages"))
+                    self.update_progress(message=_("Install additional localized packages"))
                     self.exec_cmd("apt-get --yes --force-yes install %s" % packages)
             except Exception as detail:
                 msg = "ERROR: %s" % detail
                 print(msg)
-                self.update_progress(total=self.our_total, current=self.our_current, message=msg)
+                self.update_progress(message=msg)
 
     def applications(self):
         if self.language != "en_US":
             # Localize KDE
-            self.our_current += 1
-            if self.isPackageInstalled("kde-runtime"):
+            if isPackageInstalled("kde-runtime"):
                 print(" --> Localizing KDE")
-                self.update_progress(total=self.our_total, current=self.our_current, message=_("Localizing KDE"))
+                self.update_progress(message=_("Localizing KDE"))
                 package = self.get_localized_package("kde-l10n")
                 if package != "":
                     self.exec_cmd("apt-get install --yes --force-yes %s" % package)
 
             # Localize LibreOffice
-            self.our_current += 1
-            if self.isPackageInstalled("libreoffice"):
+            if isPackageInstalled("libreoffice"):
                 print(" --> Localizing LibreOffice")
-                self.update_progress(total=self.our_total, current=self.our_current, message=_("Localizing LibreOffice"))
+                self.update_progress(message=_("Localizing LibreOffice"))
                 package = self.get_localized_package("libreoffice-l10n")
                 if package != "":
                     self.exec_cmd("apt-get install --yes --force-yes %s" % package)
@@ -80,36 +74,33 @@ class Localize():
                     self.exec_cmd("apt-get install --yes --force-yes %s" % package)
 
             # Localize AbiWord
-            self.our_current += 1
-            if self.isPackageInstalled("abiword"):
+            if isPackageInstalled("abiword"):
                 print(" --> Localizing AbiWord")
-                self.update_progress(total=self.our_total, current=self.our_current, message=_("Localizing AbiWord"))
+                self.update_progress(message=_("Localizing AbiWord"))
                 package = self.get_localized_package("aspell")
                 if package != "":
                     self.exec_cmd("apt-get install --yes --force-yes %s" % package)
 
             # Localize Firefox
-            self.our_current += 1
             ff = "firefox"
-            isESR = self.isPackageInstalled("firefox-esr")
+            isESR = isPackageInstalled("firefox-esr")
             if isESR:
                 ff = "firefox-esr"
-            if isESR or self.isPackageInstalled("firefox"):
+            if isESR or isPackageInstalled("firefox"):
                 esr = ""
                 if isESR:
                     esr = "esr-"
                 print(" --> Localizing Firefox")
-                self.update_progress(total=self.our_total, current=self.our_current, message=_("Localizing Firefox"))
+                self.update_progress(message=_("Localizing Firefox"))
                 package = self.get_localized_package("firefox-%sl10n" % esr)
                 if package != "":
                     self.exec_cmd("apt-get install --yes --force-yes %s %s" % (ff, package))
                     self.localizePref("%s/home/%s/.mozilla/firefox/mwad0hks.default/prefs.js" % (self.target_dir, self.username))
 
             # Localize Thunderbird
-            self.our_current += 1
-            if self.isPackageInstalled("thunderbird"):
+            if isPackageInstalled("thunderbird"):
                 print(" --> Localizing Thunderbird")
-                self.update_progress(total=self.our_total, current=self.our_current, message=_("Localizing Thunderbird"))
+                self.update_progress(message=_("Localizing Thunderbird"))
                 package = self.get_localized_package("thunderbird-l10n")
                 if package != "":
                     self.exec_cmd("apt-get install --yes --force-yes %s" % package)
@@ -118,13 +109,13 @@ class Localize():
     def get_localized_package(self, package):
         lan = "".join(self.locale)
         pck = "{}-{}".format(package, lan)
-        if not self.doesPackageExist(pck):
+        if not doesPackageExist(pck):
             lan = "-".join(self.locale)
             pck = "{}-{}".format(package, lan)
-            if not self.doesPackageExist(pck):
+            if not doesPackageExist(pck):
                 lan = self.locale[0]
                 pck = "{}-{}".format(package, lan)
-                if not self.doesPackageExist(pck):
+                if not doesPackageExist(pck):
                     pck = ''
         return pck
 
@@ -156,28 +147,6 @@ class Localize():
             if appendString is not None:
                 text += "\n%s" % appendString
         return text
-
-    # Check if package exists
-    def doesPackageExist(self, package):
-        return package in self.cache
-
-    # Check if a package is installed
-    def isPackageInstalled(self, packageName, alsoCheckVersion=True):
-        isInstalled = False
-        try:
-            pkg = self.cache[packageName]
-            if (not pkg.is_installed or
-                pkg._pkg.current_state != apt_pkg.CURSTATE_INSTALLED or
-                self.cache._depcache.broken_count > 0):
-                isInstalled = False
-            elif alsoCheckVersion:
-                if pkg.installed.version == pkg.candidate.version:
-                    isInstalled = True
-            else:
-                isInstalled = True
-        except:
-            pass
-        return isInstalled
 
     def exec_cmd(self, command):
         if self.setup.oem_setup:

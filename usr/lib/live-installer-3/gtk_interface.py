@@ -24,7 +24,7 @@ from utils import getoutput, get_config_dict, shell_exec, filter_text, \
                   is_valid_hostname, ExecuteThreadedCommands
 import partitioning
 from widgets import PictureChooserButton
-from utils import has_internet
+from utils import has_internet, memoize
 from simplebrowser import SimpleBrowser
 
 LOADING_ANIMATION = '/usr/share/live-installer-3/loading.gif'
@@ -55,12 +55,15 @@ class InstallerWindow():
             try:
                 config = get_config_dict(f)
                 name, version = config[n], config[v]
-            except (IOError, KeyError): continue
-            else: break
-        else: name, version = 'Unknown GNU/Linux', '1.0'
+            except (IOError, KeyError):
+                continue
+            else:
+                break
+        else:
+            name, version = 'Unknown GNU/Linux', '1.0'
         self.setup.distribution_name, self.setup.distribution_version = name, version
         config = get_config_dict('/etc/os-release')
-        self.setup.distribution_id =  config.get('ID', 'distro')
+        self.setup.distribution_id = config.get('ID', 'distro')
 
         # Set conf variables
         config = get_config_dict(CONFIG_FILE)
@@ -232,11 +235,6 @@ class InstallerWindow():
         self.help_label = self.go("help_label")
         self.help_label.modify_fg(Gtk.StateType.NORMAL, fgColor)
 
-        if self.fullscreen:
-            # dedicated installer mode thingum (OEM setup)
-            self.window.maximize()
-            self.window.fullscreen()
-
         # Configure slideshow webview
         html = '<html><body style="background-color:#E6E6E6;"></body></html>'
         self.slideshow_browser = SimpleBrowser(html)
@@ -260,6 +258,16 @@ class InstallerWindow():
         # Start translating here
         self.on_treeview_language_list_cursor_changed(self.treeview_language_list)
 
+        # make sure we're on the right page (no pun.)
+        self.activate_page(0)
+
+        if self.fullscreen:
+            # dedicated installer mode thingum (OEM setup)
+            self.window.maximize()
+
+        # Show window
+        self.window.show_all()
+
         # Let the user connect to the internet
         if not has_internet():
             msg = _("Please, click on the network manager's system tray icon to connect to the internet before you continue.\n\n"
@@ -267,11 +275,12 @@ class InstallerWindow():
                     "Without an internet connection your system will not be upgraded and some packages cannot be localized." % self.setup.distribution_name)
             WarningDialog(_("No internet connection"), msg)
 
-        # make sure we're on the right page (no pun.)
-        self.activate_page(0)
+            # If we now have an internet connection we can check the user's position
+            if has_internet():
+                self.build_lang_list()
 
-        # Show window
-        self.window.show_all()
+        if self.fullscreen:
+            self.window.fullscreen()
 
     # ===================================================================
     # Main window signals
@@ -1093,35 +1102,57 @@ class InstallerWindow():
             languages[code2 or code3] = language
 
         # Construct language selection model
-        model = Gtk.ListStore(str, str, GdkPixbuf.Pixbuf, str)
         set_iter = None
-        flag_path = lambda ccode: self.mediaDir + '/flags/16/' + ccode.lower() + '.png'
-        from utils import memoize
-        flag = memoize(lambda ccode: GdkPixbuf.Pixbuf.new_from_file(flag_path(ccode)))
-        for locale in getoutput("awk -F'[@ \.]' '/UTF-8/{ print $1 }' /usr/share/i18n/SUPPORTED | uniq"):
-            locale = locale.strip()
-            try:
+        model = self.treeview_language_list.get_model()
+        if model is not None:
+            # Select iter in existing model corresponding to current language
+            itr = model.get_iter_first()
+            while itr is not None:
+                locale = model.get_value(itr, 3)
+                #print((">> locale = %s" % locale))
+                ccode = ''
                 if '_' in locale:
                     lang, ccode = locale.split('_')
-                    language, country = languages[lang], countries[ccode]
                 else:
                     lang = locale
-                    language = languages[lang]
-                    country = ''
-            except:
-                print(("Error adding locale '%s'" % locale))
-                continue
-            pixbuf = flag(ccode) if not lang in 'eo ia' else flag('_' + lang)
-            itr = model.append((language, country, pixbuf, locale))
-            if (ccode == self.cur_country_code and
-                (not set_iter or
-                 set_iter and lang == 'en' or  # prefer English, or
-                 set_iter and lang == ccode.lower())):  # fuzzy: lang matching ccode (fr_FR, de_DE, es_ES, ...)
-                set_iter = itr
+                if (ccode == self.cur_country_code and
+                   (not set_iter or
+                    set_iter and lang == 'en' or  # prefer English, or
+                    set_iter and lang == ccode.lower())):  # fuzzy: lang matching ccode (fr_FR, de_DE, es_ES, ...)
+                    # Found
+                    #print((">> Found lang = %s, ccode = %s" % (lang, ccode)))
+                    set_iter = itr
+                    break
+                itr = model.iter_next(itr)
+        else:
+            model = Gtk.ListStore(str, str, GdkPixbuf.Pixbuf, str)
+            flag_path = lambda ccode: self.mediaDir + '/flags/16/' + ccode.lower() + '.png'
+            flag = memoize(lambda ccode: GdkPixbuf.Pixbuf.new_from_file(flag_path(ccode)))
+            for locale in getoutput("awk -F'[@ \.]' '/UTF-8/{ print $1 }' /usr/share/i18n/SUPPORTED | uniq"):
+                locale = locale.strip()
+                try:
+                    if '_' in locale:
+                        lang, ccode = locale.split('_')
+                        language, country = languages[lang], countries[ccode]
+                    else:
+                        lang = locale
+                        language = languages[lang]
+                        country = ''
+                except:
+                    print(("Error adding locale '%s'" % locale))
+                    continue
+                pixbuf = flag(ccode) if not lang in 'eo ia' else flag('_' + lang)
+                itr = model.append((language, country, pixbuf, locale))
+                if (ccode == self.cur_country_code and
+                    (not set_iter or
+                     set_iter and lang == 'en' or  # prefer English, or
+                     set_iter and lang == ccode.lower())):  # fuzzy: lang matching ccode (fr_FR, de_DE, es_ES, ...)
+                    set_iter = itr
 
-        # Sort by Country, then by Language
-        model.set_sort_column_id(0, Gtk.SortType.ASCENDING)
-        model.set_sort_column_id(1, Gtk.SortType.ASCENDING)
+            # Sort by Country, then by Language
+            model.set_sort_column_id(0, Gtk.SortType.ASCENDING)
+            model.set_sort_column_id(1, Gtk.SortType.ASCENDING)
+
         # Set the model and pre-select the correct language
         self.treeview_language_list.set_model(model)
         if set_iter:

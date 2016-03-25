@@ -7,6 +7,8 @@ import re
 import threading
 import os
 import fnmatch
+import apt
+import apt_pkg
 
 
 def shell_exec_popen(command, kwargs={}):
@@ -23,10 +25,17 @@ def shell_exec(command, logger=None):
     return subprocess.call(command, shell=True)
 
 
-def getoutput(command, always_as_list=False):
+def getoutput(command, always_as_list=False, logger=None):
     #return shell_exec(command).stdout.read().strip()
     try:
+        if logger is not None:
+            logger.write(command, "utils.getoutput")
+        else:
+            print(("Executing: %s" % command))
         output = subprocess.check_output(command, shell=True).decode('utf-8').strip().split('\n')
+        if logger is not None:
+            for line in output:
+                logger.write(line, "utils.getoutput")
     except:
         # Even if an error occurs, don't crash here
         output = ['']
@@ -230,6 +239,31 @@ def get_files_from_dir(directory, pattern=''):
             for f in fnmatch.filter(files, pattern):
                 found_files.append(os.path.join(root, f))
     return found_files
+
+
+# Check if package exists
+def doesPackageExist(package):
+    return package in apt.Cache()
+
+
+# Check if a package is installed
+def isPackageInstalled(packageName, alsoCheckVersion=True):
+    isInstalled = False
+    try:
+        cache = apt.Cache()
+        pkg = cache[packageName]
+        if (not pkg.is_installed or
+            pkg._pkg.current_state != apt_pkg.CURSTATE_INSTALLED or
+            cache._depcache.broken_count > 0):
+            isInstalled = False
+        elif alsoCheckVersion:
+            if pkg.installed.version == pkg.candidate.version:
+                isInstalled = True
+        else:
+            isInstalled = True
+    except:
+        pass
+    return isInstalled
 
 
 # Class to run commands in a thread and return the output in a queue
