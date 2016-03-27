@@ -101,6 +101,8 @@
               <object class="GtkNotebook" id="notebook1">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
+                <property name="margin_left">6</property>
+                <property name="margin_right">6</property>
                 <property name="show_border">False</property>
                 <child>
                   <object class="GtkScrolledWindow" id="scrolledwindow_language_list">
@@ -1140,7 +1142,6 @@
                         <property name="can_focus">False</property>
                         <property name="margin_top">4</property>
                         <property name="xalign">0</property>
-                        <property name="label" translatable="yes">label</property>
                         <property name="ellipsize">middle</property>
                       </object>
                       <packing>
@@ -1337,6 +1338,8 @@
               <object class="GtkBox" id="hbox_buttons">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="margin_left">6</property>
+                <property name="margin_right">6</property>
                 <property name="margin_top">6</property>
                 <property name="margin_bottom">6</property>
                 <property name="hexpand">True</property>

@@ -631,7 +631,7 @@ class InstallerWindow():
         self.overview_col.set_title(_("Overview"))
 
         # install page
-        self.go("label_install_progress").set_markup("<i>%s</i>" % _("Calculating file indexes ..."))
+        # self.go("label_install_progress").set_markup("<i>%s</i>" % _("Calculating file indexes ..."))
 
     def activate_page(self, index):
         help_text = _(self.wizard_pages[index].help_text)

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: live-installer-3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-25 18:43+0100\n"
+"POT-Creation-Date: 2016-03-26 20:31+0100\n"
 "PO-Revision-Date: 2016-03-25 17:35+0000\n"
 "Last-Translator: Arjen Balfoort <schoelje@solydxk.com>\n"
 "Language-Team: Polish (http://www.transifex.com/solydxk/live-installer-3/"
@@ -174,12 +174,12 @@ msgstr "Wybierz typ plików dla partycji szyfrowanej (domyślnie - ext4)"
 msgid "You need to choose a mount point for partition:"
 msgstr "Wybierz punkt montowania partycji:"
 
-#: ../usr/lib/live-installer-3/installer.py:142
-#: ../usr/lib/live-installer-3/installer.py:167
+#: ../usr/lib/live-installer-3/installer.py:143
+#: ../usr/lib/live-installer-3/installer.py:168
 msgid "Installation error"
 msgstr "Błąd instalacyjny"
 
-#: ../usr/lib/live-installer-3/installer.py:152
+#: ../usr/lib/live-installer-3/installer.py:153
 msgid ""
 "Installation is now paused. Please read the instructions on the page "
 "carefully before clicking Forward to finish the installation."
@@ -187,37 +187,37 @@ msgstr ""
 "Przerwa w instalacji. Proszę uważnie przeczytać instrukcje na stronie a "
 "następnie kliknąć \"Dalej\" aby dokończyć instalację."
 
-#: ../usr/lib/live-installer-3/installer.py:153
+#: ../usr/lib/live-installer-3/installer.py:154
 msgid "Verify that fstab is correct (use blkid to check the UUIDs)."
 msgstr "Sprawdź poprawność fstab (użyj blkid aby zweryfikować UUID)."
 
-#: ../usr/lib/live-installer-3/installer.py:154
+#: ../usr/lib/live-installer-3/installer.py:155
 msgid ""
 "A chrooted terminal and fstab will be opened after you close this message."
 msgstr ""
 "Chrootowany terminal i fstab zostaną otwarte po zamknięciu tej wiadomoći."
 
-#: ../usr/lib/live-installer-3/installer.py:156
+#: ../usr/lib/live-installer-3/installer.py:157
 msgid "Installation paused"
 msgstr "Instalacja zatrzymana"
 
-#: ../usr/lib/live-installer-3/installer.py:206
+#: ../usr/lib/live-installer-3/installer.py:207
 #, python-format
 msgid "Encrypting %(partition)s ..."
 msgstr "Szyfrowanie %(partition)s ..."
 
-#: ../usr/lib/live-installer-3/installer.py:212
+#: ../usr/lib/live-installer-3/installer.py:213
 #, python-format
 msgid "Formatting %(partition)s as %(format)s ..."
 msgstr "Formatowanie %(partition)s jako %(format)s ..."
 
-#: ../usr/lib/live-installer-3/installer.py:255
-#: ../usr/lib/live-installer-3/installer.py:269
+#: ../usr/lib/live-installer-3/installer.py:256
+#: ../usr/lib/live-installer-3/installer.py:270
 #, python-format
 msgid "Mounting %(partition)s on %(mountpoint)s"
 msgstr "Montowanie %(partition)s na %(mountpoint)s"
 
-#: ../usr/lib/live-installer-3/installer.py:285
+#: ../usr/lib/live-installer-3/installer.py:286
 #, python-format
 msgid ""
 "You must first manually mount your target filesystem(s) at %s to do a custom "
@@ -226,11 +226,11 @@ msgstr ""
 "Musisz wpierw ręcznie zamontować swój docelowy system plików w %s, aby "
 "przeprowadzić własną instalację!"
 
-#: ../usr/lib/live-installer-3/installer.py:288
+#: ../usr/lib/live-installer-3/installer.py:289
 msgid "Not mounted"
 msgstr "Niezamontowany"
 
-#: ../usr/lib/live-installer-3/installer.py:296
+#: ../usr/lib/live-installer-3/installer.py:297
 msgid ""
 "Something is wrong with the installation medium! This is usually caused by "
 "burning tools which are not compatible with {}. Please burn the ISO image to "
@@ -240,75 +240,75 @@ msgstr ""
 "narzędzia do nagrywania obrazu z {}. Proszę użyć innego oprogramowania do "
 "nagrywania obrazu ISO na płytę DVD/dysk USB."
 
-#: ../usr/lib/live-installer-3/installer.py:299
+#: ../usr/lib/live-installer-3/installer.py:300
 msgid "Base filesystem does not exist"
 msgstr "Nie istnieje bazowy system plików"
 
-#: ../usr/lib/live-installer-3/installer.py:353
+#: ../usr/lib/live-installer-3/installer.py:354
 msgid "Copying"
 msgstr "Kopiowanie"
 
-#: ../usr/lib/live-installer-3/installer.py:390
+#: ../usr/lib/live-installer-3/installer.py:391
 msgid "Entering the system ..."
 msgstr "Wejście do systemu..."
 
-#: ../usr/lib/live-installer-3/installer.py:413
+#: ../usr/lib/live-installer-3/installer.py:414
 msgid "Installing EFI packages..."
 msgstr "Instalacja pakietów EFI"
 
-#: ../usr/lib/live-installer-3/installer.py:437
+#: ../usr/lib/live-installer-3/installer.py:438
 msgid "Installing drivers"
 msgstr "Instalacja sterowników"
 
-#: ../usr/lib/live-installer-3/installer.py:452
+#: ../usr/lib/live-installer-3/installer.py:474
 msgid "Adding new user to the system"
 msgstr "Dodawanie nowego użytkownika"
 
-#: ../usr/lib/live-installer-3/installer.py:500
+#: ../usr/lib/live-installer-3/installer.py:523
 msgid "Writing filesystem mount information to /etc/fstab"
 msgstr "Zapisywanie informacji o punktach montowania do /etc/fstab"
 
-#: ../usr/lib/live-installer-3/installer.py:639
+#: ../usr/lib/live-installer-3/installer.py:662
 msgid "Setting hostname"
 msgstr "Ustawianie nazwy komputera"
 
-#: ../usr/lib/live-installer-3/installer.py:660
+#: ../usr/lib/live-installer-3/installer.py:683
 msgid "Setting locale"
 msgstr "Ustawianie opcji lokalnych"
 
-#: ../usr/lib/live-installer-3/installer.py:676
+#: ../usr/lib/live-installer-3/installer.py:699
 msgid "Update apt cache"
 msgstr "Uaktualnij pamięć apt"
 
-#: ../usr/lib/live-installer-3/installer.py:678
+#: ../usr/lib/live-installer-3/installer.py:701
 msgid "Update the new system"
 msgstr "Zaktualizuj nowy system"
 
-#: ../usr/lib/live-installer-3/installer.py:685
+#: ../usr/lib/live-installer-3/installer.py:708
 msgid "Localizing packages"
 msgstr "Pakiety lokalizacyjne"
 
-#: ../usr/lib/live-installer-3/installer.py:703
+#: ../usr/lib/live-installer-3/installer.py:726
 msgid "Setting keyboard options"
 msgstr "Ustawianie opcji klawiatury"
 
-#: ../usr/lib/live-installer-3/installer.py:765
+#: ../usr/lib/live-installer-3/installer.py:788
 msgid "Configuring sensors"
 msgstr "Konfiguracja czujników"
 
-#: ../usr/lib/live-installer-3/installer.py:771
+#: ../usr/lib/live-installer-3/installer.py:794
 msgid "Removing VirtualBox"
 msgstr "Usuwanie VirtualBox"
 
-#: ../usr/lib/live-installer-3/installer.py:777
+#: ../usr/lib/live-installer-3/installer.py:800
 msgid "Removing os-prober"
 msgstr "Usuwanie pakietu os-prober"
 
-#: ../usr/lib/live-installer-3/installer.py:783
+#: ../usr/lib/live-installer-3/installer.py:806
 msgid "Installing bootloader"
 msgstr "Instalowanie programu rozruchowego"
 
-#: ../usr/lib/live-installer-3/installer.py:805
+#: ../usr/lib/live-installer-3/installer.py:828
 msgid ""
 "The grub bootloader was not configured properly! You need to configure it "
 "manually."
@@ -316,36 +316,36 @@ msgstr ""
 "Program rozruchowy grub nie jest właściwie skonfigurowany. Konieczna "
 "konfiguracja manualna."
 
-#: ../usr/lib/live-installer-3/installer.py:808
+#: ../usr/lib/live-installer-3/installer.py:831
 msgid "Grub not configured"
 msgstr "Grub jest nieskonfigurowany"
 
-#: ../usr/lib/live-installer-3/installer.py:834
+#: ../usr/lib/live-installer-3/installer.py:857
 msgid "Cleaning APT"
 msgstr "Czyszczenie APT"
 
-#: ../usr/lib/live-installer-3/installer.py:866
+#: ../usr/lib/live-installer-3/installer.py:889
 msgid "Removing live configuration (packages)"
 msgstr "Usuwanie konfiguracji live (pakiety)"
 
-#: ../usr/lib/live-installer-3/installer.py:908
+#: ../usr/lib/live-installer-3/installer.py:931
 msgid "Unmounting partitions"
 msgstr "Odmontowanie partycji"
 
-#: ../usr/lib/live-installer-3/installer.py:930
+#: ../usr/lib/live-installer-3/installer.py:953
 #: ../usr/lib/live-installer-3/gtk_interface.py:940
 msgid "Installation finished"
 msgstr "Instalacja zakończona"
 
-#: ../usr/lib/live-installer-3/installer.py:934
+#: ../usr/lib/live-installer-3/installer.py:957
 msgid "Configuring bootloader"
 msgstr "Konfigurowanie programu rozruchowego"
 
-#: ../usr/lib/live-installer-3/installer.py:941
+#: ../usr/lib/live-installer-3/installer.py:964
 msgid "Checking bootloader"
 msgstr "Sprawdzanie programu rozruchowego"
 
-#: ../usr/lib/live-installer-3/installer.py:956
+#: ../usr/lib/live-installer-3/installer.py:979
 #, python-format
 msgid "No %s file found!"
 msgstr ""
@@ -675,10 +675,6 @@ msgstr ""
 msgid "Overview"
 msgstr "Przegląd"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:634
-msgid "Calculating file indexes ..."
-msgstr "Obliczanie indeksów plików..."
-
 #: ../usr/lib/live-installer-3/gtk_interface.py:700
 msgid "Please provide your full name."
 msgstr "Proszę wpisać imię i nazwisko."
@@ -960,3 +956,6 @@ msgstr "Instalator live"
 #: ../usr/share/applications/live-installer-3.desktop.in.h:3
 msgid "Install the operating system"
 msgstr "Instaluj system operacyjny"
+
+#~ msgid "Calculating file indexes ..."
+#~ msgstr "Obliczanie indeksów plików..."

@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: live-installer-3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-25 18:43+0100\n"
-"PO-Revision-Date: 2016-03-25 17:35+0000\n"
-"Last-Translator: Arjen Balfoort <schoelje@solydxk.com>\n"
+"POT-Creation-Date: 2016-03-26 20:31+0100\n"
+"PO-Revision-Date: 2016-03-25 17:50+0000\n"
+"Last-Translator: Alderson Robert Jenet <alderson@outlook.my>\n"
 "Language-Team: Malay (http://www.transifex.com/solydxk/live-installer-3/"
 "language/ms/)\n"
 "Language: ms\n"
@@ -98,7 +98,7 @@ msgstr "Kata laluan untuk enkripsi partition anda"
 
 #: ../usr/lib/live-installer-3/partitioning.py:644
 msgid "Edit partition"
-msgstr "Sunting sekatan"
+msgstr "Edit Partition"
 
 #: ../usr/lib/live-installer-3/partitioning.py:651
 #: ../usr/lib/live-installer-3/gtk_interface.py:562
@@ -177,12 +177,12 @@ msgstr ""
 msgid "You need to choose a mount point for partition:"
 msgstr "Anda mesti pilih mount point pada partition: "
 
-#: ../usr/lib/live-installer-3/installer.py:142
-#: ../usr/lib/live-installer-3/installer.py:167
+#: ../usr/lib/live-installer-3/installer.py:143
+#: ../usr/lib/live-installer-3/installer.py:168
 msgid "Installation error"
 msgstr "Kesilapan pemasangan "
 
-#: ../usr/lib/live-installer-3/installer.py:152
+#: ../usr/lib/live-installer-3/installer.py:153
 msgid ""
 "Installation is now paused. Please read the instructions on the page "
 "carefully before clicking Forward to finish the installation."
@@ -190,36 +190,36 @@ msgstr ""
 "Pemasangan berhenti. Sila baca arahan dipaparan sebelum klik butang "
 "berikutnya untuk habiskan pemasangan."
 
-#: ../usr/lib/live-installer-3/installer.py:153
+#: ../usr/lib/live-installer-3/installer.py:154
 msgid "Verify that fstab is correct (use blkid to check the UUIDs)."
 msgstr "Pastikan fstab adalah betul (Guna bikid untuk periksa UUIDs)."
 
-#: ../usr/lib/live-installer-3/installer.py:154
+#: ../usr/lib/live-installer-3/installer.py:155
 msgid ""
 "A chrooted terminal and fstab will be opened after you close this message."
 msgstr "Sila tunggu terminal chrooted dan fstab akan dibuka selepas ini."
 
-#: ../usr/lib/live-installer-3/installer.py:156
+#: ../usr/lib/live-installer-3/installer.py:157
 msgid "Installation paused"
 msgstr "Pemasangan dihentikan"
 
-#: ../usr/lib/live-installer-3/installer.py:206
+#: ../usr/lib/live-installer-3/installer.py:207
 #, python-format
 msgid "Encrypting %(partition)s ..."
 msgstr "Mengenkripsi %(partition)s ..."
 
-#: ../usr/lib/live-installer-3/installer.py:212
+#: ../usr/lib/live-installer-3/installer.py:213
 #, python-format
 msgid "Formatting %(partition)s as %(format)s ..."
 msgstr "Sedang memformat %(partition)s ke %(format)s ..."
 
-#: ../usr/lib/live-installer-3/installer.py:255
-#: ../usr/lib/live-installer-3/installer.py:269
+#: ../usr/lib/live-installer-3/installer.py:256
+#: ../usr/lib/live-installer-3/installer.py:270
 #, python-format
 msgid "Mounting %(partition)s on %(mountpoint)s"
 msgstr "Melekap %(partition)s pada %(mountpoint)s"
 
-#: ../usr/lib/live-installer-3/installer.py:285
+#: ../usr/lib/live-installer-3/installer.py:286
 #, python-format
 msgid ""
 "You must first manually mount your target filesystem(s) at %s to do a custom "
@@ -228,11 +228,11 @@ msgstr ""
 "Anda perlu mount secara manual kepada sasaran filesystems(s) ke %s untuk "
 "melakukan pemasangan custom"
 
-#: ../usr/lib/live-installer-3/installer.py:288
+#: ../usr/lib/live-installer-3/installer.py:289
 msgid "Not mounted"
 msgstr "Tidak dimount"
 
-#: ../usr/lib/live-installer-3/installer.py:296
+#: ../usr/lib/live-installer-3/installer.py:297
 msgid ""
 "Something is wrong with the installation medium! This is usually caused by "
 "burning tools which are not compatible with {}. Please burn the ISO image to "
@@ -242,75 +242,75 @@ msgstr ""
 "alatan penyalin tidak sesuai dengan {}. Pastikan menyalin dari ISO imej ke "
 "DVD/USB menggunkan aplikasi yang betul. "
 
-#: ../usr/lib/live-installer-3/installer.py:299
+#: ../usr/lib/live-installer-3/installer.py:300
 msgid "Base filesystem does not exist"
 msgstr "Sistem fail asas tidak ditemui"
 
-#: ../usr/lib/live-installer-3/installer.py:353
+#: ../usr/lib/live-installer-3/installer.py:354
 msgid "Copying"
 msgstr "Sedang menyalin"
 
-#: ../usr/lib/live-installer-3/installer.py:390
+#: ../usr/lib/live-installer-3/installer.py:391
 msgid "Entering the system ..."
 msgstr "Memasukkan sistem"
 
-#: ../usr/lib/live-installer-3/installer.py:413
+#: ../usr/lib/live-installer-3/installer.py:414
 msgid "Installing EFI packages..."
 msgstr "Memasang pakej EFI"
 
-#: ../usr/lib/live-installer-3/installer.py:437
+#: ../usr/lib/live-installer-3/installer.py:438
 msgid "Installing drivers"
 msgstr "Memasang drivers"
 
-#: ../usr/lib/live-installer-3/installer.py:452
+#: ../usr/lib/live-installer-3/installer.py:474
 msgid "Adding new user to the system"
 msgstr "Tambah pengguna baru pada sistem"
 
-#: ../usr/lib/live-installer-3/installer.py:500
+#: ../usr/lib/live-installer-3/installer.py:523
 msgid "Writing filesystem mount information to /etc/fstab"
 msgstr "Sedang memasukkan informasi filesistem mount kedalam /etc/fstab"
 
-#: ../usr/lib/live-installer-3/installer.py:639
+#: ../usr/lib/live-installer-3/installer.py:662
 msgid "Setting hostname"
 msgstr "Tetapan nama hos"
 
-#: ../usr/lib/live-installer-3/installer.py:660
+#: ../usr/lib/live-installer-3/installer.py:683
 msgid "Setting locale"
 msgstr "Menetapkan penempatan"
 
-#: ../usr/lib/live-installer-3/installer.py:676
+#: ../usr/lib/live-installer-3/installer.py:699
 msgid "Update apt cache"
 msgstr "Apt cache dikemaskini"
 
-#: ../usr/lib/live-installer-3/installer.py:678
+#: ../usr/lib/live-installer-3/installer.py:701
 msgid "Update the new system"
 msgstr "Sistem baru sedang dikemaskini"
 
-#: ../usr/lib/live-installer-3/installer.py:685
+#: ../usr/lib/live-installer-3/installer.py:708
 msgid "Localizing packages"
 msgstr "Menyetempatkan pakej"
 
-#: ../usr/lib/live-installer-3/installer.py:703
+#: ../usr/lib/live-installer-3/installer.py:726
 msgid "Setting keyboard options"
 msgstr "Menetapkan pilihan papan kekunci"
 
-#: ../usr/lib/live-installer-3/installer.py:765
+#: ../usr/lib/live-installer-3/installer.py:788
 msgid "Configuring sensors"
 msgstr "Sensors sedang dikonfigurasi"
 
-#: ../usr/lib/live-installer-3/installer.py:771
+#: ../usr/lib/live-installer-3/installer.py:794
 msgid "Removing VirtualBox"
 msgstr "VirtualBox sedang disingkirkan"
 
-#: ../usr/lib/live-installer-3/installer.py:777
+#: ../usr/lib/live-installer-3/installer.py:800
 msgid "Removing os-prober"
 msgstr "os-prober sedang disingkirkan"
 
-#: ../usr/lib/live-installer-3/installer.py:783
+#: ../usr/lib/live-installer-3/installer.py:806
 msgid "Installing bootloader"
 msgstr "Memasang pemuat but"
 
-#: ../usr/lib/live-installer-3/installer.py:805
+#: ../usr/lib/live-installer-3/installer.py:828
 msgid ""
 "The grub bootloader was not configured properly! You need to configure it "
 "manually."
@@ -318,36 +318,36 @@ msgstr ""
 "Belum ada tetapan konfigurasi pada Grub! Konfigurasi secara manual "
 "diperlukan."
 
-#: ../usr/lib/live-installer-3/installer.py:808
+#: ../usr/lib/live-installer-3/installer.py:831
 msgid "Grub not configured"
 msgstr "Belum ada konfigurasi pada Grub"
 
-#: ../usr/lib/live-installer-3/installer.py:834
+#: ../usr/lib/live-installer-3/installer.py:857
 msgid "Cleaning APT"
 msgstr "Membersih APT"
 
-#: ../usr/lib/live-installer-3/installer.py:866
+#: ../usr/lib/live-installer-3/installer.py:889
 msgid "Removing live configuration (packages)"
 msgstr "Membuang konfigurasi langsung (pakej)"
 
-#: ../usr/lib/live-installer-3/installer.py:908
+#: ../usr/lib/live-installer-3/installer.py:931
 msgid "Unmounting partitions"
 msgstr "Membebaskan partitions"
 
-#: ../usr/lib/live-installer-3/installer.py:930
+#: ../usr/lib/live-installer-3/installer.py:953
 #: ../usr/lib/live-installer-3/gtk_interface.py:940
 msgid "Installation finished"
 msgstr "Pemasangan selesai"
 
-#: ../usr/lib/live-installer-3/installer.py:934
+#: ../usr/lib/live-installer-3/installer.py:957
 msgid "Configuring bootloader"
 msgstr "Menkonfigur pemuat but"
 
-#: ../usr/lib/live-installer-3/installer.py:941
+#: ../usr/lib/live-installer-3/installer.py:964
 msgid "Checking bootloader"
 msgstr "Memeriksa pemuat but"
 
-#: ../usr/lib/live-installer-3/installer.py:956
+#: ../usr/lib/live-installer-3/installer.py:979
 #, python-format
 msgid "No %s file found!"
 msgstr "Tiada %s sebarang fail ditemui!"
@@ -679,10 +679,6 @@ msgstr ""
 msgid "Overview"
 msgstr "Keseluruhan"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:634
-msgid "Calculating file indexes ..."
-msgstr "Sedang mengira fail indexes"
-
 #: ../usr/lib/live-installer-3/gtk_interface.py:700
 msgid "Please provide your full name."
 msgstr "Pilih nama penuh anda."
@@ -964,3 +960,6 @@ msgstr "Pemasangan langsung"
 #: ../usr/share/applications/live-installer-3.desktop.in.h:3
 msgid "Install the operating system"
 msgstr "Memasang sistem operasi"
+
+#~ msgid "Calculating file indexes ..."
+#~ msgstr "Sedang mengira fail indexes"

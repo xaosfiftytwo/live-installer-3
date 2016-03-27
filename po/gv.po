@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-25 18:29+0100\n"
+"POT-Creation-Date: 2016-03-26 20:31+0100\n"
 "PO-Revision-Date: 2010-10-12 15:32+0000\n"
 "Last-Translator: Reuben Potts <Unknown>\n"
 "Language-Team: Manx <gv@li.org>\n"
@@ -170,176 +170,176 @@ msgstr ""
 msgid "You need to choose a mount point for partition:"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:142
-#: ../usr/lib/live-installer-3/installer.py:167
+#: ../usr/lib/live-installer-3/installer.py:143
+#: ../usr/lib/live-installer-3/installer.py:168
 msgid "Installation error"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:152
+#: ../usr/lib/live-installer-3/installer.py:153
 msgid ""
 "Installation is now paused. Please read the instructions on the page "
 "carefully before clicking Forward to finish the installation."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:153
+#: ../usr/lib/live-installer-3/installer.py:154
 msgid "Verify that fstab is correct (use blkid to check the UUIDs)."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:154
+#: ../usr/lib/live-installer-3/installer.py:155
 msgid ""
 "A chrooted terminal and fstab will be opened after you close this message."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:156
+#: ../usr/lib/live-installer-3/installer.py:157
 #, fuzzy
 msgid "Installation paused"
 msgstr "Cur 'sy co`earrooder jeant"
 
-#: ../usr/lib/live-installer-3/installer.py:206
+#: ../usr/lib/live-installer-3/installer.py:207
 #, python-format
 msgid "Encrypting %(partition)s ..."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:212
+#: ../usr/lib/live-installer-3/installer.py:213
 #, python-format
 msgid "Formatting %(partition)s as %(format)s ..."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:255
-#: ../usr/lib/live-installer-3/installer.py:269
+#: ../usr/lib/live-installer-3/installer.py:256
+#: ../usr/lib/live-installer-3/installer.py:270
 #, python-format
 msgid "Mounting %(partition)s on %(mountpoint)s"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:285
+#: ../usr/lib/live-installer-3/installer.py:286
 #, python-format
 msgid ""
 "You must first manually mount your target filesystem(s) at %s to do a custom "
 "install!"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:288
+#: ../usr/lib/live-installer-3/installer.py:289
 msgid "Not mounted"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:296
+#: ../usr/lib/live-installer-3/installer.py:297
 msgid ""
 "Something is wrong with the installation medium! This is usually caused by "
 "burning tools which are not compatible with {}. Please burn the ISO image to "
 "DVD/USB using a different tool."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:299
+#: ../usr/lib/live-installer-3/installer.py:300
 msgid "Base filesystem does not exist"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:353
+#: ../usr/lib/live-installer-3/installer.py:354
 #, fuzzy
 msgid "Copying"
 msgstr "Jannoo coip %s"
 
-#: ../usr/lib/live-installer-3/installer.py:390
+#: ../usr/lib/live-installer-3/installer.py:391
 #, fuzzy
 msgid "Entering the system ..."
 msgstr "Goaill stiagh ayns corys noa..."
 
-#: ../usr/lib/live-installer-3/installer.py:413
+#: ../usr/lib/live-installer-3/installer.py:414
 #, fuzzy
 msgid "Installing EFI packages..."
 msgstr "Cur 'sy co`earrooder jeant"
 
-#: ../usr/lib/live-installer-3/installer.py:437
+#: ../usr/lib/live-installer-3/installer.py:438
 #, fuzzy
 msgid "Installing drivers"
 msgstr "Cur laadeyderbrebbal 'sy co`earrooder"
 
-#: ../usr/lib/live-installer-3/installer.py:452
+#: ../usr/lib/live-installer-3/installer.py:474
 #, fuzzy
 msgid "Adding new user to the system"
 msgstr "Cur ymmydeyr dys'n corys"
 
-#: ../usr/lib/live-installer-3/installer.py:500
+#: ../usr/lib/live-installer-3/installer.py:523
 #, fuzzy
 msgid "Writing filesystem mount information to /etc/fstab"
 msgstr "Screeu fysseree corys coadan chiangley"
 
-#: ../usr/lib/live-installer-3/installer.py:639
+#: ../usr/lib/live-installer-3/installer.py:662
 msgid "Setting hostname"
 msgstr "Cur er ennym cuirreyder"
 
-#: ../usr/lib/live-installer-3/installer.py:660
+#: ../usr/lib/live-installer-3/installer.py:683
 msgid "Setting locale"
 msgstr "Cur er Locale"
 
-#: ../usr/lib/live-installer-3/installer.py:676
+#: ../usr/lib/live-installer-3/installer.py:699
 msgid "Update apt cache"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:678
+#: ../usr/lib/live-installer-3/installer.py:701
 msgid "Update the new system"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:685
+#: ../usr/lib/live-installer-3/installer.py:708
 msgid "Localizing packages"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:703
+#: ../usr/lib/live-installer-3/installer.py:726
 msgid "Setting keyboard options"
 msgstr "Cur er reihghyn mair-chlaa"
 
-#: ../usr/lib/live-installer-3/installer.py:765
+#: ../usr/lib/live-installer-3/installer.py:788
 msgid "Configuring sensors"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:771
+#: ../usr/lib/live-installer-3/installer.py:794
 msgid "Removing VirtualBox"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:777
+#: ../usr/lib/live-installer-3/installer.py:800
 msgid "Removing os-prober"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:783
+#: ../usr/lib/live-installer-3/installer.py:806
 msgid "Installing bootloader"
 msgstr "Cur laadeyderbrebbal 'sy co`earrooder"
 
-#: ../usr/lib/live-installer-3/installer.py:805
+#: ../usr/lib/live-installer-3/installer.py:828
 msgid ""
 "The grub bootloader was not configured properly! You need to configure it "
 "manually."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:808
+#: ../usr/lib/live-installer-3/installer.py:831
 msgid "Grub not configured"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:834
+#: ../usr/lib/live-installer-3/installer.py:857
 msgid "Cleaning APT"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:866
+#: ../usr/lib/live-installer-3/installer.py:889
 msgid "Removing live configuration (packages)"
 msgstr "Geddyn rey lesh reihghyn bio (bundeilyn)"
 
-#: ../usr/lib/live-installer-3/installer.py:908
+#: ../usr/lib/live-installer-3/installer.py:931
 #, fuzzy
 msgid "Unmounting partitions"
 msgstr "Caghlaa scarreyn"
 
-#: ../usr/lib/live-installer-3/installer.py:930
+#: ../usr/lib/live-installer-3/installer.py:953
 #: ../usr/lib/live-installer-3/gtk_interface.py:940
 msgid "Installation finished"
 msgstr "Cur 'sy co`earrooder jeant"
 
-#: ../usr/lib/live-installer-3/installer.py:934
+#: ../usr/lib/live-installer-3/installer.py:957
 msgid "Configuring bootloader"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:941
+#: ../usr/lib/live-installer-3/installer.py:964
 msgid "Checking bootloader"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:956
+#: ../usr/lib/live-installer-3/installer.py:979
 #, python-format
 msgid "No %s file found!"
 msgstr ""
@@ -646,11 +646,6 @@ msgstr ""
 msgid "Overview"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:634
-#, fuzzy
-msgid "Calculating file indexes ..."
-msgstr "Co`earrooaghey ayndaghyn coadan..."
-
 #: ../usr/lib/live-installer-3/gtk_interface.py:700
 #, fuzzy
 msgid "Please provide your full name."
@@ -917,6 +912,10 @@ msgstr "Greie cur 'sy co`earroder %s"
 #: ../usr/share/applications/live-installer-3.desktop.in.h:3
 msgid "Install the operating system"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Calculating file indexes ..."
+#~ msgstr "Co`earrooaghey ayndaghyn coadan..."
 
 #~ msgid "Device:"
 #~ msgstr "Saase:"

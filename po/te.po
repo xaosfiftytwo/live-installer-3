@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-25 18:29+0100\n"
+"POT-Creation-Date: 2016-03-26 20:31+0100\n"
 "PO-Revision-Date: 2011-11-11 02:32+0000\n"
 "Last-Translator: Praveen Illa <mail2ipn@gmail.com>\n"
 "Language-Team: Telugu <te@li.org>\n"
@@ -172,178 +172,178 @@ msgstr ""
 msgid "You need to choose a mount point for partition:"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:142
-#: ../usr/lib/live-installer-3/installer.py:167
+#: ../usr/lib/live-installer-3/installer.py:143
+#: ../usr/lib/live-installer-3/installer.py:168
 msgid "Installation error"
 msgstr "స్థాపన ప్రక్రియ దోషము"
 
-#: ../usr/lib/live-installer-3/installer.py:152
+#: ../usr/lib/live-installer-3/installer.py:153
 msgid ""
 "Installation is now paused. Please read the instructions on the page "
 "carefully before clicking Forward to finish the installation."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:153
+#: ../usr/lib/live-installer-3/installer.py:154
 msgid "Verify that fstab is correct (use blkid to check the UUIDs)."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:154
+#: ../usr/lib/live-installer-3/installer.py:155
 msgid ""
 "A chrooted terminal and fstab will be opened after you close this message."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:156
+#: ../usr/lib/live-installer-3/installer.py:157
 #, fuzzy
 msgid "Installation paused"
 msgstr "స్థాపన ప్రక్రియ పూర్తిచేయబడింది"
 
-#: ../usr/lib/live-installer-3/installer.py:206
+#: ../usr/lib/live-installer-3/installer.py:207
 #, fuzzy, python-format
 msgid "Encrypting %(partition)s ..."
 msgstr "%(partition)s లను %(format)s ఫార్మేటుచేస్తున్నది..."
 
-#: ../usr/lib/live-installer-3/installer.py:212
+#: ../usr/lib/live-installer-3/installer.py:213
 #, fuzzy, python-format
 msgid "Formatting %(partition)s as %(format)s ..."
 msgstr "%(partition)s లను %(format)s ఫార్మేటుచేస్తున్నది..."
 
-#: ../usr/lib/live-installer-3/installer.py:255
-#: ../usr/lib/live-installer-3/installer.py:269
+#: ../usr/lib/live-installer-3/installer.py:256
+#: ../usr/lib/live-installer-3/installer.py:270
 #, python-format
 msgid "Mounting %(partition)s on %(mountpoint)s"
 msgstr "%(partition)s లను %(mountpoint)s పై మౌంటుచేస్తున్నది"
 
-#: ../usr/lib/live-installer-3/installer.py:285
+#: ../usr/lib/live-installer-3/installer.py:286
 #, python-format
 msgid ""
 "You must first manually mount your target filesystem(s) at %s to do a custom "
 "install!"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:288
+#: ../usr/lib/live-installer-3/installer.py:289
 msgid "Not mounted"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:296
+#: ../usr/lib/live-installer-3/installer.py:297
 msgid ""
 "Something is wrong with the installation medium! This is usually caused by "
 "burning tools which are not compatible with {}. Please burn the ISO image to "
 "DVD/USB using a different tool."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:299
+#: ../usr/lib/live-installer-3/installer.py:300
 msgid "Base filesystem does not exist"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:353
+#: ../usr/lib/live-installer-3/installer.py:354
 #, fuzzy
 msgid "Copying"
 msgstr "%s నకలుచేస్తున్నది"
 
-#: ../usr/lib/live-installer-3/installer.py:390
+#: ../usr/lib/live-installer-3/installer.py:391
 #, fuzzy
 msgid "Entering the system ..."
 msgstr "కొత్త వ్యవస్థలోకి ప్రవేశిస్తున్నది..."
 
-#: ../usr/lib/live-installer-3/installer.py:413
+#: ../usr/lib/live-installer-3/installer.py:414
 #, fuzzy
 msgid "Installing EFI packages..."
 msgstr "స్థాపన ప్రక్రియ పూర్తిచేయబడింది"
 
-#: ../usr/lib/live-installer-3/installer.py:437
+#: ../usr/lib/live-installer-3/installer.py:438
 #, fuzzy
 msgid "Installing drivers"
 msgstr "బూట్ లోడర్ స్థాపించబడుతోంది"
 
-#: ../usr/lib/live-installer-3/installer.py:452
+#: ../usr/lib/live-installer-3/installer.py:474
 #, fuzzy
 msgid "Adding new user to the system"
 msgstr "వ్యవస్థ లోకి వాడుకదారుని చేర్చబడుతోంది"
 
-#: ../usr/lib/live-installer-3/installer.py:500
+#: ../usr/lib/live-installer-3/installer.py:523
 #, fuzzy
 msgid "Writing filesystem mount information to /etc/fstab"
 msgstr "దస్త్ర వ్యవస్థ యొక్క మౌంట్ సమాచారం వ్రాయబడుతోంది"
 
-#: ../usr/lib/live-installer-3/installer.py:639
+#: ../usr/lib/live-installer-3/installer.py:662
 msgid "Setting hostname"
 msgstr "హోస్టుపేరు అమర్చబడుతోంది"
 
-#: ../usr/lib/live-installer-3/installer.py:660
+#: ../usr/lib/live-installer-3/installer.py:683
 msgid "Setting locale"
 msgstr "భాషను అమర్చుతున్నది"
 
-#: ../usr/lib/live-installer-3/installer.py:676
+#: ../usr/lib/live-installer-3/installer.py:699
 msgid "Update apt cache"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:678
+#: ../usr/lib/live-installer-3/installer.py:701
 msgid "Update the new system"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:685
+#: ../usr/lib/live-installer-3/installer.py:708
 msgid "Localizing packages"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:703
+#: ../usr/lib/live-installer-3/installer.py:726
 msgid "Setting keyboard options"
 msgstr "కీ బోర్డు ఐచ్ఛికాలను అమర్చుతున్నది"
 
-#: ../usr/lib/live-installer-3/installer.py:765
+#: ../usr/lib/live-installer-3/installer.py:788
 #, fuzzy
 msgid "Configuring sensors"
 msgstr "బూట్‌లోడర్‌ని స్వరూపిస్తున్నది"
 
-#: ../usr/lib/live-installer-3/installer.py:771
+#: ../usr/lib/live-installer-3/installer.py:794
 msgid "Removing VirtualBox"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:777
+#: ../usr/lib/live-installer-3/installer.py:800
 msgid "Removing os-prober"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:783
+#: ../usr/lib/live-installer-3/installer.py:806
 msgid "Installing bootloader"
 msgstr "బూట్ లోడర్ స్థాపించబడుతోంది"
 
-#: ../usr/lib/live-installer-3/installer.py:805
+#: ../usr/lib/live-installer-3/installer.py:828
 #, fuzzy
 msgid ""
 "The grub bootloader was not configured properly! You need to configure it "
 "manually."
 msgstr "హెచ్ఛరిక: grub బూట్‌లోడర్‌ సరిగా స్వరూపించబడలేదు! మీరు దానిని మానవీయంగా స్వరూపించాలి."
 
-#: ../usr/lib/live-installer-3/installer.py:808
+#: ../usr/lib/live-installer-3/installer.py:831
 msgid "Grub not configured"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:834
+#: ../usr/lib/live-installer-3/installer.py:857
 msgid "Cleaning APT"
 msgstr "APTని శుభ్రపరుస్తున్నది"
 
-#: ../usr/lib/live-installer-3/installer.py:866
+#: ../usr/lib/live-installer-3/installer.py:889
 msgid "Removing live configuration (packages)"
 msgstr "ప్యాకేజిల  ప్రత్యక్ష కన్ఫిగరేషన్ తీసివేయబడుతోంది"
 
-#: ../usr/lib/live-installer-3/installer.py:908
+#: ../usr/lib/live-installer-3/installer.py:931
 #, fuzzy
 msgid "Unmounting partitions"
 msgstr "%(partition)s లను %(format)s ఫార్మేటుచేస్తున్నది..."
 
-#: ../usr/lib/live-installer-3/installer.py:930
+#: ../usr/lib/live-installer-3/installer.py:953
 #: ../usr/lib/live-installer-3/gtk_interface.py:940
 msgid "Installation finished"
 msgstr "స్థాపన ప్రక్రియ పూర్తిచేయబడింది"
 
-#: ../usr/lib/live-installer-3/installer.py:934
+#: ../usr/lib/live-installer-3/installer.py:957
 msgid "Configuring bootloader"
 msgstr "బూట్‌లోడర్‌ని స్వరూపిస్తున్నది"
 
-#: ../usr/lib/live-installer-3/installer.py:941
+#: ../usr/lib/live-installer-3/installer.py:964
 msgid "Checking bootloader"
 msgstr "బూట్‌లోడర్‌ని తనిఖీ చేస్తున్నది"
 
-#: ../usr/lib/live-installer-3/installer.py:956
+#: ../usr/lib/live-installer-3/installer.py:979
 #, python-format
 msgid "No %s file found!"
 msgstr ""
@@ -650,11 +650,6 @@ msgstr ""
 msgid "Overview"
 msgstr "అవలోకనం"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:634
-#, fuzzy
-msgid "Calculating file indexes ..."
-msgstr "ఫైల్ సూచికను లెక్కిస్తున్నది..."
-
 #: ../usr/lib/live-installer-3/gtk_interface.py:700
 #, fuzzy
 msgid "Please provide your full name."
@@ -924,6 +919,10 @@ msgstr "%s స్థాపకం"
 #, fuzzy
 msgid "Install the operating system"
 msgstr "నిర్వహణ వ్యవస్థ"
+
+#, fuzzy
+#~ msgid "Calculating file indexes ..."
+#~ msgstr "ఫైల్ సూచికను లెక్కిస్తున్నది..."
 
 #, fuzzy
 #~ msgid "Configuring initramfs"

@@ -266,6 +266,24 @@ def isPackageInstalled(packageName, alsoCheckVersion=True):
     return isInstalled
 
 
+# Check for string in file
+def hasStringInFile(searchString, filePath):
+    if os.path.exists(filePath):
+        with open(filePath) as f:
+            for line in f:
+                if re.search("{0}".format(searchString), line):
+                    return True
+    return False
+
+
+# Check if the machine has a battery
+def has_power_supply():
+    out = getoutput("ls /sys/class/power_supply | grep BAT", True)
+    if out[0] != "":
+        return True
+    return False
+
+
 # Class to run commands in a thread and return the output in a queue
 class ExecuteThreadedCommands(threading.Thread):
 

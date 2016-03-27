@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-25 18:29+0100\n"
+"POT-Creation-Date: 2016-03-26 20:31+0100\n"
 "PO-Revision-Date: 2014-06-06 19:01+0000\n"
 "Last-Translator: spacy01 <Unknown>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
@@ -175,12 +175,12 @@ msgstr ""
 msgid "You need to choose a mount point for partition:"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:142
-#: ../usr/lib/live-installer-3/installer.py:167
+#: ../usr/lib/live-installer-3/installer.py:143
+#: ../usr/lib/live-installer-3/installer.py:168
 msgid "Installation error"
 msgstr "Грешка при инсталация"
 
-#: ../usr/lib/live-installer-3/installer.py:152
+#: ../usr/lib/live-installer-3/installer.py:153
 #, fuzzy
 msgid ""
 "Installation is now paused. Please read the instructions on the page "
@@ -189,37 +189,37 @@ msgstr ""
 "Инсталацията е на пауза. Моля внимателно прочетете инструкциите на тази "
 "страница и натиснете Напред, за да завършите инсталацията."
 
-#: ../usr/lib/live-installer-3/installer.py:153
+#: ../usr/lib/live-installer-3/installer.py:154
 msgid "Verify that fstab is correct (use blkid to check the UUIDs)."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:154
+#: ../usr/lib/live-installer-3/installer.py:155
 msgid ""
 "A chrooted terminal and fstab will be opened after you close this message."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:156
+#: ../usr/lib/live-installer-3/installer.py:157
 #, fuzzy
 msgid "Installation paused"
 msgstr "Инсталацията е паузирана"
 
-#: ../usr/lib/live-installer-3/installer.py:206
+#: ../usr/lib/live-installer-3/installer.py:207
 #, fuzzy, python-format
 msgid "Encrypting %(partition)s ..."
 msgstr "Форматирай %(partition)s като %(format)s..."
 
-#: ../usr/lib/live-installer-3/installer.py:212
+#: ../usr/lib/live-installer-3/installer.py:213
 #, fuzzy, python-format
 msgid "Formatting %(partition)s as %(format)s ..."
 msgstr "Форматирай %(partition)s като %(format)s..."
 
-#: ../usr/lib/live-installer-3/installer.py:255
-#: ../usr/lib/live-installer-3/installer.py:269
+#: ../usr/lib/live-installer-3/installer.py:256
+#: ../usr/lib/live-installer-3/installer.py:270
 #, python-format
 msgid "Mounting %(partition)s on %(mountpoint)s"
 msgstr "Монтиране на %(partition)s в %(mountpoint)s"
 
-#: ../usr/lib/live-installer-3/installer.py:285
+#: ../usr/lib/live-installer-3/installer.py:286
 #, fuzzy, python-format
 msgid ""
 "You must first manually mount your target filesystem(s) at %s to do a custom "
@@ -228,93 +228,93 @@ msgstr ""
 "ГРЕШКА: Първо трябва ръчно да монтирате вашата целева файлова(и) система(и) "
 "в /цел за потребителска инсталация!"
 
-#: ../usr/lib/live-installer-3/installer.py:288
+#: ../usr/lib/live-installer-3/installer.py:289
 msgid "Not mounted"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:296
+#: ../usr/lib/live-installer-3/installer.py:297
 msgid ""
 "Something is wrong with the installation medium! This is usually caused by "
 "burning tools which are not compatible with {}. Please burn the ISO image to "
 "DVD/USB using a different tool."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:299
+#: ../usr/lib/live-installer-3/installer.py:300
 msgid "Base filesystem does not exist"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:353
+#: ../usr/lib/live-installer-3/installer.py:354
 #, fuzzy
 msgid "Copying"
 msgstr "Копиране на %s"
 
-#: ../usr/lib/live-installer-3/installer.py:390
+#: ../usr/lib/live-installer-3/installer.py:391
 #, fuzzy
 msgid "Entering the system ..."
 msgstr "Влизане в новата система..."
 
-#: ../usr/lib/live-installer-3/installer.py:413
+#: ../usr/lib/live-installer-3/installer.py:414
 #, fuzzy
 msgid "Installing EFI packages..."
 msgstr "Инсталиране на Linux Mint"
 
-#: ../usr/lib/live-installer-3/installer.py:437
+#: ../usr/lib/live-installer-3/installer.py:438
 #, fuzzy
 msgid "Installing drivers"
 msgstr "Инсталиране на програмата за начално стартиране"
 
-#: ../usr/lib/live-installer-3/installer.py:452
+#: ../usr/lib/live-installer-3/installer.py:474
 #, fuzzy
 msgid "Adding new user to the system"
 msgstr "Добавяне на потребител към системата"
 
-#: ../usr/lib/live-installer-3/installer.py:500
+#: ../usr/lib/live-installer-3/installer.py:523
 #, fuzzy
 msgid "Writing filesystem mount information to /etc/fstab"
 msgstr "Записване на информацията за монтиране на файловата система"
 
-#: ../usr/lib/live-installer-3/installer.py:639
+#: ../usr/lib/live-installer-3/installer.py:662
 msgid "Setting hostname"
 msgstr "Настройване на системното име"
 
-#: ../usr/lib/live-installer-3/installer.py:660
+#: ../usr/lib/live-installer-3/installer.py:683
 msgid "Setting locale"
 msgstr "Настройване на локал"
 
-#: ../usr/lib/live-installer-3/installer.py:676
+#: ../usr/lib/live-installer-3/installer.py:699
 msgid "Update apt cache"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:678
+#: ../usr/lib/live-installer-3/installer.py:701
 msgid "Update the new system"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:685
+#: ../usr/lib/live-installer-3/installer.py:708
 msgid "Localizing packages"
 msgstr "Локализация на пакети"
 
-#: ../usr/lib/live-installer-3/installer.py:703
+#: ../usr/lib/live-installer-3/installer.py:726
 msgid "Setting keyboard options"
 msgstr "Настройване на клавиатурата"
 
-#: ../usr/lib/live-installer-3/installer.py:765
+#: ../usr/lib/live-installer-3/installer.py:788
 #, fuzzy
 msgid "Configuring sensors"
 msgstr "Конфигуриране на програмата за начално зареждане"
 
-#: ../usr/lib/live-installer-3/installer.py:771
+#: ../usr/lib/live-installer-3/installer.py:794
 msgid "Removing VirtualBox"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:777
+#: ../usr/lib/live-installer-3/installer.py:800
 msgid "Removing os-prober"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:783
+#: ../usr/lib/live-installer-3/installer.py:806
 msgid "Installing bootloader"
 msgstr "Инсталиране на програмата за начално стартиране"
 
-#: ../usr/lib/live-installer-3/installer.py:805
+#: ../usr/lib/live-installer-3/installer.py:828
 #, fuzzy
 msgid ""
 "The grub bootloader was not configured properly! You need to configure it "
@@ -323,37 +323,37 @@ msgstr ""
 "ВНИМАНИЕ: Grub не е конфигуриран правилно! Вие трябва да го конфигурирате "
 "ръчно."
 
-#: ../usr/lib/live-installer-3/installer.py:808
+#: ../usr/lib/live-installer-3/installer.py:831
 msgid "Grub not configured"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:834
+#: ../usr/lib/live-installer-3/installer.py:857
 msgid "Cleaning APT"
 msgstr "Почистване на APT"
 
-#: ../usr/lib/live-installer-3/installer.py:866
+#: ../usr/lib/live-installer-3/installer.py:889
 msgid "Removing live configuration (packages)"
 msgstr "Премахване на Live конфигурацията (пакети)"
 
-#: ../usr/lib/live-installer-3/installer.py:908
+#: ../usr/lib/live-installer-3/installer.py:931
 #, fuzzy
 msgid "Unmounting partitions"
 msgstr "Форматирай %(partition)s като %(format)s..."
 
-#: ../usr/lib/live-installer-3/installer.py:930
+#: ../usr/lib/live-installer-3/installer.py:953
 #: ../usr/lib/live-installer-3/gtk_interface.py:940
 msgid "Installation finished"
 msgstr "Инсталирането завърши"
 
-#: ../usr/lib/live-installer-3/installer.py:934
+#: ../usr/lib/live-installer-3/installer.py:957
 msgid "Configuring bootloader"
 msgstr "Конфигуриране на програмата за начално зареждане"
 
-#: ../usr/lib/live-installer-3/installer.py:941
+#: ../usr/lib/live-installer-3/installer.py:964
 msgid "Checking bootloader"
 msgstr "Проверка на програмата за начално зареждане"
 
-#: ../usr/lib/live-installer-3/installer.py:956
+#: ../usr/lib/live-installer-3/installer.py:979
 #, python-format
 msgid "No %s file found!"
 msgstr ""
@@ -691,11 +691,6 @@ msgstr ""
 msgid "Overview"
 msgstr "Преглед"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:634
-#, fuzzy
-msgid "Calculating file indexes ..."
-msgstr "Пресмятане на индекси..."
-
 #: ../usr/lib/live-installer-3/gtk_interface.py:700
 #, fuzzy
 msgid "Please provide your full name."
@@ -988,6 +983,10 @@ msgstr "%s инсталатор"
 #, fuzzy
 msgid "Install the operating system"
 msgstr "Операционна система"
+
+#, fuzzy
+#~ msgid "Calculating file indexes ..."
+#~ msgstr "Пресмятане на индекси..."
 
 #, fuzzy
 #~ msgid "Configuring initramfs"

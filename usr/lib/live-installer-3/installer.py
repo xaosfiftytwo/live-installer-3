@@ -10,7 +10,8 @@
 
 from utils import shell_exec, shell_exec_popen, getoutput, chroot_exec, \
                   get_config_dict, has_internet, in_virtualbox, \
-                  get_boot_parameters, get_files_from_dir, isPackageInstalled
+                  get_boot_parameters, get_files_from_dir, isPackageInstalled, \
+                  has_power_supply, hasStringInFile
 from localize import Localize
 from encryption import clear_partition, encrypt_partition
 from partitioning import get_partition_label
@@ -442,6 +443,27 @@ class InstallerEngine(threading.Thread):
                 self.local_exec("rm -rf %s/debs" % self.setup.target_dir)
                 with open("%s/etc/modprobe.d/blacklist-broadcom.conf" % self.setup.target_dir, "w") as conf:
                     conf.write('blacklist b43 brcmsmac bcma ssb')
+
+            # Configure power management for xfce4
+            xml = "%s/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml" % self.setup.target_dir
+            if exists(xml):
+                if has_power_supply() and not hasStringInFile("power-manager-plugin", xml):
+                    # sed isn't woring here because of the apostrophes
+                    lines = []
+                    i = 0
+                    line_added = False
+                    with open(xml, 'r') as f:
+                        lines = f.readlines()
+                        for line in lines:
+                            i += 1
+                            if "datetime" in line:
+                                lines.insert(i, "    <property name=\"plugin-6\" type=\"string\" value=\"power-manager-plugin\"/>\n")
+                                line_added = True
+                                break
+                    if line_added:
+                        self.log.write("Save power management in %s" % xml, "InstallerEngine.init_install", "info")
+                        with open(xml, 'w') as f:
+                            f.write("".join(lines))
         else:
             # Steps when in OEM user setup:
             self.our_total = self.get_progress_total()
@@ -461,9 +483,10 @@ class InstallerEngine(threading.Thread):
             self.log.write("Create user dir: {}".format(user_dir), "InstallerEngine.init_install", "info")
             self.local_exec("mkdir {}".format(user_dir))
 
-        # Copy the skel files to the new user's home directory
-        self.local_exec("cp -R /etc/skel/.* {}/".format(user_dir))
-        self.local_exec("chown -R {}:{} {}".format(self.setup.username, self.setup.username, user_dir))
+        if not os.listdir(user_dir):
+            # Copy the skel files to the new user's home directory
+            self.local_exec("cp -R %s/etc/skel/.* %s/" % (self.setup.target_dir, user_dir))
+            self.local_exec("chown -R {}:{} {}".format(self.setup.username, self.setup.username, user_dir))
 
         # Save passwords
         # Using a temporary file fails for the new user (but correctly sets the root's password)
@@ -901,7 +924,7 @@ class InstallerEngine(threading.Thread):
                 #self.exec_cmd("/usr/bin/sha1sum /boot/initrd.img-%s > /var/lib/initramfs-tools/%s" % (kernelversion, kernelversion))
 
             # /etc/default/grub could have been changed: update Grub
-            shell_exec('update-grub', logger=self.log)
+            self.exec_cmd('update-grub')
 
             # now unmount it
             self.log.write(" --> Unmounting partitions", "InstallerEngine.finish_install", "info")

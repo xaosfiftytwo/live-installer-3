@@ -1,3 +1,9 @@
+live-installer-3 (2016.03.26) debian; urgency=low
+
+  * Configure power supply when on laptop
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Sat, 26 Mar 2016 07:48:20 +0100
+
 live-installer-3 (2016.03.25) debian; urgency=low
 
   * Reload translations when internet connection has been established
