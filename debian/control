@@ -42,6 +42,7 @@ Depends: ${misc:Depends}, ${python:Depends}
   , whois
   , passwd
   , cryptsetup
+  , console-setup
 Conflicts: live-installer
 Replaces: live-installer
 Description: Live Installer
