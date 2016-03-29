@@ -4,6 +4,7 @@ Live Installer 3
 This is a coversion of live-installer version 2016.01.01: Python2.7/Gtk to Python3/Gtk+
 
 Some features:
+* OEM Setup (any user name ending with -oem)
 * Encrypt your partitions
 * Configures SSD
 * Support for persistent USB installation
