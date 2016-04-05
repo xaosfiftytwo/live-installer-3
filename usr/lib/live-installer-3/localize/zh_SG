@@ -1,5 +1,5 @@
-all = fonts-arphic-ukai fonts-arphic-uming im-config fcitx fcitx-sunpinyin fcitx-libpinyin fcitx-googlepinyin fcitx-frontend-gtk3 fcitx-ui-classic fcitx-config-gtk
-solydk32 = fonts-arphic-ukai fonts-arphic-uming im-config fcitx fcitx-sunpinyin fcitx-libpinyin fcitx-googlepinyin fcitx-frontend-gtk3 fcitx-ui-classic fcitx-config-gtk
-solydk64 = fonts-arphic-ukai fonts-arphic-uming im-config fcitx fcitx-sunpinyin fcitx-libpinyin fcitx-googlepinyin fcitx-frontend-gtk3 fcitx-ui-classic fcitx-config-gtk
-solydx32 = fonts-arphic-ukai fonts-arphic-uming im-config fcitx fcitx-sunpinyin fcitx-libpinyin fcitx-googlepinyin fcitx-frontend-gtk3 fcitx-ui-classic fcitx-config-gtk
-solydx64 = fonts-arphic-ukai fonts-arphic-uming im-config fcitx fcitx-sunpinyin fcitx-libpinyin fcitx-googlepinyin fcitx-frontend-gtk3 fcitx-ui-classic fcitx-config-gtk
+all = fonts-wqy-microhei fonts-wqy-zenhei xfonts-wqy im-config fcitx-sunpinyin
+solydk32 = fonts-wqy-microhei fonts-wqy-zenhei xfonts-wqy im-config fcitx-sunpinyin
+solydk64 = fonts-wqy-microhei fonts-wqy-zenhei xfonts-wqy im-config fcitx-sunpinyin
+solydx32 = fonts-wqy-microhei fonts-wqy-zenhei xfonts-wqy im-config fcitx-sunpinyin
+solydx64 = fonts-wqy-microhei fonts-wqy-zenhei xfonts-wqy im-config fcitx-sunpinyin

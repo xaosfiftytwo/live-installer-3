@@ -44,6 +44,7 @@ Comment[nb]=Installer operativsystemet
 Comment[nl]=Installeer het besturingssysteem
 Comment[pl]=Instaluj system operacyjny
 Comment[pt]=Instalar o sistema operativo
+Comment[ru]=Установка операционной системы
 Comment[sv]=Installera operativsystemet
 Comment[tr]=İşletim sistemini kur
 Exec=live-installer-3

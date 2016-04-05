@@ -1,5 +1,5 @@
-all = fonts-unfonts* im-config fcitx fcitx-hangul fcitx-frontend-gtk3 fcitx-ui-classic fcitx-config-gtk
-solydk32 = fonts-unfonts* im-config fcitx fcitx-hangul fcitx-frontend-gtk3 fcitx-ui-classic fcitx-config-gtk
-solydk64 = fonts-unfonts* im-config fcitx fcitx-hangul fcitx-frontend-gtk3 fcitx-ui-classic fcitx-config-gtk
-solydx32 = fonts-unfonts* im-config fcitx fcitx-hangul fcitx-frontend-gtk3 fcitx-ui-classic fcitx-config-gtk
-solydx64 = fonts-unfonts* im-config fcitx fcitx-hangul fcitx-frontend-gtk3 fcitx-ui-classic fcitx-config-gtk
+all = fonts-unfonts* im-config fcitx-hangul
+solydk32 = fonts-unfonts* im-config fcitx-hangul
+solydk64 = fonts-unfonts* im-config fcitx-hangul
+solydx32 = fonts-unfonts* im-config fcitx-hangul
+solydx64 = fonts-unfonts* im-config fcitx-hangul

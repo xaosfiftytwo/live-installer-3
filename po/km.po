@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-26 20:31+0100\n"
+"POT-Creation-Date: 2016-04-05 14:13+0200\n"
 "PO-Revision-Date: 2012-06-12 16:45+0000\n"
 "Last-Translator: KOSAL (David Salvo) <slinkeepy@gmail.com>\n"
 "Language-Team: Khmer <km@li.org>\n"
@@ -45,99 +45,106 @@ msgstr "មូលដ្ឋានីយកម្ម"
 msgid "Localizing Thunderbird"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/partitioning.py:170
-#: ../usr/lib/live-installer-3/partitioning.py:515
+#: ../usr/lib/live-installer-3/partitioning.py:173
+#: ../usr/lib/live-installer-3/partitioning.py:574
 msgid "Unknown"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/partitioning.py:297
+#: ../usr/lib/live-installer-3/partitioning.py:344
 msgid "Removable:"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/partitioning.py:324
-#: ../usr/lib/live-installer-3/gtk_interface.py:752
-#: ../usr/lib/live-installer-3/gtk_interface.py:756
-#: ../usr/lib/live-installer-3/gtk_interface.py:775
-#: ../usr/lib/live-installer-3/gtk_interface.py:780
-#: ../usr/lib/live-installer-3/gtk_interface.py:784
-#: ../usr/lib/live-installer-3/gtk_interface.py:788
+#: ../usr/lib/live-installer-3/partitioning.py:371
+#: ../usr/lib/live-installer-3/gtk_interface.py:809
+#: ../usr/lib/live-installer-3/gtk_interface.py:813
+#: ../usr/lib/live-installer-3/gtk_interface.py:832
+#: ../usr/lib/live-installer-3/gtk_interface.py:837
+#: ../usr/lib/live-installer-3/gtk_interface.py:841
+#: ../usr/lib/live-installer-3/gtk_interface.py:845
 msgid "Installation Tool"
 msgstr "ឧបករណ៍​ការដំឡើង"
 
-#: ../usr/lib/live-installer-3/partitioning.py:325
-#, fuzzy, python-brace-format
+#: ../usr/lib/live-installer-3/partitioning.py:372
+#, fuzzy, python-format
 msgid ""
-"No partition table was found on the hard drive: {disk_description}. Do you "
-"want the installer to create a set of partitions for you? Note: This will "
-"ERASE ALL DATA present on this disk."
+"No partition table was found on the hard drive: %s.\n"
+"\n"
+"Do you want the installer to create a set of partitions for you?\n"
+"\n"
+"Note: This will ERASE ALL DATA present on this disk."
 msgstr ""
 "គ្មាន​តារាង​ភាគថាស​លើ​ថាស​រឹង​នោះ​ទេ។ តើ​អ្នក​ចង់​ឲ្យ​កម្មវិធី​ដំឡើង​នេះ​បង្កើត​សំណុំ​ភាគថាស​ឲ្យ​អ្នក?\r\n"
 "ចំណាំ៖ អំពើ​នេះ​នឹង​លប់​ទិន្នន័យ​អ្វី​នៅ​លើ​ថាស។"
 
-#: ../usr/lib/live-installer-3/partitioning.py:510
+#: ../usr/lib/live-installer-3/partitioning.py:569
 #, fuzzy
 msgid "Logical partition"
 msgstr "កែ​សម្រួល​ភាគ​ថាស"
 
-#: ../usr/lib/live-installer-3/partitioning.py:511
+#: ../usr/lib/live-installer-3/partitioning.py:570
 #, fuzzy
 msgid "Extended partition"
 msgstr "កែ​សម្រួល​ភាគ​ថាស"
 
-#: ../usr/lib/live-installer-3/partitioning.py:512
-#: ../usr/lib/live-installer-3/gtk_interface.py:570
+#: ../usr/lib/live-installer-3/partitioning.py:571
+#: ../usr/lib/live-installer-3/gtk_interface.py:597
 msgid "Free space"
 msgstr "ទំហំ​ទំនេរ"
 
-#: ../usr/lib/live-installer-3/partitioning.py:532
+#: ../usr/lib/live-installer-3/partitioning.py:599
+#: ../usr/lib/live-installer-3/gtk_interface.py:633
 #, fuzzy
 msgid "Encryption password"
 msgstr "សេចក្ដី​ពិពណ៌នា"
 
-#: ../usr/lib/live-installer-3/partitioning.py:533
+#: ../usr/lib/live-installer-3/partitioning.py:600
 #, fuzzy
 msgid "Password for the encrypted partition:"
 msgstr "សូម​ផ្ដល់​ពាក្យសម្ងាត់​សំរាប់​គណនី​អ្នកប្រើ​របស់​អ្នក"
 
-#: ../usr/lib/live-installer-3/partitioning.py:644
+#: ../usr/lib/live-installer-3/partitioning.py:749
 msgid "Edit partition"
 msgstr "កែ​សម្រួល​ភាគ​ថាស"
 
-#: ../usr/lib/live-installer-3/partitioning.py:651
-#: ../usr/lib/live-installer-3/gtk_interface.py:562
+#: ../usr/lib/live-installer-3/partitioning.py:756
+#: ../usr/lib/live-installer-3/gtk_interface.py:589
 msgid "Device"
 msgstr "ឧបករណ៍"
 
-#: ../usr/lib/live-installer-3/partitioning.py:652
-#: ../usr/lib/live-installer-3/gtk_interface.py:567
+#: ../usr/lib/live-installer-3/partitioning.py:757
+#: ../usr/lib/live-installer-3/gtk_interface.py:594
 #, fuzzy
 msgid "Format as"
 msgstr "ធ្វើ​ទ្រង់​ទ្រាយ​ជា​ ៖"
 
-#: ../usr/lib/live-installer-3/partitioning.py:653
-#: ../usr/lib/live-installer-3/gtk_interface.py:566
+#: ../usr/lib/live-installer-3/partitioning.py:758
+#: ../usr/lib/live-installer-3/gtk_interface.py:593
 msgid "Mount point"
 msgstr "ចំណុច​ម៉ោន"
 
-#: ../usr/lib/live-installer-3/partitioning.py:654
+#: ../usr/lib/live-installer-3/partitioning.py:759
 msgid "Label (optional)"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/partitioning.py:655
+#: ../usr/lib/live-installer-3/partitioning.py:760
 #, fuzzy
-msgid "Encryption/password"
-msgstr "សេចក្ដី​ពិពណ៌នា"
+msgid "Encrypt partition"
+msgstr "កំពុង​ធ្វើ​ទ្រង់ទ្រាយ %(partition)s ជា %(format)s..."
 
-#: ../usr/lib/live-installer-3/partitioning.py:742
-#: ../usr/lib/live-installer-3/partitioning.py:749
-#: ../usr/lib/live-installer-3/partitioning.py:778
-#: ../usr/lib/live-installer-3/partitioning.py:782
-#: ../usr/lib/live-installer-3/partitioning.py:788
+#: ../usr/lib/live-installer-3/partitioning.py:761
+#, fuzzy
+msgid "Password"
+msgstr "ពាក្យ​សម្ងាត់​ត្រូវ​គ្នា"
+
+#: ../usr/lib/live-installer-3/partitioning.py:851
+#: ../usr/lib/live-installer-3/partitioning.py:858
+#: ../usr/lib/live-installer-3/partitioning.py:925
+#: ../usr/lib/live-installer-3/gtk_interface.py:629
 #, fuzzy
 msgid "Encryption"
 msgstr "សេចក្ដី​ពិពណ៌នា"
 
-#: ../usr/lib/live-installer-3/partitioning.py:743
+#: ../usr/lib/live-installer-3/partitioning.py:852
 msgid ""
 "You chose to encrypt the root partition.\n"
 "\n"
@@ -150,25 +157,32 @@ msgid ""
 "Are you sure you want to continue?"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/partitioning.py:750
+#: ../usr/lib/live-installer-3/partitioning.py:859
 msgid ""
 "Encryption will erase all data from {}\n"
 "\n"
 "Are you sure you want to continue?"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/partitioning.py:779
+#: ../usr/lib/live-installer-3/partitioning.py:911
+#: ../usr/lib/live-installer-3/gtk_interface.py:758
 #, fuzzy
-msgid "Provide an encryption password for partition:"
+msgid "Please provide an encryption password."
 msgstr "សូម​ផ្ដល់​ពាក្យសម្ងាត់​សំរាប់​គណនី​អ្នកប្រើ​របស់​អ្នក"
 
-#: ../usr/lib/live-installer-3/partitioning.py:783
+#: ../usr/lib/live-installer-3/partitioning.py:914
+#: ../usr/lib/live-installer-3/gtk_interface.py:761
+#, fuzzy
+msgid "Your encryption passwords do not match."
+msgstr "ពាក្យសម្ងាត់​មិន​ផ្គូផ្គង​គ្នា"
+
+#: ../usr/lib/live-installer-3/partitioning.py:917
 msgid ""
 "You need to choose a format type\n"
 "for your encrypted partition (default: ext4):"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/partitioning.py:789
+#: ../usr/lib/live-installer-3/partitioning.py:922
 msgid "You need to choose a mount point for partition:"
 msgstr ""
 
@@ -208,30 +222,31 @@ msgid "Formatting %(partition)s as %(format)s ..."
 msgstr "កំពុង​ធ្វើ​ទ្រង់ទ្រាយ %(partition)s ជា %(format)s..."
 
 #: ../usr/lib/live-installer-3/installer.py:256
-#: ../usr/lib/live-installer-3/installer.py:270
+#: ../usr/lib/live-installer-3/installer.py:271
 #, python-format
 msgid "Mounting %(partition)s on %(mountpoint)s"
 msgstr "កំពុង​ម៉ោន %(partition)s លើ %(mountpoint)s..."
 
-#: ../usr/lib/live-installer-3/installer.py:286
+#: ../usr/lib/live-installer-3/installer.py:293
 #, python-format
 msgid ""
 "You must first manually mount your target filesystem(s) at %s to do a custom "
 "install!"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:289
+#: ../usr/lib/live-installer-3/installer.py:296
+#: ../usr/lib/live-installer-3/installer.py:398
 msgid "Not mounted"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:297
+#: ../usr/lib/live-installer-3/installer.py:304
 msgid ""
 "Something is wrong with the installation medium! This is usually caused by "
 "burning tools which are not compatible with {}. Please burn the ISO image to "
 "DVD/USB using a different tool."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:300
+#: ../usr/lib/live-installer-3/installer.py:307
 msgid "Base filesystem does not exist"
 msgstr ""
 
@@ -245,109 +260,114 @@ msgstr "កំពុង​ចម្លង %s"
 msgid "Entering the system ..."
 msgstr "កំពុង​ចូល​ប្រពន្ធ័​ថ្មី..."
 
-#: ../usr/lib/live-installer-3/installer.py:414
+#: ../usr/lib/live-installer-3/installer.py:395
+#, python-format
+msgid "%s/dev not mounted - exiting"
+msgstr ""
+
+#: ../usr/lib/live-installer-3/installer.py:418
 #, fuzzy
 msgid "Installing EFI packages..."
 msgstr "បាន​បញ្ចប់​ការ​ដំឡើង"
 
-#: ../usr/lib/live-installer-3/installer.py:438
+#: ../usr/lib/live-installer-3/installer.py:442
 #, fuzzy
 msgid "Installing drivers"
 msgstr "កំពុង​ដំឡើង​កម្មវិធី​ចាប់ផ្ដើម"
 
-#: ../usr/lib/live-installer-3/installer.py:474
-#, fuzzy
-msgid "Adding new user to the system"
-msgstr "កំពុង​បន្ថែម​អ្នក​ប្រើ​ទៅ​កាន់​ប្រពន្ធ័"
-
-#: ../usr/lib/live-installer-3/installer.py:523
+#: ../usr/lib/live-installer-3/installer.py:473
 #, fuzzy
 msgid "Writing filesystem mount information to /etc/fstab"
 msgstr "កំពុង​សរសេរ​​ព័ត៌មាន​ម៉ោន​ប្រព័ន្ធឯកសារ"
 
-#: ../usr/lib/live-installer-3/installer.py:662
+#: ../usr/lib/live-installer-3/installer.py:594
+#, fuzzy
+msgid "Adding new user to the system"
+msgstr "កំពុង​បន្ថែម​អ្នក​ប្រើ​ទៅ​កាន់​ប្រពន្ធ័"
+
+#: ../usr/lib/live-installer-3/installer.py:680
 msgid "Setting hostname"
 msgstr "កំពុង​កំណត់​ឈ្មោះ​ម៉ាស៊ីន"
 
-#: ../usr/lib/live-installer-3/installer.py:683
+#: ../usr/lib/live-installer-3/installer.py:701
 msgid "Setting locale"
 msgstr "កំពុង​កំណត់​មូលដ្ឋាន"
 
-#: ../usr/lib/live-installer-3/installer.py:699
+#: ../usr/lib/live-installer-3/installer.py:717
 msgid "Update apt cache"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:701
+#: ../usr/lib/live-installer-3/installer.py:719
 msgid "Update the new system"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:708
+#: ../usr/lib/live-installer-3/installer.py:726
 msgid "Localizing packages"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:726
+#: ../usr/lib/live-installer-3/installer.py:744
 msgid "Setting keyboard options"
 msgstr "កំពុង​កំណត់​ជម្រើស​ក្ដារចុច"
 
-#: ../usr/lib/live-installer-3/installer.py:788
+#: ../usr/lib/live-installer-3/installer.py:805
 #, fuzzy
 msgid "Configuring sensors"
 msgstr "កំពុង​កំណត់​រចនាសម្ព័ន្ធ​កម្មវិធី​ចាប់ផ្ដើម"
 
-#: ../usr/lib/live-installer-3/installer.py:794
+#: ../usr/lib/live-installer-3/installer.py:811
 msgid "Removing VirtualBox"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:800
+#: ../usr/lib/live-installer-3/installer.py:817
 msgid "Removing os-prober"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:806
+#: ../usr/lib/live-installer-3/installer.py:824
 msgid "Installing bootloader"
 msgstr "កំពុង​ដំឡើង​កម្មវិធី​ចាប់ផ្ដើម"
 
-#: ../usr/lib/live-installer-3/installer.py:828
+#: ../usr/lib/live-installer-3/installer.py:846
 msgid ""
 "The grub bootloader was not configured properly! You need to configure it "
 "manually."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:831
+#: ../usr/lib/live-installer-3/installer.py:849
 msgid "Grub not configured"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:857
+#: ../usr/lib/live-installer-3/installer.py:876
 msgid "Cleaning APT"
 msgstr "កំពុង​សំអាតAPT"
 
-#: ../usr/lib/live-installer-3/installer.py:889
+#: ../usr/lib/live-installer-3/installer.py:908
 msgid "Removing live configuration (packages)"
 msgstr "កំពុង​យកការ​កំណត់​រចនាសម្ព័ន្ធបន្តផ្ទាល់​ចេញ (កញ្ចប់)"
 
-#: ../usr/lib/live-installer-3/installer.py:931
+#: ../usr/lib/live-installer-3/installer.py:950
 #, fuzzy
 msgid "Unmounting partitions"
 msgstr "កំពុង​ធ្វើ​ទ្រង់ទ្រាយ %(partition)s ជា %(format)s..."
 
-#: ../usr/lib/live-installer-3/installer.py:953
-#: ../usr/lib/live-installer-3/gtk_interface.py:940
+#: ../usr/lib/live-installer-3/installer.py:967
+#: ../usr/lib/live-installer-3/gtk_interface.py:998
 msgid "Installation finished"
 msgstr "បាន​បញ្ចប់​ការ​ដំឡើង"
 
-#: ../usr/lib/live-installer-3/installer.py:957
+#: ../usr/lib/live-installer-3/installer.py:987
 msgid "Configuring bootloader"
 msgstr "កំពុង​កំណត់​រចនាសម្ព័ន្ធ​កម្មវិធី​ចាប់ផ្ដើម"
 
-#: ../usr/lib/live-installer-3/installer.py:964
+#: ../usr/lib/live-installer-3/installer.py:994
 msgid "Checking bootloader"
 msgstr "កំពុង​ពិនិត្យមើល​កម្មវិធី​ចាប់ផ្ដើម"
 
-#: ../usr/lib/live-installer-3/installer.py:979
+#: ../usr/lib/live-installer-3/installer.py:1009
 #, python-format
 msgid "No %s file found!"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:273
+#: ../usr/lib/live-installer-3/gtk_interface.py:285
 #, python-format
 msgid ""
 "Please, click on the network manager's system tray icon to connect to the "
@@ -358,262 +378,279 @@ msgid ""
 "packages cannot be localized."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:276
-#: ../usr/lib/live-installer-3/gtk_interface.py:361
+#: ../usr/lib/live-installer-3/gtk_interface.py:288
+#: ../usr/lib/live-installer-3/gtk_interface.py:373
 msgid "No internet connection"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:306
+#: ../usr/lib/live-installer-3/gtk_interface.py:318
 msgid "Quit?"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:306
+#: ../usr/lib/live-installer-3/gtk_interface.py:318
 msgid "Are you sure you want to quit the installer?"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:359
+#: ../usr/lib/live-installer-3/gtk_interface.py:371
 msgid ""
 "Cannot download and install additional locale packages: no internet "
 "connection\n"
 "Configuration will still be set to your selected language."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:510
-#: ../usr/lib/live-installer-3/gtk_interface.py:515
+#: ../usr/lib/live-installer-3/gtk_interface.py:537
+#: ../usr/lib/live-installer-3/gtk_interface.py:542
 #, fuzzy
 msgid "{} Installer"
 msgstr "កម្មវិធី​ដំឡើង %s"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:513
+#: ../usr/lib/live-installer-3/gtk_interface.py:540
 msgid "{} OEM Setup"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:529
-#: ../usr/lib/live-installer-3/gtk_interface.py:549
+#: ../usr/lib/live-installer-3/gtk_interface.py:556
+#: ../usr/lib/live-installer-3/gtk_interface.py:576
 msgid "Language"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:530
+#: ../usr/lib/live-installer-3/gtk_interface.py:557
 msgid "Timezone"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:531
+#: ../usr/lib/live-installer-3/gtk_interface.py:558
 msgid "Keyboard layout"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:532
+#: ../usr/lib/live-installer-3/gtk_interface.py:559
 msgid "User info"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:533
+#: ../usr/lib/live-installer-3/gtk_interface.py:560
 msgid "Partitioning"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:534
+#: ../usr/lib/live-installer-3/gtk_interface.py:561
 msgid "Please make sure you wish to manage partitions manually"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:535
+#: ../usr/lib/live-installer-3/gtk_interface.py:562
 msgid "Summary"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:536
+#: ../usr/lib/live-installer-3/gtk_interface.py:563
 #, fuzzy
 msgid "Installing {}..."
 msgstr "បាន​បញ្ចប់​ការ​ដំឡើង"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:537
+#: ../usr/lib/live-installer-3/gtk_interface.py:564
 msgid "Installation is paused: please finish the custom installation"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:544
-#: ../usr/lib/live-installer-3/gtk_interface.py:574
+#: ../usr/lib/live-installer-3/gtk_interface.py:571
+#: ../usr/lib/live-installer-3/gtk_interface.py:601
 msgid "Quit"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:545
-#: ../usr/lib/live-installer-3/gtk_interface.py:575
+#: ../usr/lib/live-installer-3/gtk_interface.py:572
+#: ../usr/lib/live-installer-3/gtk_interface.py:602
 msgid "Back"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:546
-#: ../usr/lib/live-installer-3/gtk_interface.py:576
-#: ../usr/lib/live-installer-3/gtk_interface.py:655
+#: ../usr/lib/live-installer-3/gtk_interface.py:573
+#: ../usr/lib/live-installer-3/gtk_interface.py:603
+#: ../usr/lib/live-installer-3/gtk_interface.py:694
 msgid "Forward"
 msgstr "ទៅមុខ"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:550
+#: ../usr/lib/live-installer-3/gtk_interface.py:577
 msgid "Country"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:553
+#: ../usr/lib/live-installer-3/gtk_interface.py:580
 msgid "Selected timezone:"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:554
+#: ../usr/lib/live-installer-3/gtk_interface.py:581
 msgid "Select timezone"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:557
+#: ../usr/lib/live-installer-3/gtk_interface.py:584
 msgid "Refresh"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:558
+#: ../usr/lib/live-installer-3/gtk_interface.py:585
 msgid "_Expert mode"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:559
+#: ../usr/lib/live-installer-3/gtk_interface.py:586
 #, fuzzy
 msgid "_Edit partitions"
 msgstr "កែសម្រួល​ភាគថាស"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:563
+#: ../usr/lib/live-installer-3/gtk_interface.py:590
 msgid "Grub"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:564
+#: ../usr/lib/live-installer-3/gtk_interface.py:591
 msgid "Type"
 msgstr "ប្រភេទ"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:565
+#: ../usr/lib/live-installer-3/gtk_interface.py:592
 msgid "Label"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:568
+#: ../usr/lib/live-installer-3/gtk_interface.py:595
 #, fuzzy
 msgid "Encrypt"
 msgstr "សេចក្ដី​ពិពណ៌នា"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:569
+#: ../usr/lib/live-installer-3/gtk_interface.py:596
 msgid "Size"
 msgstr "ទំហំ"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:579
+#: ../usr/lib/live-installer-3/gtk_interface.py:606
 msgid "Layout"
 msgstr "ប្លង់"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:580
+#: ../usr/lib/live-installer-3/gtk_interface.py:607
 msgid "Variant"
 msgstr "វ៉ារ្យង់"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:581
+#: ../usr/lib/live-installer-3/gtk_interface.py:608
 #, fuzzy
 msgid "Use this box to test your keyboard layout."
 msgstr "ប្រើ​ប្រអប់​នេះ​ដើម្បី​សាកល្បង​ប្លង់​ក្ដារចុច"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:582
+#: ../usr/lib/live-installer-3/gtk_interface.py:609
 msgid "Model"
 msgstr "ម៉ូដែល"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:585
+#: ../usr/lib/live-installer-3/gtk_interface.py:612
 msgid "Click to change your picture"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:586
+#: ../usr/lib/live-installer-3/gtk_interface.py:613
 msgid "Take a photo..."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:587
+#: ../usr/lib/live-installer-3/gtk_interface.py:614
 msgid "Browse for more pictures..."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:588
+#: ../usr/lib/live-installer-3/gtk_interface.py:615
 msgid "Your full name"
 msgstr "ឈ្មោះ​ពេញ​របស់​អ្នក"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:589
+#: ../usr/lib/live-installer-3/gtk_interface.py:616
 #, fuzzy
 msgid "This will be shown in the About Me application."
 msgstr "នេះ​នឹង​ត្រូវ​បាន​បង្ហាញ​ក្នុង​កម្មវិធី«អំពី​ខ្ញុំ»"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:590
+#: ../usr/lib/live-installer-3/gtk_interface.py:617
 msgid "Your username"
 msgstr "ឈ្មោះ​អ្នក​ប្រើ​របស់​អ្នក"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:591
+#: ../usr/lib/live-installer-3/gtk_interface.py:618
 msgid "This is the name you will use to log in to your computer."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:592
+#: ../usr/lib/live-installer-3/gtk_interface.py:619
 msgid "Your password"
 msgstr "ពាក្យ​សម្ងាត់​របស់​អ្នក"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:593
+#: ../usr/lib/live-installer-3/gtk_interface.py:620
 #, fuzzy
 msgid "Please enter your password twice to ensure it is correct."
 msgstr "សូម​បញ្ចូល​ពាក្យ​សម្ងាត់​របស់​អ្នក​ពីរ​ដង ដើម្បី​ប្រាកដ​ថា​ត្រឹមត្រូវ"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:594
+#: ../usr/lib/live-installer-3/gtk_interface.py:622
 msgid "Hostname"
 msgstr "ឈ្មោះ​ម៉ាស៊ីន​បម្រើ"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:595
+#: ../usr/lib/live-installer-3/gtk_interface.py:623
 #, fuzzy
 msgid "This hostname will be the computer's name on the network."
 msgstr "ឈ្មោះម៉ាស៊ីន​នេះ​នឹងជា​ឈ្មោះ​កុំព្យូទ័រ​នេះ​លើ​បណ្ដាញ"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:596
+#: ../usr/lib/live-installer-3/gtk_interface.py:624
 msgid "Automatic login"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:597
+#: ../usr/lib/live-installer-3/gtk_interface.py:625
 msgid ""
 "If enabled, the login screen is skipped when the system starts, and you are "
 "signed into your desktop session automatically."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:599
+#: ../usr/lib/live-installer-3/gtk_interface.py:627
 msgid "Log in automatically on system boot"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:600
+#: ../usr/lib/live-installer-3/gtk_interface.py:630
+#, fuzzy
+msgid "Encrypt home partition"
+msgstr "កំពុង​ធ្វើ​ទ្រង់ទ្រាយ %(partition)s ជា %(format)s..."
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:631
+msgid "If enabled, the home partition will be encrypted."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:634
+msgid ""
+"WARNING: when you loose your encryption password, you won't be able to "
+"recover your data! During boot you will be asked for your password to unlock "
+"the home partition. This is not necessarily the same password as your user "
+"login password."
+msgstr ""
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:639
 msgid "Your picture"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:601
+#: ../usr/lib/live-installer-3/gtk_interface.py:640
 msgid ""
 "This picture represents your user account. It is used in the login screen "
 "and a few other places."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:605
+#: ../usr/lib/live-installer-3/gtk_interface.py:644
 msgid ""
 "You have selected to manage your partitions manually, this feature is for "
 "ADVANCED USERS ONLY."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:607
+#: ../usr/lib/live-installer-3/gtk_interface.py:646
 #, python-format
 msgid "Before continuing, please mount your target filesystem(s) at %s."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:609
+#: ../usr/lib/live-installer-3/gtk_interface.py:648
 #, python-format
 msgid "Do NOT mount virtual devices such as /dev, /proc, /sys, etc on %s/."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:611
+#: ../usr/lib/live-installer-3/gtk_interface.py:650
 #, python-format
 msgid ""
 "During the install, you will be given time to chroot into %s and install any "
 "packages that will be needed to boot your new system."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:613
+#: ../usr/lib/live-installer-3/gtk_interface.py:652
 msgid "During the install, you will be required to write your own /etc/fstab."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:615
+#: ../usr/lib/live-installer-3/gtk_interface.py:654
 msgid ""
 "If you aren't sure what any of this means, please go back and deselect "
 "manual partition management."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:619
+#: ../usr/lib/live-installer-3/gtk_interface.py:658
 msgid "Please do the following and then click Forward to finish installation:"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:621
+#: ../usr/lib/live-installer-3/gtk_interface.py:660
 #, python-format
 msgid ""
 "Create %s/etc/fstab for the filesystems as they will be mounted in your new "
@@ -621,7 +658,7 @@ msgid ""
 "in the mount paths themselves)."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:623
+#: ../usr/lib/live-installer-3/gtk_interface.py:662
 #, python-format
 msgid ""
 "Install any packages that may be needed for first boot (mdadm, cryptsetup, "
@@ -629,7 +666,7 @@ msgid ""
 "aptitude installations."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:625
+#: ../usr/lib/live-installer-3/gtk_interface.py:664
 #, python-format
 msgid ""
 "Note that in order for update-initramfs to work properly in some cases (such "
@@ -637,80 +674,80 @@ msgid ""
 "block device name as they appear in %s/etc/fstab."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:627
+#: ../usr/lib/live-installer-3/gtk_interface.py:666
 #, python-format
 msgid ""
 "Double-check that your %s/etc/fstab is correct, matches what your new system "
 "will have at first boot, and matches what is currently mounted at %s."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:631
+#: ../usr/lib/live-installer-3/gtk_interface.py:670
 msgid "Overview"
 msgstr "ទិដ្ឋភាព​ទូទៅ"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:700
+#: ../usr/lib/live-installer-3/gtk_interface.py:739
 #, fuzzy
 msgid "Please provide your full name."
 msgstr "សូម​ផ្ដល់​ឈ្មោះ​ពេញ​របស់​អ្នក"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:703
+#: ../usr/lib/live-installer-3/gtk_interface.py:742
 #, fuzzy
 msgid "Please provide a username."
 msgstr "សូម​ផ្ដល់​ឈ្មោះ​អ្នកប្រើ​ថ្មី​មួយ"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:706
+#: ../usr/lib/live-installer-3/gtk_interface.py:745
 #, fuzzy
 msgid "Please provide a username without -oem."
 msgstr "សូម​ផ្ដល់​ឈ្មោះ​អ្នកប្រើ​ថ្មី​មួយ"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:709
+#: ../usr/lib/live-installer-3/gtk_interface.py:748
 #, fuzzy
 msgid "Please provide a password for your user account."
 msgstr "សូម​ផ្ដល់​ពាក្យសម្ងាត់​សំរាប់​គណនី​អ្នកប្រើ​របស់​អ្នក"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:712
+#: ../usr/lib/live-installer-3/gtk_interface.py:751
 #, fuzzy
 msgid "Your passwords do not match."
 msgstr "ពាក្យសម្ងាត់​មិន​ផ្គូផ្គង​គ្នា"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:715
+#: ../usr/lib/live-installer-3/gtk_interface.py:754
 #, fuzzy
 msgid "Please provide a hostname."
 msgstr "សូម​ផ្ដល់​ឈ្មោះ​ម៉ាស៊ីន"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:719
+#: ../usr/lib/live-installer-3/gtk_interface.py:765
 #, fuzzy
 msgid "Your username cannot start with a digit."
 msgstr "ឈ្មោះ​អ្នកប្រើ​របស់​អ្នក មិន​អាច‍មាន​តួអក្សរ​ស(ដក​ឃ្លា ថេប ។ល។)បាន​ទេ"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:722
+#: ../usr/lib/live-installer-3/gtk_interface.py:768
 msgid ""
 "The hostname is incorrect:\n"
 "not more than 63 characters between periods\n"
 "and not more than 255 characters total."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:727
+#: ../usr/lib/live-installer-3/gtk_interface.py:773
 msgid "Error"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:733
-#: ../usr/lib/live-installer-3/gtk_interface.py:825
-#: ../usr/lib/live-installer-3/gtk_interface.py:832
+#: ../usr/lib/live-installer-3/gtk_interface.py:790
+#: ../usr/lib/live-installer-3/gtk_interface.py:883
+#: ../usr/lib/live-installer-3/gtk_interface.py:890
 msgid "Apply"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:753
+#: ../usr/lib/live-installer-3/gtk_interface.py:810
 msgid ""
 "Please indicate a filesystem to format the root (/) partition with before "
 "proceeding."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:757
+#: ../usr/lib/live-installer-3/gtk_interface.py:814
 msgid "<b>Please select a root (/) partition.</b>"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:758
+#: ../usr/lib/live-installer-3/gtk_interface.py:815
 msgid ""
 "A root partition is needed to install the system.\n"
 "\n"
@@ -719,20 +756,20 @@ msgid ""
 " - Recommended filesystem format: ext4\n"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:775
+#: ../usr/lib/live-installer-3/gtk_interface.py:832
 msgid "The EFI partition is too small. It must be at least 100MB."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:780
-#: ../usr/lib/live-installer-3/gtk_interface.py:784
+#: ../usr/lib/live-installer-3/gtk_interface.py:837
+#: ../usr/lib/live-installer-3/gtk_interface.py:841
 msgid "The EFI partition must be formatted as vfat."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:789
+#: ../usr/lib/live-installer-3/gtk_interface.py:846
 msgid "<b>Please select an EFI partition.</b>"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:790
+#: ../usr/lib/live-installer-3/gtk_interface.py:847
 msgid ""
 "An EFI system partition is needed with the following requirements:\n"
 "\n"
@@ -746,128 +783,134 @@ msgid ""
 " "
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:934
+#: ../usr/lib/live-installer-3/gtk_interface.py:992
 msgid "Setup finished"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:935
-msgid "Setup is now complete. The system will now reboot."
+#: ../usr/lib/live-installer-3/gtk_interface.py:993
+msgid "Setup is complete. The system will now reboot."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:941
+#: ../usr/lib/live-installer-3/gtk_interface.py:999
 msgid ""
 "Installation is now complete. Do you want to restart your computer to use "
 "the new system?"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:989
+#: ../usr/lib/live-installer-3/gtk_interface.py:1047
 msgid "Localization"
 msgstr "មូលដ្ឋានីយកម្ម"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:990
+#: ../usr/lib/live-installer-3/gtk_interface.py:1048
 msgid "Language: "
 msgstr "ភាសា៖ "
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:991
+#: ../usr/lib/live-installer-3/gtk_interface.py:1049
 msgid "Timezone: "
 msgstr "តំបន់​ពេលវេលា៖ "
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:992
+#: ../usr/lib/live-installer-3/gtk_interface.py:1050
 msgid "Keyboard layout: "
 msgstr "ប្លង់​ក្ដារចុច៖ "
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:995
+#: ../usr/lib/live-installer-3/gtk_interface.py:1053
 msgid "User settings"
 msgstr "ការកំណត់​អ្នកប្រើ"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:996
+#: ../usr/lib/live-installer-3/gtk_interface.py:1054
 msgid "Real name: "
 msgstr "ឈ្មោះ​ពិត៖ "
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:997
+#: ../usr/lib/live-installer-3/gtk_interface.py:1055
 msgid "Username: "
 msgstr "ឈ្មោះ​អ្នក​ប្រើ​ ៖ "
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:998
+#: ../usr/lib/live-installer-3/gtk_interface.py:1056
 msgid "Automatic login: "
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:998
+#: ../usr/lib/live-installer-3/gtk_interface.py:1056
 msgid "enabled"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:998
+#: ../usr/lib/live-installer-3/gtk_interface.py:1056
 msgid "disabled"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:999
+#: ../usr/lib/live-installer-3/gtk_interface.py:1057
 msgid "System settings"
 msgstr "ការ​កំណត់​ប្រព័ន្ធ"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1000
+#: ../usr/lib/live-installer-3/gtk_interface.py:1058
 msgid "Hostname: "
 msgstr "ឈ្មោះ​ម៉ាស៊ីន៖ "
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1003
+#: ../usr/lib/live-installer-3/gtk_interface.py:1061
+#: ../usr/lib/live-installer-3/gtk_interface.py:1080
 msgid "Filesystem operations"
 msgstr "ប្រតិបត្តិការ​ប្រព័ន្ធ​ឯកសារ"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1004
+#: ../usr/lib/live-installer-3/gtk_interface.py:1062
 #, fuzzy
 msgid "Install Grub on {}"
 msgstr "ដំឡើង​កម្មវិធី​ចាប់ផ្ដើម​ក្នុង %s"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1004
+#: ../usr/lib/live-installer-3/gtk_interface.py:1062
 #, fuzzy
 msgid "Do not install Grub"
 msgstr "កុំ​ដំឡើង​កម្មវិធី​ចាប់ផ្ដើម"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1007
+#: ../usr/lib/live-installer-3/gtk_interface.py:1065
 #, python-format
 msgid "Use already-mounted %s."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1016
+#: ../usr/lib/live-installer-3/gtk_interface.py:1074
 msgid "set boot flag"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1017
+#: ../usr/lib/live-installer-3/gtk_interface.py:1075
 #, fuzzy
 msgid "Mount {}{} as {}"
 msgstr "ធ្វើ​ទ្រង់​ទ្រាយ​ជា​ ៖"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1020
+#: ../usr/lib/live-installer-3/gtk_interface.py:1081
+#, fuzzy
+msgid "Encrypt {}"
+msgstr "សេចក្ដី​ពិពណ៌នា"
+
+#: ../usr/lib/live-installer-3/gtk_interface.py:1083
 msgid "Encrypt {} and format as {}"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1022
+#: ../usr/lib/live-installer-3/gtk_interface.py:1085
 #, fuzzy
 msgid "Format {} as {}"
 msgstr "ធ្វើ​ទ្រង់​ទ្រាយ​ជា​ ៖"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1239
+#: ../usr/lib/live-installer-3/gtk_interface.py:1302
 msgid "Assign to /"
 msgstr "ផ្ដល់​ទៅ /"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1242
+#: ../usr/lib/live-installer-3/gtk_interface.py:1305
 msgid "Assign to /home"
 msgstr "ផ្ដល់​ទៅ /home"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1248
+#: ../usr/lib/live-installer-3/gtk_interface.py:1311
 msgid "Assign to /boot/efi"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1253
+#: ../usr/lib/live-installer-3/gtk_interface.py:1316
 msgid "Advanced..."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1267
-#: ../usr/lib/live-installer-3/gtk_interface.py:1293
+#: ../usr/lib/live-installer-3/gtk_interface.py:1330
+#: ../usr/lib/live-installer-3/gtk_interface.py:1356
 #, fuzzy
 msgid "Grub install"
 msgstr "កម្មវិធី​ដំឡើង %s"
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1268
+#: ../usr/lib/live-installer-3/gtk_interface.py:1331
 msgid ""
 "You chose to NOT install Grub on your system.\n"
 "Without a bootloader like Grub your system might not boot.\n"
@@ -875,7 +918,7 @@ msgid ""
 "Are you sure you want to continue?"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1294
+#: ../usr/lib/live-installer-3/gtk_interface.py:1357
 msgid ""
 "You chose to install Grub on a partition.\n"
 "It is recommended to install Grub on a disk instead of a partition.\n"
@@ -886,19 +929,19 @@ msgid ""
 "Are you sure you want to continue?"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1347
+#: ../usr/lib/live-installer-3/gtk_interface.py:1428
 msgid "Select image"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1374
+#: ../usr/lib/live-installer-3/gtk_interface.py:1455
 msgid "Unable to convert the image."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1405
+#: ../usr/lib/live-installer-3/gtk_interface.py:1486
 msgid "Take a photo"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/gtk_interface.py:1406
+#: ../usr/lib/live-installer-3/gtk_interface.py:1487
 msgid "Unable to take a photo."
 msgstr ""
 
@@ -916,6 +959,18 @@ msgstr "កម្មវិធី​ដំឡើង %s"
 #, fuzzy
 msgid "Install the operating system"
 msgstr "ប្រព័ន្ធ​ប្រតិបត្តិការ"
+
+#, fuzzy
+#~ msgid "Encryption/password"
+#~ msgstr "សេចក្ដី​ពិពណ៌នា"
+
+#, fuzzy
+#~ msgid "Provide an encryption password for partition:"
+#~ msgstr "សូម​ផ្ដល់​ពាក្យសម្ងាត់​សំរាប់​គណនី​អ្នកប្រើ​របស់​អ្នក"
+
+#, fuzzy
+#~ msgid "Please provide a password for the encryption of your home directory."
+#~ msgstr "សូម​ផ្ដល់​ពាក្យសម្ងាត់​សំរាប់​គណនី​អ្នកប្រើ​របស់​អ្នក"
 
 #, fuzzy
 #~ msgid "Calculating file indexes ..."
@@ -980,10 +1035,6 @@ msgstr "ប្រព័ន្ធ​ប្រតិបត្តិការ"
 #, fuzzy
 #~ msgid "Passwords do not match."
 #~ msgstr "ពាក្យសម្ងាត់​មិន​ផ្គូផ្គង​គ្នា"
-
-#, fuzzy
-#~ msgid "Passwords match."
-#~ msgstr "ពាក្យ​សម្ងាត់​ត្រូវ​គ្នា"
 
 #~ msgid "Indexing files to be copied.."
 #~ msgstr "កំពុង​ដាក់​លិបិក្រម​ឯកសារ​ដែល​នឹង​ត្រូវ​បាន​ចម្លង..."

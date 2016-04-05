@@ -1,5 +1,5 @@
-all = libthai0 fonts-thai-tlwg im-config fcitx fcitx-table-thai fcitx-sunpinyin fcitx-libpinyin fcitx-googlepinyin fcitx-frontend-gtk3 fcitx-ui-classic fcitx-config-gtk
-solydk32 = libthai0 fonts-thai-tlwg im-config fcitx fcitx-table-thai fcitx-sunpinyin fcitx-libpinyin fcitx-googlepinyin fcitx-frontend-gtk3 fcitx-ui-classic fcitx-config-gtk
-solydk64 = libthai0 fonts-thai-tlwg im-config fcitx fcitx-table-thai fcitx-sunpinyin fcitx-libpinyin fcitx-googlepinyin fcitx-frontend-gtk3 fcitx-ui-classic fcitx-config-gtk
-solydx32 = libthai0 fonts-thai-tlwg im-config fcitx fcitx-table-thai fcitx-sunpinyin fcitx-libpinyin fcitx-googlepinyin fcitx-frontend-gtk3 fcitx-ui-classic fcitx-config-gtk
-solydx64 = libthai0 fonts-thai-tlwg im-config fcitx fcitx-table-thai fcitx-sunpinyin fcitx-libpinyin fcitx-googlepinyin fcitx-frontend-gtk3 fcitx-ui-classic fcitx-config-gtk
+all = libthai0 fonts-thai-tlwg xfonts-thai im-config fcitx-table-thai fcitx-sunpinyin
+solydk32 = libthai0 fonts-thai-tlwg xfonts-thai im-config fcitx-table-thai fcitx-sunpinyin
+solydk64 = libthai0 fonts-thai-tlwg xfonts-thai im-config fcitx-table-thai fcitx-sunpinyin
+solydx32 = libthai0 fonts-thai-tlwg xfonts-thai im-config fcitx-table-thai fcitx-sunpinyin
+solydx64 = libthai0 fonts-thai-tlwg xfonts-thai im-config fcitx-table-thai fcitx-sunpinyin

@@ -40,6 +40,9 @@ RESOURCE_DIR = '/usr/share/live-installer-3/'
 
 EFI_MOUNT_POINT = '/boot/efi'
 SWAP_MOUNT_POINT = 'swap'
+ROOT_MOUNT_POINT = '/'
+HOME_MOUNT_POINT = '/home'
+BOOT_MOUNT_POINT = '/boot'
 
 
 with open(RESOURCE_DIR + 'disk-partitions.html') as f:
@@ -221,18 +224,62 @@ def get_partition_label(path):
         return ''
 
 
-def has_efi_installed(path):
-    shell_exec("mkdir -p %s.efi" % TMP_MOUNTPOINT)
-    shell_exec("umount --force %s" % path)
-    shell_exec("mount -t vfat %s %s.efi" % (path, TMP_MOUNTPOINT))
+def get_partition_path_from_string(partition_string):
+    if '/' in partition_string:
+        if path_exists(partition_string):
+            return partition_string
+        return ''
+    cmd = "blkid | grep {} | cut -d':' -f 1".format(partition_string)
+    try:
+        return getoutput(cmd).strip()
+    except:
+        return ''
+
+
+def do_mount(device, mountpoint, filesystem=None, options=None):
+    if get_mount_point(device, mountpoint) == '':
+        if options:
+            if options[0:1] != '-':
+                options = '-o ' + options
+        else:
+            options = ''
+        filesystem = '-t ' + filesystem if filesystem else ''
+        cmd = "mount {options} {filesystem} {device} {mountpoint}".format(**locals())
+        shell_exec(cmd)
+
+
+def do_unmount(mountpoint, force=False):
+    if get_mount_point(mountpoint) != '':
+        force_str = '-f' if force else ''
+        cmd = "umount {force_str} {mountpoint}".format(**locals())
+        shell_exec(cmd)
+
+
+def get_mount_point(device, mountpoint=None):
+    mountpoint = '| grep ' + mountpoint if mountpoint else ''
+    cmd = "mount | grep %s %s | awk '{print $1}' | head -1" % (device, mountpoint)
+    try:
+        return getoutput(cmd).strip()
+    except:
+        return ''
+
+
+def has_efi_installed(device_path):
+    mount_point = get_mount_point(device_path)
+    if mount_point == '':
+        mount_point = "%s.efi" % TMP_MOUNTPOINT
+        shell_exec("mkdir -p %s" % mount_point)
+        shell_exec("mount -t vfat %s %s" % (device_path, mount_point))
+        chk = get_mount_point(device_path)
     # From python 3.5 (Jessie has 3.4):
     #from glob import iglob
     #if iglob('/mnt/**/grubx*.efi', recursive=True):
     ret = False
-    for root, dirs, files in os.walk("/mnt"):
+    for root, dirs, files in os.walk(mount_point):
         if fnmatch.filter(files, 'grubx*.efi'):
             ret = True
-    shell_exec("umount --force %s" % path)
+    if TMP_MOUNTPOINT in mount_point:
+        shell_exec("umount -f %s 2>/dev/null" % device_path)
     return ret
 
 
@@ -322,7 +369,9 @@ class PartitionSetup(Gtk.TreeStore):
                 disk = parted.Disk(disk_device)
             except Exception:
                 dialog = QuestionDialog(_("Installation Tool"),
-                                        _("No partition table was found on the hard drive: {disk_description}. Do you want the installer to create a set of partitions for you? Note: This will ERASE ALL DATA present on this disk.").format(**locals()),
+                                        _("No partition table was found on the hard drive: %s.\n\n"
+                                          "Do you want the installer to create a set of partitions for you?\n\n"
+                                          "Note: This will ERASE ALL DATA present on this disk.") % disk_description,
                                         None,
                                         installer.window)
                 if not dialog:
@@ -356,7 +405,16 @@ class PartitionSetup(Gtk.TreeStore):
 
             # Needed to fix the 1% minimum Partition.size_percent
             sum_size_percent = sum(p.size_percent for p in partitions) + .5  # .5 for good measure
+
             for partition in partitions:
+                # Set root and home partition if not multi-boot
+                if installer.setup.root_partition != '':
+                    if partition.path == installer.setup.root_partition:
+                        partition.mount_as = ROOT_MOUNT_POINT
+                        partition.format_as = partition.type
+                    if partition.path == installer.setup.home_partition:
+                        partition.mount_as = HOME_MOUNT_POINT
+
                 # Save disk type (used later to decide if boot flag is allowed)
                 partition.disk_type = disk.type
 
@@ -491,8 +549,9 @@ class Partition(object):
         # if not normal partition with /dev/sdXN path, set its name to '' and discard it from model
         self.name = self.path if partition.number != -1 else ''
 
+        encrypted = is_encrypted(self.path)
         try:
-            if is_encrypted(self.path):
+            if encrypted:
                 self.type = 'luks'
             else:
                 self.type = partition.fileSystem.type
@@ -521,12 +580,20 @@ class Partition(object):
         if "swap" in self.type:
             self.mount_as = SWAP_MOUNT_POINT
         if "fat" in self.type and installer.setup.gptonefi:
-            if has_efi_installed(self.path) or 'boot' in self.flags:
+            if has_efi_installed(self.path):
                 self.mount_as = EFI_MOUNT_POINT
+                installer.setup.efi_partition = self.path
+            else:
+                if installer.setup.efi_partition is None:
+                    if 'boot' in self.flags:
+                        self.mount_as = EFI_MOUNT_POINT
+                elif 'boot' in self.flags:
+                    self.mount_as = BOOT_MOUNT_POINT
 
         # identify partition's label and used space
+        mount_point = ''
         try:
-            if is_encrypted(self.path):
+            if encrypted:
                 if not is_connected(self):
                     # Ask for password for encrypted partition and save it in enc_password
                     pwd = InputDialog(title=_("Encryption password"),
@@ -539,12 +606,16 @@ class Partition(object):
                     self.enc_status = get_status(mapped_drv)
                     self.path = mapped_drv
                     self.name = mapped_drv
-                    label = get_partition_label(mapped_drv)
-                    shell_exec('mount --read-only {} {}'.format(mapped_drv, TMP_MOUNTPOINT))
+                    part_label = get_partition_label(mapped_drv)
+                    self.mount_device(mapped_drv)
             else:
-                label = get_partition_label(self.path)
-                shell_exec('mount --read-only {} {}'.format(self.path, TMP_MOUNTPOINT))
+                part_label = get_partition_label(self.path)
+                if not "swap" in self.type:
+                    self.mount_device(self.path)
+
+            # Get size and other info
             size, free, self.used_percent, mount_point = getoutput("df {0} | grep '^{0}' | awk '{{print $2,$4,$5,$6}}' | tail -1".format(self.path)).split()
+
         except ValueError:
             print('WARNING: Partition {} or type {} failed to mount!'.format(self.path, self.type))
             self.os_fs_info, self.label, self.free_space, self.used_percent = ': '+self.type, '', '', 0
@@ -553,42 +624,67 @@ class Partition(object):
             self.size = to_human_readable(int(size) * 1024)  # for mountable partitions, more accurate than the getLength size above
             self.free_space = to_human_readable(int(free) * 1024)  # df returns values in 1024B-blocks by default
             self.used_percent = self.used_percent.strip('%') or 0
+
             # Had to rewrite label: multiple user errors
-            if label == '':
-                if path_exists(mount_point, 'etc/'):
-                    try:
-                        label = get_release_name(mount_point)
-                        if label == '':
-                            label = getoutput('uname -s')
-                    except:
-                        label = 'Unix'
-                elif path_exists(mount_point, 'Windows/servicing/Version'):
-                    label = 'Windows ' + {
-                        '6.4':'10',
-                        '6.3':'8.1',
-                        '6.2':'8',
-                        '6.1':'7',
-                        '6.0':'Vista',
-                        '5.2':'XP Pro x64',
-                        '5.1':'XP',
-                        '5.0':'2000',
-                        '4.9':'ME',
-                        '4.1':'98',
-                        '4.0':'95',
-                    }.get(getoutput('ls {}/Windows/servicing/Version'.format(mount_point))[:3], '')
-                elif path_exists(mount_point, 'Boot/BCD'):
-                    label = 'Windows recovery'
-                elif path_exists(mount_point, 'Windows/System32'):
-                    label = 'Windows'
-                elif path_exists(mount_point, 'System/Library/CoreServices/SystemVersion.plist'):
-                    label = 'Mac OS X'
-                elif self.mount_as == EFI_MOUNT_POINT:
-                    # Label on fat cannot be longer than 11 characters
-                    label = 'EFI'
-            self.label = label
-            self.os_fs_info = ': {0.label} ({0.type}; {0.size}; {0.free_space})'.format(self) if label else ': ' + self.type
+            label = ''
+            if path_exists(mount_point, 'etc/'):
+                try:
+                    label = get_release_name(mount_point)
+                    if label == '':
+                        label = getoutput('uname -s')
+
+                    # Save this partition as a partition to mount as root
+                    if installer.setup.root_partition is None:
+                        installer.setup.root_partition = self.path
+                    else:
+                        # Empty the root_partition and home_partition variables to show that this
+                        # is a multi-boot system and no root or home partition may be pre-mounted
+                        installer.setup.root_partition = ''
+                        installer.setup.home_partition = ''
+
+                    # Get home partition from fstab
+                    if installer.setup.root_partition != '':
+                        fstab = join(mount_point, 'etc/fstab')
+                        if path_exists(fstab):
+                            fstab_cont = ''
+                            with open(fstab, 'r') as f:
+                                fstab_cont = f.read()
+                            fstab_str = re.search("([a-z0-9-/]+)\s+%s" % HOME_MOUNT_POINT, fstab_cont).group(1)
+                            installer.setup.home_partition = get_partition_path_from_string(fstab_str)
+
+                except:
+                    label = 'Unix'
+            elif path_exists(mount_point, 'Windows/servicing/Version'):
+                label = 'Windows ' + {
+                    '6.4':'10',
+                    '6.3':'8.1',
+                    '6.2':'8',
+                    '6.1':'7',
+                    '6.0':'Vista',
+                    '5.2':'XP Pro x64',
+                    '5.1':'XP',
+                    '5.0':'2000',
+                    '4.9':'ME',
+                    '4.1':'98',
+                    '4.0':'95',
+                }.get(getoutput('ls {}/Windows/servicing/Version'.format(mount_point))[:3], '')
+            elif path_exists(mount_point, 'Boot/BCD'):
+                label = 'Windows recovery'
+            elif path_exists(mount_point, 'Windows/System32'):
+                label = 'Windows'
+            elif path_exists(mount_point, 'System/Library/CoreServices/SystemVersion.plist'):
+                label = 'Mac OS X'
+            elif self.mount_as == EFI_MOUNT_POINT:
+                # Label on fat cannot be longer than 11 characters
+                label = 'EFI'
+            if part_label == '':
+                self.label = label
+            else:
+                self.label = part_label
+            self.os_fs_info = ': {0.label} ({0.type}; {0.size}; {0.free_space})'.format(self) if self.label else ': ' + self.type
         finally:
-            shell_exec('umount -f ' + TMP_MOUNTPOINT + ' 2>/dev/null')
+            if TMP_MOUNTPOINT in mount_point:
+                shell_exec("umount -f %s" % self.path)
 
         self.html_name = self.name.split('/')[-1]
         self.html_description = self.label
@@ -619,6 +715,15 @@ class Partition(object):
             'luks': '#3E3B4D',
             parted.PARTITION_EXTENDED: '#a9a9a9',
         }.get(self.type, '#a9a9a9')
+
+    def mount_device(self, device_path):
+        # Check if mounted
+        mount_point = get_mount_point(device_path)
+        if mount_point == '':
+            mount_point = TMP_MOUNTPOINT
+            #print((">> mount %s ro on %s" % (device_path, mount_point)))
+            shell_exec('mount --read-only {} {}'.format(device_path, mount_point))
+        return mount_point
 
     def print_partition(self):
         print("Device: %s (%s), format as: %s, mount as: %s, encrypt: %s" % (self.path, self.label, self.format_as, self.mount_as, self.encrypt))
@@ -652,7 +757,8 @@ class PartitionDialog(object):
         self.go("label_use_as").set_markup(_("Format as"))
         self.go("label_mount_point").set_markup(_("Mount point"))
         self.go("label_label").set_markup(_("Label (optional)"))
-        self.go("lbl_encryption").set_label(_("Encryption/password"))
+        self.go("chk_encryption").set_label(_("Encrypt partition"))
+        self.go("label_encryption_pwd").set_label(_("Password"))
 
         # Show the selected partition path
         self.go("label_partition_value").set_label(self.partition.path)
@@ -660,11 +766,13 @@ class PartitionDialog(object):
         # Encryption
         self.go("chk_encryption").set_active(partition.encrypt)
         if partition.encrypt:
-            self.go("txt_encryption_passphrase").set_sensitive(True)
-            self.go("txt_encryption_passphrase").set_text(partition.enc_passphrase)
+            self.go("frm_partition_encryption").set_sensitive(True)
+            self.go("entry_encpass1").set_text(partition.enc_passphrase)
+            self.go("entry_encpass2").set_text(partition.enc_passphrase)
         else:
-            self.go("txt_encryption_passphrase").set_sensitive(False)
-            self.go("txt_encryption_passphrase").set_text('')
+            self.go("frm_partition_encryption").set_sensitive(False)
+            self.go("entry_encpass1").set_text('')
+            self.go("entry_encpass2").set_text('')
 
         # Label
         label_len = 16
@@ -702,8 +810,9 @@ class PartitionDialog(object):
             # Cannot encrypt
             self.go("chk_encryption").set_active(False)
             self.go("chk_encryption").set_sensitive(False)
-            self.go("txt_encryption_passphrase").set_sensitive(False)
-            self.go("txt_encryption_passphrase").set_text('')
+            self.go("frm_partition_encryption").set_sensitive(False)
+            self.go("entry_encpass1").set_text('')
+            self.go("entry_encpass2").set_text('')
         else:
             # Can encrypt
             self.loading = True
@@ -753,47 +862,74 @@ class PartitionDialog(object):
                 format_as = get_combox_value(self.cmb_use_as)
                 if not format_as:
                     select_combobox_value(self.cmb_use_as, 'ext4')
-                self.go("txt_encryption_passphrase").set_sensitive(True)
-                self.go("txt_encryption_passphrase").set_text(self.partition.enc_passphrase)
-                self.go("txt_encryption_passphrase").grab_focus()
+                self.go("frm_partition_encryption").set_sensitive(True)
+                self.go("entry_encpass1").set_text(self.partition.enc_passphrase)
+                self.go("entry_encpass2").set_text(self.partition.enc_passphrase)
+                self.go("entry_encpass1").grab_focus()
             else:
                 widget.set_active(False)
-                self.go("txt_encryption_passphrase").set_sensitive(False)
-                self.go("txt_encryption_passphrase").set_text("")
+                self.go("frm_partition_encryption").set_sensitive(False)
+                self.go("entry_encpass1").set_text("")
+                self.go("entry_encpass2").set_text("")
         else:
-            self.go("txt_encryption_passphrase").set_sensitive(False)
-            self.go("txt_encryption_passphrase").set_text("")
+            self.go("frm_partition_encryption").set_sensitive(False)
+            self.go("entry_encpass1").set_text("")
+            self.go("entry_encpass2").set_text("")
+
+    def on_entry_encpass1_changed(self, widget):
+        self.assign_enc_password()
+
+    def on_entry_encpass2_changed(self, widget):
+        self.assign_enc_password()
+
+    def assign_enc_password(self):
+        encryption_pwd1 = self.go("entry_encpass1").get_text()
+        encryption_pwd2 = self.go("entry_encpass2").get_text()
+        if(encryption_pwd1 == "" and encryption_pwd2 == ""):
+            self.go("image_enc_mismatch").hide()
+        else:
+            self.go("image_enc_mismatch").show()
+        if(encryption_pwd1 != encryption_pwd2):
+            self.go("image_enc_mismatch").set_from_stock(Gtk.STOCK_NO, Gtk.IconSize.BUTTON)
+        else:
+            self.go("image_enc_mismatch").set_from_stock(Gtk.STOCK_OK, Gtk.IconSize.BUTTON)
 
     def on_button_ok_clicked(self, widget):
         # Collect data
         format_as = get_combox_value(self.cmb_use_as)
         mount_as = get_combox_value(self.cmb_mount_point)
         encrypt = self.go("chk_encryption").get_active()
-        enc_passphrase = self.go("txt_encryption_passphrase").get_text().strip()
+        enc_passphrase1 = self.go("entry_encpass1").get_text().strip()
+        enc_passphrase2 = self.go("entry_encpass2").get_text().strip()
         label = self.txt_label.get_text().strip()
 
         # Check user input
         if encrypt:
-            if not enc_passphrase:
-                ErrorDialog(_("Encryption"),
-                            "{} {}".format(_("Provide an encryption password for partition:"), self.partition.path))
-                return True
-            if not format_as:
-                ErrorDialog(_("Encryption"),
-                              "{} {}".format(_("You need to choose a format type\n"
-                              "for your encrypted partition (default: ext4):"), self.partition.path))
+            errorFound = False
+            if enc_passphrase1 == "":
+                errorFound = True
+                errorMessage = _("Please provide an encryption password.")
+            elif enc_passphrase1 != enc_passphrase2:
+                errorFound = True
+                errorMessage = _("Your encryption passwords do not match.")
+            elif not format_as:
+                errorFound = True
+                errorMessage = "{} {}".format(_("You need to choose a format type\n"
+                               "for your encrypted partition (default: ext4):"), self.partition.path)
                 select_combobox_value(self.cmb_use_as, 'ext4')
-                return True
             if not mount_as:
-                ErrorDialog(_("Encryption"),
-                              "{} {}".format(_("You need to choose a mount point for partition:"), self.partition.path))
+                errorFound = True
+                errorMessage = "{} {}".format(_("You need to choose a mount point for partition:"), self.partition.path)
+
+            if errorFound:
+                ErrorDialog(_("Encryption"), errorMessage)
                 return True
         else:
             # For good measure
-            enc_passphrase = ''
+            enc_passphrase1 = ''
 
         # Save the settings and close the window
-        assign_mount_point(self.partition, mount_as, format_as, encrypt, enc_passphrase, label)
+        assign_mount_point(self.partition, mount_as, format_as, encrypt, enc_passphrase1, label)
         self.window.hide()
 
     def on_dialog_delete_event(self, widget, data=None):

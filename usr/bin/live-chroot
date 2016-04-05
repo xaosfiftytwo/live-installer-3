@@ -1,18 +1,18 @@
 #!/bin/bash
 
-# Be root to run this script
-if [ $UID -ne 0 ]; then
-  echo "Please, type root password..."
-  su -c "$0 $@"
-  exit
-fi
-
 partition=$1
 if [ -z $partition ] || [ ! -e $partition ]; then
   echo
   echo "An existing partition path is needed"
   echo "E.g.: live-chroot /dev/sda1"
   echo "List all partitions with: sudo fdisk -l"
+  exit
+fi
+
+# Be root to run this script
+if [ $UID -ne 0 ]; then
+  echo "Please, type root password..."
+  su -c "$0 $@"
   exit
 fi
 
@@ -34,11 +34,12 @@ fi
 # Mounting
 echo "Mounting $partition on $target"
 mount $partition $target
-mount --bind /dev/ $target/dev/
+mount --bind /dev/ $target/dev
 mount --bind /dev/shm $target/dev/shm
 mount --bind /dev/pts $target/dev/pts
-mount --bind /sys/ $target/sys/
-mount --bind /proc/ $target/proc/
+mount --bind /sys/ $target/sys
+mount --bind /sys/ $target/sys/fs/fuse/connections
+mount --bind /proc/ $target/proc
 
 # Chroot into dir
 echo "Chrooting into $target"
@@ -49,10 +50,10 @@ if $target_created; then
   # Unmount when done
   umount --force $target/dev/shm
   umount --force $target/dev/pts
-  umount --force $target/dev/
-  umount --force $target/sys/fs/fuse/connections/ 2>/dev/null
-  umount --force $target/sys/
-  umount --force $target/proc/
+  umount --force $target/dev
+  umount --force $target/sys/fs/fuse/connections 2>/dev/null
+  umount --force $target/sys
+  umount --force $target/proc
   umount --force $target
   # Remove temporary dir
   rmdir $target

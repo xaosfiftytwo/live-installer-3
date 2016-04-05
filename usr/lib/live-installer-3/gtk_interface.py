@@ -268,6 +268,18 @@ class InstallerWindow():
         # Show window
         self.window.show_all()
 
+        # Build the partitions
+        partitioning.build_partitions(self)
+
+        # Hide home partition encryption when not in OEM setup
+        if self.setup.oem_setup \
+           and self.setup.home_partition != '' \
+           and not self.setup.home_partition is None:
+            self.go("frm_home_encryption_2").set_sensitive(False)
+        else:
+            self.go("frm_home_encryption_1").hide()
+            self.go("frm_home_encryption_2").hide()
+
         # Let the user connect to the internet
         if not has_internet():
             msg = _("Please, click on the network manager's system tray icon to connect to the internet before you continue.\n\n"
@@ -364,6 +376,15 @@ class InstallerWindow():
         self.setup.autologin = checkbox.get_active()
         self.setup.print_setup()
 
+    def on_checkbutton_home_encryption_toggled(self, checkbox, data=None):
+        if checkbox.get_active():
+            self.go("frm_home_encryption_2").set_sensitive(True)
+            self.go("entry_encpass1").grab_focus()
+        else:
+            self.go("frm_home_encryption_2").set_sensitive(False)
+            self.go("entry_encpass1").set_text('')
+            self.go("entry_encpass2").set_text('')
+
 
     # ===================================================================
     # Main window keyboard signals
@@ -432,6 +453,12 @@ class InstallerWindow():
 
     def on_entry_userpass2_changed(self, widget):
         self.assign_password()
+
+    def on_entry_encpass1_changed(self, widget):
+        self.assign_enc_password()
+
+    def on_entry_encpass2_changed(self, widget):
+        self.assign_enc_password()
 
     # ===================================================================
     # Main window partitions signals
@@ -591,12 +618,24 @@ class InstallerWindow():
         self.go("label_username_help").set_markup("<span fgcolor='#3C3C3C'><sub><i>%s</i></sub></span>" % _("This is the name you will use to log in to your computer."))
         self.go("label_choose_pass").set_markup("<b>%s</b>" % _("Your password"))
         self.go("label_pass_help").set_markup("<span fgcolor='#3C3C3C'><sub><i>%s</i></sub></span>" % _("Please enter your password twice to ensure it is correct."))
+
         self.go("label_hostname").set_markup("<b>%s</b>" % _("Hostname"))
         self.go("label_hostname_help").set_markup("<span fgcolor='#3C3C3C'><sub><i>%s</i></sub></span>" % _("This hostname will be the computer's name on the network."))
         self.go("label_autologin").set_markup("<b>%s</b>" % _("Automatic login"))
         text = self.wrap_text(_("If enabled, the login screen is skipped when the system starts, and you are signed into your desktop session automatically."), 50)
         self.go("label_autologin_help").set_markup("<span fgcolor='#3C3C3C'><sub><i>%s</i></sub></span>" % text)
         self.go("checkbutton_autologin").set_label(_("Log in automatically on system boot"))
+
+        self.go("label_home_encryption").set_markup("<b>%s</b>" % _("Encryption"))
+        self.go("checkbutton_home_encryption").set_label(_("Encrypt home partition"))
+        text = self.wrap_text(_("If enabled, the home partition will be encrypted."), 50)
+        self.go("label_home_encryption_help1").set_markup("<span fgcolor='#3C3C3C'><sub><i>%s</i></sub></span>" % text)
+        self.go("label_home_encryption_pwd").set_markup("<b>%s</b>" % _("Encryption password"))
+        text = self.wrap_text(_("WARNING: when you loose your encryption password, you won't be able to recover your data! "
+                                "During boot you will be asked for your password to unlock the home partition. "
+                                "This is not necessarily the same password as your user login password."), 100)
+        self.go("label_home_encryption_help2").set_markup("<span fgcolor='#3C3C3C'><sub><i>%s</i></sub></span>" % text)
+
         self.go("face_label").set_markup("<b>%s</b>" % _("Your picture"))
         text = self.wrap_text(_("This picture represents your user account. It is used in the login screen and a few other places."), 50)
         self.go("face_description").set_markup("<span fgcolor='#3C3C3C'><sub><i>%s</i></sub></span>" % text)
@@ -713,6 +752,13 @@ class InstallerWindow():
                 elif(self.setup.hostname is None or self.setup.hostname == ""):
                     errorFound = True
                     errorMessage = _("Please provide a hostname.")
+                elif self.go("checkbutton_home_encryption").get_active():
+                    if(self.setup.oem_home_encryption_pwd1 is None or self.setup.oem_home_encryption_pwd1 == ""):
+                        errorFound = True
+                        errorMessage = _("Please provide an encryption password.")
+                    elif(self.setup.oem_home_encryption_pwd1 != self.setup.oem_home_encryption_pwd2):
+                        errorFound = True
+                        errorMessage = _("Your encryption passwords do not match.")
                 else:
                     if self.setup.username[0:1].isdigit():
                         errorFound = True
@@ -727,6 +773,17 @@ class InstallerWindow():
                     WarningDialog(_("Error"), errorMessage)
                 else:
                     if self.setup.oem_setup:
+                        # OEM Setup home partition encryption
+                        #print((">> Checkbutton encrypt home = {}".format(self.go("checkbutton_home_encryption").get_active())))
+                        if self.go("checkbutton_home_encryption").get_active():
+                            for partition in self.setup.partitions:
+                                #print((">> partition.mount_as= %s" % partition.mount_as))
+                                if partition.mount_as == partitioning.HOME_MOUNT_POINT:
+                                    partition.encrypt = True
+                                    partition.format_as = partition.type
+                                    partition.enc_passphrase = self.go("entry_encpass1").get_text().strip()
+                                    #print((">> Encrypt %s with pwd %s and format with %s" % (partition.path, partition.enc_passphrase, partition.format_as)))
+
                         self.activate_page(self.PAGE_OVERVIEW)
                         self.show_overview()
                         self.go("treeview_overview").expand_all()
@@ -738,7 +795,7 @@ class InstallerWindow():
                             self.setup.autologin = True
 
                         self.activate_page(self.PAGE_PARTITIONS)
-                        partitioning.build_partitions(self)
+                        #partitioning.build_partitions(self)
                         self.build_popup_menu()
             elif(sel == self.PAGE_PARTITIONS):
                 model = self.go("treeview_disks").get_model()
@@ -812,6 +869,7 @@ class InstallerWindow():
                         # or as root
                         elif partition.mount_as == "/":
                             bootRootPath = partition.path
+
                 # Is this partition mounted as /boot or /boot/efi AND hasn't got a boot flag: set boot flag
                 if bootMountPath is not None and bootFlagFoundPath != bootMountPath:
                     self.setup.boot_partition = bootMountPath
@@ -932,7 +990,7 @@ class InstallerWindow():
 
                 # Done: reboot
                 MessageDialog(_("Setup finished"),
-                              _("Setup is now complete. The system will now reboot."))
+                              _("Setup is complete. The system will now reboot."))
                 answer = True
 
             else:
@@ -1015,11 +1073,16 @@ class InstallerWindow():
                     if self.setup.boot_partition == p.path:
                         mount += " ({})".format(_("set boot flag"))
                     model.append(top, (bold(_("Mount {}{} as {}").format(p.path, label, mount)),))
-            for p in self.setup.partitions:
-                if p.encrypt:
+
+        for p in self.setup.partitions:
+            if p.encrypt:
+                if self.setup.oem_setup:
+                    top = model.append(None, (_("Filesystem operations"),))
+                    model.append(top, (bold(_("Encrypt {}").format(p.path)),))
+                else:
                     model.append(top, (bold(_("Encrypt {} and format as {}").format(p.path, p.format_as)),))
-                elif p.format_as:
-                    model.append(top, (bold(_("Format {} as {}").format(p.path, p.format_as)),))
+            elif p.format_as:
+                model.append(top, (bold(_("Format {} as {}").format(p.path, p.format_as)),))
 
     def update_progress(self, fail=False, done=False, pulse=False, total=0, current=0, message=""):
         # Needed to use idle_add to update the UI in python3
@@ -1340,6 +1403,24 @@ class InstallerWindow():
             #self.go("label_mismatch").set_label(_("Passwords do not match."))
         else:
             self.go("image_mismatch").set_from_stock(Gtk.STOCK_OK, Gtk.IconSize.BUTTON)
+            #self.go("label_mismatch").set_label(_("Passwords match."))
+        self.setup.print_setup()
+
+    def assign_enc_password(self):
+        ''' Someone typed into the entry '''
+        self.setup.oem_home_encryption_pwd1 = self.go("entry_encpass1").get_text()
+        self.setup.oem_home_encryption_pwd2 = self.go("entry_encpass2").get_text()
+        if(self.setup.oem_home_encryption_pwd1 == "" and self.setup.oem_home_encryption_pwd2 == ""):
+            self.go("image_enc_mismatch").hide()
+            #self.go("label_mismatch").hide()
+        else:
+            self.go("image_enc_mismatch").show()
+            #self.go("label_mismatch").show()
+        if(self.setup.oem_home_encryption_pwd1 != self.setup.oem_home_encryption_pwd2):
+            self.go("image_enc_mismatch").set_from_stock(Gtk.STOCK_NO, Gtk.IconSize.BUTTON)
+            #self.go("label_mismatch").set_label(_("Passwords do not match."))
+        else:
+            self.go("image_enc_mismatch").set_from_stock(Gtk.STOCK_OK, Gtk.IconSize.BUTTON)
             #self.go("label_mismatch").set_label(_("Passwords match."))
         self.setup.print_setup()
 

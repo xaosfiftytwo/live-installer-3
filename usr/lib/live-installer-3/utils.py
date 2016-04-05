@@ -36,7 +36,11 @@ def getoutput(command, always_as_list=False, logger=None):
         if logger is not None:
             for line in output:
                 logger.write(line, "utils.getoutput")
-    except:
+    except Exception as detail:
+        if logger is not None:
+            logger.write(detail, "utils.getoutput")
+        else:
+            print((detail))
         # Even if an error occurs, don't crash here
         output = ['']
     if len(output) == 1 and not always_as_list:
@@ -166,7 +170,7 @@ def is_amd64():
 
 def get_boot_parameters():
     parms = []
-    not_allowed = 'live,ram,single,ignore,config,components,memtest,iso,noprompt,noeject,noswap'.split(',')
+    not_allowed = 'live,ram,single,ignore,config,components,memtest,iso,noprompt,noeject,noswap,BOOT_IMAGE,root'.split(',')
     cmd = "cat /proc/cmdline"
     ret = getoutput(cmd).split(" ")
     for line in ret:
@@ -282,6 +286,16 @@ def has_power_supply():
     if out[0] != "":
         return True
     return False
+
+
+# Comment or uncomment a line with given pattern in a file
+def comment_line(file_path, pattern, comment=True):
+    if os.path.exists(file_path):
+        pattern = pattern.replace("/", "\/")
+        cmd = "sed -i '{p}/s/^/#/' {f}".format(p=pattern, f=file_path)
+        if not comment:
+            cmd = "sed -i '/^#.*{p}/s/^#//' {f}".format(p=pattern, f=file_path)
+        shell_exec(cmd)
 
 
 # Class to run commands in a thread and return the output in a queue
