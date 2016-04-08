@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-05 14:13+0200\n"
+"POT-Creation-Date: 2016-04-08 13:47+0200\n"
 "PO-Revision-Date: 2014-06-05 10:34+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: Thai <th@li.org>\n"
@@ -281,95 +281,95 @@ msgstr "กำลังติดตั้งลินุกซ์มินต์
 msgid "Installing drivers"
 msgstr "กำลังติดตั้ง bootloader"
 
-#: ../usr/lib/live-installer-3/installer.py:473
+#: ../usr/lib/live-installer-3/installer.py:477
 #, fuzzy
 msgid "Writing filesystem mount information to /etc/fstab"
 msgstr "กำลังเขียนข้อมูลการ mount ระบบไฟล์"
 
-#: ../usr/lib/live-installer-3/installer.py:594
+#: ../usr/lib/live-installer-3/installer.py:598
 #, fuzzy
 msgid "Adding new user to the system"
 msgstr "กำลังเพื่มผู้ใช้งานไปยังระบบ"
 
-#: ../usr/lib/live-installer-3/installer.py:680
+#: ../usr/lib/live-installer-3/installer.py:679
 msgid "Setting hostname"
 msgstr "ตั้งค่าโฮสต์เนม"
 
-#: ../usr/lib/live-installer-3/installer.py:701
+#: ../usr/lib/live-installer-3/installer.py:700
 msgid "Setting locale"
 msgstr "กำลังตั้งค่าตำแหน่งที่ตั้ง"
 
-#: ../usr/lib/live-installer-3/installer.py:717
+#: ../usr/lib/live-installer-3/installer.py:716
 msgid "Update apt cache"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:719
+#: ../usr/lib/live-installer-3/installer.py:718
 msgid "Update the new system"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:726
+#: ../usr/lib/live-installer-3/installer.py:725
 msgid "Localizing packages"
 msgstr "แพกเกจความเป็นท้องถิ่น"
 
-#: ../usr/lib/live-installer-3/installer.py:744
+#: ../usr/lib/live-installer-3/installer.py:743
 msgid "Setting keyboard options"
 msgstr "กำลังตั้งค่าคีย์บอร์ด"
 
-#: ../usr/lib/live-installer-3/installer.py:805
+#: ../usr/lib/live-installer-3/installer.py:804
 #, fuzzy
 msgid "Configuring sensors"
 msgstr "ตั้งค่า bootloader"
 
-#: ../usr/lib/live-installer-3/installer.py:811
+#: ../usr/lib/live-installer-3/installer.py:810
 msgid "Removing VirtualBox"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:817
+#: ../usr/lib/live-installer-3/installer.py:816
 msgid "Removing os-prober"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:824
+#: ../usr/lib/live-installer-3/installer.py:823
 msgid "Installing bootloader"
 msgstr "กำลังติดตั้ง bootloader"
 
-#: ../usr/lib/live-installer-3/installer.py:846
+#: ../usr/lib/live-installer-3/installer.py:845
 #, fuzzy
 msgid ""
 "The grub bootloader was not configured properly! You need to configure it "
 "manually."
 msgstr "คำเตือน : grub bootloader ไม่ได้ตั้งค่าอย่างถูกต้อง คุณต้องตั้งค่ามันด้วยตนเอง"
 
-#: ../usr/lib/live-installer-3/installer.py:849
+#: ../usr/lib/live-installer-3/installer.py:848
 msgid "Grub not configured"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:876
+#: ../usr/lib/live-installer-3/installer.py:875
 msgid "Cleaning APT"
 msgstr "ล้าง APT"
 
-#: ../usr/lib/live-installer-3/installer.py:908
+#: ../usr/lib/live-installer-3/installer.py:907
 msgid "Removing live configuration (packages)"
 msgstr "กำลังลบการตั้งค่าแบบ live (แพคเกจ)"
 
-#: ../usr/lib/live-installer-3/installer.py:950
+#: ../usr/lib/live-installer-3/installer.py:949
 #, fuzzy
 msgid "Unmounting partitions"
 msgstr "กำลังฟอร์แมต %(partition)s เป็น %(format)s..."
 
-#: ../usr/lib/live-installer-3/installer.py:967
+#: ../usr/lib/live-installer-3/installer.py:966
 #: ../usr/lib/live-installer-3/gtk_interface.py:998
 msgid "Installation finished"
 msgstr "การติดตั้งเสร็จสิ้น"
 
-#: ../usr/lib/live-installer-3/installer.py:987
+#: ../usr/lib/live-installer-3/installer.py:986
 msgid "Configuring bootloader"
 msgstr "ตั้งค่า bootloader"
 
-#: ../usr/lib/live-installer-3/installer.py:994
+#: ../usr/lib/live-installer-3/installer.py:993
 msgid "Checking bootloader"
 msgstr "กำลังตรวจสอบ bootloader"
 
-#: ../usr/lib/live-installer-3/installer.py:1009
+#: ../usr/lib/live-installer-3/installer.py:1008
 #, python-format
 msgid "No %s file found!"
 msgstr ""

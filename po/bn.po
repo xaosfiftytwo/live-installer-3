@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-05 14:13+0200\n"
+"POT-Creation-Date: 2016-04-08 13:47+0200\n"
 "PO-Revision-Date: 2013-05-01 06:38+0000\n"
 "Last-Translator: Iftekhar Mohammad <Unknown>\n"
 "Language-Team: Bengali <bn@li.org>\n"
@@ -276,58 +276,58 @@ msgstr "ইন্সটল প্রক্রিয়া সম্পন্ন হ
 msgid "Installing drivers"
 msgstr "বুটলোডার ইন্সটল করা হচ্ছে"
 
-#: ../usr/lib/live-installer-3/installer.py:473
+#: ../usr/lib/live-installer-3/installer.py:477
 #, fuzzy
 msgid "Writing filesystem mount information to /etc/fstab"
 msgstr "ফাইলসিস্টেমের মাউন্ট তথ্য লেখা হচ্ছে"
 
-#: ../usr/lib/live-installer-3/installer.py:594
+#: ../usr/lib/live-installer-3/installer.py:598
 #, fuzzy
 msgid "Adding new user to the system"
 msgstr "সিস্টেমে ইউজারকে যুক্ত করা হচ্ছে"
 
-#: ../usr/lib/live-installer-3/installer.py:680
+#: ../usr/lib/live-installer-3/installer.py:679
 msgid "Setting hostname"
 msgstr "হোস্টনেম নির্ধারণ করা হচ্ছে"
 
-#: ../usr/lib/live-installer-3/installer.py:701
+#: ../usr/lib/live-installer-3/installer.py:700
 msgid "Setting locale"
 msgstr "অবস্থান নির্ধারিত হচ্ছে"
 
-#: ../usr/lib/live-installer-3/installer.py:717
+#: ../usr/lib/live-installer-3/installer.py:716
 msgid "Update apt cache"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:719
+#: ../usr/lib/live-installer-3/installer.py:718
 msgid "Update the new system"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:726
+#: ../usr/lib/live-installer-3/installer.py:725
 msgid "Localizing packages"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:744
+#: ../usr/lib/live-installer-3/installer.py:743
 msgid "Setting keyboard options"
 msgstr "কী-বোর্ড বাছাই করা হচ্ছে"
 
-#: ../usr/lib/live-installer-3/installer.py:805
+#: ../usr/lib/live-installer-3/installer.py:804
 #, fuzzy
 msgid "Configuring sensors"
 msgstr "বুটলোডআর কনফিগার করা হচ্ছে"
 
-#: ../usr/lib/live-installer-3/installer.py:811
+#: ../usr/lib/live-installer-3/installer.py:810
 msgid "Removing VirtualBox"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:817
+#: ../usr/lib/live-installer-3/installer.py:816
 msgid "Removing os-prober"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:824
+#: ../usr/lib/live-installer-3/installer.py:823
 msgid "Installing bootloader"
 msgstr "বুটলোডার ইন্সটল করা হচ্ছে"
 
-#: ../usr/lib/live-installer-3/installer.py:846
+#: ../usr/lib/live-installer-3/installer.py:845
 #, fuzzy
 msgid ""
 "The grub bootloader was not configured properly! You need to configure it "
@@ -336,37 +336,37 @@ msgstr ""
 "সতর্কবার্তাঃ গ্রুব বুটলোডআরটি সঠিকভাবে কনফিগার করা হয় নি! আপনাকে এটি নিজের থেকে "
 "কনফিগার করতে হবে।"
 
-#: ../usr/lib/live-installer-3/installer.py:849
+#: ../usr/lib/live-installer-3/installer.py:848
 msgid "Grub not configured"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:876
+#: ../usr/lib/live-installer-3/installer.py:875
 msgid "Cleaning APT"
 msgstr "APT পরিষ্কার করা হচ্ছে"
 
-#: ../usr/lib/live-installer-3/installer.py:908
+#: ../usr/lib/live-installer-3/installer.py:907
 msgid "Removing live configuration (packages)"
 msgstr "লাইভ কনফিগারেশন (প্যাকেজসমূহ) সরিয়ে নেয়া হচ্ছে"
 
-#: ../usr/lib/live-installer-3/installer.py:950
+#: ../usr/lib/live-installer-3/installer.py:949
 #, fuzzy
 msgid "Unmounting partitions"
 msgstr "%(partition)s পার্টিশনটিকে %(format)s হিসেবে ফরম্যাট করা হচ্ছে..."
 
-#: ../usr/lib/live-installer-3/installer.py:967
+#: ../usr/lib/live-installer-3/installer.py:966
 #: ../usr/lib/live-installer-3/gtk_interface.py:998
 msgid "Installation finished"
 msgstr "ইন্সটল প্রক্রিয়া সম্পন্ন হয়েছে"
 
-#: ../usr/lib/live-installer-3/installer.py:987
+#: ../usr/lib/live-installer-3/installer.py:986
 msgid "Configuring bootloader"
 msgstr "বুটলোডআর কনফিগার করা হচ্ছে"
 
-#: ../usr/lib/live-installer-3/installer.py:994
+#: ../usr/lib/live-installer-3/installer.py:993
 msgid "Checking bootloader"
 msgstr "বুটলোডআর পরীক্ষা করা হচ্ছে"
 
-#: ../usr/lib/live-installer-3/installer.py:1009
+#: ../usr/lib/live-installer-3/installer.py:1008
 #, python-format
 msgid "No %s file found!"
 msgstr ""

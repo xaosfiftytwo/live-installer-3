@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-05 14:13+0200\n"
+"POT-Creation-Date: 2016-04-08 13:47+0200\n"
 "PO-Revision-Date: 2011-11-11 02:32+0000\n"
 "Last-Translator: Praveen Illa <mail2ipn@gmail.com>\n"
 "Language-Team: Telugu <te@li.org>\n"
@@ -275,95 +275,95 @@ msgstr "స్థాపన ప్రక్రియ పూర్తిచేయ�
 msgid "Installing drivers"
 msgstr "బూట్ లోడర్ స్థాపించబడుతోంది"
 
-#: ../usr/lib/live-installer-3/installer.py:473
+#: ../usr/lib/live-installer-3/installer.py:477
 #, fuzzy
 msgid "Writing filesystem mount information to /etc/fstab"
 msgstr "దస్త్ర వ్యవస్థ యొక్క మౌంట్ సమాచారం వ్రాయబడుతోంది"
 
-#: ../usr/lib/live-installer-3/installer.py:594
+#: ../usr/lib/live-installer-3/installer.py:598
 #, fuzzy
 msgid "Adding new user to the system"
 msgstr "వ్యవస్థ లోకి వాడుకదారుని చేర్చబడుతోంది"
 
-#: ../usr/lib/live-installer-3/installer.py:680
+#: ../usr/lib/live-installer-3/installer.py:679
 msgid "Setting hostname"
 msgstr "హోస్టుపేరు అమర్చబడుతోంది"
 
-#: ../usr/lib/live-installer-3/installer.py:701
+#: ../usr/lib/live-installer-3/installer.py:700
 msgid "Setting locale"
 msgstr "భాషను అమర్చుతున్నది"
 
-#: ../usr/lib/live-installer-3/installer.py:717
+#: ../usr/lib/live-installer-3/installer.py:716
 msgid "Update apt cache"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:719
+#: ../usr/lib/live-installer-3/installer.py:718
 msgid "Update the new system"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:726
+#: ../usr/lib/live-installer-3/installer.py:725
 msgid "Localizing packages"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:744
+#: ../usr/lib/live-installer-3/installer.py:743
 msgid "Setting keyboard options"
 msgstr "కీ బోర్డు ఐచ్ఛికాలను అమర్చుతున్నది"
 
-#: ../usr/lib/live-installer-3/installer.py:805
+#: ../usr/lib/live-installer-3/installer.py:804
 #, fuzzy
 msgid "Configuring sensors"
 msgstr "బూట్‌లోడర్‌ని స్వరూపిస్తున్నది"
 
-#: ../usr/lib/live-installer-3/installer.py:811
+#: ../usr/lib/live-installer-3/installer.py:810
 msgid "Removing VirtualBox"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:817
+#: ../usr/lib/live-installer-3/installer.py:816
 msgid "Removing os-prober"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:824
+#: ../usr/lib/live-installer-3/installer.py:823
 msgid "Installing bootloader"
 msgstr "బూట్ లోడర్ స్థాపించబడుతోంది"
 
-#: ../usr/lib/live-installer-3/installer.py:846
+#: ../usr/lib/live-installer-3/installer.py:845
 #, fuzzy
 msgid ""
 "The grub bootloader was not configured properly! You need to configure it "
 "manually."
 msgstr "హెచ్ఛరిక: grub బూట్‌లోడర్‌ సరిగా స్వరూపించబడలేదు! మీరు దానిని మానవీయంగా స్వరూపించాలి."
 
-#: ../usr/lib/live-installer-3/installer.py:849
+#: ../usr/lib/live-installer-3/installer.py:848
 msgid "Grub not configured"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:876
+#: ../usr/lib/live-installer-3/installer.py:875
 msgid "Cleaning APT"
 msgstr "APTని శుభ్రపరుస్తున్నది"
 
-#: ../usr/lib/live-installer-3/installer.py:908
+#: ../usr/lib/live-installer-3/installer.py:907
 msgid "Removing live configuration (packages)"
 msgstr "ప్యాకేజిల  ప్రత్యక్ష కన్ఫిగరేషన్ తీసివేయబడుతోంది"
 
-#: ../usr/lib/live-installer-3/installer.py:950
+#: ../usr/lib/live-installer-3/installer.py:949
 #, fuzzy
 msgid "Unmounting partitions"
 msgstr "%(partition)s లను %(format)s ఫార్మేటుచేస్తున్నది..."
 
-#: ../usr/lib/live-installer-3/installer.py:967
+#: ../usr/lib/live-installer-3/installer.py:966
 #: ../usr/lib/live-installer-3/gtk_interface.py:998
 msgid "Installation finished"
 msgstr "స్థాపన ప్రక్రియ పూర్తిచేయబడింది"
 
-#: ../usr/lib/live-installer-3/installer.py:987
+#: ../usr/lib/live-installer-3/installer.py:986
 msgid "Configuring bootloader"
 msgstr "బూట్‌లోడర్‌ని స్వరూపిస్తున్నది"
 
-#: ../usr/lib/live-installer-3/installer.py:994
+#: ../usr/lib/live-installer-3/installer.py:993
 msgid "Checking bootloader"
 msgstr "బూట్‌లోడర్‌ని తనిఖీ చేస్తున్నది"
 
-#: ../usr/lib/live-installer-3/installer.py:1009
+#: ../usr/lib/live-installer-3/installer.py:1008
 #, python-format
 msgid "No %s file found!"
 msgstr ""

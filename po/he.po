@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-05 14:13+0200\n"
+"POT-Creation-Date: 2016-04-08 13:47+0200\n"
 "PO-Revision-Date: 2014-05-01 17:44+0000\n"
 "Last-Translator: levi <levi0x0x@gmail.com>\n"
 "Language-Team: Hebrew <he@li.org>\n"
@@ -276,95 +276,95 @@ msgstr "מתקין את לינוקס מינט..."
 msgid "Installing drivers"
 msgstr "מתקין את bootloader"
 
-#: ../usr/lib/live-installer-3/installer.py:473
+#: ../usr/lib/live-installer-3/installer.py:477
 #, fuzzy
 msgid "Writing filesystem mount information to /etc/fstab"
 msgstr "כותב את עיגוני מערכת הקבצים"
 
-#: ../usr/lib/live-installer-3/installer.py:594
+#: ../usr/lib/live-installer-3/installer.py:598
 #, fuzzy
 msgid "Adding new user to the system"
 msgstr "מוסיף משתמש למערכת"
 
-#: ../usr/lib/live-installer-3/installer.py:680
+#: ../usr/lib/live-installer-3/installer.py:679
 msgid "Setting hostname"
 msgstr "הגדרת כינוי המחשב"
 
-#: ../usr/lib/live-installer-3/installer.py:701
+#: ../usr/lib/live-installer-3/installer.py:700
 msgid "Setting locale"
 msgstr "הגדרת מיקום"
 
-#: ../usr/lib/live-installer-3/installer.py:717
+#: ../usr/lib/live-installer-3/installer.py:716
 msgid "Update apt cache"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:719
+#: ../usr/lib/live-installer-3/installer.py:718
 msgid "Update the new system"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:726
+#: ../usr/lib/live-installer-3/installer.py:725
 msgid "Localizing packages"
 msgstr "חבילות איזורים"
 
-#: ../usr/lib/live-installer-3/installer.py:744
+#: ../usr/lib/live-installer-3/installer.py:743
 msgid "Setting keyboard options"
 msgstr "הגדרות מקלדת"
 
-#: ../usr/lib/live-installer-3/installer.py:805
+#: ../usr/lib/live-installer-3/installer.py:804
 #, fuzzy
 msgid "Configuring sensors"
 msgstr "מגדיר את מנהל האיתחול"
 
-#: ../usr/lib/live-installer-3/installer.py:811
+#: ../usr/lib/live-installer-3/installer.py:810
 msgid "Removing VirtualBox"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:817
+#: ../usr/lib/live-installer-3/installer.py:816
 msgid "Removing os-prober"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:824
+#: ../usr/lib/live-installer-3/installer.py:823
 msgid "Installing bootloader"
 msgstr "מתקין את bootloader"
 
-#: ../usr/lib/live-installer-3/installer.py:846
+#: ../usr/lib/live-installer-3/installer.py:845
 #, fuzzy
 msgid ""
 "The grub bootloader was not configured properly! You need to configure it "
 "manually."
 msgstr "אזהרה: grub bootloader לא הוגדר כראוי! אתה צריך להגדיר אותו ידנית."
 
-#: ../usr/lib/live-installer-3/installer.py:849
+#: ../usr/lib/live-installer-3/installer.py:848
 msgid "Grub not configured"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:876
+#: ../usr/lib/live-installer-3/installer.py:875
 msgid "Cleaning APT"
 msgstr "מנקה APT"
 
-#: ../usr/lib/live-installer-3/installer.py:908
+#: ../usr/lib/live-installer-3/installer.py:907
 msgid "Removing live configuration (packages)"
 msgstr "מסיר קונפיגירצייה חיה (חבילות)"
 
-#: ../usr/lib/live-installer-3/installer.py:950
+#: ../usr/lib/live-installer-3/installer.py:949
 #, fuzzy
 msgid "Unmounting partitions"
 msgstr "מתבצע פרמוט של %(partition)s ל־%(format)s..."
 
-#: ../usr/lib/live-installer-3/installer.py:967
+#: ../usr/lib/live-installer-3/installer.py:966
 #: ../usr/lib/live-installer-3/gtk_interface.py:998
 msgid "Installation finished"
 msgstr "ההתקנה הסתיימה"
 
-#: ../usr/lib/live-installer-3/installer.py:987
+#: ../usr/lib/live-installer-3/installer.py:986
 msgid "Configuring bootloader"
 msgstr "מגדיר את מנהל האיתחול"
 
-#: ../usr/lib/live-installer-3/installer.py:994
+#: ../usr/lib/live-installer-3/installer.py:993
 msgid "Checking bootloader"
 msgstr "בודק את מנהל האיתחול"
 
-#: ../usr/lib/live-installer-3/installer.py:1009
+#: ../usr/lib/live-installer-3/installer.py:1008
 #, python-format
 msgid "No %s file found!"
 msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-05 14:13+0200\n"
+"POT-Creation-Date: 2016-04-08 13:47+0200\n"
 "PO-Revision-Date: 2012-06-03 19:42+0000\n"
 "Last-Translator: Hoysala T'swamy <jrandomnerd@gmail.com>\n"
 "Language-Team: Kannada <kn@li.org>\n"
@@ -276,58 +276,58 @@ msgstr "ಸಂಸ್ಥಾಪನೆ ಪೂರ್ಣವಾಗಿದೆ"
 msgid "Installing drivers"
 msgstr "ಬೂಟ್ ಲೋಡರ್ ಸಂಸ್ಥಾಪಿಸುತ್ತಿದೆ"
 
-#: ../usr/lib/live-installer-3/installer.py:473
+#: ../usr/lib/live-installer-3/installer.py:477
 #, fuzzy
 msgid "Writing filesystem mount information to /etc/fstab"
 msgstr "ಕಡತವ್ಯವಸ್ಥೆ ಆರೋಹಣ ಮಾಹಿತಿಯನ್ನು ಬರೆಯುತ್ತಿದೆ"
 
-#: ../usr/lib/live-installer-3/installer.py:594
+#: ../usr/lib/live-installer-3/installer.py:598
 #, fuzzy
 msgid "Adding new user to the system"
 msgstr "ವ್ಯವಸ್ಥೆಗೆ ಬಳಕೆದಾರರನ್ನು ಸೇರಿಸುತ್ತಿದೆ"
 
-#: ../usr/lib/live-installer-3/installer.py:680
+#: ../usr/lib/live-installer-3/installer.py:679
 msgid "Setting hostname"
 msgstr "ಆತಿಥೇಯ ಹೆಸರು ನಿಗದಿಪಡಿಸುತ್ತಿದೆ"
 
-#: ../usr/lib/live-installer-3/installer.py:701
+#: ../usr/lib/live-installer-3/installer.py:700
 msgid "Setting locale"
 msgstr "ಸ್ಥಳೀಯತೆ ನಿಗದಿಪಡಿಸುತ್ತಿದೆ"
 
-#: ../usr/lib/live-installer-3/installer.py:717
+#: ../usr/lib/live-installer-3/installer.py:716
 msgid "Update apt cache"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:719
+#: ../usr/lib/live-installer-3/installer.py:718
 msgid "Update the new system"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:726
+#: ../usr/lib/live-installer-3/installer.py:725
 msgid "Localizing packages"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:744
+#: ../usr/lib/live-installer-3/installer.py:743
 msgid "Setting keyboard options"
 msgstr "ಕೀಲಿಮಣೆ ಆಯ್ಕೆಗಳನ್ನು ನಿಗದಿಮಾಡುತ್ತಿದೆ"
 
-#: ../usr/lib/live-installer-3/installer.py:805
+#: ../usr/lib/live-installer-3/installer.py:804
 #, fuzzy
 msgid "Configuring sensors"
 msgstr "ಬೂಟ್ ಲೋಡರ್ ಸಂಯೋಜಿಸುತ್ತಿದೆ"
 
-#: ../usr/lib/live-installer-3/installer.py:811
+#: ../usr/lib/live-installer-3/installer.py:810
 msgid "Removing VirtualBox"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:817
+#: ../usr/lib/live-installer-3/installer.py:816
 msgid "Removing os-prober"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:824
+#: ../usr/lib/live-installer-3/installer.py:823
 msgid "Installing bootloader"
 msgstr "ಬೂಟ್ ಲೋಡರ್ ಸಂಸ್ಥಾಪಿಸುತ್ತಿದೆ"
 
-#: ../usr/lib/live-installer-3/installer.py:846
+#: ../usr/lib/live-installer-3/installer.py:845
 #, fuzzy
 msgid ""
 "The grub bootloader was not configured properly! You need to configure it "
@@ -336,37 +336,37 @@ msgstr ""
 "ಎಚ್ಚರಿಕೆ: ಗ್ರಬ್ ಬೂಟ್ ಲೋಡರ್ ಸಮರ್ಪಕವಾಗಿ ಸಂಯೋಜಿತವಾಗಿಲ್ಲ! ನೀವು ಇದನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ಸಂಯೋಜನೆ "
 "ಮಾಡಬೇಕಿದೆ"
 
-#: ../usr/lib/live-installer-3/installer.py:849
+#: ../usr/lib/live-installer-3/installer.py:848
 msgid "Grub not configured"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:876
+#: ../usr/lib/live-installer-3/installer.py:875
 msgid "Cleaning APT"
 msgstr "ಎಪಿಟಿ ಸ್ವಚ್ಛಗೊಳಿಸುತ್ತಿದೆ"
 
-#: ../usr/lib/live-installer-3/installer.py:908
+#: ../usr/lib/live-installer-3/installer.py:907
 msgid "Removing live configuration (packages)"
 msgstr "ಲೈವ್ ಸಂಯೋಜನೆ (ತಂತ್ರಾಂಶ ಪೊಟ್ಟಣಗಳು) ತೆಗೆದುಹಾಕುತ್ತಿದೆ"
 
-#: ../usr/lib/live-installer-3/installer.py:950
+#: ../usr/lib/live-installer-3/installer.py:949
 #, fuzzy
 msgid "Unmounting partitions"
 msgstr "%(partition)s ನ್ನು %(format)s ನಂತೆ ಸಂವಿಭಜಿಸುತ್ತಿದೆ..."
 
-#: ../usr/lib/live-installer-3/installer.py:967
+#: ../usr/lib/live-installer-3/installer.py:966
 #: ../usr/lib/live-installer-3/gtk_interface.py:998
 msgid "Installation finished"
 msgstr "ಸಂಸ್ಥಾಪನೆ ಪೂರ್ಣವಾಗಿದೆ"
 
-#: ../usr/lib/live-installer-3/installer.py:987
+#: ../usr/lib/live-installer-3/installer.py:986
 msgid "Configuring bootloader"
 msgstr "ಬೂಟ್ ಲೋಡರ್ ಸಂಯೋಜಿಸುತ್ತಿದೆ"
 
-#: ../usr/lib/live-installer-3/installer.py:994
+#: ../usr/lib/live-installer-3/installer.py:993
 msgid "Checking bootloader"
 msgstr "ಬೂಟ್ ಲೋಡರ್ ಪರೀಕ್ಷಿಸುತ್ತಿದೆ"
 
-#: ../usr/lib/live-installer-3/installer.py:1009
+#: ../usr/lib/live-installer-3/installer.py:1008
 #, python-format
 msgid "No %s file found!"
 msgstr ""

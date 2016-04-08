@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: live-installer-3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-05 14:13+0200\n"
-"PO-Revision-Date: 2016-04-05 09:29+0000\n"
-"Last-Translator: Arjen Balfoort <schoelje@solydxk.com>\n"
+"POT-Creation-Date: 2016-04-08 13:47+0200\n"
+"PO-Revision-Date: 2016-04-05 19:24+0000\n"
+"Last-Translator: Alderson Robert Jenet <alderson@outlook.my>\n"
 "Language-Team: Malay (http://www.transifex.com/solydxk/live-installer-3/"
 "language/ms/)\n"
 "Language: ms\n"
@@ -73,6 +73,11 @@ msgid ""
 "\n"
 "Note: This will ERASE ALL DATA present on this disk."
 msgstr ""
+"Tiada partition ditemui didalam hard disk: %s\n"
+"\n"
+"Adakan anda ingin membuat set partition anda?\n"
+"\n"
+"NOTA: Ini akan MEMADAM SEMUA DATA anda."
 
 #: ../usr/lib/live-installer-3/partitioning.py:569
 msgid "Logical partition"
@@ -120,14 +125,12 @@ msgid "Label (optional)"
 msgstr "Label(Pilihan)"
 
 #: ../usr/lib/live-installer-3/partitioning.py:760
-#, fuzzy
 msgid "Encrypt partition"
-msgstr "Mengenkripsi %(partition)s ..."
+msgstr "Enkrypt partition"
 
 #: ../usr/lib/live-installer-3/partitioning.py:761
-#, fuzzy
 msgid "Password"
-msgstr "Kata laluan anda"
+msgstr "Kata laluan"
 
 #: ../usr/lib/live-installer-3/partitioning.py:851
 #: ../usr/lib/live-installer-3/partitioning.py:858
@@ -167,15 +170,13 @@ msgstr ""
 
 #: ../usr/lib/live-installer-3/partitioning.py:911
 #: ../usr/lib/live-installer-3/gtk_interface.py:758
-#, fuzzy
 msgid "Please provide an encryption password."
-msgstr "Pilih kata laluan untuk enkripsi pada partition anda"
+msgstr "Sedian kata laluan yang dienkrypt."
 
 #: ../usr/lib/live-installer-3/partitioning.py:914
 #: ../usr/lib/live-installer-3/gtk_interface.py:761
-#, fuzzy
 msgid "Your encryption passwords do not match."
-msgstr "Kata laluan tidak padan."
+msgstr "Kata laluan enkripsi anda tidak padan."
 
 #: ../usr/lib/live-installer-3/partitioning.py:917
 msgid ""
@@ -271,7 +272,7 @@ msgstr "Memasukkan sistem"
 #: ../usr/lib/live-installer-3/installer.py:395
 #, python-format
 msgid "%s/dev not mounted - exiting"
-msgstr ""
+msgstr "%s/dev tidak dimount - sedang keluar"
 
 #: ../usr/lib/live-installer-3/installer.py:418
 msgid "Installing EFI packages..."
@@ -281,55 +282,55 @@ msgstr "Memasang pakej EFI"
 msgid "Installing drivers"
 msgstr "Memasang drivers"
 
-#: ../usr/lib/live-installer-3/installer.py:473
+#: ../usr/lib/live-installer-3/installer.py:477
 msgid "Writing filesystem mount information to /etc/fstab"
 msgstr "Sedang memasukkan informasi filesistem mount kedalam /etc/fstab"
 
-#: ../usr/lib/live-installer-3/installer.py:594
+#: ../usr/lib/live-installer-3/installer.py:598
 msgid "Adding new user to the system"
 msgstr "Tambah pengguna baru pada sistem"
 
-#: ../usr/lib/live-installer-3/installer.py:680
+#: ../usr/lib/live-installer-3/installer.py:679
 msgid "Setting hostname"
 msgstr "Tetapan nama hos"
 
-#: ../usr/lib/live-installer-3/installer.py:701
+#: ../usr/lib/live-installer-3/installer.py:700
 msgid "Setting locale"
 msgstr "Menetapkan penempatan"
 
-#: ../usr/lib/live-installer-3/installer.py:717
+#: ../usr/lib/live-installer-3/installer.py:716
 msgid "Update apt cache"
 msgstr "Apt cache dikemaskini"
 
-#: ../usr/lib/live-installer-3/installer.py:719
+#: ../usr/lib/live-installer-3/installer.py:718
 msgid "Update the new system"
 msgstr "Sistem baru sedang dikemaskini"
 
-#: ../usr/lib/live-installer-3/installer.py:726
+#: ../usr/lib/live-installer-3/installer.py:725
 msgid "Localizing packages"
 msgstr "Menyetempatkan pakej"
 
-#: ../usr/lib/live-installer-3/installer.py:744
+#: ../usr/lib/live-installer-3/installer.py:743
 msgid "Setting keyboard options"
 msgstr "Menetapkan pilihan papan kekunci"
 
-#: ../usr/lib/live-installer-3/installer.py:805
+#: ../usr/lib/live-installer-3/installer.py:804
 msgid "Configuring sensors"
 msgstr "Sensors sedang dikonfigurasi"
 
-#: ../usr/lib/live-installer-3/installer.py:811
+#: ../usr/lib/live-installer-3/installer.py:810
 msgid "Removing VirtualBox"
 msgstr "VirtualBox sedang disingkirkan"
 
-#: ../usr/lib/live-installer-3/installer.py:817
+#: ../usr/lib/live-installer-3/installer.py:816
 msgid "Removing os-prober"
 msgstr "os-prober sedang disingkirkan"
 
-#: ../usr/lib/live-installer-3/installer.py:824
+#: ../usr/lib/live-installer-3/installer.py:823
 msgid "Installing bootloader"
 msgstr "Memasang pemuat but"
 
-#: ../usr/lib/live-installer-3/installer.py:846
+#: ../usr/lib/live-installer-3/installer.py:845
 msgid ""
 "The grub bootloader was not configured properly! You need to configure it "
 "manually."
@@ -337,36 +338,36 @@ msgstr ""
 "Belum ada tetapan konfigurasi pada Grub! Konfigurasi secara manual "
 "diperlukan."
 
-#: ../usr/lib/live-installer-3/installer.py:849
+#: ../usr/lib/live-installer-3/installer.py:848
 msgid "Grub not configured"
 msgstr "Belum ada konfigurasi pada Grub"
 
-#: ../usr/lib/live-installer-3/installer.py:876
+#: ../usr/lib/live-installer-3/installer.py:875
 msgid "Cleaning APT"
 msgstr "Membersih APT"
 
-#: ../usr/lib/live-installer-3/installer.py:908
+#: ../usr/lib/live-installer-3/installer.py:907
 msgid "Removing live configuration (packages)"
 msgstr "Membuang konfigurasi langsung (pakej)"
 
-#: ../usr/lib/live-installer-3/installer.py:950
+#: ../usr/lib/live-installer-3/installer.py:949
 msgid "Unmounting partitions"
 msgstr "Membebaskan partitions"
 
-#: ../usr/lib/live-installer-3/installer.py:967
+#: ../usr/lib/live-installer-3/installer.py:966
 #: ../usr/lib/live-installer-3/gtk_interface.py:998
 msgid "Installation finished"
 msgstr "Pemasangan selesai"
 
-#: ../usr/lib/live-installer-3/installer.py:987
+#: ../usr/lib/live-installer-3/installer.py:986
 msgid "Configuring bootloader"
 msgstr "Menkonfigur pemuat but"
 
-#: ../usr/lib/live-installer-3/installer.py:994
+#: ../usr/lib/live-installer-3/installer.py:993
 msgid "Checking bootloader"
 msgstr "Memeriksa pemuat but"
 
-#: ../usr/lib/live-installer-3/installer.py:1009
+#: ../usr/lib/live-installer-3/installer.py:1008
 #, python-format
 msgid "No %s file found!"
 msgstr "Tiada %s sebarang fail ditemui!"
@@ -595,13 +596,12 @@ msgid "Log in automatically on system boot"
 msgstr "Login secara automatik kedalam sistem boot"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:630
-#, fuzzy
 msgid "Encrypt home partition"
-msgstr "Mengenkripsi %(partition)s ..."
+msgstr "Enkripsi pada home partition"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:631
 msgid "If enabled, the home partition will be encrypted."
-msgstr ""
+msgstr "Jika dipilih, akan membuatkan partition pada home akan dienkripsi."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:634
 msgid ""
@@ -610,6 +610,10 @@ msgid ""
 "the home partition. This is not necessarily the same password as your user "
 "login password."
 msgstr ""
+"AMARAN: Sekiranya kata laluan enkripsi anda hilang mungkin anda tidak dapat "
+"kembalikan data anda. Kata laluan diperlukan untuk tidak mengunci pada home "
+"partition. Tidak perlu gunakan kata laluan sama dengan kata laluan pada log "
+"masuk pengguna anda."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:639
 msgid "Your picture"
@@ -830,7 +834,7 @@ msgstr "Pemasangan telah selesai"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:993
 msgid "Setup is complete. The system will now reboot."
-msgstr ""
+msgstr "Pemasangan telah selesai. Sistem sekarang akan mula reboot."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:999
 msgid ""
@@ -915,9 +919,8 @@ msgid "Mount {}{} as {}"
 msgstr "Mountkan {}{} ke {}"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1081
-#, fuzzy
 msgid "Encrypt {}"
-msgstr "Enkripsi"
+msgstr "Enkrypt{}"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1083
 msgid "Encrypt {} and format as {}"
@@ -1002,6 +1005,3 @@ msgstr "Pemasangan langsung"
 #: ../usr/share/applications/live-installer-3.desktop.in.h:3
 msgid "Install the operating system"
 msgstr "Memasang sistem operasi"
-
-#~ msgid "Encryption/password"
-#~ msgstr "Enkripsi/Kata laluan"

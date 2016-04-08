@@ -11,6 +11,10 @@
       <object class="GtkGrid" id="grid1">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
+        <property name="margin_left">4</property>
+        <property name="margin_right">4</property>
+        <property name="margin_top">4</property>
+        <property name="margin_bottom">4</property>
         <property name="row_spacing">2</property>
         <property name="column_spacing">12</property>
         <child>
@@ -229,6 +233,7 @@
           <object class="GtkBox" id="box2">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="margin_top">12</property>
             <property name="hexpand">True</property>
             <property name="spacing">4</property>
             <property name="homogeneous">True</property>

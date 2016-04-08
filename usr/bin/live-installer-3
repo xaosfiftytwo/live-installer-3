@@ -7,9 +7,13 @@ for i in "$args"; do
   case $i in
     -o|--oem)
       # Change screen resolution if in OEM mode
-      SIZE=$(xrandr | grep 'x768 ' | head -1 | awk '{print $1}')
-      if [ "$SIZE" != "" ]; then
-        xrandr --size $SIZE
+      MODELINE=$(env LANG=C cvt 1360 768 | grep ^Modeline | sed 's/.*odeline//' | sed 's/_[0-9\.]*//')
+      RES=$(echo $MODELINE | cut -d'"' -f 2)
+      VGA=$(env LANG=C xrandr | grep connected | awk '{print $1}')
+      if [[ "$RES" =~ "x" ]] && [ "$VGA" != "" ]; then
+        xrandr --newmode $MODELINE
+        xrandr --addmode $VGA \"$RES\"
+        xrandr --output $VGA --mode \"$RES\"
       fi
       shift # past argument=value
       ;;

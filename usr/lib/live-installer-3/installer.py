@@ -338,8 +338,8 @@ class InstallerEngine(threading.Thread):
             # Check the output of rsync
             while rsync.poll() is None:
                 # Cleanup the line: only path of file to be copied
-                line = rsync.stdout.readline().strip()
                 try:
+                    line = rsync.stdout.readline().strip()
                     line = line[0:line.index(' ')]
                 except:
                     pass
@@ -469,6 +469,10 @@ class InstallerEngine(threading.Thread):
                         with open(xml, 'w') as f:
                             f.write("".join(lines))
 
+        if self.setup.oem_setup:
+            self.our_total = self.get_progress_total()
+            self.our_current = 0
+
         # write the /etc/fstab and /etc/crypttab
         self.update_progress(message=_("Writing filesystem mount information to /etc/fstab"))
         fstab_path = "%s/etc/fstab" % self.setup.target_dir
@@ -595,7 +599,7 @@ class InstallerEngine(threading.Thread):
         # Do not create oem user dir in /home (in case the home partition needs encrypting)
         oem_prm = ''
         if self.setup.username[-4:] == "-oem":
-            oem_prm = "--home /%s --firstuid 990 --lastuid 999" % self.setup.username
+            oem_prm = "--home /%s --firstuid 990 --lastuid 999 --ingroup root" % self.setup.username
         self.exec_cmd('adduser {oem} --disabled-login --gecos "{real_name}" {username}'.format(oem=oem_prm,real_name=self.setup.real_name.replace('"', r'\"'), username=self.setup.username))
         for group in 'adm audio bluetooth cdrom dialout dip fax floppy fuse lpadmin netdev plugdev powerdev sambashare scanner sudo tape users vboxsf video'.split():
             self.exec_cmd("adduser {user} {group}".format(user=self.setup.username, group=group))
@@ -606,11 +610,6 @@ class InstallerEngine(threading.Thread):
         if not exists(user_dir):
             self.log.write("Create user dir: {}".format(user_dir), "InstallerEngine.init_install", "info")
             self.local_exec("mkdir {}".format(user_dir))
-
-        if not os.listdir(user_dir):
-            # Copy the skel files to the new user's home directory
-            self.local_exec("cp -R %s/etc/skel/.* %s/" % (self.setup.target_dir, user_dir))
-            self.local_exec("chown -R {}:{} {}".format(self.setup.username, self.setup.username, user_dir))
 
         # Save passwords
         # Using a temporary file fails for the new user (but correctly sets the root's password)
