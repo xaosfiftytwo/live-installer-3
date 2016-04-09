@@ -1,11 +1,11 @@
-live-installer-3 (2016.04.08) debian; urgency=low
+live-installer-3 (2016.04.09) debian; urgency=low
 
   * Fix broken pipe error in logger.py
   * Remove copy from /etc/skel
   * Create oem user in group root
   * Create new screen resolution for OEM user
 
- -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Fri, 08 Apr 2016 11:19:47 +0200
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Sat, 09 Apr 2016 10:46:47 +0200
 
 live-installer-3 (2016.04.05) debian; urgency=low
 
