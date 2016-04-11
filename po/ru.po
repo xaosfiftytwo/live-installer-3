@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: live-installer-3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-08 13:47+0200\n"
+"POT-Creation-Date: 2016-04-10 19:49+0200\n"
 "PO-Revision-Date: 2016-04-05 12:27+0000\n"
 "Last-Translator: Arjen Balfoort <schoelje@solydxk.com>\n"
 "Language-Team: Russian (http://www.transifex.com/solydxk/live-installer-3/"
@@ -50,15 +50,15 @@ msgid "Localizing Thunderbird"
 msgstr "Локализация Thunderbird"
 
 #: ../usr/lib/live-installer-3/partitioning.py:173
-#: ../usr/lib/live-installer-3/partitioning.py:574
+#: ../usr/lib/live-installer-3/partitioning.py:579
 msgid "Unknown"
 msgstr "Неизвестный"
 
-#: ../usr/lib/live-installer-3/partitioning.py:344
+#: ../usr/lib/live-installer-3/partitioning.py:348
 msgid "Removable:"
 msgstr "Съемный:"
 
-#: ../usr/lib/live-installer-3/partitioning.py:371
+#: ../usr/lib/live-installer-3/partitioning.py:375
 #: ../usr/lib/live-installer-3/gtk_interface.py:809
 #: ../usr/lib/live-installer-3/gtk_interface.py:813
 #: ../usr/lib/live-installer-3/gtk_interface.py:832
@@ -68,7 +68,7 @@ msgstr "Съемный:"
 msgid "Installation Tool"
 msgstr "Средство для установки"
 
-#: ../usr/lib/live-installer-3/partitioning.py:372
+#: ../usr/lib/live-installer-3/partitioning.py:376
 #, python-format
 msgid ""
 "No partition table was found on the hard drive: %s.\n"
@@ -78,67 +78,67 @@ msgid ""
 "Note: This will ERASE ALL DATA present on this disk."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/partitioning.py:569
+#: ../usr/lib/live-installer-3/partitioning.py:574
 msgid "Logical partition"
 msgstr "Логический раздел"
 
-#: ../usr/lib/live-installer-3/partitioning.py:570
+#: ../usr/lib/live-installer-3/partitioning.py:575
 msgid "Extended partition"
 msgstr "Расширенный раздел"
 
-#: ../usr/lib/live-installer-3/partitioning.py:571
+#: ../usr/lib/live-installer-3/partitioning.py:576
 #: ../usr/lib/live-installer-3/gtk_interface.py:597
 msgid "Free space"
 msgstr "Свободное место"
 
-#: ../usr/lib/live-installer-3/partitioning.py:599
+#: ../usr/lib/live-installer-3/partitioning.py:604
 #: ../usr/lib/live-installer-3/gtk_interface.py:633
 msgid "Encryption password"
 msgstr "Шифрование пароля"
 
-#: ../usr/lib/live-installer-3/partitioning.py:600
+#: ../usr/lib/live-installer-3/partitioning.py:605
 msgid "Password for the encrypted partition:"
 msgstr "Пароль для зашифрованного раздела:"
 
-#: ../usr/lib/live-installer-3/partitioning.py:749
+#: ../usr/lib/live-installer-3/partitioning.py:763
 msgid "Edit partition"
 msgstr "Редактировать раздел"
 
-#: ../usr/lib/live-installer-3/partitioning.py:756
+#: ../usr/lib/live-installer-3/partitioning.py:770
 #: ../usr/lib/live-installer-3/gtk_interface.py:589
 msgid "Device"
 msgstr "Устройство"
 
-#: ../usr/lib/live-installer-3/partitioning.py:757
+#: ../usr/lib/live-installer-3/partitioning.py:771
 #: ../usr/lib/live-installer-3/gtk_interface.py:594
 msgid "Format as"
 msgstr "Форматировать как"
 
-#: ../usr/lib/live-installer-3/partitioning.py:758
+#: ../usr/lib/live-installer-3/partitioning.py:772
 #: ../usr/lib/live-installer-3/gtk_interface.py:593
 msgid "Mount point"
 msgstr "Точка монтирования"
 
-#: ../usr/lib/live-installer-3/partitioning.py:759
+#: ../usr/lib/live-installer-3/partitioning.py:773
 msgid "Label (optional)"
 msgstr "Метка (не обязательно)"
 
-#: ../usr/lib/live-installer-3/partitioning.py:760
+#: ../usr/lib/live-installer-3/partitioning.py:774
 msgid "Encrypt partition"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/partitioning.py:761
+#: ../usr/lib/live-installer-3/partitioning.py:775
 msgid "Password"
 msgstr "Пароль"
 
-#: ../usr/lib/live-installer-3/partitioning.py:851
-#: ../usr/lib/live-installer-3/partitioning.py:858
-#: ../usr/lib/live-installer-3/partitioning.py:925
+#: ../usr/lib/live-installer-3/partitioning.py:865
+#: ../usr/lib/live-installer-3/partitioning.py:872
+#: ../usr/lib/live-installer-3/partitioning.py:939
 #: ../usr/lib/live-installer-3/gtk_interface.py:629
 msgid "Encryption"
 msgstr "Шифрование"
 
-#: ../usr/lib/live-installer-3/partitioning.py:852
+#: ../usr/lib/live-installer-3/partitioning.py:866
 msgid ""
 "You chose to encrypt the root partition.\n"
 "\n"
@@ -160,7 +160,7 @@ msgstr ""
 "\n"
 "Уверены, что хотите продолжить?"
 
-#: ../usr/lib/live-installer-3/partitioning.py:859
+#: ../usr/lib/live-installer-3/partitioning.py:873
 msgid ""
 "Encryption will erase all data from {}\n"
 "\n"
@@ -170,17 +170,17 @@ msgstr ""
 "\n"
 "Вы уверенны что хотите продолжить?"
 
-#: ../usr/lib/live-installer-3/partitioning.py:911
+#: ../usr/lib/live-installer-3/partitioning.py:925
 #: ../usr/lib/live-installer-3/gtk_interface.py:758
 msgid "Please provide an encryption password."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/partitioning.py:914
+#: ../usr/lib/live-installer-3/partitioning.py:928
 #: ../usr/lib/live-installer-3/gtk_interface.py:761
 msgid "Your encryption passwords do not match."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/partitioning.py:917
+#: ../usr/lib/live-installer-3/partitioning.py:931
 msgid ""
 "You need to choose a format type\n"
 "for your encrypted partition (default: ext4):"
@@ -188,7 +188,7 @@ msgstr ""
 "Вы должны выбрать тип формата\n"
 "для зашифрованного раздела (по умолчанию: ext4):"
 
-#: ../usr/lib/live-installer-3/partitioning.py:922
+#: ../usr/lib/live-installer-3/partitioning.py:936
 msgid "You need to choose a mount point for partition:"
 msgstr "Вам необходимо выбрать точку монтирования для раздела:"
 

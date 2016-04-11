@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-08 13:47+0200\n"
+"POT-Creation-Date: 2016-04-10 19:49+0200\n"
 "PO-Revision-Date: 2013-11-23 05:52+0000\n"
 "Last-Translator: Hyunsu Ko <kohs9959@gmail.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
@@ -46,15 +46,15 @@ msgid "Localizing Thunderbird"
 msgstr ""
 
 #: ../usr/lib/live-installer-3/partitioning.py:173
-#: ../usr/lib/live-installer-3/partitioning.py:574
+#: ../usr/lib/live-installer-3/partitioning.py:579
 msgid "Unknown"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/partitioning.py:344
+#: ../usr/lib/live-installer-3/partitioning.py:348
 msgid "Removable:"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/partitioning.py:371
+#: ../usr/lib/live-installer-3/partitioning.py:375
 #: ../usr/lib/live-installer-3/gtk_interface.py:809
 #: ../usr/lib/live-installer-3/gtk_interface.py:813
 #: ../usr/lib/live-installer-3/gtk_interface.py:832
@@ -64,7 +64,7 @@ msgstr ""
 msgid "Installation Tool"
 msgstr "설치 도구"
 
-#: ../usr/lib/live-installer-3/partitioning.py:372
+#: ../usr/lib/live-installer-3/partitioning.py:376
 #, fuzzy, python-format
 msgid ""
 "No partition table was found on the hard drive: %s.\n"
@@ -76,75 +76,75 @@ msgstr ""
 "하드디스크에서 파티션이 검색되지 않았습니다. 설치관리자에서 파티션을 만드시겠"
 "습니까? 디스크의 데이터를 지울 수 있습니다."
 
-#: ../usr/lib/live-installer-3/partitioning.py:569
+#: ../usr/lib/live-installer-3/partitioning.py:574
 #, fuzzy
 msgid "Logical partition"
 msgstr "파티션 편집"
 
-#: ../usr/lib/live-installer-3/partitioning.py:570
+#: ../usr/lib/live-installer-3/partitioning.py:575
 #, fuzzy
 msgid "Extended partition"
 msgstr "파티션 편집"
 
-#: ../usr/lib/live-installer-3/partitioning.py:571
+#: ../usr/lib/live-installer-3/partitioning.py:576
 #: ../usr/lib/live-installer-3/gtk_interface.py:597
 msgid "Free space"
 msgstr "빈 자리"
 
-#: ../usr/lib/live-installer-3/partitioning.py:599
+#: ../usr/lib/live-installer-3/partitioning.py:604
 #: ../usr/lib/live-installer-3/gtk_interface.py:633
 #, fuzzy
 msgid "Encryption password"
 msgstr "설명"
 
-#: ../usr/lib/live-installer-3/partitioning.py:600
+#: ../usr/lib/live-installer-3/partitioning.py:605
 #, fuzzy
 msgid "Password for the encrypted partition:"
 msgstr "사용자의 계정을 위한 암호를 입력하십시오"
 
-#: ../usr/lib/live-installer-3/partitioning.py:749
+#: ../usr/lib/live-installer-3/partitioning.py:763
 msgid "Edit partition"
 msgstr "파티션 편집"
 
-#: ../usr/lib/live-installer-3/partitioning.py:756
+#: ../usr/lib/live-installer-3/partitioning.py:770
 #: ../usr/lib/live-installer-3/gtk_interface.py:589
 msgid "Device"
 msgstr "장치"
 
-#: ../usr/lib/live-installer-3/partitioning.py:757
+#: ../usr/lib/live-installer-3/partitioning.py:771
 #: ../usr/lib/live-installer-3/gtk_interface.py:594
 #, fuzzy
 msgid "Format as"
 msgstr "포맷할 종류:"
 
-#: ../usr/lib/live-installer-3/partitioning.py:758
+#: ../usr/lib/live-installer-3/partitioning.py:772
 #: ../usr/lib/live-installer-3/gtk_interface.py:593
 msgid "Mount point"
 msgstr "올릴 곳"
 
-#: ../usr/lib/live-installer-3/partitioning.py:759
+#: ../usr/lib/live-installer-3/partitioning.py:773
 msgid "Label (optional)"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/partitioning.py:760
+#: ../usr/lib/live-installer-3/partitioning.py:774
 #, fuzzy
 msgid "Encrypt partition"
 msgstr "%(partition)s을(를) %(format)s(으)로 밀고 있습니다..."
 
-#: ../usr/lib/live-installer-3/partitioning.py:761
+#: ../usr/lib/live-installer-3/partitioning.py:775
 #, fuzzy
 msgid "Password"
 msgstr "암호가 일치합니다"
 
-#: ../usr/lib/live-installer-3/partitioning.py:851
-#: ../usr/lib/live-installer-3/partitioning.py:858
-#: ../usr/lib/live-installer-3/partitioning.py:925
+#: ../usr/lib/live-installer-3/partitioning.py:865
+#: ../usr/lib/live-installer-3/partitioning.py:872
+#: ../usr/lib/live-installer-3/partitioning.py:939
 #: ../usr/lib/live-installer-3/gtk_interface.py:629
 #, fuzzy
 msgid "Encryption"
 msgstr "설명"
 
-#: ../usr/lib/live-installer-3/partitioning.py:852
+#: ../usr/lib/live-installer-3/partitioning.py:866
 msgid ""
 "You chose to encrypt the root partition.\n"
 "\n"
@@ -157,32 +157,32 @@ msgid ""
 "Are you sure you want to continue?"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/partitioning.py:859
+#: ../usr/lib/live-installer-3/partitioning.py:873
 msgid ""
 "Encryption will erase all data from {}\n"
 "\n"
 "Are you sure you want to continue?"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/partitioning.py:911
+#: ../usr/lib/live-installer-3/partitioning.py:925
 #: ../usr/lib/live-installer-3/gtk_interface.py:758
 #, fuzzy
 msgid "Please provide an encryption password."
 msgstr "사용자의 계정을 위한 암호를 입력하십시오"
 
-#: ../usr/lib/live-installer-3/partitioning.py:914
+#: ../usr/lib/live-installer-3/partitioning.py:928
 #: ../usr/lib/live-installer-3/gtk_interface.py:761
 #, fuzzy
 msgid "Your encryption passwords do not match."
 msgstr "암호가 일치하지 않습니다"
 
-#: ../usr/lib/live-installer-3/partitioning.py:917
+#: ../usr/lib/live-installer-3/partitioning.py:931
 msgid ""
 "You need to choose a format type\n"
 "for your encrypted partition (default: ext4):"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/partitioning.py:922
+#: ../usr/lib/live-installer-3/partitioning.py:936
 msgid "You need to choose a mount point for partition:"
 msgstr ""
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-08 13:47+0200\n"
+"POT-Creation-Date: 2016-04-10 19:49+0200\n"
 "PO-Revision-Date: 2012-01-27 19:51+0000\n"
 "Last-Translator: Rhos <rprys@yahoo.com>\n"
 "Language-Team: Welsh <cy@li.org>\n"
@@ -46,15 +46,15 @@ msgid "Localizing Thunderbird"
 msgstr ""
 
 #: ../usr/lib/live-installer-3/partitioning.py:173
-#: ../usr/lib/live-installer-3/partitioning.py:574
+#: ../usr/lib/live-installer-3/partitioning.py:579
 msgid "Unknown"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/partitioning.py:344
+#: ../usr/lib/live-installer-3/partitioning.py:348
 msgid "Removable:"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/partitioning.py:371
+#: ../usr/lib/live-installer-3/partitioning.py:375
 #: ../usr/lib/live-installer-3/gtk_interface.py:809
 #: ../usr/lib/live-installer-3/gtk_interface.py:813
 #: ../usr/lib/live-installer-3/gtk_interface.py:832
@@ -64,7 +64,7 @@ msgstr ""
 msgid "Installation Tool"
 msgstr "Offeryn Gosod"
 
-#: ../usr/lib/live-installer-3/partitioning.py:372
+#: ../usr/lib/live-installer-3/partitioning.py:376
 #, fuzzy, python-format
 msgid ""
 "No partition table was found on the hard drive: %s.\n"
@@ -76,75 +76,75 @@ msgstr ""
 "Nid oes tabl rhaniad ar y disg caled. Hoffech chi i'r gosodwr greu set o "
 "raniadau ar eich cyfer? Sylw: Bydd hyn yn dileu unrhyw ddata sydd ar y ddisg."
 
-#: ../usr/lib/live-installer-3/partitioning.py:569
+#: ../usr/lib/live-installer-3/partitioning.py:574
 #, fuzzy
 msgid "Logical partition"
 msgstr "Golygu'r rhaniad"
 
-#: ../usr/lib/live-installer-3/partitioning.py:570
+#: ../usr/lib/live-installer-3/partitioning.py:575
 #, fuzzy
 msgid "Extended partition"
 msgstr "Golygu'r rhaniad"
 
-#: ../usr/lib/live-installer-3/partitioning.py:571
+#: ../usr/lib/live-installer-3/partitioning.py:576
 #: ../usr/lib/live-installer-3/gtk_interface.py:597
 msgid "Free space"
 msgstr "Lle rhydd"
 
-#: ../usr/lib/live-installer-3/partitioning.py:599
+#: ../usr/lib/live-installer-3/partitioning.py:604
 #: ../usr/lib/live-installer-3/gtk_interface.py:633
 #, fuzzy
 msgid "Encryption password"
 msgstr "Disgrifiad"
 
-#: ../usr/lib/live-installer-3/partitioning.py:600
+#: ../usr/lib/live-installer-3/partitioning.py:605
 #, fuzzy
 msgid "Password for the encrypted partition:"
 msgstr "Rhowch gyfrinair ar gyfer eich cyfrif defnyddiwr"
 
-#: ../usr/lib/live-installer-3/partitioning.py:749
+#: ../usr/lib/live-installer-3/partitioning.py:763
 msgid "Edit partition"
 msgstr "Golygu'r rhaniad"
 
-#: ../usr/lib/live-installer-3/partitioning.py:756
+#: ../usr/lib/live-installer-3/partitioning.py:770
 #: ../usr/lib/live-installer-3/gtk_interface.py:589
 msgid "Device"
 msgstr "Dyfais"
 
-#: ../usr/lib/live-installer-3/partitioning.py:757
+#: ../usr/lib/live-installer-3/partitioning.py:771
 #: ../usr/lib/live-installer-3/gtk_interface.py:594
 #, fuzzy
 msgid "Format as"
 msgstr "Fformatio fel:"
 
-#: ../usr/lib/live-installer-3/partitioning.py:758
+#: ../usr/lib/live-installer-3/partitioning.py:772
 #: ../usr/lib/live-installer-3/gtk_interface.py:593
 msgid "Mount point"
 msgstr "Pwynt arosod"
 
-#: ../usr/lib/live-installer-3/partitioning.py:759
+#: ../usr/lib/live-installer-3/partitioning.py:773
 msgid "Label (optional)"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/partitioning.py:760
+#: ../usr/lib/live-installer-3/partitioning.py:774
 #, fuzzy
 msgid "Encrypt partition"
 msgstr "Formatio %(partition)s fel %(format)s..."
 
-#: ../usr/lib/live-installer-3/partitioning.py:761
+#: ../usr/lib/live-installer-3/partitioning.py:775
 #, fuzzy
 msgid "Password"
 msgstr "Mae'r cyfrineiriau yn cydweddu"
 
-#: ../usr/lib/live-installer-3/partitioning.py:851
-#: ../usr/lib/live-installer-3/partitioning.py:858
-#: ../usr/lib/live-installer-3/partitioning.py:925
+#: ../usr/lib/live-installer-3/partitioning.py:865
+#: ../usr/lib/live-installer-3/partitioning.py:872
+#: ../usr/lib/live-installer-3/partitioning.py:939
 #: ../usr/lib/live-installer-3/gtk_interface.py:629
 #, fuzzy
 msgid "Encryption"
 msgstr "Disgrifiad"
 
-#: ../usr/lib/live-installer-3/partitioning.py:852
+#: ../usr/lib/live-installer-3/partitioning.py:866
 msgid ""
 "You chose to encrypt the root partition.\n"
 "\n"
@@ -157,32 +157,32 @@ msgid ""
 "Are you sure you want to continue?"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/partitioning.py:859
+#: ../usr/lib/live-installer-3/partitioning.py:873
 msgid ""
 "Encryption will erase all data from {}\n"
 "\n"
 "Are you sure you want to continue?"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/partitioning.py:911
+#: ../usr/lib/live-installer-3/partitioning.py:925
 #: ../usr/lib/live-installer-3/gtk_interface.py:758
 #, fuzzy
 msgid "Please provide an encryption password."
 msgstr "Rhowch gyfrinair ar gyfer eich cyfrif defnyddiwr"
 
-#: ../usr/lib/live-installer-3/partitioning.py:914
+#: ../usr/lib/live-installer-3/partitioning.py:928
 #: ../usr/lib/live-installer-3/gtk_interface.py:761
 #, fuzzy
 msgid "Your encryption passwords do not match."
 msgstr "Nid yw eich cyfrineiriau yn cydweddu"
 
-#: ../usr/lib/live-installer-3/partitioning.py:917
+#: ../usr/lib/live-installer-3/partitioning.py:931
 msgid ""
 "You need to choose a format type\n"
 "for your encrypted partition (default: ext4):"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/partitioning.py:922
+#: ../usr/lib/live-installer-3/partitioning.py:936
 msgid "You need to choose a mount point for partition:"
 msgstr ""
 

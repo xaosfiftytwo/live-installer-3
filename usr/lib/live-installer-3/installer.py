@@ -1009,10 +1009,10 @@ class InstallerEngine(threading.Thread):
             return False
 
     def get_progress_total(self):
-        total = 6
+        total = 8
 
         if not self.setup.oem_setup:
-            total += 6
+            total += 4
             if self.setup.gptonefi:
                 total += 1
             if self.installBroadcom:

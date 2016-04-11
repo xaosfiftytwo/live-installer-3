@@ -256,10 +256,14 @@ def do_unmount(mountpoint, force=False):
 
 
 def get_mount_point(device, mountpoint=None):
-    mountpoint = '| grep ' + mountpoint if mountpoint else ''
-    cmd = "mount | grep %s %s | awk '{print $1}' | head -1" % (device, mountpoint)
+    mountpoint = " | grep \"%s \"" % mountpoint if mountpoint else ''
+    cmd = "mount | grep \"%s \"%s" % (device, mountpoint)
+    #print((">> cmd = %s" % cmd))
     try:
-        return getoutput(cmd).strip()
+        out = getoutput(cmd).strip()
+        mount = re.search("\s+on\s+([\S]+)", out).group(1)
+        #print((">> mount = %s" % mount))
+        return mount
     except:
         return ''
 
@@ -411,7 +415,8 @@ class PartitionSetup(Gtk.TreeStore):
                 if installer.setup.root_partition != '':
                     if partition.path == installer.setup.root_partition:
                         partition.mount_as = ROOT_MOUNT_POINT
-                        partition.format_as = partition.type
+                        if not installer.setup.oem_setup:
+                            partition.format_as = partition.type
                     if partition.path == installer.setup.home_partition:
                         partition.mount_as = HOME_MOUNT_POINT
 
@@ -633,17 +638,26 @@ class Partition(object):
                     if label == '':
                         label = getoutput('uname -s')
 
-                    # Save this partition as a partition to mount as root
-                    if installer.setup.root_partition is None:
-                        installer.setup.root_partition = self.path
+                    set_home = False
+                    if installer.setup.oem_setup:
+                        # OEM setup: check if this partition is mounted as root
+                        #print((">> %s" % get_mount_point(self.path)))
+                        if get_mount_point(self.path) == '/':
+                            installer.setup.root_partition = self.path
+                            set_home = True
                     else:
-                        # Empty the root_partition and home_partition variables to show that this
-                        # is a multi-boot system and no root or home partition may be pre-mounted
-                        installer.setup.root_partition = ''
-                        installer.setup.home_partition = ''
+                        # Save this partition as a partition to mount as root
+                        if installer.setup.root_partition is None:
+                            installer.setup.root_partition = self.path
+                            set_home = True
+                        else:
+                            # Empty the root_partition and home_partition variables to show that this
+                            # is a multi-boot system and no root or home partition may be pre-mounted
+                            installer.setup.root_partition = ''
+                            installer.setup.home_partition = ''
 
                     # Get home partition from fstab
-                    if installer.setup.root_partition != '':
+                    if set_home:
                         fstab = join(mount_point, 'etc/fstab')
                         if path_exists(fstab):
                             fstab_cont = ''

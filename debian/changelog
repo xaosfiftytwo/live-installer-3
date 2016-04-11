@@ -1,3 +1,15 @@
+live-installer-3 (2016.04.11) debian; urgency=low
+
+  * General debugging
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Mon, 11 Apr 2016 08:03:48 +0200
+
+live-installer-3 (2016.04.10) debian; urgency=low
+
+  * Bug resolved: multi-boot OEM setup format wrong root partitions
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Sun, 10 Apr 2016 12:02:24 +0200
+
 live-installer-3 (2016.04.09) debian; urgency=low
 
   * Fix broken pipe error in logger.py
