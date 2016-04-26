@@ -1,22 +1,28 @@
 #!/bin/bash
 
 partition=$1
+target='/target'
 if [ -z $partition ] || [ ! -e $partition ]; then
-  echo
   echo "An existing partition path is needed"
   echo "E.g.: live-chroot /dev/sda1"
   echo "List all partitions with: sudo fdisk -l"
   exit
 fi
 
-# Be root to run this script
-if [ $UID -ne 0 ]; then
-  echo "Please, type root password..."
-  su -c "$0 $@"
+# Check if partition is mounted or target is used as mount point
+MOUNTCHK=$(mount | grep -E "$partition|$target")
+if [ "$MOUNTCHK" != "" ]; then
+  echo "$partition and/or $target in use - exiting"
   exit
 fi
 
-target='/target'
+# Be root to run this script
+if [ $UID -ne 0 ]; then
+  sudo -c "$0 $@"
+  exit
+fi
+
+
 conf='/etc/live-installer-3/live-installer-3.conf'
 if [ -e $conf ]; then
   . $conf

@@ -862,7 +862,7 @@ class InstallerEngine(threading.Thread):
                                     self.boot_parms.remove('splash')
                                     break
 
-                cmd = "sed -i -e 's/GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT=\"%s\"/' %s" % (' '.join(self.boot_parms), default_grub)
+                cmd = "sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT=\"%s\"/' %s" % (' '.join(self.boot_parms), default_grub)
                 self.local_exec(cmd)
 
                 # Configure Plymouth

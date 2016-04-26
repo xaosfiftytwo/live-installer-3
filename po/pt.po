@@ -11,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: live-installer-3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-10 19:49+0200\n"
-"PO-Revision-Date: 2016-04-05 12:27+0000\n"
-"Last-Translator: Arjen Balfoort <schoelje@solydxk.com>\n"
+"POT-Creation-Date: 2016-04-24 18:48+0200\n"
+"PO-Revision-Date: 2016-04-13 03:50+0000\n"
+"Last-Translator: Luis Filipe Teixeira <lufilte@gmail.com>\n"
 "Language-Team: Portuguese (http://www.transifex.com/solydxk/live-installer-3/"
 "language/pt/)\n"
 "Language: pt\n"
@@ -74,6 +74,11 @@ msgid ""
 "\n"
 "Note: This will ERASE ALL DATA present on this disk."
 msgstr ""
+"Nenhuma tabela de partição foi encontrada neste disco: %s.\n"
+"\n"
+"Quer que o instalador crie as partições para si?\n"
+"\n"
+"Nota: Isto irá APAGAR TODA A INFORMAÇÃO contida neste disco."
 
 #: ../usr/lib/live-installer-3/partitioning.py:574
 msgid "Logical partition"
@@ -122,7 +127,7 @@ msgstr "Rotulo (opcional)"
 
 #: ../usr/lib/live-installer-3/partitioning.py:774
 msgid "Encrypt partition"
-msgstr ""
+msgstr "Encriptar partição"
 
 #: ../usr/lib/live-installer-3/partitioning.py:775
 msgid "Password"
@@ -170,12 +175,12 @@ msgstr ""
 #: ../usr/lib/live-installer-3/partitioning.py:925
 #: ../usr/lib/live-installer-3/gtk_interface.py:758
 msgid "Please provide an encryption password."
-msgstr ""
+msgstr "Por favor, forneça uma senha de criptografia."
 
 #: ../usr/lib/live-installer-3/partitioning.py:928
 #: ../usr/lib/live-installer-3/gtk_interface.py:761
 msgid "Your encryption passwords do not match."
-msgstr ""
+msgstr "As suas senhas de criptografia não coincidem."
 
 #: ../usr/lib/live-installer-3/partitioning.py:931
 msgid ""
@@ -271,7 +276,7 @@ msgstr "A entrar no sistema ..."
 #: ../usr/lib/live-installer-3/installer.py:395
 #, python-format
 msgid "%s/dev not mounted - exiting"
-msgstr ""
+msgstr "%s/dev não está montado - a sair"
 
 #: ../usr/lib/live-installer-3/installer.py:418
 msgid "Installing EFI packages..."
@@ -381,6 +386,12 @@ msgid ""
 "Without an internet connection your system will not be upgraded and some "
 "packages cannot be localized."
 msgstr ""
+"Por favor, clique no ícone do gestor de rede na barra de tarefas para se "
+"conectar à Internet antes de continuar.\n"
+"\n"
+"Você pode sempre instalar  %s sem uma ligação à Internet.\n"
+"Sem uma ligação à Internet o sistema não será atualizado e alguns pacotes "
+"poderão não ser localizados."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:288
 #: ../usr/lib/live-installer-3/gtk_interface.py:373
@@ -412,7 +423,7 @@ msgstr "{} Instalador"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:540
 msgid "{} OEM Setup"
-msgstr ""
+msgstr "{} Instalação OEM"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:556
 #: ../usr/lib/live-installer-3/gtk_interface.py:576
@@ -591,11 +602,11 @@ msgstr "Fazer login automaticamente na inicialização do sistema"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:630
 msgid "Encrypt home partition"
-msgstr ""
+msgstr "Encriptar a partição home"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:631
 msgid "If enabled, the home partition will be encrypted."
-msgstr ""
+msgstr "Se selecionado, a partição home será encriptada"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:634
 msgid ""
@@ -604,6 +615,10 @@ msgid ""
 "the home partition. This is not necessarily the same password as your user "
 "login password."
 msgstr ""
+"AVISO: Quando perder a sua senha encriptada, não será capaz de recuperar "
+"seus dados! Durante o inicio do sistema será pedida a sua senha para "
+"desbloquear a partição home. Isto não é necessariamente a mesma senha como a "
+"sua senha de login de utilizador."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:639
 msgid "Your picture"
@@ -669,7 +684,7 @@ msgid ""
 "in the mount paths themselves)."
 msgstr ""
 "Crie  %s/etc/fstab para os sistemas de ficheiros como eles serão montados no "
-"seu novo sistema, correspondendo os actualmente montados em %s (sem utilizar "
+"seu novo sistema, correspondendo os atualmente montados em %s (sem utilizar "
 "o prefixo %s nos pontos de montagem)"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:662
@@ -690,9 +705,9 @@ msgid ""
 "as dm-crypt), you may need to have drives currently mounted using the same "
 "block device name as they appear in %s/etc/fstab."
 msgstr ""
-"Note que de forma a que update-initramfs funcione correctamente em "
+"Note que de forma a que update-initramfs funcione corretamente em "
 "determinadas situações (tais como dm-crypt), talvez tenha que ter as "
-"partições actualmente montadas, utilizando o mesmo nome de dispositivo que "
+"partições atualmente montadas, utilizando o mesmo nome de dispositivo que "
 "aparece em %s/etc/fstab."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:666
@@ -701,9 +716,9 @@ msgid ""
 "Double-check that your %s/etc/fstab is correct, matches what your new system "
 "will have at first boot, and matches what is currently mounted at %s."
 msgstr ""
-"Verifique se %s/etc/fstab está correcto, que corresponde ao que o seu "
-"sistema terá no seu primeiro arranque e que corresponde ao que se encontra "
-"actualmente montado em %s."
+"Verifique se %s/etc/fstab está correto, que corresponde ao que o seu sistema "
+"terá no seu primeiro arranque e que corresponde ao que se encontra "
+"atualmente montado em %s."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:670
 msgid "Overview"
@@ -822,11 +837,11 @@ msgstr ""
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:992
 msgid "Setup finished"
-msgstr ""
+msgstr "A instalação terminou"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:993
 msgid "Setup is complete. The system will now reboot."
-msgstr ""
+msgstr "A instalação está completa. O sistema irá reiniciar."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:999
 msgid ""
@@ -912,7 +927,7 @@ msgstr "Monte {}{} como {}"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1081
 msgid "Encrypt {}"
-msgstr ""
+msgstr "Encriptar {}"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1083
 msgid "Encrypt {} and format as {}"
@@ -979,7 +994,7 @@ msgstr "Selecionar uma imagem"
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1455
 msgid "Unable to convert the image."
-msgstr ""
+msgstr "Incapaz de converter a imagem."
 
 #: ../usr/lib/live-installer-3/gtk_interface.py:1486
 msgid "Take a photo"

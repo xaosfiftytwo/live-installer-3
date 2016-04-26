@@ -1,3 +1,10 @@
+live-installer-3 (2016.04.24) debian; urgency=low
+
+  * Updated live-chroot: check for existing mount
+  * Updated translations
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Sun, 24 Apr 2016 18:48:08 +0200
+
 live-installer-3 (2016.04.11) debian; urgency=low
 
   * General debugging
