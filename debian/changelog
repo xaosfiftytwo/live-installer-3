@@ -1,3 +1,33 @@
+live-installer-3 (2016.06.13) debian; urgency=low
+
+  * User defined mount points
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Mon, 13 Jun 2016 09:37:31 +0200
+
+live-installer-3 (2016.06.08) debian; urgency=low
+
+  * Handle --force-yes for Stretch
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Wed, 08 Jun 2016 12:50:15 +0200
+
+live-installer-3 (2016.05.07) debian; urgency=low
+
+  * Let user change swap partition if swap mount not set automatically
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Sat, 07 May 2016 16:43:55 +0200
+
+live-installer-3 (2016.05.02) debian; urgency=low
+
+  * Remove nomodeset only in VirtualBox
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Mon, 02 May 2016 10:47:15 +0200
+
+live-installer-3 (2016.04.30) debian; urgency=low
+
+  * Remove nomodeset from boot parameters when doing a regular installation
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Sat, 30 Apr 2016 14:37:22 +0200
+
 live-installer-3 (2016.04.24) debian; urgency=low
 
   * Updated live-chroot: check for existing mount

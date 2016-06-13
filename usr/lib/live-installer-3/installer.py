@@ -11,7 +11,7 @@
 from utils import shell_exec, shell_exec_popen, getoutput, chroot_exec, \
                   get_config_dict, has_internet, in_virtualbox, \
                   get_boot_parameters, get_files_from_dir, isPackageInstalled, \
-                  has_power_supply, hasStringInFile
+                  has_power_supply, hasStringInFile, get_apt_force
 from localize import Localize
 from encryption import clear_partition, encrypt_partition
 import partitioning
@@ -55,6 +55,7 @@ class InstallerEngine(threading.Thread):
         self.ssd_partition = ""
         self.sorted_partitions = []
         self.installBroadcom = False
+        self.force = get_apt_force()
 
         # Log
         self.log = Logger("/var/log/live-installer-3.log")
@@ -423,11 +424,11 @@ class InstallerEngine(threading.Thread):
                 self.local_exec("rm -rf %s/debs" % self.setup.target_dir)
                 if int(ret) != 0:
                     if has_internet():
-                        self.exec_cmd("apt-get remove --purge --assume-yes -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold --force-yes grub-efi")
+                        self.exec_cmd("apt-get remove --purge --assume-yes -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold %s grub-efi" % self.force)
                     # TODO: Errors were reported after installing grub-efi and leaving grub-pc
                     # (although it should have been removed in the previous process)
-                    self.exec_cmd("apt-get remove --assume-yes -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold --force-yes grub-pc")
-                    self.exec_cmd("apt-get -f install --assume-yes -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold --force-yes")
+                    self.exec_cmd("apt-get remove --assume-yes -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold %s grub-pc" % self.force)
+                    self.exec_cmd("apt-get -f install --assume-yes -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold %s" % self.force)
 
             # Detect cdrom device
             # TODO : properly detect cdrom device
@@ -716,7 +717,7 @@ class InstallerEngine(threading.Thread):
             self.update_progress(message=_("Update apt cache"))
             self.exec_cmd("apt-get update")
             self.update_progress(message=_("Update the new system"))
-            self.exec_cmd("apt-get --assume-yes -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold --force-yes upgrade")
+            self.exec_cmd("apt-get --assume-yes -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold %s upgrade" % self.force)
 
         # localizing
         if self.setup.language != "en_US":
@@ -808,13 +809,13 @@ class InstallerEngine(threading.Thread):
         if not in_virtualbox() or self.detachable:
             self.log.write(" --> Remove VirtualBox", "InstallerEngine.finish_install", "info")
             self.update_progress(pulse=True, message=_("Removing VirtualBox"))
-            self.exec_cmd("apt-get purge --assume-yes -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold --force-yes virtualbox*")
+            self.exec_cmd("apt-get purge --assume-yes -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold %s virtualbox*" % self.force)
 
         # Remove os-prober when installing to pen drive
         if self.detachable:
             self.log.write(" --> Remove os-prober", "InstallerEngine.finish_install", "info")
             self.update_progress(pulse=True, message=_("Removing os-prober"))
-            self.exec_cmd("apt-get purge --assume-yes -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold --force-yes os-prober")
+            self.exec_cmd("apt-get purge --assume-yes -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold %s os-prober" % self.force)
 
         # write MBR (grub)
         self.log.write(" --> Configuring Grub", "InstallerEngine.finish_install", "info")
@@ -852,9 +853,12 @@ class InstallerEngine(threading.Thread):
             # Save current boot parameters
             default_grub = "%s/etc/default/grub" % self.setup.target_dir
             if exists(default_grub) and len(self.boot_parms) > 0:
-                # When booting in EFI in VirtualBox with an encrypted partition Plymouth will break the system!
-                if 'splash' in self.boot_parms:
-                    if in_virtualbox():
+                if in_virtualbox():
+                    # We needed nomodeset in a live session in VB but not when installed
+                    if 'nomodeset' in self.boot_parms:
+                        self.boot_parms.remove('nomodeset')
+                    # When booting in EFI in VirtualBox with an encrypted partition Plymouth will break the system!
+                    if 'splash' in self.boot_parms:
                         for partition in self.sorted_partitions:
                             if partition.mount_as:
                                 if partition.encrypt or partition.type == 'luks':
@@ -877,13 +881,13 @@ class InstallerEngine(threading.Thread):
                       "sed -i 's/^deb cdrom/#deb cdrom/' /etc/apt/sources.list\n" \
                       "dpkg --configure -a\n" \
                       "apt-get -f install\n" \
-                      "apt-get -y --force-yes clean\n" \
-                      "apt-get -y --force-yes autoremove\n" \
+                      "apt-get -y %s clean\n" \
+                      "apt-get -y %s autoremove\n" \
                       "while [ \"$(deborphan)\" ]; do\n" \
                       "  apt-get remove --purge --assume-yes -o " \
                       "Dpkg::Options::=--force-confdef -o " \
-                      "Dpkg::Options::=--force-confold --force-yes $(deborphan)\n" \
-                      "done"
+                      "Dpkg::Options::=--force-confold %s $(deborphan)\n" \
+                      "done" % (self.force, self.force, self.force)
             with open("%s/cleanup.sh" % self.setup.target_dir, "w") as f:
                 f.write(cleanup)
             self.local_exec("chmod +x %s/cleanup.sh" % self.setup.target_dir)
@@ -911,7 +915,7 @@ class InstallerEngine(threading.Thread):
             self.local_exec("cp %s %s/root/" % (packages_remove, self.setup.target_dir))
             # But remove the live packages
             packages = "live-boot live-boot-initramfs-tools live-config live-config-sysvinit live-config-systemd live-config-sysvinit live-build live-tools"
-            self.exec_cmd("apt-get remove --purge --assume-yes -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold --force-yes %s" % packages)
+            self.exec_cmd("apt-get remove --purge --assume-yes -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold %s %s" % (self.force, packages))
         else:
             if self.setup.oem_setup:
                 packages_remove = "/root/filesystem.packages-remove"
@@ -919,9 +923,9 @@ class InstallerEngine(threading.Thread):
             if exists(packages_remove):
                 with open(packages_remove, "r") as fd:
                     line = fd.read().replace('\n', ' ')
-                self.exec_cmd("apt-get remove --purge --assume-yes -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold --force-yes %s" % line)
+                self.exec_cmd("apt-get remove --purge --assume-yes -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold %s %s" % (self.force, line))
             else:
-                self.exec_cmd("apt-get remove --purge --assume-yes -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold --force-yes ^live-*")
+                self.exec_cmd("apt-get remove --purge --assume-yes -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold %s ^live-*" % self.force)
 
         # Create SHA file of initrd.img
         kernelversion = getoutput("uname -r", logger=self.log)

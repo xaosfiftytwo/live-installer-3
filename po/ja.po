@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: live-installer-3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-10 19:49+0200\n"
+"POT-Creation-Date: 2016-06-13 09:38+0200\n"
 "PO-Revision-Date: 2016-04-05 12:27+0000\n"
 "Last-Translator: Arjen Balfoort <schoelje@solydxk.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/solydxk/live-installer-3/"
@@ -22,40 +22,40 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../usr/lib/live-installer-3/localize.py:45
+#: ../usr/lib/live-installer-3/localize.py:46
 msgid "Install additional localized packages"
 msgstr "追加ローカライズパッケージのインストール"
 
-#: ../usr/lib/live-installer-3/localize.py:57
+#: ../usr/lib/live-installer-3/localize.py:58
 msgid "Localizing KDE"
 msgstr "KDE のローカライズ中"
 
-#: ../usr/lib/live-installer-3/localize.py:65
+#: ../usr/lib/live-installer-3/localize.py:66
 msgid "Localizing LibreOffice"
 msgstr "LibreOffice のローカライズ中"
 
-#: ../usr/lib/live-installer-3/localize.py:79
+#: ../usr/lib/live-installer-3/localize.py:80
 msgid "Localizing AbiWord"
 msgstr "AbiWord のローカライズ中"
 
-#: ../usr/lib/live-installer-3/localize.py:94
+#: ../usr/lib/live-installer-3/localize.py:95
 msgid "Localizing Firefox"
 msgstr "Firefox のローカライズ中"
 
-#: ../usr/lib/live-installer-3/localize.py:103
+#: ../usr/lib/live-installer-3/localize.py:104
 msgid "Localizing Thunderbird"
 msgstr "Thunderbird のローカライズ中"
 
-#: ../usr/lib/live-installer-3/partitioning.py:173
-#: ../usr/lib/live-installer-3/partitioning.py:579
+#: ../usr/lib/live-installer-3/partitioning.py:175
+#: ../usr/lib/live-installer-3/partitioning.py:581
 msgid "Unknown"
 msgstr "未設定"
 
-#: ../usr/lib/live-installer-3/partitioning.py:348
+#: ../usr/lib/live-installer-3/partitioning.py:350
 msgid "Removable:"
 msgstr "取り外し可能: "
 
-#: ../usr/lib/live-installer-3/partitioning.py:375
+#: ../usr/lib/live-installer-3/partitioning.py:377
 #: ../usr/lib/live-installer-3/gtk_interface.py:809
 #: ../usr/lib/live-installer-3/gtk_interface.py:813
 #: ../usr/lib/live-installer-3/gtk_interface.py:832
@@ -65,7 +65,7 @@ msgstr "取り外し可能: "
 msgid "Installation Tool"
 msgstr "インストールツール"
 
-#: ../usr/lib/live-installer-3/partitioning.py:376
+#: ../usr/lib/live-installer-3/partitioning.py:378
 #, python-format
 msgid ""
 "No partition table was found on the hard drive: %s.\n"
@@ -75,56 +75,56 @@ msgid ""
 "Note: This will ERASE ALL DATA present on this disk."
 msgstr ""
 
-#: ../usr/lib/live-installer-3/partitioning.py:574
+#: ../usr/lib/live-installer-3/partitioning.py:576
 msgid "Logical partition"
 msgstr "論理パーティション"
 
-#: ../usr/lib/live-installer-3/partitioning.py:575
+#: ../usr/lib/live-installer-3/partitioning.py:577
 msgid "Extended partition"
 msgstr "拡張パーティション"
 
-#: ../usr/lib/live-installer-3/partitioning.py:576
+#: ../usr/lib/live-installer-3/partitioning.py:578
 #: ../usr/lib/live-installer-3/gtk_interface.py:597
 msgid "Free space"
 msgstr "空き容量"
 
-#: ../usr/lib/live-installer-3/partitioning.py:604
+#: ../usr/lib/live-installer-3/partitioning.py:606
 #: ../usr/lib/live-installer-3/gtk_interface.py:633
 msgid "Encryption password"
 msgstr "暗号化パスワード"
 
-#: ../usr/lib/live-installer-3/partitioning.py:605
+#: ../usr/lib/live-installer-3/partitioning.py:607
 msgid "Password for the encrypted partition:"
 msgstr "パーティションの暗号化パスワード:"
 
-#: ../usr/lib/live-installer-3/partitioning.py:763
+#: ../usr/lib/live-installer-3/partitioning.py:765
 msgid "Edit partition"
 msgstr "パーティションを編集"
 
-#: ../usr/lib/live-installer-3/partitioning.py:770
+#: ../usr/lib/live-installer-3/partitioning.py:774
 #: ../usr/lib/live-installer-3/gtk_interface.py:589
 msgid "Device"
 msgstr "デバイス"
 
-#: ../usr/lib/live-installer-3/partitioning.py:771
+#: ../usr/lib/live-installer-3/partitioning.py:775
 #: ../usr/lib/live-installer-3/gtk_interface.py:594
 msgid "Format as"
 msgstr "フォーマット"
 
-#: ../usr/lib/live-installer-3/partitioning.py:772
+#: ../usr/lib/live-installer-3/partitioning.py:776
 #: ../usr/lib/live-installer-3/gtk_interface.py:593
 msgid "Mount point"
 msgstr "マウントポイント"
 
-#: ../usr/lib/live-installer-3/partitioning.py:773
+#: ../usr/lib/live-installer-3/partitioning.py:777
 msgid "Label (optional)"
 msgstr "ラベル (オプション)"
 
-#: ../usr/lib/live-installer-3/partitioning.py:774
+#: ../usr/lib/live-installer-3/partitioning.py:778
 msgid "Encrypt partition"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/partitioning.py:775
+#: ../usr/lib/live-installer-3/partitioning.py:779
 msgid "Password"
 msgstr "パスワード"
 
@@ -189,12 +189,12 @@ msgstr ""
 msgid "You need to choose a mount point for partition:"
 msgstr "パーティションのマウントポイントを選択して下さい:"
 
-#: ../usr/lib/live-installer-3/installer.py:143
-#: ../usr/lib/live-installer-3/installer.py:168
+#: ../usr/lib/live-installer-3/installer.py:144
+#: ../usr/lib/live-installer-3/installer.py:169
 msgid "Installation error"
 msgstr "インストールエラー"
 
-#: ../usr/lib/live-installer-3/installer.py:153
+#: ../usr/lib/live-installer-3/installer.py:154
 msgid ""
 "Installation is now paused. Please read the instructions on the page "
 "carefully before clicking Forward to finish the installation."
@@ -202,36 +202,36 @@ msgstr ""
 "インストールは一時停止中です。インストールを終えるために次へをクリックする前"
 "に、慎重にページの指示を読んでください"
 
-#: ../usr/lib/live-installer-3/installer.py:154
+#: ../usr/lib/live-installer-3/installer.py:155
 msgid "Verify that fstab is correct (use blkid to check the UUIDs)."
 msgstr "fstab が正しいか確認しています。(UUID を確認するために blkid を使用)"
 
-#: ../usr/lib/live-installer-3/installer.py:155
+#: ../usr/lib/live-installer-3/installer.py:156
 msgid ""
 "A chrooted terminal and fstab will be opened after you close this message."
 msgstr "このメッセージを閉じた後、chroot 端末で fstab を開きます。"
 
-#: ../usr/lib/live-installer-3/installer.py:157
+#: ../usr/lib/live-installer-3/installer.py:158
 msgid "Installation paused"
 msgstr "インストールの一時停止"
 
-#: ../usr/lib/live-installer-3/installer.py:207
+#: ../usr/lib/live-installer-3/installer.py:208
 #, python-format
 msgid "Encrypting %(partition)s ..."
 msgstr "%(partition)s を暗号化..."
 
-#: ../usr/lib/live-installer-3/installer.py:213
+#: ../usr/lib/live-installer-3/installer.py:214
 #, python-format
 msgid "Formatting %(partition)s as %(format)s ..."
 msgstr "%(partition)s を %(format)s へフォーマット中..."
 
-#: ../usr/lib/live-installer-3/installer.py:256
-#: ../usr/lib/live-installer-3/installer.py:271
+#: ../usr/lib/live-installer-3/installer.py:257
+#: ../usr/lib/live-installer-3/installer.py:272
 #, python-format
 msgid "Mounting %(partition)s on %(mountpoint)s"
 msgstr "%(partition)s を %(mountpoint)s にマウントしています"
 
-#: ../usr/lib/live-installer-3/installer.py:293
+#: ../usr/lib/live-installer-3/installer.py:294
 #, python-format
 msgid ""
 "You must first manually mount your target filesystem(s) at %s to do a custom "
@@ -240,12 +240,12 @@ msgstr ""
 "まず手動でカスタムインストールを行うために、対象のファイルシステムを %s へマ"
 "ウントする必要があります！"
 
-#: ../usr/lib/live-installer-3/installer.py:296
-#: ../usr/lib/live-installer-3/installer.py:398
+#: ../usr/lib/live-installer-3/installer.py:297
+#: ../usr/lib/live-installer-3/installer.py:399
 msgid "Not mounted"
 msgstr "マウントされていません"
 
-#: ../usr/lib/live-installer-3/installer.py:304
+#: ../usr/lib/live-installer-3/installer.py:305
 msgid ""
 "Something is wrong with the installation medium! This is usually caused by "
 "burning tools which are not compatible with {}. Please burn the ISO image to "
@@ -255,116 +255,116 @@ msgstr ""
 "書き込んだことによって発生します。対象 {} 別のツールを使用して、DVD/USB に "
 "ISO イメージを書き込んで下さい。"
 
-#: ../usr/lib/live-installer-3/installer.py:307
+#: ../usr/lib/live-installer-3/installer.py:308
 msgid "Base filesystem does not exist"
 msgstr "ベースファイルシステムが存在しません"
 
-#: ../usr/lib/live-installer-3/installer.py:354
+#: ../usr/lib/live-installer-3/installer.py:355
 msgid "Copying"
 msgstr "コピー中"
 
-#: ../usr/lib/live-installer-3/installer.py:391
+#: ../usr/lib/live-installer-3/installer.py:392
 msgid "Entering the system ..."
 msgstr "新システムへ入っています..."
 
-#: ../usr/lib/live-installer-3/installer.py:395
+#: ../usr/lib/live-installer-3/installer.py:396
 #, python-format
 msgid "%s/dev not mounted - exiting"
 msgstr ""
 
-#: ../usr/lib/live-installer-3/installer.py:418
+#: ../usr/lib/live-installer-3/installer.py:419
 msgid "Installing EFI packages..."
 msgstr "EFI パッケージをインストール中..."
 
-#: ../usr/lib/live-installer-3/installer.py:442
+#: ../usr/lib/live-installer-3/installer.py:443
 msgid "Installing drivers"
 msgstr "ドライバーのインストール中"
 
-#: ../usr/lib/live-installer-3/installer.py:477
+#: ../usr/lib/live-installer-3/installer.py:478
 msgid "Writing filesystem mount information to /etc/fstab"
 msgstr "/etc/stab にファイルシステムのマウント情報を書込中"
 
-#: ../usr/lib/live-installer-3/installer.py:598
+#: ../usr/lib/live-installer-3/installer.py:599
 msgid "Adding new user to the system"
 msgstr "システムに新規ユーザを追加中"
 
-#: ../usr/lib/live-installer-3/installer.py:679
+#: ../usr/lib/live-installer-3/installer.py:680
 msgid "Setting hostname"
 msgstr "ホスト名を設定しています"
 
-#: ../usr/lib/live-installer-3/installer.py:700
+#: ../usr/lib/live-installer-3/installer.py:701
 msgid "Setting locale"
 msgstr "ロケールを設定しています"
 
-#: ../usr/lib/live-installer-3/installer.py:716
+#: ../usr/lib/live-installer-3/installer.py:717
 msgid "Update apt cache"
 msgstr "apt キャッシュの更新"
 
-#: ../usr/lib/live-installer-3/installer.py:718
+#: ../usr/lib/live-installer-3/installer.py:719
 msgid "Update the new system"
 msgstr "新しいシステムへ更新"
 
-#: ../usr/lib/live-installer-3/installer.py:725
+#: ../usr/lib/live-installer-3/installer.py:726
 msgid "Localizing packages"
 msgstr "パッケージのローカライズを行っています"
 
-#: ../usr/lib/live-installer-3/installer.py:743
+#: ../usr/lib/live-installer-3/installer.py:744
 msgid "Setting keyboard options"
 msgstr "キーボードオプションを設定しています"
 
-#: ../usr/lib/live-installer-3/installer.py:804
+#: ../usr/lib/live-installer-3/installer.py:805
 msgid "Configuring sensors"
 msgstr "sensors の設定中"
 
-#: ../usr/lib/live-installer-3/installer.py:810
+#: ../usr/lib/live-installer-3/installer.py:811
 msgid "Removing VirtualBox"
 msgstr "VirtualBox を削除"
 
-#: ../usr/lib/live-installer-3/installer.py:816
+#: ../usr/lib/live-installer-3/installer.py:817
 msgid "Removing os-prober"
 msgstr "os-prober を削除中"
 
-#: ../usr/lib/live-installer-3/installer.py:823
+#: ../usr/lib/live-installer-3/installer.py:824
 msgid "Installing bootloader"
 msgstr "ブートローダーをインストールしています"
 
-#: ../usr/lib/live-installer-3/installer.py:845
+#: ../usr/lib/live-installer-3/installer.py:846
 msgid ""
 "The grub bootloader was not configured properly! You need to configure it "
 "manually."
 msgstr ""
 "Grub ブートローダーが正しく設定されていません! 手動で設定する必要があります。"
 
-#: ../usr/lib/live-installer-3/installer.py:848
+#: ../usr/lib/live-installer-3/installer.py:849
 msgid "Grub not configured"
 msgstr "GRUB の設定が行えませんでした"
 
-#: ../usr/lib/live-installer-3/installer.py:875
+#: ../usr/lib/live-installer-3/installer.py:879
 msgid "Cleaning APT"
 msgstr "APT を消去しています"
 
-#: ../usr/lib/live-installer-3/installer.py:907
+#: ../usr/lib/live-installer-3/installer.py:911
 msgid "Removing live configuration (packages)"
 msgstr "ライブ設定 (パッケージ) を削除しています"
 
-#: ../usr/lib/live-installer-3/installer.py:949
+#: ../usr/lib/live-installer-3/installer.py:953
 msgid "Unmounting partitions"
 msgstr "パーティションのマウント解除中"
 
-#: ../usr/lib/live-installer-3/installer.py:966
+#: ../usr/lib/live-installer-3/installer.py:970
 #: ../usr/lib/live-installer-3/gtk_interface.py:998
 msgid "Installation finished"
 msgstr "インストール完了"
 
-#: ../usr/lib/live-installer-3/installer.py:986
+#: ../usr/lib/live-installer-3/installer.py:990
 msgid "Configuring bootloader"
 msgstr "ブートローダーを設定しています"
 
-#: ../usr/lib/live-installer-3/installer.py:993
+#: ../usr/lib/live-installer-3/installer.py:997
 msgid "Checking bootloader"
 msgstr "ブートローダーを確認しています"
 
-#: ../usr/lib/live-installer-3/installer.py:1008
+#: ../usr/lib/live-installer-3/installer.py:1012
 #, python-format
 msgid "No %s file found!"
 msgstr "ファイル %s が見つかりません！"

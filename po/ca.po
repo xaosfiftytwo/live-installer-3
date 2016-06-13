@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: live-installer-3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-10 19:49+0200\n"
+"POT-Creation-Date: 2016-06-13 09:38+0200\n"
 "PO-Revision-Date: 2016-04-05 16:55+0000\n"
 "Last-Translator: Eduard Selma <selma@tinet.cat>\n"
 "Language-Team: Catalan (http://www.transifex.com/solydxk/live-installer-3/"
@@ -21,40 +21,40 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../usr/lib/live-installer-3/localize.py:45
+#: ../usr/lib/live-installer-3/localize.py:46
 msgid "Install additional localized packages"
 msgstr "Instal·la paquets localitzats addicionals "
 
-#: ../usr/lib/live-installer-3/localize.py:57
+#: ../usr/lib/live-installer-3/localize.py:58
 msgid "Localizing KDE"
 msgstr "Localitzant KDE "
 
-#: ../usr/lib/live-installer-3/localize.py:65
+#: ../usr/lib/live-installer-3/localize.py:66
 msgid "Localizing LibreOffice"
 msgstr "Localitzant LibreOffice "
 
-#: ../usr/lib/live-installer-3/localize.py:79
+#: ../usr/lib/live-installer-3/localize.py:80
 msgid "Localizing AbiWord"
 msgstr "Localitzant AbiWord "
 
-#: ../usr/lib/live-installer-3/localize.py:94
+#: ../usr/lib/live-installer-3/localize.py:95
 msgid "Localizing Firefox"
 msgstr "Localitzant Firefox "
 
-#: ../usr/lib/live-installer-3/localize.py:103
+#: ../usr/lib/live-installer-3/localize.py:104
 msgid "Localizing Thunderbird"
 msgstr "Localitzant Thunderbird "
 
-#: ../usr/lib/live-installer-3/partitioning.py:173
-#: ../usr/lib/live-installer-3/partitioning.py:579
+#: ../usr/lib/live-installer-3/partitioning.py:175
+#: ../usr/lib/live-installer-3/partitioning.py:581
 msgid "Unknown"
 msgstr "Desconegut "
 
-#: ../usr/lib/live-installer-3/partitioning.py:348
+#: ../usr/lib/live-installer-3/partitioning.py:350
 msgid "Removable:"
 msgstr "Dispositiu extraïble: "
 
-#: ../usr/lib/live-installer-3/partitioning.py:375
+#: ../usr/lib/live-installer-3/partitioning.py:377
 #: ../usr/lib/live-installer-3/gtk_interface.py:809
 #: ../usr/lib/live-installer-3/gtk_interface.py:813
 #: ../usr/lib/live-installer-3/gtk_interface.py:832
@@ -64,7 +64,7 @@ msgstr "Dispositiu extraïble: "
 msgid "Installation Tool"
 msgstr "Eina d'instal·lació "
 
-#: ../usr/lib/live-installer-3/partitioning.py:376
+#: ../usr/lib/live-installer-3/partitioning.py:378
 #, python-format
 msgid ""
 "No partition table was found on the hard drive: %s.\n"
@@ -79,56 +79,56 @@ msgstr ""
 "\n"
 "Això ELIMINARÀ TOTES LES DADES existents al disc."
 
-#: ../usr/lib/live-installer-3/partitioning.py:574
+#: ../usr/lib/live-installer-3/partitioning.py:576
 msgid "Logical partition"
 msgstr "Partició lògica "
 
-#: ../usr/lib/live-installer-3/partitioning.py:575
+#: ../usr/lib/live-installer-3/partitioning.py:577
 msgid "Extended partition"
 msgstr "Partició estesa "
 
-#: ../usr/lib/live-installer-3/partitioning.py:576
+#: ../usr/lib/live-installer-3/partitioning.py:578
 #: ../usr/lib/live-installer-3/gtk_interface.py:597
 msgid "Free space"
 msgstr "Espai lliure "
 
-#: ../usr/lib/live-installer-3/partitioning.py:604
+#: ../usr/lib/live-installer-3/partitioning.py:606
 #: ../usr/lib/live-installer-3/gtk_interface.py:633
 msgid "Encryption password"
 msgstr "Contrasenya d'encriptació "
 
-#: ../usr/lib/live-installer-3/partitioning.py:605
+#: ../usr/lib/live-installer-3/partitioning.py:607
 msgid "Password for the encrypted partition:"
 msgstr "Contrasenya per la partició encriptada: "
 
-#: ../usr/lib/live-installer-3/partitioning.py:763
+#: ../usr/lib/live-installer-3/partitioning.py:765
 msgid "Edit partition"
 msgstr "Edita la partició "
 
-#: ../usr/lib/live-installer-3/partitioning.py:770
+#: ../usr/lib/live-installer-3/partitioning.py:774
 #: ../usr/lib/live-installer-3/gtk_interface.py:589
 msgid "Device"
 msgstr "Dispositiu "
 
-#: ../usr/lib/live-installer-3/partitioning.py:771
+#: ../usr/lib/live-installer-3/partitioning.py:775
 #: ../usr/lib/live-installer-3/gtk_interface.py:594
 msgid "Format as"
 msgstr "Formata com: "
 
-#: ../usr/lib/live-installer-3/partitioning.py:772
+#: ../usr/lib/live-installer-3/partitioning.py:776
 #: ../usr/lib/live-installer-3/gtk_interface.py:593
 msgid "Mount point"
 msgstr "Punt de muntatge "
 
-#: ../usr/lib/live-installer-3/partitioning.py:773
+#: ../usr/lib/live-installer-3/partitioning.py:777
 msgid "Label (optional)"
 msgstr "Etiqueta (opcional) "
 
-#: ../usr/lib/live-installer-3/partitioning.py:774
+#: ../usr/lib/live-installer-3/partitioning.py:778
 msgid "Encrypt partition"
 msgstr "Encripta la partició "
 
-#: ../usr/lib/live-installer-3/partitioning.py:775
+#: ../usr/lib/live-installer-3/partitioning.py:779
 msgid "Password"
 msgstr "Contrasenya"
 
@@ -192,12 +192,12 @@ msgstr ""
 msgid "You need to choose a mount point for partition:"
 msgstr "Cal triar un punt de muntatge per a la partició: "
 
-#: ../usr/lib/live-installer-3/installer.py:143
-#: ../usr/lib/live-installer-3/installer.py:168
+#: ../usr/lib/live-installer-3/installer.py:144
+#: ../usr/lib/live-installer-3/installer.py:169
 msgid "Installation error"
 msgstr "S'ha produït un error en la instal·lació "
 
-#: ../usr/lib/live-installer-3/installer.py:153
+#: ../usr/lib/live-installer-3/installer.py:154
 msgid ""
 "Installation is now paused. Please read the instructions on the page "
 "carefully before clicking Forward to finish the installation."
@@ -205,38 +205,38 @@ msgstr ""
 "La instal·lació està en pausa. Si us plau, llegiu les instruccions de la "
 "pàgina amb cura i feu clic a Següent per finalitzar la instal·lació."
 
-#: ../usr/lib/live-installer-3/installer.py:154
+#: ../usr/lib/live-installer-3/installer.py:155
 msgid "Verify that fstab is correct (use blkid to check the UUIDs)."
 msgstr ""
 "Comproveu que el fstab és correcte (useu blkid per verificar els UUIDs)"
 
-#: ../usr/lib/live-installer-3/installer.py:155
+#: ../usr/lib/live-installer-3/installer.py:156
 msgid ""
 "A chrooted terminal and fstab will be opened after you close this message."
 msgstr ""
 "S'obrirà un terminal amb chroot i fstab després de tancar aquest missatge."
 
-#: ../usr/lib/live-installer-3/installer.py:157
+#: ../usr/lib/live-installer-3/installer.py:158
 msgid "Installation paused"
 msgstr "Instal·lació en pausa "
 
-#: ../usr/lib/live-installer-3/installer.py:207
+#: ../usr/lib/live-installer-3/installer.py:208
 #, python-format
 msgid "Encrypting %(partition)s ..."
 msgstr "Encriptant %(partition)s ..."
 
-#: ../usr/lib/live-installer-3/installer.py:213
+#: ../usr/lib/live-installer-3/installer.py:214
 #, python-format
 msgid "Formatting %(partition)s as %(format)s ..."
 msgstr "Formatant %(partition)s com a %(format)s..."
 
-#: ../usr/lib/live-installer-3/installer.py:256
-#: ../usr/lib/live-installer-3/installer.py:271
+#: ../usr/lib/live-installer-3/installer.py:257
+#: ../usr/lib/live-installer-3/installer.py:272
 #, python-format
 msgid "Mounting %(partition)s on %(mountpoint)s"
 msgstr "S'està muntant %(partition)s a %(mountpoint)s"
 
-#: ../usr/lib/live-installer-3/installer.py:293
+#: ../usr/lib/live-installer-3/installer.py:294
 #, python-format
 msgid ""
 "You must first manually mount your target filesystem(s) at %s to do a custom "
@@ -245,12 +245,12 @@ msgstr ""
 "Cal que primer munteu manualment el sistema de fitxers objectiu a %s per fer "
 "una instal·lació a mida!"
 
-#: ../usr/lib/live-installer-3/installer.py:296
-#: ../usr/lib/live-installer-3/installer.py:398
+#: ../usr/lib/live-installer-3/installer.py:297
+#: ../usr/lib/live-installer-3/installer.py:399
 msgid "Not mounted"
 msgstr "No muntat "
 
-#: ../usr/lib/live-installer-3/installer.py:304
+#: ../usr/lib/live-installer-3/installer.py:305
 msgid ""
 "Something is wrong with the installation medium! This is usually caused by "
 "burning tools which are not compatible with {}. Please burn the ISO image to "
@@ -260,82 +260,82 @@ msgstr ""
 "les eines de gravació, que no són compatibles amb {}. Si us plau, graveu la "
 "imatge ISO amb una eina diferent."
 
-#: ../usr/lib/live-installer-3/installer.py:307
+#: ../usr/lib/live-installer-3/installer.py:308
 msgid "Base filesystem does not exist"
 msgstr "El sistema de fitxers base no existeix "
 
-#: ../usr/lib/live-installer-3/installer.py:354
+#: ../usr/lib/live-installer-3/installer.py:355
 msgid "Copying"
 msgstr "Copiant"
 
-#: ../usr/lib/live-installer-3/installer.py:391
+#: ../usr/lib/live-installer-3/installer.py:392
 msgid "Entering the system ..."
 msgstr "Entrant al sistema..."
 
-#: ../usr/lib/live-installer-3/installer.py:395
+#: ../usr/lib/live-installer-3/installer.py:396
 #, python-format
 msgid "%s/dev not mounted - exiting"
 msgstr "%s/dev no està muntat - sortint "
 
-#: ../usr/lib/live-installer-3/installer.py:418
+#: ../usr/lib/live-installer-3/installer.py:419
 msgid "Installing EFI packages..."
 msgstr "Instal·lant els paquets EFI..."
 
-#: ../usr/lib/live-installer-3/installer.py:442
+#: ../usr/lib/live-installer-3/installer.py:443
 msgid "Installing drivers"
 msgstr "Instal·lant controladors "
 
-#: ../usr/lib/live-installer-3/installer.py:477
+#: ../usr/lib/live-installer-3/installer.py:478
 msgid "Writing filesystem mount information to /etc/fstab"
 msgstr ""
 "S'està escrivint la informació de muntatge del sistema de fitxers a /etc/"
 "fstab "
 
-#: ../usr/lib/live-installer-3/installer.py:598
+#: ../usr/lib/live-installer-3/installer.py:599
 msgid "Adding new user to the system"
 msgstr "S'està afegint l'usuari al sistema "
 
-#: ../usr/lib/live-installer-3/installer.py:679
+#: ../usr/lib/live-installer-3/installer.py:680
 msgid "Setting hostname"
 msgstr "Definint el nom de l'amfitrió "
 
-#: ../usr/lib/live-installer-3/installer.py:700
+#: ../usr/lib/live-installer-3/installer.py:701
 msgid "Setting locale"
 msgstr "Establint la configuració regional "
 
-#: ../usr/lib/live-installer-3/installer.py:716
+#: ../usr/lib/live-installer-3/installer.py:717
 msgid "Update apt cache"
 msgstr "Actualitzant la memòria cau de l'APT  "
 
-#: ../usr/lib/live-installer-3/installer.py:718
+#: ../usr/lib/live-installer-3/installer.py:719
 msgid "Update the new system"
 msgstr "Actualitza el nou sistema "
 
-#: ../usr/lib/live-installer-3/installer.py:725
+#: ../usr/lib/live-installer-3/installer.py:726
 msgid "Localizing packages"
 msgstr "Configurant llengua dels paquets "
 
-#: ../usr/lib/live-installer-3/installer.py:743
+#: ../usr/lib/live-installer-3/installer.py:744
 msgid "Setting keyboard options"
 msgstr "Establint les opcions del teclat "
 
-#: ../usr/lib/live-installer-3/installer.py:804
+#: ../usr/lib/live-installer-3/installer.py:805
 msgid "Configuring sensors"
 msgstr "Configurant els sensors "
 
-#: ../usr/lib/live-installer-3/installer.py:810
+#: ../usr/lib/live-installer-3/installer.py:811
 msgid "Removing VirtualBox"
 msgstr "Eliminant VirtualBox "
 
-#: ../usr/lib/live-installer-3/installer.py:816
+#: ../usr/lib/live-installer-3/installer.py:817
 msgid "Removing os-prober"
 msgstr "Eliminant OS-prober "
 
-#: ../usr/lib/live-installer-3/installer.py:823
+#: ../usr/lib/live-installer-3/installer.py:824
 msgid "Installing bootloader"
 msgstr "Instal·lant el carregador d'arrencada "
 
-#: ../usr/lib/live-installer-3/installer.py:845
+#: ../usr/lib/live-installer-3/installer.py:846
 msgid ""
 "The grub bootloader was not configured properly! You need to configure it "
 "manually."
@@ -343,36 +343,36 @@ msgstr ""
 "El gestor d'arrencada GRUB no està configurat correctament! Cal configurar-"
 "lo manualment."
 
-#: ../usr/lib/live-installer-3/installer.py:848
+#: ../usr/lib/live-installer-3/installer.py:849
 msgid "Grub not configured"
 msgstr "El GRUB no està configurat "
 
-#: ../usr/lib/live-installer-3/installer.py:875
+#: ../usr/lib/live-installer-3/installer.py:879
 msgid "Cleaning APT"
 msgstr "Netejant l'APT "
 
-#: ../usr/lib/live-installer-3/installer.py:907
+#: ../usr/lib/live-installer-3/installer.py:911
 msgid "Removing live configuration (packages)"
 msgstr "S'està eliminant la configuració live (paquets) "
 
-#: ../usr/lib/live-installer-3/installer.py:949
+#: ../usr/lib/live-installer-3/installer.py:953
 msgid "Unmounting partitions"
 msgstr "Desmuntant les particions "
 
-#: ../usr/lib/live-installer-3/installer.py:966
+#: ../usr/lib/live-installer-3/installer.py:970
 #: ../usr/lib/live-installer-3/gtk_interface.py:998
 msgid "Installation finished"
 msgstr "S'ha finalitzat la instal·lació "
 
-#: ../usr/lib/live-installer-3/installer.py:986
+#: ../usr/lib/live-installer-3/installer.py:990
 msgid "Configuring bootloader"
 msgstr "Configurant el gestor d'arrencada "
 
-#: ../usr/lib/live-installer-3/installer.py:993
+#: ../usr/lib/live-installer-3/installer.py:997
 msgid "Checking bootloader"
 msgstr "Comprovant el gestor d'arrencada "
 
-#: ../usr/lib/live-installer-3/installer.py:1008
+#: ../usr/lib/live-installer-3/installer.py:1012
 #, python-format
 msgid "No %s file found!"
 msgstr "No he trobat el fitxer %s! "

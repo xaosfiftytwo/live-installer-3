@@ -185,37 +185,6 @@ def get_boot_parameters():
     return parms
 
 
-def select_combobox_value(combobox, value, valueColNr=0):
-    i = 0
-    activeIndex = -1
-    liststore = combobox.get_model()
-    for data in liststore:
-        if data[valueColNr] == value:
-            activeIndex = i
-            break
-        i += 1
-    if combobox.get_has_entry():
-        combobox.set_entry_text_column(valueColNr)
-        if activeIndex < 0:
-            entry = combobox.get_child()
-            entry.set_text(value)
-    else:
-        if activeIndex < 0:
-            activeIndex = 0
-    combobox.set_active(activeIndex)
-
-
-def get_combox_value(combobox):
-    value = None
-    if combobox.get_has_entry():
-        entry = combobox.get_child()
-        value = entry.get_text().strip()
-    else:
-        model = combobox.get_model()
-        value = model.get_value(combobox.get_active_iter(), 0)
-    return value
-
-
 def filter_text(widget, allowed_chars_regexp='0-9'):
     def filter(entry, *args):
         text = entry.get_text().strip().lower()
@@ -296,6 +265,29 @@ def comment_line(file_path, pattern, comment=True):
         if not comment:
             cmd = "sed -i '/^#.*{p}/s/^#//' {f}".format(p=pattern, f=file_path)
         shell_exec(cmd)
+
+
+# Convert string to number
+def str_to_nr(stringnr, toInt=False):
+    nr = 0
+    stringnr = stringnr.strip()
+    try:
+        if toInt:
+            nr = int(stringnr)
+        else:
+            nr = float(stringnr)
+    except ValueError:
+        nr = 0
+    return nr
+
+
+def get_apt_force():
+    # --force-yes is deprecated in stretch
+    force = '--force-yes'
+    ver = str_to_nr(getoutput("head -c 1 /etc/debian_version | sed 's/[a-zA-Z]/0/' 2>/dev/null || echo 0"))
+    if ver == 0 or ver > 8:
+        force = '--allow-downgrades --allow-remove-essential --allow-change-held-packages'
+    return force
 
 
 # Class to run commands in a thread and return the output in a queue

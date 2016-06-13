@@ -8,10 +8,11 @@ import os
 import re
 import fnmatch
 from collections import defaultdict
-from utils import getoutput, shell_exec, select_combobox_value, get_combox_value
+from utils import getoutput, shell_exec
 from dialogs import QuestionDialog, ErrorDialog, InputDialog
 from encryption import is_encrypted, is_connected, connect_block_device, get_status
 from os.path import join, abspath, dirname, basename, exists
+from combobox import ComboBoxHandler
 
 # http://sourcecodebrowser.com/pyparted/3.0/annotated.html
 import parted
@@ -100,9 +101,10 @@ def edit_partition_dialog(widget, path, viewcol):
     partition = row[IDX_PART_OBJECT]
     if not partition: return
     partition_type = model.get_value(iter, IDX_PART_TYPE)
+    partition_mount_as = model.get_value(iter, IDX_PART_MOUNT_AS)
     if (partition.partition.type == parted.PARTITION_EXTENDED or
         partition.partition.number == -1 or
-        "swap" in partition_type):
+        ("swap" in partition_type and "swap" in partition_mount_as)):
         return
 
     PartitionDialog(partition,
@@ -764,7 +766,9 @@ class PartitionDialog(object):
         self.loading = True
         self.txt_label = self.go("txt_label")
         self.cmb_mount_point = self.go("combobox_mount_point")
+        self.cmb_mount_point_handler = ComboBoxHandler(self.cmb_mount_point)
         self.cmb_use_as = self.go("combobox_use_as")
+        self.cmb_use_as_handler = ComboBoxHandler(self.cmb_use_as)
 
         # Translations
         self.go("label_partition").set_markup("<b>%s</b>" % _("Device"))
@@ -796,21 +800,17 @@ class PartitionDialog(object):
         self.txt_label.set_text(partition.label)
 
         # Build list of pre-provided mountpoints
-        mounts = " / /home /boot /boot/efi /srv /tmp /var swap".split(' ')
-        self.cmb_mount_point.set_entry_text_column(0)
-        for mount in mounts:
-            self.cmb_mount_point.append_text(mount)
+        mounts = ",/,/home,/boot,/boot/efi,/srv,/tmp,/var,swap".split(',')
+        self.cmb_mount_point_handler.fillComboBox(mounts)
 
         # Build supported filesystems list
         filesystems = sorted(['', 'swap'] +
                              [fs[11:] for fs in getoutput('echo /sbin/mkfs.*').split()],
                              key=lambda x: 0 if x in ('', 'ext4') else 1 if x == 'swap' else 2)
-        self.cmb_use_as.set_entry_text_column(0)
-        for fs in filesystems:
-            self.cmb_use_as.append_text(fs)
+        self.cmb_use_as_handler.fillComboBox(filesystems)
 
-        select_combobox_value(self.cmb_mount_point, mount_as)
-        select_combobox_value(self.cmb_use_as, format_as)
+        self.cmb_mount_point_handler.selectValue(mount_as)
+        self.cmb_use_as_handler.selectValue(format_as)
 
         # Connect builder signals and show window
         self.builder.connect_signals(self)
@@ -819,7 +819,7 @@ class PartitionDialog(object):
         self.loading = False
 
     def on_combobox_mount_point_changed(self, widget):
-        mount_as = get_combox_value(widget)
+        mount_as = self.cmb_mount_point_handler.getValue()
         if "boot" in mount_as:
             # Cannot encrypt
             self.go("chk_encryption").set_active(False)
@@ -840,17 +840,17 @@ class PartitionDialog(object):
 
         # swap
         if mount_as == 'swap' and self.partition.type != 'swap':
-            select_combobox_value(self.cmb_use_as, 'swap')
+            self.cmb_use_as_handler.selectValue('swap')
 
         # efi
         if 'efi' in mount_as and 'fat' not in self.partition.type:
-            select_combobox_value(self.cmb_use_as, 'vfat')
+            self.cmb_use_as_handler.selectValue('vfat')
 
     def on_combobox_use_as_changed(self, widget):
-        format_as = get_combox_value(widget)
-        mount_as = get_combox_value(self.cmb_mount_point)
+        format_as = self.cmb_use_as_handler.getValue()
+        mount_as = self.cmb_mount_point_handler.getValue()
         if format_as == 'swap' and mount_as != 'swap':
-            select_combobox_value(self.cmb_mount_point, 'swap')
+            self.cmb_mount_point_handler.selectValue('swap')
 
     def on_button_cancel_clicked(self, widget):
         # Close window without saving
@@ -860,7 +860,7 @@ class PartitionDialog(object):
         if self.loading: return
         if widget.get_active():
             # Show warning message
-            mount_as = get_combox_value(self.cmb_mount_point)
+            mount_as = self.cmb_mount_point_handler.getValue()
             if mount_as == '/':
                 encrypt = QuestionDialog(_("Encryption"),
                                          _("You chose to encrypt the root partition.\n\n"
@@ -873,9 +873,9 @@ class PartitionDialog(object):
                                          _("Encryption will erase all data from {}\n\n"
                                            "Are you sure you want to continue?").format(self.partition.path))
             if encrypt:
-                format_as = get_combox_value(self.cmb_use_as)
+                format_as = self.cmb_use_as_handler.getValue()
                 if not format_as:
-                    select_combobox_value(self.cmb_use_as, 'ext4')
+                    self.cmb_use_as_handler.selectValue('ext4')
                 self.go("frm_partition_encryption").set_sensitive(True)
                 self.go("entry_encpass1").set_text(self.partition.enc_passphrase)
                 self.go("entry_encpass2").set_text(self.partition.enc_passphrase)
@@ -910,8 +910,8 @@ class PartitionDialog(object):
 
     def on_button_ok_clicked(self, widget):
         # Collect data
-        format_as = get_combox_value(self.cmb_use_as)
-        mount_as = get_combox_value(self.cmb_mount_point)
+        format_as = self.cmb_use_as_handler.getValue()
+        mount_as = self.cmb_mount_point_handler.getValue()
         encrypt = self.go("chk_encryption").get_active()
         enc_passphrase1 = self.go("entry_encpass1").get_text().strip()
         enc_passphrase2 = self.go("entry_encpass2").get_text().strip()
@@ -930,7 +930,7 @@ class PartitionDialog(object):
                 errorFound = True
                 errorMessage = "{} {}".format(_("You need to choose a format type\n"
                                "for your encrypted partition (default: ext4):"), self.partition.path)
-                select_combobox_value(self.cmb_use_as, 'ext4')
+                self.cmb_use_as_handler.selectValue('ext4')
             if not mount_as:
                 errorFound = True
                 errorMessage = "{} {}".format(_("You need to choose a mount point for partition:"), self.partition.path)

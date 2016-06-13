@@ -3,7 +3,7 @@
 import os
 import re
 from utils import chroot_exec, get_config_dict, shell_exec, \
-                  doesPackageExist, isPackageInstalled
+                  doesPackageExist, isPackageInstalled, get_apt_force
 
 
 CONFIG_FILE = '/etc/live-installer-3/live-installer-3.conf'
@@ -18,6 +18,7 @@ class Localize():
         self.locale = self.language.lower().split("_")
         self.scriptDir = os.path.dirname(os.path.realpath(__file__))
         self.edition = 'all'
+        self.force = get_apt_force()
         config = get_config_dict(CONFIG_FILE)
         self.info = config.get('info', '/etc/linuxmint/info')
         if os.path.exists(self.info):
@@ -43,7 +44,7 @@ class Localize():
                 packages = config.get(self.edition, '').strip()
                 if packages != "":
                     self.update_progress(message=_("Install additional localized packages"))
-                    self.exec_cmd("apt-get --yes --force-yes install %s" % packages)
+                    self.exec_cmd("apt-get --yes %s install %s" % (self.force, packages))
             except Exception as detail:
                 msg = "ERROR: %s" % detail
                 print(msg)
@@ -57,7 +58,7 @@ class Localize():
                 self.update_progress(message=_("Localizing KDE"))
                 package = self.get_localized_package("kde-l10n")
                 if package != "":
-                    self.exec_cmd("apt-get install --yes --force-yes %s" % package)
+                    self.exec_cmd("apt-get install --yes %s %s" % (self.force, package))
 
             # Localize LibreOffice
             if isPackageInstalled("libreoffice"):
@@ -65,13 +66,13 @@ class Localize():
                 self.update_progress(message=_("Localizing LibreOffice"))
                 package = self.get_localized_package("libreoffice-l10n")
                 if package != "":
-                    self.exec_cmd("apt-get install --yes --force-yes %s" % package)
+                    self.exec_cmd("apt-get install --yes %s %s" % (self.force, package))
                 package = self.get_localized_package("libreoffice-help")
                 if package != "":
-                    self.exec_cmd("apt-get install --yes --force-yes %s" % package)
+                    self.exec_cmd("apt-get install --yes %s %s" % (self.force, package))
                 package = self.get_localized_package("myspell")
                 if package != "":
-                    self.exec_cmd("apt-get install --yes --force-yes %s" % package)
+                    self.exec_cmd("apt-get install --yes %s %s" % (self.force, package))
 
             # Localize AbiWord
             if isPackageInstalled("abiword"):
@@ -79,7 +80,7 @@ class Localize():
                 self.update_progress(message=_("Localizing AbiWord"))
                 package = self.get_localized_package("aspell")
                 if package != "":
-                    self.exec_cmd("apt-get install --yes --force-yes %s" % package)
+                    self.exec_cmd("apt-get install --yes %s %s" % (self.force, package))
 
             # Localize Firefox
             ff = "firefox"
@@ -94,7 +95,7 @@ class Localize():
                 self.update_progress(message=_("Localizing Firefox"))
                 package = self.get_localized_package("firefox-%sl10n" % esr)
                 if package != "":
-                    self.exec_cmd("apt-get install --yes --force-yes %s %s" % (ff, package))
+                    self.exec_cmd("apt-get install --yes %s %s %s" % (self.force, ff, package))
                     self.localizePref("%s/home/%s/.mozilla/firefox/mwad0hks.default/prefs.js" % (self.target_dir, self.username))
 
             # Localize Thunderbird
@@ -103,7 +104,7 @@ class Localize():
                 self.update_progress(message=_("Localizing Thunderbird"))
                 package = self.get_localized_package("thunderbird-l10n")
                 if package != "":
-                    self.exec_cmd("apt-get install --yes --force-yes %s" % package)
+                    self.exec_cmd("apt-get install --yes %s %s" % (self.force, package))
                     self.localizePref("%s/home/%s/.thunderbird/pjzwmea6.default/prefs.js" % (self.target_dir, self.username))
 
     def get_localized_package(self, package):

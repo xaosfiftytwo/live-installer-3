@@ -18,7 +18,7 @@ fi
 
 # Be root to run this script
 if [ $UID -ne 0 ]; then
-  sudo -c "$0 $@"
+  sudo $0 $@
   exit
 fi
 
@@ -40,11 +40,19 @@ fi
 # Mounting
 echo "Mounting $partition on $target"
 mount $partition $target
+
+if [ ! -e $target/dev ] || [ ! -e $target/sys ]; then
+  echo "dev en sys not found on $partition - exiting"
+  umount $target
+  rmdir $target
+  exit
+fi
+
 mount --bind /dev/ $target/dev
 mount --bind /dev/shm $target/dev/shm
 mount --bind /dev/pts $target/dev/pts
 mount --bind /sys/ $target/sys
-mount --bind /sys/ $target/sys/fs/fuse/connections
+mount --bind /sys/fs/fuse/connections $target/sys/fs/fuse/connections
 mount --bind /proc/ $target/proc
 
 # Chroot into dir

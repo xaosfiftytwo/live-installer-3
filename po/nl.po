@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: live-installer-3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-10 19:49+0200\n"
+"POT-Creation-Date: 2016-06-13 09:38+0200\n"
 "PO-Revision-Date: 2016-04-05 12:27+0000\n"
 "Last-Translator: Arjen Balfoort <schoelje@solydxk.com>\n"
 "Language-Team: Dutch (http://www.transifex.com/solydxk/live-installer-3/"
@@ -20,40 +20,40 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../usr/lib/live-installer-3/localize.py:45
+#: ../usr/lib/live-installer-3/localize.py:46
 msgid "Install additional localized packages"
 msgstr "Installeer extra geregionaliseerde software"
 
-#: ../usr/lib/live-installer-3/localize.py:57
+#: ../usr/lib/live-installer-3/localize.py:58
 msgid "Localizing KDE"
 msgstr "KDE wordt geregionaliseerd"
 
-#: ../usr/lib/live-installer-3/localize.py:65
+#: ../usr/lib/live-installer-3/localize.py:66
 msgid "Localizing LibreOffice"
 msgstr "LibreOffice wordt geregionaliseerd"
 
-#: ../usr/lib/live-installer-3/localize.py:79
+#: ../usr/lib/live-installer-3/localize.py:80
 msgid "Localizing AbiWord"
 msgstr "AbiWord wordt geregionaliseerd"
 
-#: ../usr/lib/live-installer-3/localize.py:94
+#: ../usr/lib/live-installer-3/localize.py:95
 msgid "Localizing Firefox"
 msgstr "Firefox wordt geregionaliseerd"
 
-#: ../usr/lib/live-installer-3/localize.py:103
+#: ../usr/lib/live-installer-3/localize.py:104
 msgid "Localizing Thunderbird"
 msgstr "Thunderbird wordt geregionaliseerd"
 
-#: ../usr/lib/live-installer-3/partitioning.py:173
-#: ../usr/lib/live-installer-3/partitioning.py:579
+#: ../usr/lib/live-installer-3/partitioning.py:175
+#: ../usr/lib/live-installer-3/partitioning.py:581
 msgid "Unknown"
 msgstr "Onbekend"
 
-#: ../usr/lib/live-installer-3/partitioning.py:348
+#: ../usr/lib/live-installer-3/partitioning.py:350
 msgid "Removable:"
 msgstr "Verwijderbaar:"
 
-#: ../usr/lib/live-installer-3/partitioning.py:375
+#: ../usr/lib/live-installer-3/partitioning.py:377
 #: ../usr/lib/live-installer-3/gtk_interface.py:809
 #: ../usr/lib/live-installer-3/gtk_interface.py:813
 #: ../usr/lib/live-installer-3/gtk_interface.py:832
@@ -63,7 +63,7 @@ msgstr "Verwijderbaar:"
 msgid "Installation Tool"
 msgstr "Installatieprogramma"
 
-#: ../usr/lib/live-installer-3/partitioning.py:376
+#: ../usr/lib/live-installer-3/partitioning.py:378
 #, python-format
 msgid ""
 "No partition table was found on the hard drive: %s.\n"
@@ -78,56 +78,56 @@ msgstr ""
 "\n"
 "Let op: deze actie zal alle bestaande gegevens op uw schijf wissen."
 
-#: ../usr/lib/live-installer-3/partitioning.py:574
+#: ../usr/lib/live-installer-3/partitioning.py:576
 msgid "Logical partition"
 msgstr "Logische partitie"
 
-#: ../usr/lib/live-installer-3/partitioning.py:575
+#: ../usr/lib/live-installer-3/partitioning.py:577
 msgid "Extended partition"
 msgstr "Uitgebreide partitie"
 
-#: ../usr/lib/live-installer-3/partitioning.py:576
+#: ../usr/lib/live-installer-3/partitioning.py:578
 #: ../usr/lib/live-installer-3/gtk_interface.py:597
 msgid "Free space"
 msgstr "Vrije ruimte"
 
-#: ../usr/lib/live-installer-3/partitioning.py:604
+#: ../usr/lib/live-installer-3/partitioning.py:606
 #: ../usr/lib/live-installer-3/gtk_interface.py:633
 msgid "Encryption password"
 msgstr "Versleutelwachtwoord"
 
-#: ../usr/lib/live-installer-3/partitioning.py:605
+#: ../usr/lib/live-installer-3/partitioning.py:607
 msgid "Password for the encrypted partition:"
 msgstr "Uw wachtwoord voor de versleutelde partitie:"
 
-#: ../usr/lib/live-installer-3/partitioning.py:763
+#: ../usr/lib/live-installer-3/partitioning.py:765
 msgid "Edit partition"
 msgstr "Partitie bewerken"
 
-#: ../usr/lib/live-installer-3/partitioning.py:770
+#: ../usr/lib/live-installer-3/partitioning.py:774
 #: ../usr/lib/live-installer-3/gtk_interface.py:589
 msgid "Device"
 msgstr "Apparaat"
 
-#: ../usr/lib/live-installer-3/partitioning.py:771
+#: ../usr/lib/live-installer-3/partitioning.py:775
 #: ../usr/lib/live-installer-3/gtk_interface.py:594
 msgid "Format as"
 msgstr "Formatteren als"
 
-#: ../usr/lib/live-installer-3/partitioning.py:772
+#: ../usr/lib/live-installer-3/partitioning.py:776
 #: ../usr/lib/live-installer-3/gtk_interface.py:593
 msgid "Mount point"
 msgstr "Koppelpunt"
 
-#: ../usr/lib/live-installer-3/partitioning.py:773
+#: ../usr/lib/live-installer-3/partitioning.py:777
 msgid "Label (optional)"
 msgstr "Label (optioneel)"
 
-#: ../usr/lib/live-installer-3/partitioning.py:774
+#: ../usr/lib/live-installer-3/partitioning.py:778
 msgid "Encrypt partition"
 msgstr "Versleutel partitie"
 
-#: ../usr/lib/live-installer-3/partitioning.py:775
+#: ../usr/lib/live-installer-3/partitioning.py:779
 msgid "Password"
 msgstr "Wachtwoord"
 
@@ -191,12 +191,12 @@ msgstr ""
 msgid "You need to choose a mount point for partition:"
 msgstr "U dient een koppelpunt te kiezen voor uw partitie:"
 
-#: ../usr/lib/live-installer-3/installer.py:143
-#: ../usr/lib/live-installer-3/installer.py:168
+#: ../usr/lib/live-installer-3/installer.py:144
+#: ../usr/lib/live-installer-3/installer.py:169
 msgid "Installation error"
 msgstr "Installatiefout"
 
-#: ../usr/lib/live-installer-3/installer.py:153
+#: ../usr/lib/live-installer-3/installer.py:154
 msgid ""
 "Installation is now paused. Please read the instructions on the page "
 "carefully before clicking Forward to finish the installation."
@@ -204,37 +204,37 @@ msgstr ""
 "De installatie is thans tijdelijk onderbroken. Lees a.u.b. zorgvuldig de "
 "instructies op de pagina en klik op Volgende om de installatie te voltooien."
 
-#: ../usr/lib/live-installer-3/installer.py:154
+#: ../usr/lib/live-installer-3/installer.py:155
 msgid "Verify that fstab is correct (use blkid to check the UUIDs)."
 msgstr ""
 "Controleer dat fstab is correct (gebruik blkid om de UUID's te controleren)."
 
-#: ../usr/lib/live-installer-3/installer.py:155
+#: ../usr/lib/live-installer-3/installer.py:156
 msgid ""
 "A chrooted terminal and fstab will be opened after you close this message."
 msgstr "Een terminal en fstab worden geopend nadat dit scherm wordt gesloten."
 
-#: ../usr/lib/live-installer-3/installer.py:157
+#: ../usr/lib/live-installer-3/installer.py:158
 msgid "Installation paused"
 msgstr "Installatie tijdelijk onderbroken"
 
-#: ../usr/lib/live-installer-3/installer.py:207
+#: ../usr/lib/live-installer-3/installer.py:208
 #, python-format
 msgid "Encrypting %(partition)s ..."
 msgstr "Versleutelen van %(partition)s ..."
 
-#: ../usr/lib/live-installer-3/installer.py:213
+#: ../usr/lib/live-installer-3/installer.py:214
 #, python-format
 msgid "Formatting %(partition)s as %(format)s ..."
 msgstr "Bezig met formatteren van %(partition)s als %(format)s..."
 
-#: ../usr/lib/live-installer-3/installer.py:256
-#: ../usr/lib/live-installer-3/installer.py:271
+#: ../usr/lib/live-installer-3/installer.py:257
+#: ../usr/lib/live-installer-3/installer.py:272
 #, python-format
 msgid "Mounting %(partition)s on %(mountpoint)s"
 msgstr "Bezig met aankoppelen van %(partition)s aan %(mountpoint)s"
 
-#: ../usr/lib/live-installer-3/installer.py:293
+#: ../usr/lib/live-installer-3/installer.py:294
 #, python-format
 msgid ""
 "You must first manually mount your target filesystem(s) at %s to do a custom "
@@ -243,12 +243,12 @@ msgstr ""
 "U dient eerst uw doel bestandssysteem(en) te koppelen op %s voordat u een "
 "aangepaste installatie kunt uitvoeren!"
 
-#: ../usr/lib/live-installer-3/installer.py:296
-#: ../usr/lib/live-installer-3/installer.py:398
+#: ../usr/lib/live-installer-3/installer.py:297
+#: ../usr/lib/live-installer-3/installer.py:399
 msgid "Not mounted"
 msgstr "Niet gekoppeld"
 
-#: ../usr/lib/live-installer-3/installer.py:304
+#: ../usr/lib/live-installer-3/installer.py:305
 msgid ""
 "Something is wrong with the installation medium! This is usually caused by "
 "burning tools which are not compatible with {}. Please burn the ISO image to "
@@ -258,81 +258,81 @@ msgstr ""
 "door brand software die niet compatibel is met {}. Gelieve de ISO naar DVD/"
 "USB te branden met een andere tool."
 
-#: ../usr/lib/live-installer-3/installer.py:307
+#: ../usr/lib/live-installer-3/installer.py:308
 msgid "Base filesystem does not exist"
 msgstr "Basis bestandssysteem bestaat niet"
 
-#: ../usr/lib/live-installer-3/installer.py:354
+#: ../usr/lib/live-installer-3/installer.py:355
 msgid "Copying"
 msgstr "Kopiëren van"
 
-#: ../usr/lib/live-installer-3/installer.py:391
+#: ../usr/lib/live-installer-3/installer.py:392
 msgid "Entering the system ..."
 msgstr "Nieuwe systeem aan het binnengaan..."
 
-#: ../usr/lib/live-installer-3/installer.py:395
+#: ../usr/lib/live-installer-3/installer.py:396
 #, python-format
 msgid "%s/dev not mounted - exiting"
 msgstr "%s/dev niet gekoppeld - afsluiten"
 
-#: ../usr/lib/live-installer-3/installer.py:418
+#: ../usr/lib/live-installer-3/installer.py:419
 msgid "Installing EFI packages..."
 msgstr "EFI pakketten installeren..."
 
-#: ../usr/lib/live-installer-3/installer.py:442
+#: ../usr/lib/live-installer-3/installer.py:443
 msgid "Installing drivers"
 msgstr "Drivers installeren"
 
-#: ../usr/lib/live-installer-3/installer.py:477
+#: ../usr/lib/live-installer-3/installer.py:478
 msgid "Writing filesystem mount information to /etc/fstab"
 msgstr ""
 "Aankoppelingsinformatie bestandssysteem wordt weggeschreven naar /etc/fstab"
 
-#: ../usr/lib/live-installer-3/installer.py:598
+#: ../usr/lib/live-installer-3/installer.py:599
 msgid "Adding new user to the system"
 msgstr "Gebruiker wordt toegevoegd aan systeem"
 
-#: ../usr/lib/live-installer-3/installer.py:679
+#: ../usr/lib/live-installer-3/installer.py:680
 msgid "Setting hostname"
 msgstr "Computernaam instellen"
 
-#: ../usr/lib/live-installer-3/installer.py:700
+#: ../usr/lib/live-installer-3/installer.py:701
 msgid "Setting locale"
 msgstr "Taal en land instellen"
 
-#: ../usr/lib/live-installer-3/installer.py:716
+#: ../usr/lib/live-installer-3/installer.py:717
 msgid "Update apt cache"
 msgstr "Apt cache bewerken"
 
-#: ../usr/lib/live-installer-3/installer.py:718
+#: ../usr/lib/live-installer-3/installer.py:719
 msgid "Update the new system"
 msgstr "Het nieuwe systeem updaten"
 
-#: ../usr/lib/live-installer-3/installer.py:725
+#: ../usr/lib/live-installer-3/installer.py:726
 msgid "Localizing packages"
 msgstr "Pakketten regionaliseren"
 
-#: ../usr/lib/live-installer-3/installer.py:743
+#: ../usr/lib/live-installer-3/installer.py:744
 msgid "Setting keyboard options"
 msgstr "Toetsenbordopties instellen"
 
-#: ../usr/lib/live-installer-3/installer.py:804
+#: ../usr/lib/live-installer-3/installer.py:805
 msgid "Configuring sensors"
 msgstr "Sensors configureren"
 
-#: ../usr/lib/live-installer-3/installer.py:810
+#: ../usr/lib/live-installer-3/installer.py:811
 msgid "Removing VirtualBox"
 msgstr "VirtualBox verwijderen"
 
-#: ../usr/lib/live-installer-3/installer.py:816
+#: ../usr/lib/live-installer-3/installer.py:817
 msgid "Removing os-prober"
 msgstr "Verwijder os-prober"
 
-#: ../usr/lib/live-installer-3/installer.py:823
+#: ../usr/lib/live-installer-3/installer.py:824
 msgid "Installing bootloader"
 msgstr "Opstartlader installeren"
 
-#: ../usr/lib/live-installer-3/installer.py:845
+#: ../usr/lib/live-installer-3/installer.py:846
 msgid ""
 "The grub bootloader was not configured properly! You need to configure it "
 "manually."
@@ -340,36 +340,36 @@ msgstr ""
 "Opstartlader Grub werd niet juist ingesteld! U dient deze handmatig in te "
 "stellen."
 
-#: ../usr/lib/live-installer-3/installer.py:848
+#: ../usr/lib/live-installer-3/installer.py:849
 msgid "Grub not configured"
 msgstr "Grub niet geconfigureerd"
 
-#: ../usr/lib/live-installer-3/installer.py:875
+#: ../usr/lib/live-installer-3/installer.py:879
 msgid "Cleaning APT"
 msgstr "APT schoonmaken"
 
-#: ../usr/lib/live-installer-3/installer.py:907
+#: ../usr/lib/live-installer-3/installer.py:911
 msgid "Removing live configuration (packages)"
 msgstr "Live-configuratie (pakketten) aan het verwijderen"
 
-#: ../usr/lib/live-installer-3/installer.py:949
+#: ../usr/lib/live-installer-3/installer.py:953
 msgid "Unmounting partitions"
 msgstr "Partities loskoppelen"
 
-#: ../usr/lib/live-installer-3/installer.py:966
+#: ../usr/lib/live-installer-3/installer.py:970
 #: ../usr/lib/live-installer-3/gtk_interface.py:998
 msgid "Installation finished"
 msgstr "Installatie voltooid"
 
-#: ../usr/lib/live-installer-3/installer.py:986
+#: ../usr/lib/live-installer-3/installer.py:990
 msgid "Configuring bootloader"
 msgstr "Opstartlader instellen"
 
-#: ../usr/lib/live-installer-3/installer.py:993
+#: ../usr/lib/live-installer-3/installer.py:997
 msgid "Checking bootloader"
 msgstr "Opstartlader controleren"
 
-#: ../usr/lib/live-installer-3/installer.py:1008
+#: ../usr/lib/live-installer-3/installer.py:1012
 #, python-format
 msgid "No %s file found!"
 msgstr "Geen %s bestand gevonden!"
