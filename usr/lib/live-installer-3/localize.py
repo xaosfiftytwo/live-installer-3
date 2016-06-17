@@ -96,7 +96,7 @@ class Localize():
                 package = self.get_localized_package("firefox-%sl10n" % esr)
                 if package != "":
                     self.exec_cmd("apt-get install --yes %s %s %s" % (self.force, ff, package))
-                    self.localizePref("%s/home/%s/.mozilla/firefox/mwad0hks.default/prefs.js" % (self.target_dir, self.username))
+                    self.localizePref("%s/home/%s/.mozilla/firefox/mwad0hks.default/prefs.js" % (self.target_dir, self.username), package)
 
             # Localize Thunderbird
             if isPackageInstalled("thunderbird"):
@@ -105,7 +105,7 @@ class Localize():
                 package = self.get_localized_package("thunderbird-l10n")
                 if package != "":
                     self.exec_cmd("apt-get install --yes %s %s" % (self.force, package))
-                    self.localizePref("%s/home/%s/.thunderbird/pjzwmea6.default/prefs.js" % (self.target_dir, self.username))
+                    self.localizePref("%s/home/%s/.thunderbird/pjzwmea6.default/prefs.js" % (self.target_dir, self.username), package)
 
     def get_localized_package(self, package):
         lan = "".join(self.locale)
@@ -120,15 +120,13 @@ class Localize():
                     pck = ''
         return pck
 
-    def localizePref(self, prefsPath):
+    def localizePref(self, prefsPath, localizedPackage):
         if os.path.exists(prefsPath):
             with open(prefsPath, 'r') as f:
                 text = f.read()
 
-            # Create language strings for Mozilla
-            lan = self.locale[0]
-            if self.locale[0] != self.locale[1]:
-                lan = "_".join(self.locale)
+            # Create language string from localized package name
+            lan = localizedPackage.split("l10n-", 1)[1]
 
             # Set Mozilla parameters in prefs file
             mozLine = "user_pref(\"spellchecker.dictionary\", \"%s\");" % lan
